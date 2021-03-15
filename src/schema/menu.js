@@ -44,6 +44,15 @@ export default {
         body: [
           {
             renderer: 'mis-menu-item',
+            name: 'dragger',
+            title: '拖拽',
+            icon: 'el-icon-fork-spoon',
+            pageId: 'a250a517-58cd-40a7-bcc9-6e55c0b088f9',
+            pageDesc: null,
+            schemaUrl: '/api/page/a250a517-58cd-40a7-bcc9-6e55c0b088f9',
+          },
+          {
+            renderer: 'mis-menu-item',
             name: 'echarts',
             title: '看板',
             icon: 'el-icon-s-marketing',
