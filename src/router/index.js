@@ -37,6 +37,10 @@ const routers = createRouter({
       children: menus,
     },
     {
+      path: '/test',
+      component: () => import('./test'),
+    },
+    {
       path: '/preview',
       name: 'UmisPreview',
       component: MisSchema,

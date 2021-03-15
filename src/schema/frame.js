@@ -80,7 +80,7 @@ export default {
                       icon: 'el-icon-edit',
                       actionType: 'mis-drawer',
                       body: {
-                        size: '80%',
+                        size: '100%',
                         label: '编辑',
                         appendToBody: true,
                         classname: 'umis-website__drawer',
