@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve  --mode development",
-    "mock": "vue-cli-service build --mode mock",
+    "mock": "use_analyzer=true vue-cli-service build --mode mock",
     "build": "use_analyzer=true vue-cli-service build  --mode production",
     "lint": "vue-cli-service lint"
   },
@@ -24,7 +24,7 @@
     "core-js": "^3.6.5",
     "copy-to-clipboard": "^3.3.1",
     "deep-equal": "^1.0.1",
-    "element-plus": "^1.0.1-beta.27",
+    "element-plus": "^1.0.2-beta.35",
     "element-resize-detector": "^1.2.1",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0-alpha.0",
