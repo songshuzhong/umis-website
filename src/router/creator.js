@@ -1,5 +1,5 @@
 import { MisSchema } from 'umis-renderer';
-const docSchemas = require.context('../schema', true, /[\w-]+\.js$/);
+const docSchemas = require.context('../schema', false, /[\w-]+\.js$/);
 let routesList;
 
 export default {
@@ -22,7 +22,7 @@ export default {
       routesList[routesList.length - 1].body.push({
         renderer: 'mis-menu-item',
         name: `${basename}/${docItemName}`,
-        title: docItemName,
+        title: docSchemas(filePath).default.title || docItemName,
       });
       this.menus.push({
         path: `${basename}/${docItemName}`,
