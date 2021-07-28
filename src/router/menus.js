@@ -1,9 +1,16 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import {
+  createRouter,
+  createWebHistory,
+  createWebHashHistory,
+} from 'vue-router';
 import { MisSchema } from 'umis-renderer';
 import frameSchema from '../data/frame';
 import menuCreator from './creator';
 
-const history = createWebHistory();
+const history =
+  process.env.NODE_ENV === 'development'
+    ? createWebHistory()
+    : createWebHashHistory();
 
 const createMenus = menus => {
   const routes = menuCreator

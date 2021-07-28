@@ -1,4 +1,6 @@
 module.exports = {
+  publicPath:
+    process.env.NODE_ENV === 'development' ? '' : '/umis-website/dist',
   devServer: {
     port: 80,
     proxy: {
