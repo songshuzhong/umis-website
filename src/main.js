@@ -13,6 +13,9 @@ import './style/index.scss';
 
 const app = createApp(Application);
 const UMIS_CONFIG = {
+  domains: {
+    default: process.env.VITE_APP_API_BASE,
+  },
   adaptor: {
     req: `
 if(url.includes('/terra/routes/list.json')) {
