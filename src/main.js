@@ -43,7 +43,7 @@ if(url.includes('/terra/routes/list.json')) {
 };
 
 api()
-  .slientApi()
+  .staticApi()
   .get(
     `${process.env.VUE_APP_API_BASE}/api/menu/0767bea4-c7e7-4aa7-a1b5-2fd5e1ec4a7f`
   )
