@@ -1,6 +1,7 @@
+const isDev = process.env.NODE_ENV === 'development';
+
 module.exports = {
-  publicPath:
-    process.env.NODE_ENV === 'development' ? '' : '/umis-website/dist',
+  publicPath: isDev ? '' : '/umis-website/dist',
   devServer: {
     port: 80,
     proxy: {

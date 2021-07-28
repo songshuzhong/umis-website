@@ -7,6 +7,7 @@ import menusCreator from './router/menus';
 import Application from './App.vue';
 import UmisRenderer, { api } from 'umis-renderer';
 
+import 'element-theme-chalk/lib/index.css';
 import 'umis-renderer/dist/css/index.css';
 import './style/superfans.scss';
 import './style/index.scss';
@@ -14,7 +15,7 @@ import './style/index.scss';
 const app = createApp(Application);
 const UMIS_CONFIG = {
   domains: {
-    default: process.env.VITE_APP_API_BASE,
+    default: process.env.VUE_APP_API_BASE,
   },
   adaptor: {
     req: `
