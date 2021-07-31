@@ -42,6 +42,8 @@ export default {
                 },
                 {
                   renderer: 'mis-wrapper',
+                  name: 'umis-website__header__actions',
+                  hiddenOn: 'data.activeIndex === "playground"',
                   body: [
                     {
                       renderer: 'mis-switch',
@@ -52,8 +54,6 @@ export default {
                     {
                       renderer: 'mis-action',
                       actionType: 'actions',
-                      name: 'umis-website__header__actions',
-                      hiddenOn: 'data.activeIndex == "playground"',
                       actions: [
                         {
                           renderer: 'mis-action',
@@ -76,7 +76,7 @@ export default {
                             header: {
                               renderer: 'mis-html',
                               html:
-                                  '<div style="text-align: left; color: white;">编辑Schema</div>',
+                                '<div style="text-align: left; color: white;">编辑Schema</div>',
                             },
                             body: [
                               {
@@ -88,9 +88,9 @@ export default {
                         },
                       ],
                     },
-                  ]
+                  ],
                 },
-              ]
+              ],
             },
           ],
         },
@@ -113,7 +113,7 @@ export default {
             backgroundColor: '#3a3f51',
             textColor: '#fff',
             activeTextColor: '#ffd04b',
-            defaultActive: '/astart',
+            defaultActive: '/concept',
             target: 'umis-website__nav-poppet,umis-website__header__actions',
             title: {
               renderer: 'mis-html',
@@ -122,8 +122,8 @@ export default {
             body: [],
             inherit: {
               type: 'exclude',
-              value: ['preview']
-            }
+              value: ['preview'],
+            },
           },
         },
         {
@@ -142,7 +142,7 @@ export default {
               renderer: 'mis-action',
               remoteComponent: 'preview',
               icon: 'el-icon-s-home',
-              text: ''
+              text: '',
             },
           ],
         },
@@ -151,7 +151,10 @@ export default {
           routerView: true,
           iProtal: true,
           classname: 'umis-website__main',
-          computedClass: 'data.preview ? \'preview\' : \'\'',
+          computedClass: 'data.preview ? "preview": ""',
+          inherit: {
+            type: 'none',
+          },
         },
       ],
     },

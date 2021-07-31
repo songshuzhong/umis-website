@@ -1,3 +1,11 @@
+html {
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei, SimSun, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #5e6d82;
+  line-height: 1.5em;
+}
 .umis-website__header__wrapper {
   width: 100%;
   z-index: 21;
@@ -99,6 +107,22 @@
       border: 0;
     }
   }
+  .umis-website__doc_nest {
+    height: 300px;
+    .monaco-editor {
+      height: 300px;
+    }
+    .umis-website__doc__arrow-right {
+      position: relative;
+      top: 50%;
+      width: 100%;
+      display: inline-block;
+      text-align: center;
+      .el-icon-d-arrow-right {
+        font-size: 26px !important;
+      }
+    }
+  }
 }
 .umis-website_menu-vertical:not(.el-menu--collapse) {
   width: 200px;
@@ -106,7 +130,7 @@
 .el-loading-spinner {
   cursor: not-allowed;
   .circular {
-    background-image: url('/img/loading.svg');
+    background-image: url('/loading.svg');
     background-position: center;
     background-size: cover;
     animation: loading-rotate 1s linear infinite;

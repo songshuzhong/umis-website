@@ -5,10 +5,9 @@ import locale from 'element-plus/lib/locale/lang/zh-cn';
 import menusCreator from './router/menus';
 
 import Application from './App.vue';
-import UmisRenderer, { api } from 'umis-renderer';
+import UmisRenderer, { api } from '../../umis-renderer/src/entry';
 
-import 'element-theme-chalk/lib/index.css';
-import 'umis-renderer/dist/css/index.css';
+import '../../umis-renderer/src/styles/index.scss';
 import './style/superfans.scss';
 import './style/index.scss';
 

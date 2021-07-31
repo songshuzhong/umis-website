@@ -8,6 +8,7 @@
   <title id="title">UMIS</title>
   <meta name="baidu-site-verification" content="7XGPmF2RtW" />
   <meta id="keywords" name="keywords" content="UMIS" />
+  <link rel="icon" href="./favicon.png">
   <link rel="stylesheet" href="https://unpkg.com/element-plus/lib/theme-chalk/index.css">
 </head>
 <body>
@@ -18,26 +19,16 @@
 </div>
 <script src="https://cdn.bootcdn.net/ajax/libs/monaco-editor/0.21.2/min/vs/loader.min.js"></script>
 <script type="text/javascript">
-  require.config({
-    paths: {
-      vs:
-          'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.21.2/min/vs',
-    },
-  });
-  window.MonacoEnvironment = { getWorkerUrl: () => proxy };
+  require.config({paths: {vs: 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.21.2/min/vs'}});
+  window.MonacoEnvironment = {getWorkerUrl: () => proxy};
   let proxy = URL.createObjectURL(
-      new Blob(
-          [
-            `
-            self.MonacoEnvironment = {
-              baseUrl: 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.21.2/min'
-            };
-            importScripts('https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.21.2/min/vs/base/worker/workerMain.min.js');`,
-          ],
-          { type: 'text/javascript' }
-      )
+    new Blob([`
+      self.MonacoEnvironment = {
+        baseUrl: 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.21.2/min'
+      };
+      importScripts('https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.21.2/min/vs/base/worker/workerMain.min.js');`,
+    ],{type: 'text/javascript'})
   );
-
   require(['vs/editor/editor.main'], function() {
     window.monaco = monaco;
   });

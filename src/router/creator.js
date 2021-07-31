@@ -1,4 +1,4 @@
-import { MisSchema } from 'umis-renderer';
+import { MisSchema } from '../../../umis-renderer/src/entry';
 const docSchemas = require.context('../schema', false, /[\w-]+\.js$/);
 let routesList;
 

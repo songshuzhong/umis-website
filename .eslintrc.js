@@ -1,7 +1,7 @@
 module.exports = {
   parserOptions: {
     sourceType: 'module',
-    ecmaVersion: 6,
+    ecmaVersion: 7,
   },
   plugins: ['vue'],
   extends: ['plugin:vue/vue3-essential'],
