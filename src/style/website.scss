@@ -123,6 +123,12 @@ html {
       }
     }
   }
+  .umis-website-doc__next-section {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+  }
 }
 .umis-website_menu-vertical:not(.el-menu--collapse) {
   width: 200px;

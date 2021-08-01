@@ -35,6 +35,13 @@ const createMenus = menus => {
         children: routes,
       },
     ],
+    scrollBehavior(to, from, savedPosition) {
+      if (savedPosition) {
+        return savedPosition;
+      }
+
+      return { x: 0, y: 0 };
+    },
   });
   routes.forEach(function(item) {
     router.addRoute('UmisWebsite', item);

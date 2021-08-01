@@ -120,37 +120,47 @@ const rendererPropSchema = {
   ],
 };
 export default {
-  renderer: 'mis-page',
-  classname: 'umis-website-doc',
-  title: '渲染器链',
-  body: [
+  renderer: 'mis-card',
+  header: [
     {
-      renderer: 'mis-card',
-      inherit: {
-        type: 'none',
-      },
-      header: {
-        renderer: 'mis-html',
-        html: `渲染器支持嵌套使用，在找不到时会用error兜底并给出错误信息
-`,
-      },
-      body: nestSchema,
-      footer: {
-        renderer: 'mis-action',
-        text: '查看源码',
-        actionType: 'mis-dialog',
-        body: {
-          title: '源码',
-          body: {
-            renderer: 'mis-editor',
-            schema: nestSchema,
-          },
-        },
-      },
+      renderer: 'mis-icon',
+      icon: 'el-icon-warning-outline',
     },
     {
-      renderer: 'mis-divider',
+      renderer: 'mis-html',
+      html: '&nbsp;渲染器链',
+      inline: true,
     },
   ],
+  body: {
+    renderer: 'mis-html',
+    html: `首先，渲染器分为容器型(如：card)和非容器型(如：html)。<br/>
+容器型渲染器一定会有body属性，可以接受一个或多个子渲染器；可能有header和footer属性，具体详见文档。<br/>
+渲染器根据json的层级结构，将header、body或footer中的子节点当做子渲染器依次渲染，这样就形成和HTML标签包裹类似的渲染器链。<br/>
+`,
+  },
+  footer: {
+    renderer: 'mis-grid',
+    classname: 'umis-website__doc_nest',
+    body: [
+      {
+        renderer: 'mis-editor',
+        span: 11,
+        schema: nestSchema,
+      },
+      {
+        renderer: 'mis-icon',
+        span: 2,
+        classname: 'umis-website__doc__arrow-right',
+        icon: 'el-icon-d-arrow-right',
+      },
+      {
+        renderer: 'mis-wrapper',
+        span: 11,
+        body: nestSchema,
+      },
+    ],
+  },
 };
+
 export { nestSchema, rendererPropSchema };

@@ -1,11 +1,11 @@
 const initSchema = {
   renderer: 'mis-service',
   initData: {
-    tip: 'everything is awosome!',
+    msg: 'everything is awesome!',
   },
   body: {
     renderer: 'mis-html',
-    html: '<%= data.tip %>',
+    html: '<h1>当前data.msg：<%= data.msg %></h1>',
   },
 };
 const initDataPropSchema = {
@@ -66,29 +66,60 @@ const initDataPropSchema = {
 
 export default {
   renderer: 'mis-page',
-  classname: 'umis-website-doc',
-  title: '作用域链',
-  initData: {
-    name: 'shuzhong song',
-    email: 'sshuzhong@outlook.com',
-    phone: '15510351839',
-    province: '北京',
-    age: '2',
-  },
   body: [
     {
       renderer: 'mis-card',
-      inherit: {
-        type: 'none',
-      },
-      header: {
+      header: [
+        {
+          renderer: 'mis-icon',
+          icon: 'el-icon-warning-outline',
+        },
+        {
+          renderer: 'mis-html',
+          html: '&nbsp;数据链',
+          inline: true,
+        },
+      ],
+      body: {
         renderer: 'mis-html',
-        html: `容器类型渲染器配有initData属性，开发者可以根据这个属性做数据初始化。<br/>
-该容器内的子组件会通过自身的initData属性默认自动继承父级的initData(注意:相同key值的数据有覆盖的风险)，<br/>
-不依赖自动继承的话可以根据inherit属性对字段手动过滤。
+        html: `
+数据会依着渲染器链流转。如下图：<br/>
 `,
       },
-      body: initSchema,
+      footer: {
+        renderer: 'mis-image',
+        src:
+          'http://assets.processon.com/chart_image/5bdba8c3e4b0e4521336fa28.png',
+      },
+    },
+    {
+      renderer: 'mis-divider',
+    },
+    {
+      renderer: 'mis-card',
+      header: [
+        {
+          renderer: 'mis-icon',
+          icon: 'el-icon-warning-outline',
+        },
+        {
+          renderer: 'mis-html',
+          html: '&nbsp;初始化数据(initData)',
+          inline: true,
+        },
+      ],
+      body: [
+        {
+          renderer: 'mis-html',
+          html: `
+如上图所示，<br/>
+渲染器可以根据initData属性做数据初始化。<br/>
+组件会通过自身的initData属性默认自动继承父级的initData(注意:相同key值的数据有覆盖的风险)，<br/>
+不依赖自动继承的话可以根据inherit属性对字段手动过滤，例：
+`,
+        },
+        initSchema,
+      ],
       footer: {
         renderer: 'mis-action',
         text: '查看源码',
@@ -101,9 +132,6 @@ export default {
           },
         },
       },
-    },
-    {
-      renderer: 'mis-divider',
     },
   ],
 };

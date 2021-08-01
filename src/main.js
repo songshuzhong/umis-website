@@ -2,7 +2,7 @@ import { createApp } from 'vue';
 import ElementPlus from 'element-plus';
 import locale from 'element-plus/lib/locale/lang/zh-cn';
 
-import menusCreator from './router/menus';
+import menusCreator from './router';
 
 import Application from './App.vue';
 import UmisRenderer, { api } from '../../umis-renderer/src/entry';
