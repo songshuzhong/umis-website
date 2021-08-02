@@ -30,7 +30,6 @@ export default {
         props: {
           initSchema: docSchemas(filePath).default,
           url: docItemName,
-          canSchemaUpdate: false,
           iProtal: false,
         },
         meta: {
