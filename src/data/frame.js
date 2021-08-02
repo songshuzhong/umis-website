@@ -43,7 +43,7 @@ export default {
                 {
                   renderer: 'mis-wrapper',
                   name: 'umis-website__header__actions',
-                  hiddenOn: 'data.activeIndex === "playground"',
+                  hiddenOn: 'data.activeIndex !== "playground"',
                   body: [
                     {
                       renderer: 'mis-switch',
