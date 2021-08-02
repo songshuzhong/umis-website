@@ -43,14 +43,14 @@ export default {
         {
           renderer: 'mis-action',
           type: 'text',
-          text: '游乐场',
+          text: '《 游乐场',
           actionType: 'mis-redirect',
           redirect: '/playground',
         },
         {
           renderer: 'mis-action',
           type: 'text',
-          text: '快速开始',
+          text: '快速开始 》',
           actionType: 'mis-redirect',
           redirect: '/begin',
         },
