@@ -1,209 +1,221 @@
 .umis-page__chart {
-    height: 100vh;
+  height: 100vh;
 }
 
 .mis-card-margin {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .mis-card-margin .el-card__footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border-top: 1px solid #ebeef5;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 1px solid #ebeef5;
 }
 
 .umis-demo__fieldset {
-    background: #f1f1f1;
-    padding: 20px;
+  background: #f1f1f1;
+  padding: 20px;
 }
 
 .umis-demo__fieldset.fixed {
-    padding-top: 80px;
+  padding-top: 80px;
 }
 
 .umis-form__container__fieldset {
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #e6e7e8;
-    border-radius: 4px;
-    background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #e6e7e8;
+  border-radius: 4px;
+  background-color: #fff;
 }
 
 .el-collapse-item__content {
-    display: flex;
+  display: flex;
 }
 
 .umis-form__container__fieldset__items {
-    width: 100%;
+  width: 100%;
 }
 
 .umis-form__container__legend {
-    margin-bottom: 20px;
-    font-size: 16px;
-    color: #081422;
-    letter-spacing: .4px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #081422;
+  letter-spacing: 0.4px;
 }
 
 .umis-campaigns__wrapper {
-    margin-left: 200px;
-    border-radius: 4px;
-    border: 1px solid #ebeef5;
-    overflow: hidden;
+  margin-left: 200px;
+  border-radius: 4px;
+  border: 1px solid #ebeef5;
+  overflow: hidden;
 }
 
 .umis-campaigns__viewer {
-    margin: 10px;
+  margin: 10px;
 }
 
 .umis-campaigns__viewer__header {
-    width: 270px;
-    height: 74px;
-    padding: 15px;
-    margin-bottom: 10px;
-    background-image: linear-gradient(135deg, #409EFF, #409EFF);
-    border-radius: 4px;
-    box-sizing: border-box;
-    color: white;
+  width: 270px;
+  height: 74px;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-image: linear-gradient(135deg, #409eff, #409eff);
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: white;
 }
 
 .umis-campaigns__viewer__list {
-    width: 270px;
-    height: 230px;
-    padding: 0 10px;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-y: auto;
+  width: 270px;
+  height: 230px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .umis__viewer__label {
-    white-space: nowrap;
-    line-height: 20px;
-    font-size: 12px;
-    font-weight: 700;
-    color: #081422;
+  white-space: nowrap;
+  line-height: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #081422;
 }
 
 .umis__viewer__value {
-    width: 200px;
-    line-height: 20px;
-    padding: 0 10px;
-    font-size: 12px;
-    color: #38434e;
-    white-space: normal;
-    word-break: break-all;
+  width: 200px;
+  line-height: 20px;
+  padding: 0 10px;
+  font-size: 12px;
+  color: #38434e;
+  white-space: normal;
+  word-break: break-all;
 }
 
 .umis-list-demo {
-    width: 300px;
-    text-align: center;
+  width: 300px;
+  text-align: center;
 }
 
 .umis-list-demo__img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 48px;
-    height: 48px;
-    background-color: #daf4f5;
-    transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 48px;
+  height: 48px;
+  background-color: #daf4f5;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 .umis-list-demo__img-wrapper {
-    position: relative;
-    height: 88px;
-    background-color: #daf4f5;
+  position: relative;
+  height: 88px;
+  background-color: #daf4f5;
 }
 
 .index-1 .umis-list-demo__img-wrapper {
-    background-color: #ffeae3;
+  background-color: #ffeae3;
 }
 
 .index-1 .umis-list-demo__img {
-    background-color: #ffeae3;
+  background-color: #ffeae3;
 }
 
 .index-2 .umis-list-demo__img-wrapper {
-    background-color: #e2e4f1;
+  background-color: #e2e4f1;
 }
 
 .index-2 .umis-list-demo__img {
-    background-color: #e2e4f1;
+  background-color: #e2e4f1;
 }
 
 .umis-sf__creative__wrapper {
-    padding: 20px;
-    background-color: #fff;
+  padding: 20px;
+  background-color: #fff;
 }
 
 .umis-sf__header {
-    display: flex;
-    align-items: center;
-    background: #2b313d;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  background: #2b313d;
+  justify-content: space-between;
 }
 
 .umis-sf__header.fixed {
-    width: 100%;
-    position: fixed;
-    z-index: 2021;
+  width: 100%;
+  position: fixed;
+  z-index: 2021;
 }
 
 .umis-sf__header__nav,
 .umis-sf__header__tools,
 .umis-sf__header__user {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .umis-sf__header__user {
-    background: #081422;
-    border-radius: 30px;
+  background: #081422;
+  border-radius: 30px;
 }
 
 .umis-sf__header__user .el-button {
-    padding: 0 10px;
+  padding: 0 10px;
 }
 
 .umis-sf__header__logo {
-    width: 230px;
-    margin: 0 15px;
+  width: 230px;
+  margin: 0 15px;
 }
 
 .umis-sf__header .el-button {
-    border: 0;
-    background: inherit;
-    color: #fff;
+  border: 0;
+  background: inherit;
+  color: #fff;
 }
 
 .umis-sf__header .el-avatar {
-    width: 28px;
-    height: 28px;
+  width: 28px;
+  height: 28px;
 }
 
 .umis-sf__tamplate__wrapper {
-    max-width: 700px;
-    margin-left: 120px;
+  max-width: 700px;
+  margin-left: 120px;
 }
 
 .umis-sf__tamplate-title {
-    width: 100%;
-    height: 40px;
-    padding: 0 20px;
-    background: #f1f1f1;
-    border: 1px solid #e6e7e8;
-    border-radius: 4px 4px 0 0;
-    text-align: left;
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 38px;
-    color: #081422;
+  width: 100%;
+  height: 40px;
+  padding: 0 20px;
+  background: #f1f1f1;
+  border: 1px solid #e6e7e8;
+  border-radius: 4px 4px 0 0;
+  text-align: left;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 38px;
+  color: #081422;
 }
 
 .umis-sf__tamplate {
-    padding: 10px 20px;
-    border: 1px solid #e6e7e8;
-    background-color: #fff;
-    overflow-x: hidden;
-    overflow-y: scroll;
+  padding: 10px 20px;
+  border: 1px solid #e6e7e8;
+  background-color: #fff;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.umis-ka__card {
+  margin-bottom: 20px;
+  .el-card__header {
+    background: #ebf0fb;
+    .el-descriptions__body {
+      background: #ebf0fb;
+      td {
+        padding-bottom: 0;
+      }
+    }
+  }
 }

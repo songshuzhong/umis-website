@@ -9,6 +9,10 @@ module.exports = {
         target: 'http://localhost:1026',
         changeOrigin: true,
       },
+      '/ajax': {
+        target: 'http://kadm.test.weibo.com',
+        changeOrigin: true,
+      },
     },
   },
 };

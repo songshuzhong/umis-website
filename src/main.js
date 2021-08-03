@@ -2,11 +2,12 @@ import { createApp } from 'vue';
 import ElementPlus from 'element-plus';
 import locale from 'element-plus/lib/locale/lang/zh-cn';
 
-import menusCreator from './router';
+import menusCreator from './router/menus';
 
 import Application from './App.vue';
 import UmisRenderer, { api } from '../../umis-renderer/src/entry';
 
+import 'element-plus/lib/theme-chalk/index.css';
 import '../../umis-renderer/src/styles/index.scss';
 import './style/superfans.scss';
 import './style/index.scss';
@@ -36,6 +37,10 @@ if(url.includes('/fansSupportOrder/v1/order/list')) {
 if(url.includes('/terra/routes/list.json')) {
   res.data.rows = res.data.items;
   res.data.count = res.data.total;
+}    
+if(url.includes('/ajax/contract/contract_item_list.json')) {
+  res.data.rows = res.data.data;
+  res.data.count = res.data.total_num;
 }    
     `,
   },
