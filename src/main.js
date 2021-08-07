@@ -2,7 +2,7 @@ import { createApp } from 'vue';
 import ElementPlus from 'element-plus';
 import locale from 'element-plus/lib/locale/lang/zh-cn';
 
-import menusCreator from './router/menus';
+import menusCreator from './router';
 
 import Application from './App.vue';
 import UmisRenderer, { api } from '../../umis-renderer/src/entry';
@@ -22,9 +22,17 @@ const UMIS_CONFIG = {
 if(url.includes('/terra/routes/list.json')) {
   req.params.page = params.pageIndex;
   req.params.page_size = params.pageSize;
-}    
+} 
 `,
     res: `
+if(url.includes('/v1/order/delivery')) {
+  res.data.ageData = res.data.fans.age.map(item => item.value);
+  res.data.ageXAxis = res.data.fans.age.map(item => item.label);
+  res.data.legendData = res.data.fans.interest.map(item => item.label);
+  res.data.interestData = res.data.fans.interest.map(item => {item.name = item.label; return item;});
+  res.data.originData = res.data.fans.region.map(item => item.value);
+  res.data.originLabel = res.data.fans.region.map(item => item.label);
+}   
 if(url.includes('/api/users')&&method==='get') {
   res.data.rows.forEach(function(item) {
     item.timestamp=item.updatedAt;
