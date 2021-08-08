@@ -11,7 +11,7 @@ export default {
     {
       renderer: 'mis-wrapper',
       classname: 'umis-website__header__wrapper',
-      visibleOn: 'data.preview === false',
+      hiddenOn: 'data.preview === true',
       transition: 'el-zoom-in-top',
       body: {
         renderer: 'mis-affix',
@@ -24,7 +24,7 @@ export default {
               renderer: 'mis-aside',
               name: 'umis-website__nav-poppet',
               classname: 'umis-website__header__logo',
-              visibleOn: 'data.preview === false',
+              hiddenOn: 'data.preview === true',
               transition: 'el-zoom-in-left',
               body: {
                 renderer: 'mis-html',
@@ -101,7 +101,7 @@ export default {
       body: [
         {
           renderer: 'mis-wrapper',
-          visibleOn: 'data.preview === false',
+          hiddenOn: 'data.preview === true',
           transition: 'el-zoom-in-left',
           classname: 'umis-website__nav-fixed',
           body: {
@@ -130,12 +130,12 @@ export default {
           renderer: 'mis-aside',
           name: 'umis-website__nav-poppet',
           classname: 'umis-website__nav-poppet',
-          visibleOn: 'data.preview === false',
+          hiddenOn: 'data.preview === true',
           transition: 'el-zoom-in-left',
         },
         {
           renderer: 'mis-wrapper',
-          visibleOn: 'data.preview === true',
+          hiddenOn: 'data.preview === false',
           classname: 'umis-website__goto-edit',
           body: [
             {

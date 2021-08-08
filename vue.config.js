@@ -4,6 +4,7 @@ module.exports = {
   publicPath: isDev ? '' : '/umis-website/dist',
   devServer: {
     port: 80,
+    disableHostCheck: true,
     proxy: {
       '/api': {
         target: 'http://localhost:1026',
