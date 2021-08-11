@@ -3,7 +3,7 @@ import {
   createWebHistory,
   createWebHashHistory,
 } from 'vue-router';
-import { MisSchema } from '../../../umis-renderer/src/entry';
+import { MisSchema } from '../components/entry';
 import frameSchema from '../data/frame';
 import menuCreator from './creator';
 

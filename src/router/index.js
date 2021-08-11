@@ -5,7 +5,7 @@ import {
 } from 'vue-router';
 
 import menuCreator from './creator';
-import { MisSchema } from '../../../umis-renderer/src/entry';
+import { MisSchema } from '../components/entry';
 import frameSchema from '../data/frame';
 import routerSchema from '../data/menu';
 

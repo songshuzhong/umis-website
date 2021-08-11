@@ -2,13 +2,13 @@ import { createApp } from 'vue';
 import ElementPlus from 'element-plus';
 import locale from 'element-plus/lib/locale/lang/zh-cn';
 
-import menusCreator from './router';
+import menusCreator from './router/menus';
 
 import Application from './App.vue';
-import UmisRenderer, { api } from '../../umis-renderer/src/entry';
+import UmisRenderer, { api } from './components/entry';
 
 import 'element-plus/lib/theme-chalk/index.css';
-import '../../umis-renderer/src/styles/index.scss';
+import '../../umis-renderer/src/component/styles/index.scss';
 import './style/superfans.scss';
 import './style/index.scss';
 
