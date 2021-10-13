@@ -8,7 +8,6 @@ import { ElLoading } from "element-plus";
 import menuCreator from "./creator";
 import { MisSchema } from "../components/entry";
 import frameSchema from "../data/frame";
-import routerSchema from "../data/menu";
 
 const history =
   process.env.NODE_ENV === "development"
