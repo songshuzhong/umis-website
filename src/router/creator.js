@@ -35,7 +35,7 @@ export default {
       }
     };
   },
-  docMenuCreator(basename = "") {
+  docMenuCreator(basename = "/docs") {
     const routeFold = this.initRouteFold(docRoute);
     docSchemas.keys().forEach(filePath => {
       const docItemName = filePath.replace(/(.*\/)*([^.]+).*/gi, "$2");
@@ -53,7 +53,7 @@ export default {
           iProtal: false
         },
         meta: {
-          title: docItemName
+          title: docSchemas(filePath).default.title || docItemName
         }
       });
     });

@@ -5,11 +5,11 @@
 </template>
 
 <script>
-import { ElConfigProvider } from "element-plus";
-import locale from "element-plus/lib/locale/lang/zh-cn";
+import { ElConfigProvider } from 'element-plus';
+import locale from 'element-plus/lib/locale/lang/zh-cn';
 
 export default {
-  name: "Application",
+  name: 'Application',
   components: {
     [ElConfigProvider.name]: ElConfigProvider
   },

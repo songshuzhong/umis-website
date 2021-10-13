@@ -7,7 +7,7 @@ import menusCreator from "./router/index";
 import Application from "./App.vue";
 import UmisRenderer, { api } from "./components/entry";
 
-import "element-plus/lib/theme-chalk/index.css";
+import "element-plus/dist/index.css";
 import "../../umis-renderer/src/component/styles/index.scss";
 import "./style/superfans.scss";
 import "./style/index.scss";
