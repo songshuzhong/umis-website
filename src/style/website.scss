@@ -1,15 +1,8 @@
-html {
-  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
-    Microsoft YaHei, SimSun, sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  color: #5e6d82;
-  line-height: 1.5em;
-}
 .umis-website__header__wrapper {
   width: 100%;
   z-index: 21;
 }
+
 .umis-website__nav-fixed {
   position: fixed;
   top: 0;
@@ -18,24 +11,29 @@ html {
   z-index: 10;
   overflow-y: auto;
   transition: 0.3s width ease-in-out;
+
   &::-webkit-scrollbar {
     width: 0;
   }
+
   .el-menu {
     border-right: 0;
   }
 }
+
 .umis-website__goto-edit {
   position: fixed;
   bottom: 100px;
   right: 100px;
   z-index: 9999;
 }
+
 .umis-website__nav-poppet {
   height: 100%;
   background: #3a3f51;
   transition: 0.3s width ease-in-out;
 }
+
 .umis-website__header {
   position: relative;
   height: 60px;
@@ -45,36 +43,46 @@ html {
   font-size: 12px;
   background: white;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+
   .el-button {
     border: 0 !important;
   }
+
   .umis-website__header__main {
     padding: 0 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+
   .umis-website__header__logo {
     height: 60px;
     color: white;
     text-align: center;
     line-height: 60px;
-    font-size: 20px;
     background: #3a3f51;
     transition: 0.3s width ease-in-out;
+    .mis-html {
+      font-size: 20px;
+    }
   }
 }
+
 .umis-website__menu__logo {
   height: 60px;
 }
+
 .umis-website__main {
   overflow: hidden !important;
+
   &.preview {
     padding: 0;
   }
 }
+
 .umis-website__drawer {
   background-color: #282a36 !important;
+
   .el-drawer__header {
     display: flex;
     align-items: center;
@@ -84,59 +92,66 @@ html {
     background: #282a36;
     color: #72767b;
   }
+
   .umis-popup__container__body {
     padding: 0;
     margin: 0;
   }
+
   .monaco-editor {
     height: calc(100vh - 110px);
   }
 }
+
 .umis-website__code-viwer {
   height: 200px;
   padding: 10px 20px;
+
   .monaco-editor {
     height: 180px;
   }
 }
+.umis-website__breadcrumb {
+  margin-left: 20px;
+  display: inline-block;
+}
 .umis-website-doc {
   .umis-card__footer {
     padding: 0;
+
     .el-button {
       width: 100%;
       border: 0;
     }
   }
-  .umis-website__doc_nest {
-    height: 300px;
-    .monaco-editor {
-      height: 300px;
+}
+.umis-website-doc__next-section {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.umis-website_menu-vertical {
+  .el-sub-menu .el-menu-item {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    &:hover {
+      background-color: #001528 !important;
     }
-    .umis-website__doc__arrow-right {
-      position: relative;
-      top: 50%;
-      width: 100%;
-      display: inline-block;
-      text-align: center;
-      .el-icon-d-arrow-right {
-        font-size: 26px !important;
-      }
+    .el-submenu .el-menu-item {
+      min-width: 210px !important;
+      background-color: #1f2d3d !important;
     }
   }
-  .umis-website-doc__next-section {
-    width: 100%;
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-around;
+  &:not(.el-menu--collapse) {
+    width: 200px;
   }
 }
-.umis-website_menu-vertical:not(.el-menu--collapse) {
-  width: 200px;
-}
+
 .el-loading-spinner {
   cursor: not-allowed;
+
   .circular {
-    background-image: url('/loading.svg');
+    background-image: url("../../public/img/loading.svg");
     background-position: center;
     background-size: cover;
     animation: loading-rotate 1s linear infinite;
@@ -144,6 +159,46 @@ html {
   }
 
   .path {
+    display: none;
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.umis-website__router__loader {
+  height: 3px;
+  top: 0;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #409eff;
+    transform-origin: 0 50%;
+    animation: grow 1s ease-out;
+  }
+  &::after {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-image: url("../../public/img/loading.svg");
+    background-position: center;
+    background-size: cover;
+    animation: loading-rotate 1s linear infinite;
+    animation-direction: reverse;
+    content: "";
+  }
+  .el-loading-spinner {
     display: none;
   }
 }

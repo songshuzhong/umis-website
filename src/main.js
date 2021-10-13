@@ -1,21 +1,21 @@
-import { createApp } from 'vue';
-import ElementPlus from 'element-plus';
-import locale from 'element-plus/lib/locale/lang/zh-cn';
+import { createApp } from "vue";
+import ElementPlus from "element-plus";
+import locale from "element-plus/lib/locale/lang/zh-cn";
 
-import menusCreator from './router/menus';
+import menusCreator from "./router/index";
 
-import Application from './App.vue';
-import UmisRenderer, { api } from './components/entry';
+import Application from "./App.vue";
+import UmisRenderer, { api } from "./components/entry";
 
-import 'element-plus/lib/theme-chalk/index.css';
-import '../../umis-renderer/src/component/styles/index.scss';
-import './style/superfans.scss';
-import './style/index.scss';
+import "element-plus/lib/theme-chalk/index.css";
+import "../../umis-renderer/src/component/styles/index.scss";
+import "./style/superfans.scss";
+import "./style/index.scss";
 
 const app = createApp(Application);
 const UMIS_CONFIG = {
   domains: {
-    default: process.env.VUE_APP_API_BASE,
+    default: process.env.VUE_APP_API_BASE
   },
   adaptor: {
     req: `
@@ -33,25 +33,8 @@ if(url.includes('/v1/order/delivery')) {
   res.data.originData = res.data.fans.region.map(item => item.value);
   res.data.originLabel = res.data.fans.region.map(item => item.label);
 }   
-if(url.includes('/api/users')&&method==='get') {
-  res.data.rows.forEach(function(item) {
-    item.timestamp=item.updatedAt;
-  })
-}
-if(url.includes('/fansSupportOrder/v1/order/list')) {
-  res.data.rows = res.data.items;
-  res.data.count = res.data.total;
-}    
-if(url.includes('/terra/routes/list.json')) {
-  res.data.rows = res.data.items;
-  res.data.count = res.data.total;
-}    
-if(url.includes('/ajax/contract/contract_item_list.json')) {
-  res.data.rows = res.data.data;
-  res.data.count = res.data.total_num;
-}    
-    `,
-  },
+    `
+  }
 };
 
 api()
@@ -66,5 +49,5 @@ api()
       .use(ElementPlus, { locale })
       .use(UmisRenderer, UMIS_CONFIG)
       .use(routers)
-      .mount('#app');
+      .mount("#app");
   });

@@ -1,40 +1,43 @@
 import {
   createRouter,
   createWebHashHistory,
-  createWebHistory,
-} from 'vue-router';
+  createWebHistory
+} from "vue-router";
+import { ElLoading } from "element-plus";
 
-import menuCreator from './creator';
-import { MisSchema } from '../components/entry';
-import frameSchema from '../data/frame';
-import routerSchema from '../data/menu';
+import menuCreator from "./creator";
+import { MisSchema } from "../components/entry";
+import frameSchema from "../data/frame";
+import routerSchema from "../data/menu";
 
 const history =
-  process.env.NODE_ENV === 'development'
+  process.env.NODE_ENV === "development"
     ? createWebHistory()
     : createWebHashHistory();
 
-const menus = menuCreator
-  .dynamicMenuCreator(routerSchema.data.menu)
-  .initDocMenu()
-  .docMenuCreator().menus;
-frameSchema.body[1].body[0].body.body = routerSchema.data.menu;
+const createMenus = menus => {
+  let routerMask;
+  const dyRouter = menuCreator
+    .dynamicMenuCreator(routerSchema.data.menu)
+    .initDocMenu()
+    .docMenuCreator().menus;
 
-const createMenus = () => {
-  return createRouter({
+  frameSchema.body[1].body[0].body.body = routerSchema.data.menu;
+
+  const router = createRouter({
     history,
     routes: [
       {
-        path: '/',
-        name: 'UmisWebsite',
+        path: "/",
+        name: "UmisWebsite",
         component: MisSchema,
         props: {
           initSchema: frameSchema,
           canSchemaUpdate: false,
-          iProtal: true,
+          iProtal: true
         },
-        children: menus,
-      },
+        children: dyRouter
+      }
     ],
     scrollBehavior(to, from, savedPosition) {
       if (savedPosition) {
@@ -42,8 +45,29 @@ const createMenus = () => {
       }
 
       return { x: 0, y: 0 };
-    },
+    }
   });
+  dyRouter.forEach(item => {
+    router.addRoute("UmisWebsite", item);
+  });
+  router.beforeEach((to, from, next) => {
+    if (to.path !== from.path) {
+      routerMask = ElLoading.service({
+        fullscreen: true,
+        customClass: "umis-website__router__loader"
+      });
+    }
+    next();
+  });
+  router.afterEach((route, from) => {
+    const timer = setTimeout(() => {
+      if (routerMask && typeof routerMask.close === "function") {
+        routerMask.close();
+        clearTimeout(timer);
+      }
+    }, 1000);
+  });
+  return router;
 };
 
 export default createMenus;
