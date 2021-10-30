@@ -77,100 +77,7 @@
     /******/
   };
   /******/
-  /******/ var deferredModules = []; // script path function
-  /******/
-  /******/ /******/ function jsonpScriptSrc(chunkId) {
-    /******/ return (
-      __webpack_require__.p +
-      "" +
-      ({}[chunkId] || chunkId) +
-      "." +
-      {
-        "0": "7ad0755b27886628697e",
-        "1": "0b57e91a887f5204e56b",
-        "2": "bcb46d66a0a934bee16f",
-        "3": "c737df12c065c411e433",
-        "4": "64987600b13a9b9ca0b3",
-        "5": "aa32fec4932799e52639",
-        "6": "9dfc445e77d669d614a4",
-        "7": "d1bace6ab5424e763413",
-        "8": "fef8e87119a53e19c7bb",
-        "9": "154deca92f5b950b509d",
-        "10": "d8f25897a8ea81f5c0d3",
-        "11": "5697a5ee1cebe15a7c94",
-        "12": "ab151806780047d04ffb",
-        "13": "997d3a527ad761310835",
-        "14": "57c5b73baafc51e02885",
-        "15": "3287786d1a8d67b5248b",
-        "16": "7e57764cb5be46f03375",
-        "17": "7ecb41e82b67d7fa5213",
-        "18": "3a8620bfb86575438144",
-        "19": "a7793c10eb3cbe5e6149",
-        "20": "e5345aae7dd7449d6d19",
-        "21": "19ab228576d1a55c5489",
-        "22": "093b9c202b294ba481d3",
-        "23": "c6e75fb8e07ea473609e",
-        "24": "c0c48c32c4fae3c04367",
-        "25": "a6fc3f5ffdbf8b30bb92",
-        "26": "342b1e19b26c4d8f700a",
-        "27": "1c34ef598350918dfe0b",
-        "28": "85f57b329f57de61cc25",
-        "29": "50e15cc40553b49a0eab",
-        "30": "9a677f76f1f42368ae29",
-        "31": "733984788e0908e8d4fe",
-        "32": "b6c06864ed7ec37cb98f",
-        "33": "7078ffba318e9ce4127c",
-        "34": "a1ec6f2bf2e460b17a4a",
-        "35": "49cf13de450466efbddf",
-        "36": "3bad5ac281f5a3e13f7d",
-        "37": "be12a089d6890b300989",
-        "38": "4ef0aba629a513cd6eeb",
-        "39": "617569a7e9bf9e27573c",
-        "40": "489772998dae9e0a26ff",
-        "41": "c3d9cb7af5be2d2dff22",
-        "42": "eca5991375feb00a84fb",
-        "43": "42098af941f978a19f53",
-        "44": "b938f7fd1e2d9afd65dc",
-        "45": "eac410422ede9dc39bb3",
-        "46": "dbca08504fb95d6b3c7e",
-        "47": "5199a057ff92e7852128",
-        "48": "57e79429c27ad1d4f5de",
-        "49": "bc02284f86b4b051b549",
-        "50": "0697165bbf7386cf2611",
-        "51": "f822e6785f4ef564115f",
-        "52": "a1d0798dedcfcf8210ba",
-        "53": "22fc44098c719a86306d",
-        "54": "cb4e34045f53d6160c7d",
-        "55": "7b2a2728d22ccda0b324",
-        "56": "52f1fc92f8e59027762d",
-        "57": "d7898592b5168fef1ea7",
-        "58": "6c4fad5ce543f66ce88a",
-        "59": "96b2e3810d8669d00662",
-        "60": "7f078395320bd5eb1400",
-        "61": "0c45dadd4f234106e35d",
-        "62": "51232200970d00da7dc1",
-        "63": "82cb24fd71094aaaeac4",
-        "64": "a0146d4ed53e842aa735",
-        "65": "cec3e7e0dd4b9121beff",
-        "66": "bdc99996959b18a37911",
-        "67": "40c50c4e5ed590d42f04",
-        "68": "093ee827f254c31ff452",
-        "69": "0d75c4c04256eb707e7d",
-        "70": "e860a376843b92dcb5a2",
-        "71": "70b5cb6eeae6b67c1065",
-        "72": "a534a536becf6681ed48",
-        "73": "86b3ef7de939aa54b59c",
-        "74": "56f1c2ebe5dcae1846ae",
-        "75": "f7807760af050e0791c5",
-        "76": "10fc98303b6694abf344",
-        "77": "f0e21d90e7763cb1dba4",
-        "78": "2adb8ff2c3133a5a3b84",
-        "79": "f8d85d27adef38c1ec4e"
-      }[chunkId] +
-      ".js"
-    );
-    /******/
-  } // The require function
+  /******/ var deferredModules = []; // The require function
   /******/
   /******/ /******/ function __webpack_require__(moduleId) {
     /******/
@@ -197,88 +104,8 @@
     /******/
     /******/ /******/ return module.exports;
     /******/
-  } // This file contains only the entry chunk. // The chunk loading function for additional chunks
+  } // expose the modules object (__webpack_modules__)
   /******/
-  /******/ /******/ /******/ __webpack_require__.e = function requireEnsure(
-    chunkId
-  ) {
-    /******/ var promises = []; // JSONP chunk loading for javascript
-    /******/
-    /******/
-    /******/ /******/
-    /******/ var installedChunkData = installedChunks[chunkId];
-    /******/ if (installedChunkData !== 0) {
-      // 0 means "already installed".
-      /******/
-      /******/ // a Promise means "currently loading".
-      /******/ if (installedChunkData) {
-        /******/ promises.push(installedChunkData[2]);
-        /******/
-      } else {
-        /******/ // setup Promise in chunk cache
-        /******/ var promise = new Promise(function(resolve, reject) {
-          /******/ installedChunkData = installedChunks[chunkId] = [
-            resolve,
-            reject
-          ];
-          /******/
-        });
-        /******/ promises.push((installedChunkData[2] = promise)); // start chunk loading
-        /******/
-        /******/ /******/ var script = document.createElement("script");
-        /******/ var onScriptComplete;
-        /******/
-        /******/ script.charset = "utf-8";
-        /******/ script.timeout = 120;
-        /******/ if (__webpack_require__.nc) {
-          /******/ script.setAttribute("nonce", __webpack_require__.nc);
-          /******/
-        }
-        /******/ script.src = jsonpScriptSrc(chunkId); // create error before stack unwound to get useful stacktrace later
-        /******/
-        /******/ /******/ var error = new Error();
-        /******/ onScriptComplete = function(event) {
-          /******/ // avoid mem leaks in IE.
-          /******/ script.onerror = script.onload = null;
-          /******/ clearTimeout(timeout);
-          /******/ var chunk = installedChunks[chunkId];
-          /******/ if (chunk !== 0) {
-            /******/ if (chunk) {
-              /******/ var errorType =
-                event && (event.type === "load" ? "missing" : event.type);
-              /******/ var realSrc = event && event.target && event.target.src;
-              /******/ error.message =
-                "Loading chunk " +
-                chunkId +
-                " failed.\n(" +
-                errorType +
-                ": " +
-                realSrc +
-                ")";
-              /******/ error.name = "ChunkLoadError";
-              /******/ error.type = errorType;
-              /******/ error.request = realSrc;
-              /******/ chunk[1](error);
-              /******/
-            }
-            /******/ installedChunks[chunkId] = undefined;
-            /******/
-          }
-          /******/
-        };
-        /******/ var timeout = setTimeout(function() {
-          /******/ onScriptComplete({ type: "timeout", target: script });
-          /******/
-        }, 120000);
-        /******/ script.onerror = script.onload = onScriptComplete;
-        /******/ document.head.appendChild(script);
-        /******/
-      }
-      /******/
-    }
-    /******/ return Promise.all(promises);
-    /******/
-  }; // expose the modules object (__webpack_modules__)
   /******/
   /******/ /******/ __webpack_require__.m = modules; // expose the module cache
   /******/
@@ -356,12 +183,7 @@
     return Object.prototype.hasOwnProperty.call(object, property);
   }; // __webpack_public_path__
   /******/
-  /******/ /******/ __webpack_require__.p = "/umis-website/dist/"; // on error function for async loading
-  /******/
-  /******/ /******/ __webpack_require__.oe = function(err) {
-    console.error(err);
-    throw err;
-  };
+  /******/ /******/ __webpack_require__.p = "/umis-website/dist/";
   /******/
   /******/ var jsonpArray = (window["webpackJsonp"] =
     window["webpackJsonp"] || []);
@@ -4101,20 +3923,6 @@
         /***/
       },
 
-    /***/ "../umis-renderer/src/component/utils/monaco.js":
-      /*!******************************************************!*\
-  !*** ../umis-renderer/src/component/utils/monaco.js ***!
-  \******************************************************/
-      /*! exports provided: monaco */
-      /***/ function(module, __webpack_exports__, __webpack_require__) {
-        "use strict";
-        eval(
-          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var monaco_editor_esm_vs_editor_editor_main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! monaco-editor/esm/vs/editor/editor.main */ "./node_modules/monaco-editor/esm/vs/editor/editor.main.js");\n/* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "monaco", function() { return monaco_editor_esm_vs_editor_editor_main__WEBPACK_IMPORTED_MODULE_0__; });\n/* harmony import */ var monaco_editor_esm_vs_editor_editor_worker_worker__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! monaco-editor/esm/vs/editor/editor.worker?worker */ "./node_modules/monaco-editor/esm/vs/editor/editor.worker.js?worker");\n/* harmony import */ var monaco_editor_esm_vs_language_json_json_worker_worker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! monaco-editor/esm/vs/language/json/json.worker?worker */ "./node_modules/monaco-editor/esm/vs/language/json/json.worker.js?worker");\n\n\n\nself.MonacoEnvironment = {\n  getWorker: function getWorker(_, label) {\n    if (label === \'json\') {\n      return new monaco_editor_esm_vs_language_json_json_worker_worker__WEBPACK_IMPORTED_MODULE_2__["default"]();\n    }\n\n    return new monaco_editor_esm_vs_editor_editor_worker_worker__WEBPACK_IMPORTED_MODULE_1__["default"]();\n  }\n};\n\n\n//# sourceURL=webpack:///../umis-renderer/src/component/utils/monaco.js?'
-        );
-
-        /***/
-      },
-
     /***/ "../umis-renderer/src/component/utils/tpl.js":
       /*!***************************************************!*\
   !*** ../umis-renderer/src/component/utils/tpl.js ***!
@@ -4389,7 +4197,7 @@
       /***/ function(module, __webpack_exports__, __webpack_require__) {
         "use strict";
         eval(
-          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Users_shuzhong_workspace_github_umis_website_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2 */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");\n/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");\n/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.runtime.esm-bundler.js");\n/* harmony import */ var element_plus__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! element-plus */ "./node_modules/element-plus/es/index.js");\n/* harmony import */ var _utils_monaco__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/monaco */ "../umis-renderer/src/component/utils/monaco.js");\n/* harmony import */ var _props_init_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../props/init-api */ "../umis-renderer/src/component/props/init-api.js");\n\n\n\n\n\n // import Toolmaker from \'./toolmaker/toolmaker\';\n\nvar DEFAULT_CONFIG = {\n  theme: \'vs\',\n  inherit: false,\n  fontSize: \'14px\',\n  autoIndent: true,\n  formatOnType: true,\n  formatOnPaste: true,\n  selectOnLineNumbers: true,\n  scrollBeyondLastLine: false,\n  folding: true,\n  automaticLayout: true,\n  minimap: {\n    enabled: false\n  }\n};\n/* harmony default export */ __webpack_exports__["default"] = (Object(vue__WEBPACK_IMPORTED_MODULE_2__["defineComponent"])({\n  name: \'MisEditor\',\n  components: {\n    ElButton: element_plus__WEBPACK_IMPORTED_MODULE_3__["ElButton"],\n    ElAlert: element_plus__WEBPACK_IMPORTED_MODULE_3__["ElAlert"]\n  },\n  mixins: [_props_init_api__WEBPACK_IMPORTED_MODULE_5__["default"]],\n  props: {\n    path: {\n      type: String,\n      required: true\n    },\n    schema: {\n      type: Object,\n      required: false,\n      default: function _default() {\n        return {};\n      }\n    },\n    editable: {\n      type: Boolean,\n      required: false,\n      default: false\n    }\n  },\n  setup: function setup(props) {\n    var _getCurrentInstance = Object(vue__WEBPACK_IMPORTED_MODULE_2__["getCurrentInstance"])(),\n        proxy = _getCurrentInstance.proxy;\n\n    var state = Object(vue__WEBPACK_IMPORTED_MODULE_2__["reactive"])({\n      errorInfo: \'\',\n      isJson: true,\n      iSchema: {},\n      pageInfo: {},\n      showErrorBoundary: false\n    });\n    var iSchema = Object(vue__WEBPACK_IMPORTED_MODULE_2__["ref"])(\'\');\n    var editor;\n\n    var initEditor = function initEditor() {\n      if (props.editable) {\n        var _window$UMIS = window.UMIS,\n            pageSchema = _window$UMIS.pageSchema,\n            pageInfo = _window$UMIS.pageInfo;\n        state.pageInfo = pageInfo;\n        editor = _utils_monaco__WEBPACK_IMPORTED_MODULE_4__["monaco"].editor.create(proxy.$.refs.editor, Object(_Users_shuzhong_workspace_github_umis_website_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(_Users_shuzhong_workspace_github_umis_website_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, DEFAULT_CONFIG), {}, {\n          language: \'json\',\n          theme: \'vs-dark\'\n        }));\n        updateSchema(pageSchema);\n      } else {\n        editor = _utils_monaco__WEBPACK_IMPORTED_MODULE_4__["monaco"].editor.create(proxy.$.refs.editor, Object(_Users_shuzhong_workspace_github_umis_website_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(_Users_shuzhong_workspace_github_umis_website_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, DEFAULT_CONFIG), {}, {\n          theme: \'vs\',\n          language: \'json\'\n        }));\n        updateSchema();\n      }\n    };\n\n    var handleFormatSchema = function handleFormatSchema(editor) {\n      var timer = setTimeout(function () {\n        editor.getAction([\'editor.action.formatDocument\']).run().then(function () {\n          clearTimeout(timer);\n        });\n      }, 200);\n    };\n\n    var onChange = function onChange() {\n      state.isJson = !state.isJson;\n    };\n\n    var updateSchema = function updateSchema(pageSchema) {\n      if (pageSchema) {\n        iSchema.value = pageSchema;\n      }\n\n      editor.setValue(JSON.stringify(iSchema.value));\n      handleFormatSchema(editor);\n    };\n\n    var onSaveRemote = function onSaveRemote() {\n      onSave().then(function (pageSchema) {\n        proxy.$api.slientApi().put(\'/api/page\', Object(_Users_shuzhong_workspace_github_umis_website_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({\n          pageSchema: JSON.stringify(pageSchema)\n        }, state.pageInfo)).then(function (res) {\n          console.log(res);\n        }).catch(function (error) {\n          proxy.$message({\n            message: error.message,\n            showClose: true,\n            type: \' error\'\n          });\n        });\n      });\n    };\n\n    var onSave = function onSave() {\n      return new Promise(function (resolve, reject) {\n        try {\n          var schema;\n\n          if (state.isJson) {\n            var json = editor.getValue();\n            schema = JSON.parse(json);\n            handleFormatSchema(editor);\n          } else {\n            schema = proxy.$.refs.toolmaker.schemaInstance;\n          }\n\n          proxy.$eventHub.$emit(\'mis-schema:change\', schema);\n          proxy.$message({\n            message: \'保存成功\',\n            showClose: true,\n            type: \'success\'\n          });\n          resolve(schema);\n        } catch (e) {\n          state.errorInfo = e;\n          state.showErrorBoundary = true;\n          state.errorInfoTimer = setTimeout(function () {\n            closeErrorInfo();\n            clearTimeout(state.errorInfoTimer);\n          }, 3500);\n          reject(e);\n        }\n      });\n    };\n\n    var closeErrorInfo = function closeErrorInfo() {\n      state.showErrorBoundary = false;\n    };\n\n    Object(vue__WEBPACK_IMPORTED_MODULE_2__["watch"])(function () {\n      return props.schema;\n    }, function (val) {\n      iSchema.value = val;\n    }, {\n      immediate: true\n    });\n    Object(vue__WEBPACK_IMPORTED_MODULE_2__["watch"])(function () {\n      return state.isJson;\n    }, function (val, old) {\n      if (val && !old) {\n        Object(vue__WEBPACK_IMPORTED_MODULE_2__["nextTick"])(function () {// initEditor();\n        });\n      }\n    });\n    Object(vue__WEBPACK_IMPORTED_MODULE_2__["onMounted"])(function () {\n      window.requestIdleCallback(function () {\n        initEditor();\n      });\n    });\n    return {\n      initEditor: initEditor,\n      onChange: onChange,\n      updateSchema: updateSchema,\n      onSave: onSave,\n      onSaveRemote: onSaveRemote,\n      closeErrorInfo: closeErrorInfo,\n      state: state\n    };\n  }\n}));\n\n//# sourceURL=webpack:///../umis-renderer/src/component/renderer/editor.vue?./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader-v16/dist??ref--0-1'
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Users_shuzhong_workspace_github_umis_website_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2 */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");\n/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");\n/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.runtime.esm-bundler.js");\n/* harmony import */ var element_plus__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! element-plus */ "./node_modules/element-plus/es/index.js");\n/* harmony import */ var _props_init_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../props/init-api */ "../umis-renderer/src/component/props/init-api.js");\n\n\n\n // import { monaco } from \'../utils/monaco\';\n\n // import Toolmaker from \'./toolmaker/toolmaker\';\n\nvar monaco = window.monaco;\nvar DEFAULT_CONFIG = {\n  theme: \'vs\',\n  inherit: false,\n  fontSize: \'14px\',\n  autoIndent: true,\n  formatOnType: true,\n  formatOnPaste: true,\n  selectOnLineNumbers: true,\n  scrollBeyondLastLine: false,\n  folding: true,\n  automaticLayout: true,\n  minimap: {\n    enabled: false\n  }\n};\n/* harmony default export */ __webpack_exports__["default"] = (Object(vue__WEBPACK_IMPORTED_MODULE_2__["defineComponent"])({\n  name: \'MisEditor\',\n  components: {\n    ElButton: element_plus__WEBPACK_IMPORTED_MODULE_3__["ElButton"],\n    ElAlert: element_plus__WEBPACK_IMPORTED_MODULE_3__["ElAlert"]\n  },\n  mixins: [_props_init_api__WEBPACK_IMPORTED_MODULE_4__["default"]],\n  props: {\n    path: {\n      type: String,\n      required: true\n    },\n    schema: {\n      type: Object,\n      required: false,\n      default: function _default() {\n        return {};\n      }\n    },\n    editable: {\n      type: Boolean,\n      required: false,\n      default: false\n    }\n  },\n  setup: function setup(props) {\n    var _getCurrentInstance = Object(vue__WEBPACK_IMPORTED_MODULE_2__["getCurrentInstance"])(),\n        proxy = _getCurrentInstance.proxy;\n\n    var state = Object(vue__WEBPACK_IMPORTED_MODULE_2__["reactive"])({\n      errorInfo: \'\',\n      isJson: true,\n      iSchema: {},\n      pageInfo: {},\n      showErrorBoundary: false\n    });\n    var iSchema = Object(vue__WEBPACK_IMPORTED_MODULE_2__["ref"])(\'\');\n    var editor;\n\n    var initEditor = function initEditor() {\n      if (props.editable) {\n        var _window$UMIS = window.UMIS,\n            pageSchema = _window$UMIS.pageSchema,\n            pageInfo = _window$UMIS.pageInfo;\n        state.pageInfo = pageInfo;\n        editor = monaco.editor.create(proxy.$.refs.editor, Object(_Users_shuzhong_workspace_github_umis_website_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(_Users_shuzhong_workspace_github_umis_website_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, DEFAULT_CONFIG), {}, {\n          language: \'json\',\n          theme: \'vs-dark\'\n        }));\n        updateSchema(pageSchema);\n      } else {\n        editor = monaco.editor.create(proxy.$.refs.editor, Object(_Users_shuzhong_workspace_github_umis_website_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(_Users_shuzhong_workspace_github_umis_website_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, DEFAULT_CONFIG), {}, {\n          theme: \'vs\',\n          language: \'json\'\n        }));\n        updateSchema();\n      }\n    };\n\n    var handleFormatSchema = function handleFormatSchema(editor) {\n      var timer = setTimeout(function () {\n        editor.getAction([\'editor.action.formatDocument\']).run().then(function () {\n          clearTimeout(timer);\n        });\n      }, 200);\n    };\n\n    var onChange = function onChange() {\n      state.isJson = !state.isJson;\n    };\n\n    var updateSchema = function updateSchema(pageSchema) {\n      if (pageSchema) {\n        iSchema.value = pageSchema;\n      }\n\n      editor.setValue(JSON.stringify(iSchema.value));\n      handleFormatSchema(editor);\n    };\n\n    var onSaveRemote = function onSaveRemote() {\n      onSave().then(function (pageSchema) {\n        proxy.$api.slientApi().put(\'/api/page\', Object(_Users_shuzhong_workspace_github_umis_website_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({\n          pageSchema: JSON.stringify(pageSchema)\n        }, state.pageInfo)).then(function (res) {\n          console.log(res);\n        }).catch(function (error) {\n          proxy.$message({\n            message: error.message,\n            showClose: true,\n            type: \' error\'\n          });\n        });\n      });\n    };\n\n    var onSave = function onSave() {\n      return new Promise(function (resolve, reject) {\n        try {\n          var schema;\n\n          if (state.isJson) {\n            var json = editor.getValue();\n            schema = JSON.parse(json);\n            handleFormatSchema(editor);\n          } else {\n            schema = proxy.$.refs.toolmaker.schemaInstance;\n          }\n\n          proxy.$eventHub.$emit(\'mis-schema:change\', schema);\n          proxy.$message({\n            message: \'保存成功\',\n            showClose: true,\n            type: \'success\'\n          });\n          resolve(schema);\n        } catch (e) {\n          state.errorInfo = e;\n          state.showErrorBoundary = true;\n          state.errorInfoTimer = setTimeout(function () {\n            closeErrorInfo();\n            clearTimeout(state.errorInfoTimer);\n          }, 3500);\n          reject(e);\n        }\n      });\n    };\n\n    var closeErrorInfo = function closeErrorInfo() {\n      state.showErrorBoundary = false;\n    };\n\n    Object(vue__WEBPACK_IMPORTED_MODULE_2__["watch"])(function () {\n      return props.schema;\n    }, function (val) {\n      iSchema.value = val;\n    }, {\n      immediate: true\n    });\n    Object(vue__WEBPACK_IMPORTED_MODULE_2__["watch"])(function () {\n      return state.isJson;\n    }, function (val, old) {\n      if (val && !old) {\n        Object(vue__WEBPACK_IMPORTED_MODULE_2__["nextTick"])(function () {// initEditor();\n        });\n      }\n    });\n    Object(vue__WEBPACK_IMPORTED_MODULE_2__["onMounted"])(function () {\n      window.requestIdleCallback(function () {\n        initEditor();\n      });\n    });\n    return {\n      initEditor: initEditor,\n      onChange: onChange,\n      updateSchema: updateSchema,\n      onSave: onSave,\n      onSaveRemote: onSaveRemote,\n      closeErrorInfo: closeErrorInfo,\n      state: state\n    };\n  }\n}));\n\n//# sourceURL=webpack:///../umis-renderer/src/component/renderer/editor.vue?./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader-v16/dist??ref--0-1'
         );
 
         /***/
