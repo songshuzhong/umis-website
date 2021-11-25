@@ -6,9 +6,10 @@ import menusCreator from "./router/index";
 
 import Application from "./App.vue";
 import UmisRenderer, { api } from "./components/entry";
+import UmisEditor from "./components/editor";
 
 import "element-plus/dist/index.css";
-import "../../umis-renderer/src/component/styles/index.scss";
+import "../../umis-renderer/packages/renderer/styles/index.scss";
 import "./style/superfans.scss";
 import "./style/index.scss";
 
@@ -47,6 +48,7 @@ api()
 
     app
       .use(ElementPlus, { locale })
+      .use(UmisEditor)
       .use(UmisRenderer, UMIS_CONFIG)
       .use(routers)
       .mount("#app");

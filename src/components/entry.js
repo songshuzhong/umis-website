@@ -1,18 +1,18 @@
 import { ElMessage, ElNotification } from "element-plus";
-import api from "@umis-renderer/src/component/utils/api";
-import { overwrite } from "@umis-renderer/src/component/utils/config";
+import api from "@umis-renderer/packages/utils/api";
+import { overwrite } from "@umis-renderer/packages/utils/config";
 import {
   renderTpl,
   compiledKey,
   compiledUrl,
   compiledParams,
   expressionEval
-} from "@umis-renderer/src/component/utils/tpl";
-import Eventhub from "@umis-renderer/src/component/utils/eventhub";
-import MisSchema from "@umis-renderer/src/component/renderer/schema.vue";
+} from "@umis-renderer/packages/utils/tpl";
+import Eventhub from "@umis-renderer/packages/utils/eventhub";
+import MisSchema from "@umis-renderer/packages/renderer/component/schema.vue";
 
 const requireComponent = require.context(
-  "@umis-renderer/src/component/renderer",
+  "@umis-renderer/packages/renderer/component",
   true,
   /[\w-]+\.vue$/
 );

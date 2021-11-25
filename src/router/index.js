@@ -21,7 +21,7 @@ const createMenus = menus => {
     .initDocMenu()
     .docMenuCreator().menus;
 
-  frameSchema.body[1].body[0].body.body = menus;
+  frameSchema.body.body[1].body[0].body.body = menus;
 
   const router = createRouter({
     history,
