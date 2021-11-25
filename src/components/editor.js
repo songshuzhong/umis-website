@@ -22,6 +22,5 @@ export default {
       app.component(item.name, item);
     });
     app.config.globalProperties.$misAttrs = misAttrs;
-    console.log(app);
   }
 };
