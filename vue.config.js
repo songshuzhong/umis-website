@@ -26,11 +26,8 @@ module.exports = {
   publicPath: isDev ? '' : '/umis-website/dist',
   configureWebpack: {
     output: {
-      filename:
-        process.env.NODE_ENV === 'production'
-          ? '[name].[chunkhash].js'
-          : '[name].js',
-      chunkFilename: '[name].[chunkhash].js'
+      filename: '[name].[chunkhash:6].js',
+      chunkFilename: '[name].[chunkhash:6].js'
     },
     resolve: {
       alias: {
