@@ -4,7 +4,7 @@ const webpack = require('webpack')
 module.exports = {
   mode: 'production',
   entry: {
-    vendor: ['vue', 'vue-router', 'element-plus', 'axios']
+    vendor: ['vue', 'vue-router', 'element-plus', 'axios', 'js-export-excel']
   },
   output: {
     filename: '[name].dll.js',
