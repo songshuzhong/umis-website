@@ -1,3 +1,4 @@
+const CompressionPlugin = require('compression-webpack-plugin');
 const isDev = process.env.NODE_ENV === "development";
 
 module.exports = {
@@ -14,7 +15,14 @@ module.exports = {
       alias: {
         "@umis-renderer": "../../../umis-renderer"
       }
-    }
+    },
+    plugins: [
+      new CompressionPlugin({
+        test: /\.js$|\.html$|\.css/,
+        threshold: 10240,
+        deleteOriginalAssets: false
+      })
+    ]
   },
   devServer: {
     port: 80,
