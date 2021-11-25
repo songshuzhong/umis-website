@@ -16,30 +16,5 @@
     <img src="./loading.svg" width="250" alt="加载中..." />
   </div>
 </div>
-<script src="https://cdn.bootcdn.net/ajax/libs/monaco-editor/0.26.1/min/vs/loader.min.js"></script>
-<script type="text/javascript">
-  require.config({
-    paths: {
-      vs:
-        'https://cdn.bootcdn.net/ajax/libs/monaco-editor/0.26.1/min/vs',
-    },
-  });
-  window.MonacoEnvironment = { getWorkerUrl: () => proxy };
-  let proxy = URL.createObjectURL(
-    new Blob(
-      [
-        `
-            self.MonacoEnvironment = {
-              baseUrl: 'https://cdn.bootcdn.net/ajax/libs/monaco-editor/0.26.1/min'
-            };
-            importScripts('https://cdn.bootcdn.net/ajax/libs/monaco-editor/0.26.1/min/vs/base/worker/workerMain.min.js');`,
-      ],
-      { type: 'text/javascript' }
-    )
-  );
-  require(['vs/editor/editor.main'], function() {
-    window.monaco = monaco;
-  });
-</script>
 <script type="text/javascript" src="/umis-website/dist/chunk-vendors.e87e87c9682431799685.js"></script><script type="text/javascript" src="/umis-website/dist/app.js"></script></body>
 </html>
