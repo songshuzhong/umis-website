@@ -1,9 +1,33 @@
+const webpack = require('webpack')
 const CompressionPlugin = require('compression-webpack-plugin');
 const isDev = process.env.NODE_ENV === "development";
+
+const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
+const dllReference = (config) => {
+  config.plugin('vendorDll')
+    .use(webpack.DllReferencePlugin, [{
+      context: __dirname,
+      manifest: require('./dll/vendor.manifest.json')
+    }])
+  config.plugin('addAssetHtml')
+    .use(AddAssetHtmlPlugin, [
+      [
+        {
+          filepath: require.resolve(path.resolve(__dirname, 'dll/vendor.dll.js')),
+          outputPath: 'dll',
+          publicPath: '/dll'
+        }
+      ]
+    ])
+    .after('html')
+};
 
 module.exports = {
   publicPath: isDev ? "" : "/umis-website/dist",
   configureWebpack: {
+    entry: {
+      vendor: ['vue', 'vue-router', 'element-ui', 'axios']
+    },
     output: {
       filename:
         process.env.NODE_ENV === "production"
@@ -23,6 +47,11 @@ module.exports = {
         deleteOriginalAssets: false
       })
     ]
+  },
+  chainWebpack(config) {
+    if(process.env.NODE_ENV === 'production'){
+      dllReference(config)
+    }
   },
   devServer: {
     port: 80,
