@@ -10,7 +10,7 @@ import { MisSchema } from "../components/entry";
 import frameSchema from "../data/frame";
 
 const history =
-  process.env.NODE_ENV === "development"
+  process.env.NODE_ENV === "dev"
     ? createWebHistory()
     : createWebHashHistory();
 

@@ -1,7 +1,7 @@
+const path = require('path');
 const webpack = require('webpack')
-const CompressionPlugin = require('compression-webpack-plugin');
 const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
-const isDev = process.env.NODE_ENV === 'development';
+const isDev = process.env.NODE_ENV === 'dev';
 
 const dllReference = (config) => {
   config.plugin('vendorDll')
@@ -26,21 +26,14 @@ module.exports = {
   publicPath: isDev ? '' : '/umis-website/dist',
   configureWebpack: {
     output: {
-      filename: '[name].[chunkhash:6].js',
-      chunkFilename: '[name].[chunkhash:6].js'
+      filename: '[name].[hash:6].js',
+      chunkFilename: '[name].[hash:6].js',
     },
     resolve: {
       alias: {
         '@umis-renderer': '../../../umis-renderer'
       }
     },
-    /*plugins: [
-      new CompressionPlugin({
-        test: /\.js$|\.html$|\.css/,
-        threshold: 10240,
-        deleteOriginalAssets: false
-      })
-    ]*/
   },
   chainWebpack(config) {
     if(process.env.NODE_ENV === 'production'){
