@@ -32,5 +32,4 @@ api()
       .use(UmisRenderer, UMIS_CONFIG)
       .use(routers)
       .mount('#app');
-    console.log(app);
   });
