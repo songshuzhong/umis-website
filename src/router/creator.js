@@ -1,6 +1,6 @@
 import Fold from './fold.vue';
 
-const docSchemas = require.context(/* webpackChunkName: 'docs' */ '../schema', false, /[\w-]+\.js$/);
+const docSchemas = require.context('../schema', false, /[\w-]+\.js$/);
 const docRoute = {
   renderer: 'mis-menu-submenu',
   name: 'docs',
