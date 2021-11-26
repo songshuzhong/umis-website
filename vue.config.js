@@ -23,7 +23,7 @@ const dllReference = (config) => {
 };
 
 module.exports = {
-  publicPath: isDev ? '' : '/umis-website/dist',
+  publicPath: isDev ? './' : '/umis-website/dist',
   configureWebpack: {
     output: {
       filename: '[name].[hash:6].js',

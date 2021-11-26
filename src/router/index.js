@@ -11,7 +11,7 @@ import frameSchema from "../data/frame";
 
 const history =
   process.env.NODE_ENV === "dev"
-    ? createWebHistory()
+    ? createWebHashHistory()
     : createWebHashHistory();
 
 const createMenus = menus => {
