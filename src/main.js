@@ -1,17 +1,17 @@
-import { createApp } from "vue";
-import ElementPlus from "element-plus";
-import locale from "element-plus/lib/locale/lang/zh-cn";
+import { createApp } from 'vue';
+import ElementPlus from 'element-plus';
+import locale from 'element-plus/lib/locale/lang/zh-cn';
 
-import menusCreator from "./router/index";
+import menusCreator from './router/index';
 
-import Application from "./App.vue";
-import UmisRenderer, { api } from "./components/entry";
-import UmisEditor from "./components/editor";
+import Application from './App.vue';
+import UmisRenderer, { api } from './components/entry';
+import UmisEditor from './components/editor';
 
-import "element-plus/dist/index.css";
-import "../../umis-renderer/packages/renderer/styles/index.scss";
-import "./style/superfans.scss";
-import "./style/index.scss";
+import 'element-plus/dist/index.css';
+import '../../umis-renderer/packages/renderer/styles/index.scss';
+import './style/superfans.scss';
+import './style/index.scss';
 
 const app = createApp(Application);
 const UMIS_CONFIG = {
@@ -51,5 +51,5 @@ api()
       .use(UmisEditor)
       .use(UmisRenderer, UMIS_CONFIG)
       .use(routers)
-      .mount("#app");
+      .mount('#app');
   });

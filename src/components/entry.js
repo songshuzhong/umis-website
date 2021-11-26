@@ -1,18 +1,17 @@
-import { ElMessage, ElNotification } from "element-plus";
-import api from "@umis-renderer/packages/utils/api";
-import { overwrite } from "@umis-renderer/packages/utils/config";
+import { ElMessage, ElNotification } from 'element-plus';
+import api from '@umis-renderer/packages/utils/api';
+import { overwrite } from '@umis-renderer/packages/utils/config';
 import {
   renderTpl,
   compiledKey,
   compiledUrl,
   compiledParams,
   expressionEval
-} from "@umis-renderer/packages/utils/tpl";
-import Eventhub from "@umis-renderer/packages/utils/eventhub";
-import MisSchema from "@umis-renderer/packages/renderer/component/schema.vue";
+} from '@umis-renderer/packages/utils/tpl';
+import Eventhub from '@umis-renderer/packages/utils/eventhub';
 
 const requireComponent = require.context(
-  "@umis-renderer/packages/renderer/component",
+  '@umis-renderer/packages/renderer/component',
   true,
   /[\w-]+\.vue$/
 );
@@ -24,15 +23,15 @@ export default {
 
     requireComponent.keys().forEach(filePath => {
       const componentConfig = requireComponent(filePath);
-      let componentName = filePath.replace(/(.*\/)*([^.]+).*/gi, "$2");
-      if (filePath.includes("form")) {
+      let componentName = filePath.replace(/(.*\/)*([^.]+).*/gi, '$2');
+      if (filePath.includes('form')) {
         formItems.push(`mis-${componentName}`);
       }
       misComponents.push(`mis-${componentName}`);
       componentName = componentName
-        .split("-")
+        .split('-')
         .map(kebab => kebab.charAt(0).toUpperCase() + kebab.slice(1))
-        .join("");
+        .join('');
 
       app.component(
         `Mis${componentName}`,
@@ -53,4 +52,4 @@ export default {
   }
 };
 
-export { api, MisSchema };
+export { api };

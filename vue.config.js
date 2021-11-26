@@ -1,5 +1,5 @@
 const path = require('path');
-const webpack = require('webpack')
+const webpack = require('webpack');
 const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'dev';
 
@@ -8,7 +8,7 @@ const dllReference = (config) => {
     .use(webpack.DllReferencePlugin, [{
       context: __dirname,
       manifest: require('./dist/dll/vendor.manifest.json')
-    }])
+    }]);
   config.plugin('addAssetHtml')
     .use(AddAssetHtmlPlugin, [
       [
@@ -19,7 +19,7 @@ const dllReference = (config) => {
         }
       ]
     ])
-    .after('html')
+    .after('html');
 };
 
 module.exports = {
@@ -34,10 +34,13 @@ module.exports = {
         '@umis-renderer': '../../../umis-renderer'
       }
     },
+    optimization: {
+      minimize: !isDev
+    }
   },
   chainWebpack(config) {
     if(process.env.NODE_ENV === 'production'){
-      dllReference(config)
+      dllReference(config);
     }
   },
   devServer: {
