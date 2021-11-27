@@ -36,12 +36,16 @@ module.exports = {
     },
     optimization: {
       minimize: !isDev
-    }
+    },
   },
   chainWebpack(config) {
     if(process.env.NODE_ENV === 'production'){
       dllReference(config);
     }
+  },
+  css: {
+    extract: true,
+    sourceMap: false,
   },
   devServer: {
     port: 80,
