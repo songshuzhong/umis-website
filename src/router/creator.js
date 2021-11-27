@@ -1,6 +1,6 @@
 import Fold from './fold.vue';
+import {docList} from '../data/docs.js';
 
-const docSchemas = require.context('../schema', false, /[\w-]+\.js$/);
 const docRoute = {
   renderer: 'mis-menu-submenu',
   name: 'docs',
@@ -36,23 +36,21 @@ export default {
   },
   docMenuCreator(basename = '/docs') {
     const routeFold = this.initRouteFold(docRoute);
-    docSchemas.keys().forEach(filePath => {
-      const docItemName = filePath.replace(/(.*\/)*([^.]+).*/gi, '$2');
+    docList.forEach(item => {
       routesList[routesList.length - 1].body.push({
         renderer: 'mis-menu-item',
-        name: `${basename}/${docItemName}`,
-        title: docSchemas(filePath).default.title || docItemName
+        name: `${basename}/${item.name}`,
+        title: item.title
       });
       routeFold.children.push({
-        path: `${basename}/${docItemName}`,
+        path: `${basename}/${item.name}`,
         component: () => import('@umis-renderer/packages/renderer/component/schema.vue'),
         props: {
-          initSchema: docSchemas(filePath).default,
-          url: docItemName,
+          url: `https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/docs/${item.name}`,
           iProtal: false
         },
         meta: {
-          title: docSchemas(filePath).default.title || docItemName
+          title: item.title
         }
       });
     });
