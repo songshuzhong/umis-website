@@ -64,27 +64,27 @@ module.exports = {
           {
             filepath: path.resolve(__dirname, 'public/dll/vendor.dll.js'),
             outputPath: 'dll',
-            publicPath: '/dll'
+            publicPath: isDev ? './' : '/umis-website/dist'
           },
           {
             filepath: path.resolve(__dirname, 'public/dll/copy_to_clipboard.dll.js'),
             outputPath: 'dll',
-            publicPath: '/dll'
+            publicPath: isDev ? './' : '/umis-website/dist'
           },
           {
             filepath: path.resolve(__dirname, 'public/dll/echarts.dll.js'),
             outputPath: 'dll',
-            publicPath: '/dll'
+            publicPath: isDev ? './' : '/umis-website/dist'
           },
           {
             filepath: path.resolve(__dirname, 'public/dll/qrcode2.dll.js'),
             outputPath: 'dll',
-            publicPath: '/dll'
+            publicPath: isDev ? './' : '/umis-website/dist'
           },
           {
             filepath: path.resolve(__dirname, 'public/dll/js_export_excel.dll.js'),
             outputPath: 'dll',
-            publicPath: '/dll'
+            publicPath: isDev ? './' : '/umis-website/dist'
           }
         ]
       ]);
