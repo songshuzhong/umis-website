@@ -3,31 +3,15 @@ const webpack = require('webpack');
 const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'dev';
 
-const dllReference = (config) => {
-  config.plugin('vendorDll')
-    .use(webpack.DllReferencePlugin, [{
-      context: __dirname,
-      manifest: require('./dist/dll/vendor.manifest.json')
-    }]);
-  config.plugin('addAssetHtml')
-    .use(AddAssetHtmlPlugin, [
-      [
-        {
-          filepath: require.resolve(path.resolve(__dirname, 'dist/dll/vendor.dll.js')),
-          outputPath: 'dist/dll',
-          publicPath: '/dist/dll'
-        }
-      ]
-    ])
-    .after('html');
-};
-
 module.exports = {
   publicPath: isDev ? './' : '/umis-website/dist',
   configureWebpack: {
-    output: {
+    output: isDev? {
       filename: '[name].[hash:6].js',
       chunkFilename: '[name].[hash:6].js',
+    }: {
+      filename: '[name].[contenthash:6].js',
+      chunkFilename: '[name].[contenthash:6].js',
     },
     resolve: {
       alias: {
@@ -36,29 +20,86 @@ module.exports = {
     },
     optimization: {
       minimize: !isDev
-    },
-  },
-  chainWebpack(config) {
-    if(process.env.NODE_ENV === 'production'){
-      dllReference(config);
     }
+  },
+  chainWebpack: config => {
+    config.plugin('vendorDll1')
+      .use(webpack.DllReferencePlugin, [
+        {
+          context: __dirname,
+          manifest: require('./public/manifest/vendor.manifest.json')
+        }
+      ]);
+    config.plugin('vendorDll2')
+      .use(webpack.DllReferencePlugin, [
+        {
+          context: __dirname,
+          manifest: require('./public/manifest/copy_to_clipboard.manifest.json')
+        }
+      ]);
+    config.plugin('vendorDll3')
+      .use(webpack.DllReferencePlugin, [
+        {
+          context: __dirname,
+          manifest: require('./public/manifest/echarts.manifest.json')
+        }
+      ]);
+    config.plugin('vendorDll4')
+      .use(webpack.DllReferencePlugin, [
+        {
+          context: __dirname,
+          manifest: require('./public/manifest/qrcode2.manifest.json')
+        }
+      ]);
+    config.plugin('vendorDll5')
+      .use(webpack.DllReferencePlugin, [
+        {
+          context: __dirname,
+          manifest: require('./public/manifest/js_export_excel.manifest.json')
+        }
+      ]);
+    config.plugin('asset')
+      .use(AddAssetHtmlPlugin, [
+        [
+          {
+            filepath: path.resolve(__dirname, 'public/dll/vendor.dll.js'),
+            outputPath: 'dll',
+            publicPath: '/dll'
+          },
+          {
+            filepath: path.resolve(__dirname, 'public/dll/copy_to_clipboard.dll.js'),
+            outputPath: 'dll',
+            publicPath: '/dll'
+          },
+          {
+            filepath: path.resolve(__dirname, 'public/dll/echarts.dll.js'),
+            outputPath: 'dll',
+            publicPath: '/dll'
+          },
+          {
+            filepath: path.resolve(__dirname, 'public/dll/qrcode2.dll.js'),
+            outputPath: 'dll',
+            publicPath: '/dll'
+          },
+          {
+            filepath: path.resolve(__dirname, 'public/dll/js_export_excel.dll.js'),
+            outputPath: 'dll',
+            publicPath: '/dll'
+          }
+        ]
+      ]);
   },
   css: {
     extract: true,
     sourceMap: false,
   },
   devServer: {
-    port: 80,
     disableHostCheck: true,
     proxy: {
       '/api': {
         target: 'http://localhost:1026',
         changeOrigin: true
       },
-      '/ajax': {
-        target: 'http://kadm.test.weibo.com',
-        changeOrigin: true
-      }
     }
   }
 };

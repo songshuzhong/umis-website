@@ -1,12 +1,21 @@
 module.exports = {
-  parser: 'babel-eslint',
+  parser: 'vue-eslint-parser',
   parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module',
     parser: 'babel-eslint',
   },
   plugins: ['vue'],
-  extends: ['plugin:vue/vue3-essential'],
+  extends: [
+    'plugin:vue/vue3-essential',
+    'eslint:recommended'
+  ],
+  globals: {
+    module: true,
+    require: true,
+    process: true,
+    __dirname: true
+  },
   rules: {
     curly: 2,
     eqeqeq: 2,

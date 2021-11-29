@@ -47,7 +47,6 @@ export default {
         component: () => import('@umis-renderer/packages/renderer/component/schema.vue'),
         props: {
           url: `https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/docs/${item.name}`,
-          iProtal: false
         },
         meta: {
           title: item.title
