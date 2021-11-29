@@ -4,7 +4,7 @@ const webpack = require('webpack');
 module.exports = {
   mode: 'production',
   entry: {
-    vendor: ['vue', 'vue-router', 'element-plus', 'axios'],
+    dll_vendor: ['vue', 'vue-router', 'element-plus', 'axios'],
     qrcode2: ['qrcode2'],
     echarts: ['echarts'],
     js_export_excel: ['js-export-excel'],
