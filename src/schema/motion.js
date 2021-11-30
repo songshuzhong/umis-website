@@ -1,497 +1,497 @@
-import ajaxSchema from "./action/ajax";
-import copySchema from "./action/copy";
-import dialogSchema from "./action/dialog";
-import drawerSchema from "./action/drawer";
-import popSchema from "./action/pop";
-import urlSchema from "./action/url";
-import actionsSchema from "./action/actions";
+import ajaxSchema from './action/ajax';
+import copySchema from './action/copy';
+import dialogSchema from './action/dialog';
+import drawerSchema from './action/drawer';
+import popSchema from './action/pop';
+import urlSchema from './action/url';
+import actionsSchema from './action/actions';
 
 export default {
-  renderer: "mis-page",
-  classname: "umis-website-doc",
-  title: "行为按钮",
+  renderer: 'mis-page',
+  classname: 'umis-website-doc',
+  title: '行为按钮',
   initData: {
-    name: "shuzhong song",
-    email: "sshuzhong@outlook.com",
-    phone: "15510351839",
-    province: "北京",
-    age: "2"
+    name: 'shuzhong song',
+    email: 'sshuzhong@outlook.com',
+    phone: '15510351839',
+    province: '北京',
+    age: '2'
   },
   body: [
     {
-      renderer: "mis-html",
+      renderer: 'mis-html',
       html:
-        "用户的操作行为，目前支持Ajax、弹窗、粘贴、跳转、表单提交重置等常用功能。具体详见Demo："
+        '用户的操作行为，目前支持Ajax、弹窗、粘贴、跳转、表单提交重置等常用功能。具体详见Demo：'
     },
     {
-      renderer: "mis-divider"
+      renderer: 'mis-divider'
     },
     {
-      renderer: "mis-card",
-      header: "异步请求Action",
+      renderer: 'mis-card',
+      header: '异步请求Action',
       body: {
-        renderer: "mis-schema",
+        renderer: 'mis-schema',
         initSchema: ajaxSchema,
         canSchemaUpdate: false,
         iProtal: false
       },
       footer: {
-        renderer: "mis-action",
-        text: "查看源码",
-        actionType: "mis-dialog",
+        renderer: 'mis-action',
+        text: '查看源码',
+        actionType: 'mis-dialog',
         body: {
-          title: "源码",
+          title: '源码',
           body: {
-            renderer: "mis-editor",
+            renderer: 'mis-editor',
             schema: ajaxSchema
           }
         }
       }
     },
     {
-      renderer: "mis-divider"
+      renderer: 'mis-divider'
     },
     {
-      renderer: "mis-card",
-      header: "复制Action",
+      renderer: 'mis-card',
+      header: '复制Action',
       body: {
-        renderer: "mis-schema",
+        renderer: 'mis-schema',
         initSchema: copySchema,
         canSchemaUpdate: false,
         iProtal: false
       },
       footer: {
-        renderer: "mis-action",
-        text: "查看源码",
-        actionType: "mis-dialog",
+        renderer: 'mis-action',
+        text: '查看源码',
+        actionType: 'mis-dialog',
         body: {
-          title: "源码",
+          title: '源码',
           body: {
-            renderer: "mis-editor",
+            renderer: 'mis-editor',
             schema: copySchema
           }
         }
       }
     },
     {
-      renderer: "mis-divider"
+      renderer: 'mis-divider'
     },
     {
-      renderer: "mis-card",
-      header: "DialogAction",
+      renderer: 'mis-card',
+      header: 'DialogAction',
       body: {
-        renderer: "mis-schema",
+        renderer: 'mis-schema',
         initSchema: dialogSchema,
         canSchemaUpdate: false,
         iProtal: false
       },
       footer: {
-        renderer: "mis-action",
-        text: "查看源码",
-        actionType: "mis-dialog",
+        renderer: 'mis-action',
+        text: '查看源码',
+        actionType: 'mis-dialog',
         body: {
-          title: "源码",
+          title: '源码',
           body: {
-            renderer: "mis-editor",
+            renderer: 'mis-editor',
             schema: dialogSchema
           }
         }
       }
     },
     {
-      renderer: "mis-divider"
+      renderer: 'mis-divider'
     },
     {
-      renderer: "mis-card",
-      header: "DrawerAction",
+      renderer: 'mis-card',
+      header: 'DrawerAction',
       body: {
-        renderer: "mis-schema",
+        renderer: 'mis-schema',
         initSchema: drawerSchema,
         canSchemaUpdate: false,
         iProtal: false
       },
       footer: {
-        renderer: "mis-action",
-        text: "查看源码",
-        actionType: "mis-dialog",
+        renderer: 'mis-action',
+        text: '查看源码',
+        actionType: 'mis-dialog',
         body: {
-          title: "源码",
+          title: '源码',
           body: {
-            renderer: "mis-editor",
+            renderer: 'mis-editor',
             schema: drawerSchema
           }
         }
       }
     },
     {
-      renderer: "mis-divider"
+      renderer: 'mis-divider'
     },
     {
-      renderer: "mis-card",
-      header: "PopAction",
+      renderer: 'mis-card',
+      header: 'PopAction',
       body: {
-        renderer: "mis-schema",
+        renderer: 'mis-schema',
         initSchema: popSchema,
         canSchemaUpdate: false,
         iProtal: false
       },
       footer: {
-        renderer: "mis-action",
-        text: "查看源码",
-        actionType: "mis-dialog",
+        renderer: 'mis-action',
+        text: '查看源码',
+        actionType: 'mis-dialog',
         body: {
-          title: "源码",
+          title: '源码',
           body: {
-            renderer: "mis-editor",
+            renderer: 'mis-editor',
             schema: popSchema
           }
         }
       }
     },
     {
-      renderer: "mis-divider"
+      renderer: 'mis-divider'
     },
     {
-      renderer: "mis-card",
-      header: "UrlAction",
+      renderer: 'mis-card',
+      header: 'UrlAction',
       body: {
-        renderer: "mis-schema",
+        renderer: 'mis-schema',
         initSchema: urlSchema,
         canSchemaUpdate: false,
         iProtal: false
       },
       footer: {
-        renderer: "mis-action",
-        text: "查看源码",
-        actionType: "mis-dialog",
+        renderer: 'mis-action',
+        text: '查看源码',
+        actionType: 'mis-dialog',
         body: {
-          title: "源码",
+          title: '源码',
           body: {
-            renderer: "mis-editor",
+            renderer: 'mis-editor',
             schema: urlSchema
           }
         }
       }
     },
     {
-      renderer: "mis-divider"
+      renderer: 'mis-divider'
     },
     {
-      renderer: "mis-card",
-      header: "Action组",
+      renderer: 'mis-card',
+      header: 'Action组',
       body: {
-        renderer: "mis-schema",
+        renderer: 'mis-schema',
         initSchema: actionsSchema,
         canSchemaUpdate: false,
         iProtal: false
       },
       footer: {
-        renderer: "mis-action",
-        text: "查看源码",
-        actionType: "mis-dialog",
+        renderer: 'mis-action',
+        text: '查看源码',
+        actionType: 'mis-dialog',
         body: {
-          title: "源码",
+          title: '源码',
           body: {
-            renderer: "mis-editor",
+            renderer: 'mis-editor',
             schema: actionsSchema
           }
         }
       }
     },
     {
-      renderer: "mis-divider",
-      text: "属性列表"
+      renderer: 'mis-divider',
+      text: '属性列表'
     },
     {
-      renderer: "mis-table",
+      renderer: 'mis-table',
       columns: [
         {
-          name: "prop",
-          label: "属性"
+          name: 'prop',
+          label: '属性'
         },
         {
-          name: "desc",
-          label: "说明"
+          name: 'desc',
+          label: '说明'
         },
         {
-          name: "type",
-          label: "类型"
+          name: 'type',
+          label: '类型'
         },
         {
-          name: "options",
-          label: "可选值"
+          name: 'options',
+          label: '可选值'
         },
         {
-          name: "value",
-          label: "可选值"
+          name: 'value',
+          label: '可选值'
         }
       ],
       initRows: [
         {
-          prop: "renderer",
-          desc: "渲染器名称",
-          type: "string",
-          options: "-",
-          value: "mis-action"
+          prop: 'renderer',
+          desc: '渲染器名称',
+          type: 'string',
+          options: '-',
+          value: 'mis-action'
         },
         {
-          prop: "actionType",
-          desc: "行为类型",
-          type: "string",
-          options: "mis-[ajax, dialog, drawer, url, copy]",
-          value: "-"
+          prop: 'actionType',
+          desc: '行为类型',
+          type: 'string',
+          options: 'mis-[ajax, dialog, drawer, url, copy]',
+          value: '-'
         },
         {
-          prop: "actionApi",
-          desc: "当actionType=mis-ajax时，必须配置",
-          type: "string",
-          options: "-",
-          value: "-"
+          prop: 'actionApi',
+          desc: '当actionType=mis-ajax时，必须配置',
+          type: 'string',
+          options: '-',
+          value: '-'
         },
         {
-          prop: "actions",
-          desc: "行为组，存放多个action",
-          type: "array",
-          options: "mis-action",
-          value: "-"
+          prop: 'actions',
+          desc: '行为组，存放多个action',
+          type: 'array',
+          options: 'mis-action',
+          value: '-'
         },
         {
-          prop: "text",
-          desc: "显示文案",
-          type: "String / <%= data.tpl %>",
-          options: "-",
-          value: "action"
+          prop: 'text',
+          desc: '显示文案',
+          type: 'String / <%= data.tpl %>',
+          options: '-',
+          value: 'action'
         },
         {
-          prop: "size",
-          desc: "尺寸",
-          type: "String",
-          options: "medium / small / mini",
-          value: "-"
+          prop: 'size',
+          desc: '尺寸',
+          type: 'String',
+          options: 'medium / small / mini',
+          value: '-'
         },
         {
-          prop: "type",
-          desc: "类型",
-          type: "String",
-          options: "primary / success / warning / danger / info / text",
-          value: "-"
+          prop: 'type',
+          desc: '类型',
+          type: 'String',
+          options: 'primary / success / warning / danger / info / text',
+          value: '-'
         },
         {
-          prop: "plain",
-          desc: "朴素",
-          type: "boolean",
-          options: "-",
-          value: "false"
+          prop: 'plain',
+          desc: '朴素',
+          type: 'boolean',
+          options: '-',
+          value: 'false'
         },
         {
-          prop: "round",
-          desc: "圆角",
-          type: "boolean",
-          options: "-",
-          value: "false"
+          prop: 'round',
+          desc: '圆角',
+          type: 'boolean',
+          options: '-',
+          value: 'false'
         },
         {
-          prop: "circle",
-          desc: "圆形",
-          type: "boolean",
-          options: "-",
-          value: "false"
+          prop: 'circle',
+          desc: '圆形',
+          type: 'boolean',
+          options: '-',
+          value: 'false'
         },
         {
-          prop: "icon",
-          desc: "图标",
-          type: "string",
-          options: "-",
-          value: "-"
+          prop: 'icon',
+          desc: '图标',
+          type: 'string',
+          options: '-',
+          value: '-'
         },
         {
-          prop: "classname",
-          desc: "样式",
-          type: "string",
-          options: "-",
-          value: "-"
+          prop: 'classname',
+          desc: '样式',
+          type: 'string',
+          options: '-',
+          value: '-'
         },
         {
-          prop: "disabledOn",
-          desc: "不可用条件",
-          type: "string",
-          options: "例：data.sex === 0",
-          value: "-"
+          prop: 'disabledOn',
+          desc: '不可用条件',
+          type: 'string',
+          options: '例：data.sex === 0',
+          value: '-'
         },
         {
-          prop: "target",
-          desc: "行为结束后对目标组件后续操作",
-          type: "string",
-          options: "-",
-          value: "-"
+          prop: 'target',
+          desc: '行为结束后对目标组件后续操作',
+          type: 'string',
+          options: '-',
+          value: '-'
         },
         {
-          prop: "popupType",
-          desc: "辅助弹层类型",
-          type: "string",
-          options: "over / confirm / tip / badge",
-          value: "-"
+          prop: 'popupType',
+          desc: '辅助弹层类型',
+          type: 'string',
+          options: 'over / confirm / tip / badge',
+          value: '-'
         },
         {
-          prop: "popperWidth",
-          desc: "辅助弹层宽度，over时可用",
-          type: "string",
-          options: "",
-          value: "-"
+          prop: 'popperWidth',
+          desc: '辅助弹层宽度，over时可用',
+          type: 'string',
+          options: '',
+          value: '-'
         },
         {
-          prop: "popperWidth",
-          desc: "辅助弹层宽度，over时可用",
-          type: "string",
-          options: "",
-          value: "-"
+          prop: 'popperWidth',
+          desc: '辅助弹层宽度，over时可用',
+          type: 'string',
+          options: '',
+          value: '-'
         },
 
         {
-          prop: "popoverTitle",
-          desc: "标题，over时可用",
-          type: "string",
-          options: "",
-          value: "-"
+          prop: 'popoverTitle',
+          desc: '标题，over时可用',
+          type: 'string',
+          options: '',
+          value: '-'
         },
         {
-          prop: "popoverContent",
-          desc: "内容，over时可用",
-          type: "string",
-          options: "",
-          value: "-"
+          prop: 'popoverContent',
+          desc: '内容，over时可用',
+          type: 'string',
+          options: '',
+          value: '-'
         },
         {
-          prop: "popoverPlacement",
-          desc: "位置，over时可用",
-          type: "string",
-          options: "top / top-start / top-end...",
-          value: "-"
+          prop: 'popoverPlacement',
+          desc: '位置，over时可用',
+          type: 'string',
+          options: 'top / top-start / top-end...',
+          value: '-'
         },
         {
-          prop: "popperClass",
-          desc: "辅助弹层样式，over时可用",
-          type: "string",
-          options: "",
-          value: "-"
+          prop: 'popperClass',
+          desc: '辅助弹层样式，over时可用',
+          type: 'string',
+          options: '',
+          value: '-'
         },
         {
-          prop: "confirmTitle",
-          desc: "确认标题，confirm时可用",
-          type: "string",
-          options: "",
-          value: "-"
+          prop: 'confirmTitle',
+          desc: '确认标题，confirm时可用',
+          type: 'string',
+          options: '',
+          value: '-'
         },
         {
-          prop: "confirmCancelBtnText",
-          desc: "取消文案， confirm时可用",
-          type: "string",
-          options: "",
-          value: "-"
+          prop: 'confirmCancelBtnText',
+          desc: '取消文案， confirm时可用',
+          type: 'string',
+          options: '',
+          value: '-'
         },
         {
-          prop: "confirmCancelBtnType",
-          desc: "取消按钮类型， confirm时可用",
-          type: "string",
-          options: "",
-          value: "-"
+          prop: 'confirmCancelBtnType',
+          desc: '取消按钮类型， confirm时可用',
+          type: 'string',
+          options: '',
+          value: '-'
         },
         {
-          prop: "confirmBtnText",
-          desc: "确认文案， confirm时可用",
-          type: "string",
-          options: "",
-          value: "-"
+          prop: 'confirmBtnText',
+          desc: '确认文案， confirm时可用',
+          type: 'string',
+          options: '',
+          value: '-'
         },
         {
-          prop: "confirmBtnType",
-          desc: "确认按钮类型， confirm时可用",
-          type: "string",
-          options: "",
-          value: "-"
+          prop: 'confirmBtnType',
+          desc: '确认按钮类型， confirm时可用',
+          type: 'string',
+          options: '',
+          value: '-'
         },
         {
-          prop: "confirmIcon",
-          desc: "图标， confirm时可用",
-          type: "string",
-          options: "",
-          value: "-"
+          prop: 'confirmIcon',
+          desc: '图标， confirm时可用',
+          type: 'string',
+          options: '',
+          value: '-'
         },
         {
-          prop: "confirmIconColor",
-          desc: "图标颜色， confirm时可用",
-          type: "string",
-          options: "",
-          value: "-"
+          prop: 'confirmIconColor',
+          desc: '图标颜色， confirm时可用',
+          type: 'string',
+          options: '',
+          value: '-'
         },
         {
-          prop: "confirmHideIcon",
-          desc: "是否隐藏 icon， confirm时可用",
-          type: "boolean",
-          options: "",
-          value: "-"
+          prop: 'confirmHideIcon',
+          desc: '是否隐藏 icon， confirm时可用',
+          type: 'boolean',
+          options: '',
+          value: '-'
         },
         {
-          prop: "badgeText",
-          desc: "显示值， badge时可用",
-          type: "string",
-          options: "",
-          value: "-"
+          prop: 'badgeText',
+          desc: '显示值， badge时可用',
+          type: 'string',
+          options: '',
+          value: '-'
         },
         {
-          prop: "badgeClass",
-          desc: "样式， badge时可用",
-          type: "string",
-          options: "",
-          value: "-"
+          prop: 'badgeClass',
+          desc: '样式， badge时可用',
+          type: 'string',
+          options: '',
+          value: '-'
         },
         {
-          prop: "tipDisabled",
-          desc: "tip是否可用， tip时可用",
-          type: "boolean",
-          options: "",
-          value: "-"
+          prop: 'tipDisabled',
+          desc: 'tip是否可用， tip时可用',
+          type: 'boolean',
+          options: '',
+          value: '-'
         },
         {
-          prop: "tipEffect",
-          desc: "tip主题， tip时可用",
-          type: "boolean",
-          options: "",
-          value: "-"
+          prop: 'tipEffect',
+          desc: 'tip主题， tip时可用',
+          type: 'boolean',
+          options: '',
+          value: '-'
         },
         {
-          prop: "tipContent",
-          desc: "tip内容， tip时可用",
-          type: "boolean",
-          options: "",
-          value: "-"
+          prop: 'tipContent',
+          desc: 'tip内容， tip时可用',
+          type: 'boolean',
+          options: '',
+          value: '-'
         },
         {
-          prop: "tipPlacement",
-          desc: "tip位置， tip时可用",
-          type: "boolean",
-          options: "",
-          value: "-"
+          prop: 'tipPlacement',
+          desc: 'tip位置， tip时可用',
+          type: 'boolean',
+          options: '',
+          value: '-'
         }
       ]
     },
     {
-      renderer: "mis-wrapper",
-      classname: "umis-website-doc__next-section",
+      renderer: 'mis-wrapper',
+      classname: 'umis-website-doc__next-section',
       body: [
         {
-          renderer: "mis-action",
-          type: "text",
-          text: "《 概念设计",
-          actionType: "mis-url",
-          url: "/docs/concept"
+          renderer: 'mis-action',
+          type: 'text',
+          text: '《 概念设计',
+          actionType: 'mis-url',
+          url: '/docs/concept'
         },
         {
-          renderer: "mis-action",
-          type: "text",
-          text: "Each 》",
-          actionType: "mis-url",
-          url: "/docs/each"
+          renderer: 'mis-action',
+          type: 'text',
+          text: 'Each 》',
+          actionType: 'mis-url',
+          url: '/docs/each'
         }
       ]
     }

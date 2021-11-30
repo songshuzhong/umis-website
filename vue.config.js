@@ -1,41 +1,35 @@
-const CompressionPlugin = require('compression-webpack-plugin');
-const isDev = process.env.NODE_ENV === "development";
+const isDev = process.env.NODE_ENV === 'dev';
 
 module.exports = {
-  publicPath: isDev ? "" : "/umis-website/dist",
+  publicPath: isDev ? './' : '/umis-website/dist',
   configureWebpack: {
-    output: {
-      filename:
-        process.env.NODE_ENV === "production"
-          ? "[name].[chunkhash].js"
-          : "[name].js",
-      chunkFilename: "[name].[chunkhash].js"
+    output: isDev? {
+      filename: 'js/[name].[hash:6].js',
+      chunkFilename: 'chunk/[name].[hash:6].js',
+    }: {
+      filename: 'js/[name].[contenthash:6].js',
+      chunkFilename: 'chunk/[name].[contenthash:6].js',
     },
     resolve: {
       alias: {
-        "@umis-renderer": "../../../umis-renderer"
+        '@umis-renderer': '../../../umis-renderer'
       }
     },
-    plugins: [
-      new CompressionPlugin({
-        test: /\.js$|\.html$|\.css/,
-        threshold: 10240,
-        deleteOriginalAssets: false
-      })
-    ]
+    optimization: {
+      minimize: !isDev
+    }
+  },
+  css: {
+    extract: true,
+    sourceMap: false,
   },
   devServer: {
-    port: 80,
     disableHostCheck: true,
     proxy: {
-      "/api": {
-        target: "http://localhost:1026",
+      '/api': {
+        target: 'http://localhost:1026',
         changeOrigin: true
       },
-      "/ajax": {
-        target: "http://kadm.test.weibo.com",
-        changeOrigin: true
-      }
     }
   }
 };

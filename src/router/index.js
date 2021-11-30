@@ -1,17 +1,16 @@
 import {
   createRouter,
   createWebHashHistory,
-  createWebHistory
-} from "vue-router";
-import { ElLoading } from "element-plus";
+  // createWebHistory
+} from 'vue-router';
+import { ElLoading } from 'element-plus';
 
-import menuCreator from "./creator";
-import { MisSchema } from "../components/entry";
-import frameSchema from "../data/frame";
+import menuCreator from './creator';
+import frameSchema from '../data/frame';
 
 const history =
-  process.env.NODE_ENV === "development"
-    ? createWebHistory()
+  process.env.NODE_ENV === 'dev'
+    ? createWebHashHistory()
     : createWebHashHistory();
 
 const createMenus = menus => {
@@ -27,9 +26,9 @@ const createMenus = menus => {
     history,
     routes: [
       {
-        path: "/",
-        name: "UmisWebsite",
-        component: MisSchema,
+        path: '/',
+        name: 'UmisWebsite',
+        component: () => import('@umis-renderer/packages/renderer/component/schema.vue'),
         props: {
           initSchema: frameSchema,
           canSchemaUpdate: false,
@@ -47,20 +46,20 @@ const createMenus = menus => {
     }
   });
   dyRouter.forEach(item => {
-    router.addRoute("UmisWebsite", item);
+    router.addRoute('UmisWebsite', item);
   });
   router.beforeEach((to, from, next) => {
     if (to.path !== from.path) {
       routerMask = ElLoading.service({
         fullscreen: true,
-        customClass: "umis-website__router__loader"
+        customClass: 'umis-website__router__loader'
       });
     }
     next();
   });
-  router.afterEach((route, from) => {
+  router.afterEach(() => {
     const timer = setTimeout(() => {
-      if (routerMask && typeof routerMask.close === "function") {
+      if (routerMask && typeof routerMask.close === 'function') {
         routerMask.close();
         clearTimeout(timer);
       }
