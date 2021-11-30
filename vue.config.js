@@ -3,6 +3,25 @@ const webpack = require('webpack');
 const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'dev';
 
+const dllReference = (config) => {
+  config.plugin('vendorDll')
+    .use(webpack.DllReferencePlugin, [{
+      context: __dirname,
+      manifest: require('./public/dll/vendor.manifest.json')
+    }]);
+  config.plugin('addAssetHtml')
+    .use(AddAssetHtmlPlugin, [
+      [
+        {
+          filepath: require.resolve(path.resolve(__dirname, 'public/dll/vendor.dll.js')),
+          outputPath: 'dist/dll',
+          publicPath: '/dist/dll'
+        }
+      ]
+    ])
+    .after('html');
+};
+
 module.exports = {
   publicPath: isDev ? './' : '/umis-website/dist',
   configureWebpack: {
@@ -22,52 +41,10 @@ module.exports = {
       minimize: !isDev
     }
   },
-  chainWebpack: config => {
-    config.plugin('vendorDll1')
-      .use(webpack.DllReferencePlugin, [
-        {
-          context: __dirname,
-          manifest: require('./public/manifest/vendor.manifest.json')
-        }
-      ]);
-    config.plugin('vendorDll2')
-      .use(webpack.DllReferencePlugin, [
-        {
-          context: __dirname,
-          manifest: require('./public/manifest/copy_to_clipboard.manifest.json')
-        }
-      ]);
-    config.plugin('vendorDll3')
-      .use(webpack.DllReferencePlugin, [
-        {
-          context: __dirname,
-          manifest: require('./public/manifest/echarts.manifest.json')
-        }
-      ]);
-    config.plugin('vendorDll4')
-      .use(webpack.DllReferencePlugin, [
-        {
-          context: __dirname,
-          manifest: require('./public/manifest/qrcode2.manifest.json')
-        }
-      ]);
-    config.plugin('vendorDll5')
-      .use(webpack.DllReferencePlugin, [
-        {
-          context: __dirname,
-          manifest: require('./public/manifest/js_export_excel.manifest.json')
-        }
-      ]);
-    config.plugin('asset')
-      .use(AddAssetHtmlPlugin, [
-        [
-          {
-            filepath: path.resolve(__dirname, 'public/dll/vendor.dll.js'),
-            outputPath: 'dll',
-            publicPath: isDev ? './' : '/umis-website/dist/dll'
-          }
-        ]
-      ]);
+  chainWebpack(config) {
+    if(process.env.NODE_ENV === 'production'){
+      dllReference(config);
+    }
   },
   css: {
     extract: true,

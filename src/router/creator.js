@@ -22,7 +22,7 @@ export default {
       children: []
     };
   },
-  initRoute(item, basename) {
+  initRoute(item) {
     return {
       path: `${item.name}`,
       component: () => import('@umis-renderer/packages/renderer/component/schema.vue'),

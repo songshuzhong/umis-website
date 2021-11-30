@@ -1,7 +1,7 @@
 import {
   createRouter,
   createWebHashHistory,
-  createWebHistory
+  // createWebHistory
 } from 'vue-router';
 import { ElLoading } from 'element-plus';
 
@@ -57,7 +57,7 @@ const createMenus = menus => {
     }
     next();
   });
-  router.afterEach((route, from) => {
+  router.afterEach(() => {
     const timer = setTimeout(() => {
       if (routerMask && typeof routerMask.close === 'function') {
         routerMask.close();
