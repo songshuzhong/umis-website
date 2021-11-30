@@ -26,11 +26,11 @@ module.exports = {
   publicPath: isDev ? './' : '/umis-website/dist',
   configureWebpack: {
     output: isDev? {
-      filename: '[name].[hash:6].js',
-      chunkFilename: '[name].[hash:6].js',
+      filename: 'js/[name].[hash:6].js',
+      chunkFilename: 'chunk/[name].[hash:6].js',
     }: {
-      filename: '[name].[contenthash:6].js',
-      chunkFilename: '[name].[contenthash:6].js',
+      filename: 'js/[name].[contenthash:6].js',
+      chunkFilename: 'chunk/[name].[contenthash:6].js',
     },
     resolve: {
       alias: {
