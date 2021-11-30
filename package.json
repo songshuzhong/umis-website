@@ -44,6 +44,7 @@
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-vue": "^7.20.0",
     "js-export-excel": "^1.1.4",
+    "js-watermarks": "^0.6.0",
     "lint-staged": "^8.2.1",
     "lodash.clonedeep": "^4.5.0",
     "lodash.debounce": "^4.0.8",
