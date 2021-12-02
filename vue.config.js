@@ -21,7 +21,7 @@ module.exports = {
     },
     plugins: [
       new MonacoWebpackPlugin({
-        filename: '/worker/[name].worker.js',
+        filename: 'worker/[name].worker.js',
         languages: ['json'],
       }),
     ],
