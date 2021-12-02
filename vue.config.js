@@ -1,3 +1,4 @@
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'dev';
 
 module.exports = {
@@ -17,7 +18,13 @@ module.exports = {
     },
     optimization: {
       minimize: !isDev
-    }
+    },
+    plugins: [
+      new MonacoWebpackPlugin({
+        filename: '/worker/[name].worker.js',
+        languages: ['json'],
+      }),
+    ],
   },
   css: {
     extract: true,
