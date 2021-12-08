@@ -7,6 +7,7 @@ const getTimeSchema = {
       'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/time',
     method: 'get',
   },
+  interval: 1000,
   body: {
     renderer: 'mis-html',
     html: '<h1>获取当前时间：<%=data.time%></h1>',
