@@ -1,4 +1,5 @@
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'dev';
 
 module.exports = {
@@ -20,6 +21,7 @@ module.exports = {
       minimize: !isDev
     },
     plugins: [
+      new LodashModuleReplacementPlugin(),
       new MonacoWebpackPlugin({
         filename: 'worker/[name].worker.js',
         languages: ['json'],
@@ -31,6 +33,7 @@ module.exports = {
     sourceMap: false,
   },
   devServer: {
+    port: 80,
     disableHostCheck: true,
     proxy: {
       '/api': {
