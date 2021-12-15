@@ -5,7 +5,7 @@ const docRoute = {
   renderer: 'mis-menu-submenu',
   name: 'docs',
   title: '文档手册',
-  icon: 'el-icon-takeaway-box',
+  icon: 'TakeawayBox',
   body: []
 };
 let routesList = [];
