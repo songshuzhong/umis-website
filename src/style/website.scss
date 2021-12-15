@@ -169,7 +169,12 @@
     width: 200px;
   }
 }
-
+.el-menu--vertical {
+  .icon {
+    margin-right: 5px;
+    color: white;
+  }
+}
 .el-loading-spinner {
   cursor: not-allowed;
 
