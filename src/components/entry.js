@@ -1,4 +1,5 @@
 import { ElMessage, ElNotification } from 'element-plus';
+import * as Icons from '@element-plus/icons-vue/dist/lib';
 import api from '@umis-renderer/packages/utils/api';
 import { overwrite } from '@umis-renderer/packages/utils/config';
 import {
@@ -20,7 +21,9 @@ export default {
   install(app, options = {}) {
     const misComponents = [];
     const formItems = [];
-
+    for (const name in Icons) {
+      app.component(name, Icons[name]);
+    }
     requireComponent.keys().forEach(filePath => {
       const componentConfig = requireComponent(filePath);
       let componentName = filePath.replace(/(.*\/)*([^.]+).*/gi, '$2');

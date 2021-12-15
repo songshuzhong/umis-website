@@ -50,14 +50,14 @@ export default {
                       },
                       {
                         renderer: 'mis-action',
-                        icon: 'el-icon-s-unfold',
+                        icon: 'Expand',
                         remoteComponent: 'collapse',
                         visibleOn: 'data.collapse',
                         size: 22
                       },
                       {
                         renderer: 'mis-action',
-                        icon: 'el-icon-s-fold',
+                        icon: 'Fold',
                         remoteComponent: 'collapse',
                         visibleOn: '!data.collapse',
                         size: 22
@@ -85,17 +85,17 @@ export default {
                         actions: [
                           {
                             renderer: 'mis-action',
-                            icon: 'el-icon-view',
+                            icon: 'View',
                             remoteComponent: 'preview'
                           },
                           {
                             renderer: 'mis-action',
-                            icon: 'el-icon-full-screen',
+                            icon: 'FullScreen',
                             actionType: 'mis-fullscreen'
                           },
                           {
                             renderer: 'mis-action',
-                            icon: 'el-icon-edit',
+                            icon: 'Edit',
                             actionType: 'mis-drawer',
                             body: {
                               width: '100%',
@@ -170,7 +170,7 @@ export default {
               {
                 renderer: 'mis-action',
                 remoteComponent: 'preview',
-                icon: 'el-icon-s-home',
+                icon: 'Home',
                 text: ''
               }
             ]

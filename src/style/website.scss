@@ -114,6 +114,7 @@
 .umis-website__breadcrumb {
   margin-left: 20px;
   display: inline-block;
+  vertical-align: middle;
 }
 .umis-website-doc {
   .umis-card__footer {
@@ -159,6 +160,10 @@
       min-width: 210px !important;
       background-color: #1f2d3d !important;
     }
+  }
+  .icon {
+    margin-right: 5px;
+    color: white;
   }
   &:not(.el-menu--collapse) {
     width: 200px;
