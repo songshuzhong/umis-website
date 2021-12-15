@@ -94,7 +94,7 @@ export default {
       header: [
         {
           renderer: 'mis-icon',
-          icon: 'el-icon-warning-outline',
+          icon: 'Warning',
         },
         {
           renderer: 'mis-html',

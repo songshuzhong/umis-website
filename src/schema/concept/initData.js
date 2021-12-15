@@ -72,7 +72,7 @@ export default {
       header: [
         {
           renderer: 'mis-icon',
-          icon: 'el-icon-warning-outline',
+          icon: 'WarningOutline',
         },
         {
           renderer: 'mis-html',
@@ -100,7 +100,7 @@ export default {
       header: [
         {
           renderer: 'mis-icon',
-          icon: 'el-icon-warning-outline',
+          icon: 'Warning',
         },
         {
           renderer: 'mis-html',

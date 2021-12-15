@@ -138,7 +138,7 @@ export default     {
       renderer: 'mis-action',
       text: '删除',
       type: 'text',
-      icon: 'el-icon-delete',
+      icon: 'Delete',
       actionType: 'mis-ajax',
       actionApi: {
         url: '/api/user?uids=${selectedIds}&status=1',
@@ -153,7 +153,7 @@ export default     {
       renderer: 'mis-action',
       text: '暂停',
       type: 'text',
-      icon: 'el-icon-video-pause',
+      icon: 'VideoPause',
       actionType: 'mis-ajax',
       actionApi: {
         url: '/api/user?uids=${selectedIds}',

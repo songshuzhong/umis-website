@@ -170,7 +170,7 @@ export default {
               {
                 renderer: 'mis-action',
                 remoteComponent: 'preview',
-                icon: 'Home',
+                icon: 'HomeFilled',
                 text: ''
               }
             ]
