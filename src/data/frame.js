@@ -51,6 +51,7 @@ export default {
                       {
                         renderer: 'mis-action',
                         icon: 'Expand',
+                        type: 'icon',
                         remoteComponent: 'collapse',
                         visibleOn: 'data.collapse',
                         size: 22
@@ -58,6 +59,7 @@ export default {
                       {
                         renderer: 'mis-action',
                         icon: 'Fold',
+                        type: 'icon',
                         remoteComponent: 'collapse',
                         visibleOn: '!data.collapse',
                         size: 22
