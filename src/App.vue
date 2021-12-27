@@ -6,7 +6,7 @@
 
 <script>
 import { ElConfigProvider } from 'element-plus';
-import locale from 'element-plus/lib/locale/lang/zh-cn';
+import locale from 'element-plus/es/locale/lang/zh-cn';
 
 export default {
   name: 'Application',

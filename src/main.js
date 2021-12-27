@@ -1,6 +1,5 @@
 import { createApp } from 'vue';
 import ElementPlus from 'element-plus';
-import locale from 'element-plus/lib/locale/lang/zh-cn';
 
 import menusCreator from './router/index';
 import Application from './App.vue';
@@ -28,7 +27,7 @@ api()
   .then(res => {
     const routers = menusCreator(res.data.menu);
     app
-      .use(ElementPlus, {locale})
+      .use(ElementPlus)
       .use(UmisRenderer, UMIS_CONFIG)
       .use(routers)
       .mount('#app');

@@ -32,6 +32,7 @@
     "babel-eslint": "^10.1.0",
     "babel-plugin-lodash": "^3.3.4",
     "copy-to-clipboard": "^3.3.1",
+    "countup": "^1.8.2",
     "cross-env": "^5.2.1",
     "css-loader": "^3.5.3",
     "deep-equal": "^1.0.1",
