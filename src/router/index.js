@@ -57,7 +57,8 @@ const createMenus = menus => {
     }
     next();
   });
-  router.afterEach(() => {
+  router.afterEach((route) => {
+    document.title = route?.meta?.title || 'website';
     const timer = setTimeout(() => {
       if (routerMask && typeof routerMask.close === 'function') {
         routerMask.close();
