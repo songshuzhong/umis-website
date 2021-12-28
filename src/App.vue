@@ -6,7 +6,7 @@
 
 <script>
 import { ElConfigProvider } from 'element-plus';
-import locale from 'element-plus/es/locale/lang/zh-cn';
+import zhCn from 'element-plus/es/locale/lang/zh-cn';
 
 export default {
   name: 'Application',
@@ -15,17 +15,8 @@ export default {
   },
   setup() {
     return {
-      locale
+      locale: zhCn
     };
   }
 };
 </script>
-<style lang="scss">
-body,
-.mis-html {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 14px;
-}
-</style>
