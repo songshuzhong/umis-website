@@ -1,5 +1,4 @@
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
-const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'dev';
 
 module.exports = {
@@ -21,7 +20,6 @@ module.exports = {
       minimize: !isDev
     },
     plugins: [
-      new LodashModuleReplacementPlugin(),
       new MonacoWebpackPlugin({
         filename: 'worker/[name].worker.js',
         languages: ['json'],
@@ -36,10 +34,14 @@ module.exports = {
     port: 80,
     disableHostCheck: true,
     proxy: {
+      '/api/templates': {
+        target: 'http://ashina.biz.weibo.com',
+        changeOrigin: true
+      },
       '/api': {
         target: 'http://localhost:1026',
         changeOrigin: true
-      },
+      }
     }
   }
 };

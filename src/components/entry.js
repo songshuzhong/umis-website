@@ -1,15 +1,9 @@
 import { ElMessage, ElNotification } from 'element-plus';
 import * as Icons from '@element-plus/icons-vue/dist/lib';
 import api from '@umis-renderer/packages/utils/api';
-import { overwrite } from '@umis-renderer/packages/utils/config';
-import {
-  renderTpl,
-  compiledKey,
-  compiledUrl,
-  compiledParams,
-  expressionEval
-} from '@umis-renderer/packages/utils/tpl';
 import Eventhub from '@umis-renderer/packages/utils/eventhub';
+import {overwrite} from '@umis-renderer/packages/utils/config';
+import {renderTpl, compiledKey, compiledUrl, compiledParams, expressionEval} from '@umis-renderer/packages/utils/tpl';
 
 const requireComponent = require.context(
   '@umis-renderer/packages/renderer/component',
