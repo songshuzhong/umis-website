@@ -10,6 +10,7 @@ import 'element-plus/dist/index.css';
 import '../../umis-renderer/packages/renderer/styles/index.scss';
 import './style/superfans.scss';
 import './style/index.scss';
+import './registerServiceWorker';
 
 const app = createApp(Application);
 const UMIS_CONFIG = {
