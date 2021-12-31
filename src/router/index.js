@@ -1,7 +1,7 @@
 import {
   createRouter,
   createWebHashHistory,
-  // createWebHistory
+  createWebHistory
 } from 'vue-router';
 import { ElLoading } from 'element-plus';
 
@@ -10,7 +10,7 @@ import frameSchema from '../data/frame';
 
 const history =
   process.env.NODE_ENV === 'dev'
-    ? createWebHashHistory()
+    ? createWebHistory()
     : createWebHashHistory();
 
 const createMenus = menus => {

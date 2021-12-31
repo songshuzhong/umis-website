@@ -5,12 +5,7 @@ const isDev = process.env.NODE_ENV === 'dev';
 
 module.exports = {
   publicPath: isDev ? './' : '/umis-website/dist',
-  pwa: {
-    workboxPluginMode: 'InjectManifest',
-    workboxOptions: {
-      swSrc: './service-worker.js',
-    }
-  },
+  productionSourceMap: false,
   configureWebpack: {
     output: isDev? {
       filename: 'js/[name].[hash:6].js',
