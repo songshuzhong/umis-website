@@ -18,6 +18,7 @@ register(sw, {
       title: '温馨提示',
       message: '更新版本完成，10S后刷新项目',
       type: 'success',
+      duration: 10000
     });
     const timer = setTimeout(() => {
       clearTimeout(timer);
