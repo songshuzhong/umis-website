@@ -11,7 +11,6 @@ register(sw, {
       message: '检测到新版本，正在下载中，请稍后...',
       type: 'info',
     });
-    console.log('New content is downloading.');
   },
   updated() {
     ElNotification({
