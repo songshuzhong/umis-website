@@ -1,8 +1,16 @@
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
+const { GenerateSW } = require('workbox-webpack-plugin');
+
 const isDev = process.env.NODE_ENV === 'dev';
 
 module.exports = {
   publicPath: isDev ? './' : '/umis-website/dist',
+  pwa: {
+    workboxPluginMode: 'InjectManifest',
+    workboxOptions: {
+      swSrc: './service-worker.js',
+    }
+  },
   configureWebpack: {
     output: isDev? {
       filename: 'js/[name].[hash:6].js',
@@ -20,6 +28,10 @@ module.exports = {
       minimize: !isDev
     },
     plugins: [
+      new GenerateSW ({
+        clientsClaim: true,
+        skipWaiting: true
+      }),
       new MonacoWebpackPlugin({
         filename: 'worker/[name].worker.js',
         languages: ['json'],
