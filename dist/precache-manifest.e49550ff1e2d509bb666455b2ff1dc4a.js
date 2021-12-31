@@ -56,7 +56,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/umis-website/dist/chunk/watermark.01b9b5.js"
   },
   {
-    "revision": "6ee820f2011d97046092",
+    "revision": "f0181f86df10adeca8c1",
     "url": "/umis-website/dist/css/app.464915c4.css"
   },
   {
@@ -84,12 +84,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/umis-website/dist/img/loading.5786ac69.svg"
   },
   {
-    "revision": "a58f2bedaef2d299327e47d9e60684de",
+    "revision": "e87c22334f80c3b65baf99ebac8b49ed",
     "url": "/umis-website/dist/index.html"
   },
   {
-    "revision": "6ee820f2011d97046092",
-    "url": "/umis-website/dist/js/app.a96b62.js"
+    "revision": "f0181f86df10adeca8c1",
+    "url": "/umis-website/dist/js/app.13321e.js"
   },
   {
     "revision": "5786ac6997a73e569927b2585b7f12dc",

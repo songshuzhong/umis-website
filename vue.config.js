@@ -1,5 +1,5 @@
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
-const { GenerateSW } = require('workbox-webpack-plugin');
+const {GenerateSW} = require('workbox-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'dev';
 

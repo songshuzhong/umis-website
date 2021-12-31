@@ -11,6 +11,7 @@ module.exports = {
     'eslint:recommended'
   ],
   globals: {
+    workbox: false,
     module: true,
     require: true,
     process: true,
