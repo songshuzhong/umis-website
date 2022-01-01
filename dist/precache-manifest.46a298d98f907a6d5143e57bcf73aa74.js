@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/umis-website/dist/chunk/chunk-2d0c1ed0.7fc4eb.js"
   },
   {
-    "revision": "0c0a67bfe8c07146f9ba",
-    "url": "/umis-website/dist/chunk/chunk-vendors.0bdf73.js"
+    "revision": "ad401fbdf4b6b59bdb06",
+    "url": "/umis-website/dist/chunk/chunk-vendors.eec2ab.js"
   },
   {
     "revision": "758145ebc962bde2e6aa",
@@ -24,8 +24,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/umis-website/dist/chunk/echarts.6d8a02.js"
   },
   {
-    "revision": "37ed141ed830ba530b6b",
-    "url": "/umis-website/dist/chunk/editor.9044f1.js"
+    "revision": "cce2eeb951b16c3c1e1c",
+    "url": "/umis-website/dist/chunk/editor.cad439.js"
   },
   {
     "revision": "77d9c4a8b0d2e36d3a46",
@@ -56,11 +56,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/umis-website/dist/chunk/watermark.01b9b5.js"
   },
   {
-    "revision": "1402b02bc90a7ecb1620",
-    "url": "/umis-website/dist/css/app.464915c4.css"
+    "revision": "a8cf1cbe19ee96785080",
+    "url": "/umis-website/dist/css/app.e759b756.css"
   },
   {
-    "revision": "0c0a67bfe8c07146f9ba",
+    "revision": "ad401fbdf4b6b59bdb06",
     "url": "/umis-website/dist/css/chunk-vendors.941ac153.css"
   },
   {
@@ -84,12 +84,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/umis-website/dist/img/loading.5786ac69.svg"
   },
   {
-    "revision": "3d7b9610f89f1769023e00f457fae8ad",
+    "revision": "6b649e63b3a4edd52cb7f3efeb66d2e0",
     "url": "/umis-website/dist/index.html"
   },
   {
-    "revision": "1402b02bc90a7ecb1620",
-    "url": "/umis-website/dist/js/app.7734e4.js"
+    "revision": "a8cf1cbe19ee96785080",
+    "url": "/umis-website/dist/js/app.cce0f4.js"
   },
   {
     "revision": "5786ac6997a73e569927b2585b7f12dc",
