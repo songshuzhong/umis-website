@@ -266,7 +266,7 @@ export default {
           prop: 'size',
           desc: '尺寸',
           type: 'String',
-          options: 'medium / small / mini',
+          options: 'large / default / small',
           value: '-'
         },
         {

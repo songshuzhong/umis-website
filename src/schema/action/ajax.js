@@ -1,7 +1,7 @@
 export default {
   renderer: 'mis-action',
   text: 'Ajax',
-  size: 'mini',
+  size: 'small',
   actionType: 'mis-ajax',
   actionApi: {
     url: '/api/user?uid=${uid}',

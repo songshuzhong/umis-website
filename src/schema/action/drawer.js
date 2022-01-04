@@ -1,7 +1,7 @@
 export default {
   renderer: 'mis-action',
   text: '抽屉',
-  size: 'mini',
+  size: 'small',
   actionType: 'mis-drawer',
   body: {
     showClose: true,

@@ -88,7 +88,7 @@ export default     {
         {
           renderer: 'mis-action',
           text: '删除',
-          size: 'mini',
+          size: 'small',
           plain: true,
           type: 'warning',
           actionType: 'mis-ajax',
@@ -103,7 +103,7 @@ export default     {
         {
           renderer: 'mis-action',
           text: '编辑',
-          size: 'mini',
+          size: 'small',
           type: 'primary',
           plain: true,
           actionType: 'mis-ajax',
@@ -120,7 +120,7 @@ export default     {
           text: '发布',
           type: 'danger',
           plain: true,
-          size: 'mini',
+          size: 'small',
           actionType: 'mis-ajax',
           actionApi: {
             url: '/api/user?uid=${uid}',

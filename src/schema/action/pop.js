@@ -5,7 +5,7 @@ export default {
     {
       renderer: 'mis-action',
       text: 'confirm',
-      size: 'mini',
+      size: 'small',
       actionType: 'mis-url',
       url: 'https://www.baidu.com/s?wd=123',
       blank: true,
@@ -16,7 +16,7 @@ export default {
       renderer: 'mis-action',
       popupType: 'over',
       text: 'popover',
-      size: 'mini',
+      size: 'small',
       body: {
         renderer: 'mis-qrcode',
         value: 'www.baidu.com'
@@ -25,7 +25,7 @@ export default {
     {
       renderer: 'mis-action',
       text: 'Tooltip',
-      size: 'mini',
+      size: 'small',
       popupType: 'tip',
       tipContent: '这是一个tooltip',
       actionType: 'mis-dialog',
@@ -43,7 +43,7 @@ export default {
       renderer: 'mis-action',
       popupType: 'badge',
       text: 'badge',
-      size: 'mini',
+      size: 'small',
       badgeText: '4',
       actionType: 'mis-dialog',
       body: {

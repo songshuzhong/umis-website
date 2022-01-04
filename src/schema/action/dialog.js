@@ -1,7 +1,7 @@
 export default {
   renderer: 'mis-action',
   text: '对话框',
-  size: 'mini',
+  size: 'small',
   actionType: 'mis-dialog',
   body: {
     body: {
