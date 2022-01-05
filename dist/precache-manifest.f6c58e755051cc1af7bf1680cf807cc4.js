@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/umis-website/dist/chunk/chunk-2d0c1ed0.7fc4eb.js"
   },
   {
-    "revision": "a79ea29f04a31abf5c72",
-    "url": "/umis-website/dist/chunk/chunk-vendors.e58d5f.js"
+    "revision": "bcb4adf434ce95f099c1",
+    "url": "/umis-website/dist/chunk/chunk-vendors.0be820.js"
   },
   {
     "revision": "758145ebc962bde2e6aa",
@@ -20,12 +20,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/umis-website/dist/chunk/countup.5f3fae.js"
   },
   {
+    "revision": "24d2137ecb62e5b31514",
+    "url": "/umis-website/dist/chunk/driver.5c21ba.js"
+  },
+  {
+    "revision": "be6b9dc5162fc7326230",
+    "url": "/umis-website/dist/chunk/driver.css.bb38ff.js"
+  },
+  {
     "revision": "41e28077bbb6c55c57ac",
     "url": "/umis-website/dist/chunk/echarts.6d8a02.js"
   },
   {
-    "revision": "30a7f4d60726029642d5",
-    "url": "/umis-website/dist/chunk/editor.c3d147.js"
+    "revision": "44dbf6541d1e045ff6dc",
+    "url": "/umis-website/dist/chunk/editor.228da7.js"
   },
   {
     "revision": "77d9c4a8b0d2e36d3a46",
@@ -56,11 +64,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/umis-website/dist/chunk/watermark.01b9b5.js"
   },
   {
-    "revision": "f43d121bbf20263fa790",
-    "url": "/umis-website/dist/css/app.ef69f843.css"
+    "revision": "5792c502797608acc3d9",
+    "url": "/umis-website/dist/css/app.f959911d.css"
   },
   {
-    "revision": "a79ea29f04a31abf5c72",
+    "revision": "bcb4adf434ce95f099c1",
     "url": "/umis-website/dist/css/chunk-vendors.d4aa889d.css"
   },
   {
@@ -84,12 +92,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/umis-website/dist/img/loading.5786ac69.svg"
   },
   {
-    "revision": "1f7561c58734ad4bd3dc7a4c286ad546",
+    "revision": "b78713c9a6b85361d7a63bdd8c2d7ea9",
     "url": "/umis-website/dist/index.html"
   },
   {
-    "revision": "f43d121bbf20263fa790",
-    "url": "/umis-website/dist/js/app.78291a.js"
+    "revision": "5792c502797608acc3d9",
+    "url": "/umis-website/dist/js/app.d53d5f.js"
   },
   {
     "revision": "5786ac6997a73e569927b2585b7f12dc",
