@@ -27,6 +27,7 @@ export default {
       path: `${item.name}`,
       component: () => import('@umis-renderer/packages/renderer/component/schema.vue'),
       props: {
+        classname: 'umis-website-schema__container',
         url: item.schemaUrl
       },
       meta: {

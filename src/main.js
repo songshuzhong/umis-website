@@ -31,5 +31,5 @@ api()
       .use(ElementPlus)
       .use(UmisRenderer, UMIS_CONFIG)
       .use(routers)
-      .mount('#app');
+      .mount('.umis-website-app__container');
   });
