@@ -148,7 +148,7 @@ export default {
               target: 'umis-website__container,umis-website__header__actions',
               title: {
                 renderer: 'mis-html',
-                html: '<div class="umis-website__menu__logo">UMIS</div>'
+                html: 'UMIS'
               },
               body: [],
               inherit: {
@@ -178,11 +178,24 @@ export default {
             ]
           },
           {
-            renderer: 'mis-main',
-            routerView: true,
-            iProtal: true,
-            classname: 'umis-website__main',
-            computedClass: 'data.preview ? \'preview\' : \'\''
+            renderer: 'mis-layout',
+            direction: 'vertical',
+            body: [
+              {
+                renderer: 'mis-main',
+                routerView: true,
+                iProtal: true,
+                computedClass: 'data.preview ? \'preview\' : \'\''
+              },
+              {
+                renderer: 'mis-footer',
+                classname: 'umis-website__footer',
+                body: {
+                  renderer: 'mis-html',
+                  html: 'Copyright @ 2022 sshuzhong@outlook.com'
+                }
+              }
+            ]
           }
         ]
       }

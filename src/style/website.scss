@@ -1,16 +1,12 @@
 html,
 body,
-.umis-website-app__container,
-.umis-website-schema__container,
-.umis-page__container,
-.mis-layout__container {
+.umis-website-app__container {
   height: 100%;
 }
 .umis-website__header__wrapper {
   width: 100%;
   z-index: 21;
 }
-
 .umis-website__nav-fixed {
   position: fixed;
   top: 0;
@@ -19,29 +15,24 @@ body,
   z-index: 10;
   overflow-y: auto;
   transition: 0.3s width ease-in-out;
-
   &::-webkit-scrollbar {
     width: 0;
   }
-
   .el-menu {
     border-right: 0;
   }
 }
-
 .umis-website__goto-edit {
   position: fixed;
   bottom: 100px;
   right: 100px;
   z-index: 9999;
 }
-
 .umis-website__nav-poppet {
   height: 100%;
   background: #3a3f51;
   transition: 0.3s width ease-in-out;
 }
-
 .umis-website__header {
   position: relative;
   height: 60px;
@@ -51,18 +42,15 @@ body,
   font-size: 12px;
   background: white;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
-
   .el-button {
     border: 0;
   }
-
   .umis-website__header__main {
     padding: 0 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-
   .umis-website__header__logo {
     height: 60px;
     color: white;
@@ -75,21 +63,15 @@ body,
     }
   }
 }
-
-.umis-website__menu__logo {
+.umis-website__footer {
   height: 60px;
+  border-top: 1px dashed var(--el-border-color-base);
+  line-height: 60px;
+  text-align: center;
+  color: var(--el-text-color-secondary);
 }
-
-.umis-website__main {
-  height: calc(100% - 60px);
-  &.preview {
-    padding: 0;
-  }
-}
-
 .umis-website__drawer {
   background-color: #282a36;
-
   .el-drawer__header {
     display: flex;
     align-items: center;
@@ -99,21 +81,17 @@ body,
     background: #282a36;
     color: #72767b;
   }
-
   .umis-popup__container__body {
     padding: 0;
     margin: 0;
   }
-
   .monaco-editor {
     height: calc(100vh - 110px);
   }
 }
-
 .umis-website__code-viwer {
   height: 200px;
   padding: 10px 20px;
-
   .monaco-editor {
     height: 180px;
   }
@@ -126,7 +104,6 @@ body,
 .umis-website-doc {
   .umis-card__footer {
     padding: 0;
-
     .el-button {
       width: 100%;
       border: 0;
@@ -142,14 +119,6 @@ body,
 .umis-website_menu-vertical {
   .el-sub-menu .el-menu-item {
     background-color: rgba(0, 0, 0, 0.3);
-    &:hover {
-      background-color: #001528;
-      &::after {
-        height: 100%;
-        width: 3px;
-        transform: scale(1);
-      }
-    }
     &::after {
       position: absolute;
       left: 0;
@@ -162,6 +131,14 @@ body,
       background-color: currentColor;
       transform: scale(0);
       transition: transform 0.3s;
+    }
+    &:hover {
+      background-color: #001528;
+      &::after {
+        height: 100%;
+        width: 3px;
+        transform: scale(1);
+      }
     }
     .el-submenu .el-menu-item {
       min-width: 210px;
@@ -176,15 +153,8 @@ body,
     width: 200px;
   }
 }
-.el-menu--vertical {
-  .icon {
-    margin-right: 5px;
-    color: white;
-  }
-}
 .el-loading-spinner {
   cursor: not-allowed;
-
   .circular {
     background-image: url("../../public/loading.svg");
     background-position: center;
@@ -192,7 +162,6 @@ body,
     animation: loading-rotate 1s linear infinite;
     animation-direction: reverse;
   }
-
   .path {
     display: none;
   }
@@ -210,7 +179,6 @@ body,
 .umis-website__router__loader {
   height: 3px;
   top: 0;
-
   &::before {
     content: "";
     display: block;
