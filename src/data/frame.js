@@ -3,7 +3,6 @@ export default {
   iProtal: true,
   body: {
     renderer: 'mis-layout',
-    classname: 'umis-website__container',
     name: 'umis-website__container',
     direction: 'vertical',
     initData: {
@@ -129,6 +128,7 @@ export default {
       },
       {
         renderer: 'mis-layout',
+        classname: 'umis-website__body',
         body: [
           {
             renderer: 'mis-wrapper',
