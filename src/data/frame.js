@@ -148,7 +148,7 @@ export default {
               target: 'umis-website__container,umis-website__header__actions',
               title: {
                 renderer: 'mis-html',
-                html: '<div class="umis-website__menu__logo">UMIS</div>'
+                html: '<div class="umis-website__menu__logo" />'
               },
               body: [],
               inherit: {

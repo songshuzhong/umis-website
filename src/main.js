@@ -1,5 +1,6 @@
 import {createApp} from 'vue';
 import ElementPlus from 'element-plus';
+import ResizeObserver from 'resize-observer-polyfill';
 
 import menusCreator from './router/index';
 import Application from './App.vue';
@@ -33,3 +34,7 @@ api()
       .use(routers)
       .mount('.umis-website-app__container');
   });
+
+if (!window.ResizeObserver) {
+  window.ResizeObserver = ResizeObserver;
+}
