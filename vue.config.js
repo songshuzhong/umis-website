@@ -41,6 +41,10 @@ module.exports = {
     port: 80,
     disableHostCheck: true,
     proxy: {
+      '/fansSupportOrder': {
+        target: 'http://terra.bpdev.biz.weibo.com',
+        changeOrigin: true
+      },
       '/api/templates': {
         target: 'http://ashina.biz.weibo.com',
         changeOrigin: true
