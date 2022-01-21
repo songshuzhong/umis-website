@@ -32,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/umis-website/dist/chunk/echarts.6d8a02.js"
   },
   {
-    "revision": "e1c30f183d08531e82e7",
-    "url": "/umis-website/dist/chunk/editor.6387e4.js"
+    "revision": "c893b79c3a6402ec36da",
+    "url": "/umis-website/dist/chunk/editor.90b47c.js"
   },
   {
     "revision": "77d9c4a8b0d2e36d3a46",
@@ -68,7 +68,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/umis-website/dist/chunk/watermark.01b9b5.js"
   },
   {
-    "revision": "a497d7598379ab7e259b",
+    "revision": "28afe27e90368a693988",
     "url": "/umis-website/dist/css/app.fd4a939e.css"
   },
   {
@@ -96,12 +96,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/umis-website/dist/img/loading.5786ac69.svg"
   },
   {
-    "revision": "73186ef5b6ff16ef50be28a82bc35fb0",
+    "revision": "4a10f7c8ae1fdfc73700379484c61c07",
     "url": "/umis-website/dist/index.html"
   },
   {
-    "revision": "a497d7598379ab7e259b",
-    "url": "/umis-website/dist/js/app.959a75.js"
+    "revision": "28afe27e90368a693988",
+    "url": "/umis-website/dist/js/app.408453.js"
   },
   {
     "revision": "5786ac6997a73e569927b2585b7f12dc",
@@ -120,6 +120,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/umis-website/dist/thumbnail/Alert.svg"
   },
   {
+    "revision": "00d001c7f1f42b49c784a1b54f38b988",
+    "url": "/umis-website/dist/thumbnail/Aside.svg"
+  },
+  {
     "revision": "dffc7b31ce3774027726e59e85ed0c3a",
     "url": "/umis-website/dist/thumbnail/Avatar.svg"
   },
@@ -134,6 +138,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "81044ac43d50aa006e1e763e24cc1b42",
     "url": "/umis-website/dist/thumbnail/Card.svg"
+  },
+  {
+    "revision": "6c636176403ed76b65216578cfede70d",
+    "url": "/umis-website/dist/thumbnail/Cards.svg"
   },
   {
     "revision": "8028e11855515244750bb1fe1455ae44",
@@ -184,12 +192,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/umis-website/dist/thumbnail/Empty.svg"
   },
   {
+    "revision": "00d001c7f1f42b49c784a1b54f38b988",
+    "url": "/umis-website/dist/thumbnail/Footer.svg"
+  },
+  {
     "revision": "3ec4e93bdd4009d0bfebd2aaabaee8f0",
     "url": "/umis-website/dist/thumbnail/Form.svg"
   },
   {
     "revision": "9aafb4a06c6ab283113661c9655d79d5",
     "url": "/umis-website/dist/thumbnail/Grid.svg"
+  },
+  {
+    "revision": "d986043645a2f0a3c92d5bae678b79e5",
+    "url": "/umis-website/dist/thumbnail/Html.svg"
+  },
+  {
+    "revision": "e0199bfb3140a5c9040160011d834ac7",
+    "url": "/umis-website/dist/thumbnail/Icon.svg"
   },
   {
     "revision": "c6299b5d87d362eea701ca3a2c737903",
@@ -208,6 +228,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/umis-website/dist/thumbnail/List.svg"
   },
   {
+    "revision": "00d001c7f1f42b49c784a1b54f38b988",
+    "url": "/umis-website/dist/thumbnail/Main.svg"
+  },
+  {
+    "revision": "35ab483cdf47b4a702176969b2e8f842",
+    "url": "/umis-website/dist/thumbnail/Menu.svg"
+  },
+  {
     "revision": "3887b7708419cdb1597d80825c30ece9",
     "url": "/umis-website/dist/thumbnail/Modal.svg"
   },
@@ -217,7 +245,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "f38ed05f0418be7c842872de59779705",
-    "url": "/umis-website/dist/thumbnail/PageHeader.svg"
+    "url": "/umis-website/dist/thumbnail/Page-header.svg"
+  },
+  {
+    "revision": "568c37a660041c49f65e5f89c22623df",
+    "url": "/umis-website/dist/thumbnail/Page.svg"
   },
   {
     "revision": "7f437f5e18b67a54bd4e06ab9022968f",
@@ -242,6 +274,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "b249bb3340defca67e595bd9134fd12c",
     "url": "/umis-website/dist/thumbnail/Select.svg"
+  },
+  {
+    "revision": "d986043645a2f0a3c92d5bae678b79e5",
+    "url": "/umis-website/dist/thumbnail/Service.svg"
   },
   {
     "revision": "8caab9ac0670fde0c2e9f8024b22db9a",
