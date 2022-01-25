@@ -161,6 +161,10 @@
   display: flex;
   justify-content: space-around;
 }
+.el-menu--popup {
+  height: 60vh !important;
+  overflow-y: scroll;
+}
 .el-loading-spinner {
   cursor: not-allowed;
   .circular {
