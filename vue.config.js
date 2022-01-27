@@ -1,4 +1,3 @@
-const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 const {GenerateSW} = require('workbox-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'dev';
@@ -20,18 +19,11 @@ module.exports = {
         '@umis-renderer': '../../../umis-renderer'
       }
     },
-    optimization: {
-      minimize: !isDev
-    },
     plugins: [
       new GenerateSW ({
         clientsClaim: true,
         skipWaiting: true
-      }),
-      new MonacoWebpackPlugin({
-        filename: 'worker/[name].worker.js',
-        languages: ['json'],
-      }),
+      })
     ],
   },
   css: {
