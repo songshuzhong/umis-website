@@ -5,7 +5,7 @@ import ResizeObserver from 'resize-observer-polyfill';
 import menusCreator from './router/index';
 import Application from './App.vue';
 import UmisRenderer, { api } from './components/entry';
-import {MisEditor} from '../../umis-renderer/packages/editor';
+import {MisEditor} from '../../umis-renderer/packages/canvas';
 
 import 'element-plus/dist/index.css';
 import '../../umis-renderer/packages/renderer/styles/index.scss';
