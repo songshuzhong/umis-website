@@ -1,7 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "77d79064848b471e5a4a",
-    "url": "/umis-website/dist/chunk/chunk-vendors.3f1215.js"
+    "revision": "f02aef11bf2d8f34ee74",
+    "url": "/umis-website/dist/chunk/chunk-2d21af1a.27a155.js"
+  },
+  {
+    "revision": "f9edbd4b65517a1d461d",
+    "url": "/umis-website/dist/chunk/chunk-vendors.4b23f6.js"
   },
   {
     "revision": "758145ebc962bde2e6aa",
@@ -22,10 +26,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "41e28077bbb6c55c57ac",
     "url": "/umis-website/dist/chunk/echarts.6d8a02.js"
-  },
-  {
-    "revision": "77d9c4a8b0d2e36d3a46",
-    "url": "/umis-website/dist/chunk/js-export-excel.734cd0.js"
   },
   {
     "revision": "1dd85c9cd54bccaadcd7",
@@ -52,12 +52,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/umis-website/dist/chunk/watermark.01b9b5.js"
   },
   {
-    "revision": "bb7dfeb8393d3d1d257b",
-    "url": "/umis-website/dist/css/app.3c227134.css"
+    "revision": "2e7d66e5e69cc52f76a4",
+    "url": "/umis-website/dist/css/app.9092dfc2.css"
   },
   {
-    "revision": "77d79064848b471e5a4a",
-    "url": "/umis-website/dist/css/chunk-vendors.fb4565cd.css"
+    "revision": "f9edbd4b65517a1d461d",
+    "url": "/umis-website/dist/css/chunk-vendors.6dee6c8d.css"
   },
   {
     "revision": "397b340813d08a9489f90a8ee2f1e652",
@@ -72,12 +72,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/umis-website/dist/img/loading.5786ac69.svg"
   },
   {
-    "revision": "04bd956b12bdc8665a2f54fe5557c26c",
+    "revision": "6b01f6ac77fe314f511fe41abafd5898",
     "url": "/umis-website/dist/index.html"
   },
   {
-    "revision": "bb7dfeb8393d3d1d257b",
-    "url": "/umis-website/dist/js/app.f01e14.js"
+    "revision": "2e7d66e5e69cc52f76a4",
+    "url": "/umis-website/dist/js/app.6d24ba.js"
   },
   {
     "revision": "5786ac6997a73e569927b2585b7f12dc",
@@ -254,6 +254,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "95bcb59854c18d449f53c407ce9a2e5f",
     "url": "/umis-website/dist/thumbnail/Qrcode.svg"
+  },
+  {
+    "revision": "8b6ad7ab72c859d1c65082465f27bf29",
+    "url": "/umis-website/dist/thumbnail/Quickedit.svg"
   },
   {
     "revision": "281a77f943163c81a546eae8c85e5dae",
