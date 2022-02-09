@@ -1,6 +1,17 @@
 .umis-website-app__container {
   height: 100vh;
 }
+.umis-website__header__logo {
+  height: 60px;
+  color: white;
+  text-align: center;
+  line-height: 60px;
+  background: #3a3f51;
+  transition: 0.3s width ease-in-out;
+  .mis-html {
+    font-size: 20px;
+  }
+}
 .umis-website__body {
   height: calc(100% - 60px);
   overflow: hidden;
@@ -9,7 +20,6 @@
     top: 0;
     height: 100vh;
     background: #3a3f51;
-    z-index: 10;
     overflow-y: auto;
     transition: 0.3s width ease-in-out;
     &::-webkit-scrollbar {
@@ -73,7 +83,6 @@
 }
 .umis-website__header__wrapper {
   width: 100%;
-  z-index: 21;
   .umis-website__header {
     position: relative;
     height: 60px;
@@ -91,17 +100,6 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-    }
-    .umis-website__header__logo {
-      height: 60px;
-      color: white;
-      text-align: center;
-      line-height: 60px;
-      background: #3a3f51;
-      transition: 0.3s width ease-in-out;
-      .mis-html {
-        font-size: 20px;
-      }
     }
   }
 }
