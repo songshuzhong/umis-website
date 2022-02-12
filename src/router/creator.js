@@ -25,7 +25,7 @@ export default {
   initRoute(item) {
     return {
       path: `${item.name}`,
-      component: () => import('@umis-renderer/packages/renderer/component/schema.vue'),
+      component: () => import('../../../umis-renderer/packages/renderer/component/schema.vue'),
       props: {
         classname: 'umis-website-schema__container',
         url: item.schemaUrl
@@ -45,7 +45,7 @@ export default {
       });
       routeFold.children.push({
         path: `${basename}/${item.name}`,
-        component: () => import('@umis-renderer/packages/renderer/component/schema.vue'),
+        component: () => import('../../../umis-renderer/packages/renderer/component/schema.vue'),
         props: {
           url: `https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/docs/${item.name}`,
         },

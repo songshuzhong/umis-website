@@ -28,7 +28,7 @@ const createMenus = menus => {
       {
         path: '/',
         name: 'UmisWebsite',
-        component: () => import('@umis-renderer/packages/renderer/component/schema.vue'),
+        component: () => import('../../../umis-renderer/packages/renderer/component/schema.vue'),
         props: {
           initSchema: frameSchema,
           classname: 'umis-website-schema__container',
