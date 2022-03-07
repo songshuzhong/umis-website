@@ -1,3 +1,4 @@
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 const {GenerateSW} = require('workbox-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'dev';
@@ -20,6 +21,10 @@ module.exports = {
       }
     },
     plugins: [
+      new MonacoWebpackPlugin({
+        filename: 'worker/[name].worker.js',
+        languages: ['json'],
+      }),
       new GenerateSW ({
         clientsClaim: true,
         skipWaiting: true
