@@ -172,8 +172,7 @@
     background-image: url("../../public/loading.svg");
     background-position: center;
     background-size: cover;
-    animation: loading-rotate 1s linear infinite;
-    animation-direction: reverse;
+    animation: none;
   }
   .path {
     display: none;
@@ -200,19 +199,6 @@
     background: #409eff;
     transform-origin: 0 50%;
     animation: grow 1s ease-out;
-  }
-  &::after {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 20px;
-    height: 20px;
-    background-image: url("../../public/loading.svg");
-    background-position: center;
-    background-size: cover;
-    animation: loading-rotate 1s linear infinite;
-    animation-direction: reverse;
-    content: "";
   }
   .el-loading-spinner {
     display: none;
