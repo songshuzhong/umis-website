@@ -9,7 +9,6 @@ import {MisEditor} from '../../umis-renderer/packages/canvas';
 
 import 'element-plus/dist/index.css';
 import '../../umis-renderer/packages/renderer/styles/index.scss';
-import './style/superfans.scss';
 import './style/index.scss';
 import './registerServiceWorker';
 
@@ -17,6 +16,12 @@ const app = createApp(Application);
 const UMIS_CONFIG = {
   domains: {
     default: process.env.VUE_APP_API_BASE
+  },
+  adaptor: {
+    req: `
+const cmsToken = localStorage.getItem('cmsToken');
+req.headers.common.Authorization = cmsToken;
+    `,
   }
 };
 app.component(MisEditor.name, MisEditor);

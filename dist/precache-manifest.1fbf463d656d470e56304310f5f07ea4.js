@@ -1,63 +1,35 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f02aef11bf2d8f34ee74",
-    "url": "/umis-website/dist/chunk/chunk-2d21af1a.27a155.js"
+    "revision": "e426204abe7a49e93a68",
+    "url": "/umis-website/dist/chunk/chunk-2d225f49.64d221.js"
   },
   {
-    "revision": "f9edbd4b65517a1d461d",
-    "url": "/umis-website/dist/chunk/chunk-vendors.4b23f6.js"
+    "revision": "df69d5793cabde3e7ba6",
+    "url": "/umis-website/dist/chunk/chunk-vendors.5182fa.js"
   },
   {
-    "revision": "758145ebc962bde2e6aa",
-    "url": "/umis-website/dist/chunk/copy-to-clipboard.015a3b.js"
+    "revision": "4d11105250c51ede6bd6",
+    "url": "/umis-website/dist/chunk/copy-to-clipboard.ea37e8.js"
   },
   {
-    "revision": "5222a6337280a2bcf2dd",
-    "url": "/umis-website/dist/chunk/countup.5f3fae.js"
+    "revision": "17cf8d3cf65fa3c46b09",
+    "url": "/umis-website/dist/chunk/less.d572eb.js"
   },
   {
-    "revision": "24d2137ecb62e5b31514",
-    "url": "/umis-website/dist/chunk/driver.5c21ba.js"
+    "revision": "006314fdaa2c709f44e2",
+    "url": "/umis-website/dist/chunk/monaco-editor.c64f32.js"
   },
   {
-    "revision": "be6b9dc5162fc7326230",
-    "url": "/umis-website/dist/chunk/driver.css.bb38ff.js"
+    "revision": "bcfcd0f99508ac718ff2",
+    "url": "/umis-website/dist/css/app.6cf78a85.css"
   },
   {
-    "revision": "41e28077bbb6c55c57ac",
-    "url": "/umis-website/dist/chunk/echarts.6d8a02.js"
+    "revision": "df69d5793cabde3e7ba6",
+    "url": "/umis-website/dist/css/chunk-vendors.e9d08994.css"
   },
   {
-    "revision": "1dd85c9cd54bccaadcd7",
-    "url": "/umis-website/dist/chunk/less.7f4ade.js"
-  },
-  {
-    "revision": "b4c410194eee65bd8ae9",
-    "url": "/umis-website/dist/chunk/qrcode2.a840bc.js"
-  },
-  {
-    "revision": "1c9c6a139313fdd1a559",
-    "url": "/umis-website/dist/chunk/rich-canvas.e70a9b.js"
-  },
-  {
-    "revision": "59f9ac04b38fb7bf6f62",
-    "url": "/umis-website/dist/chunk/video-player.a39207.js"
-  },
-  {
-    "revision": "16c76448315c312cb25e",
-    "url": "/umis-website/dist/chunk/video-player.css.ab3bb2.js"
-  },
-  {
-    "revision": "fd3e97180a3ae6c00be9",
-    "url": "/umis-website/dist/chunk/watermark.01b9b5.js"
-  },
-  {
-    "revision": "baa6eee67a21efb554ae",
-    "url": "/umis-website/dist/css/app.9092dfc2.css"
-  },
-  {
-    "revision": "f9edbd4b65517a1d461d",
-    "url": "/umis-website/dist/css/chunk-vendors.6dee6c8d.css"
+    "revision": "006314fdaa2c709f44e2",
+    "url": "/umis-website/dist/css/monaco-editor.719b2d48.css"
   },
   {
     "revision": "397b340813d08a9489f90a8ee2f1e652",
@@ -68,19 +40,23 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/umis-website/dist/dll/vendor.manifest.json"
   },
   {
-    "revision": "5786ac6997a73e569927b2585b7f12dc",
-    "url": "/umis-website/dist/img/loading.5786ac69.svg"
+    "revision": "805fb6ad1751ed8b849b5bf9be742ab5",
+    "url": "/umis-website/dist/fonts/codicon.805fb6ad.ttf"
   },
   {
-    "revision": "0a1741b87e8f205527224e784c8dc383",
+    "revision": "ce9bbdf78b2c215adf3c80bc4534ce4c",
+    "url": "/umis-website/dist/img/loading.ce9bbdf7.svg"
+  },
+  {
+    "revision": "d60247266d21a5e4317fd9cf952472e8",
     "url": "/umis-website/dist/index.html"
   },
   {
-    "revision": "baa6eee67a21efb554ae",
-    "url": "/umis-website/dist/js/app.369272.js"
+    "revision": "bcfcd0f99508ac718ff2",
+    "url": "/umis-website/dist/js/app.33e268.js"
   },
   {
-    "revision": "5786ac6997a73e569927b2585b7f12dc",
+    "revision": "ce9bbdf78b2c215adf3c80bc4534ce4c",
     "url": "/umis-website/dist/loading.svg"
   },
   {
@@ -326,5 +302,13 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "62508fd41dcc4fc0842ee09c7a8748cc",
     "url": "/umis-website/dist/thumbnail/Wrapper.svg"
+  },
+  {
+    "revision": "42df35ae2586cf52694de9c9f9626917",
+    "url": "/umis-website/dist/worker/editor.worker.js"
+  },
+  {
+    "revision": "846bf2397893962ca0f98db83579a948",
+    "url": "/umis-website/dist/worker/json.worker.js"
   }
 ]);
