@@ -1,9 +1,9 @@
 export default {
-  renderer: 'mis-page',
+  renderer: 'page',
   iProtal: true,
   body: {
-    renderer: 'mis-layout',
-    name: 'umis-website__container',
+    renderer: 'layout',
+    name: 'i-renderer-website__container',
     direction: 'vertical',
     initData: {
       preview: false,
@@ -12,40 +12,40 @@ export default {
     },
     body: [
       {
-        renderer: 'mis-wrapper',
-        classname: 'umis-website__header__wrapper',
+        renderer: 'wrapper',
+        classname: 'i-renderer-website__header__wrapper',
         hiddenOn: 'data.preview === true',
         transition: 'el-zoom-in-top',
         body: {
-          renderer: 'mis-layout',
-          classname: 'umis-website__header',
+          renderer: 'layout',
+          classname: 'i-renderer-website__header',
           body: [
             {
-              renderer: 'mis-aside',
-              name: 'umis-website__nav-poppet',
-              classname: 'umis-website__header__logo',
+              renderer: 'aside',
+              name: 'i-renderer-website__nav-poppet',
+              classname: 'i-renderer-website__header__logo',
               visibleOn: 'data.preview === false',
               transition: 'el-zoom-in-left',
               body: {
-                renderer: 'mis-html',
-                html: 'UMIS'
+                renderer: 'html',
+                html: 'IRender'
               }
             },
             {
-              renderer: 'mis-main',
-              classname: 'umis-website__header__main',
+              renderer: 'main',
+              classname: 'i-renderer-website__header__main',
               body: [
                 {
-                  renderer: 'mis-wrapper',
+                  renderer: 'wrapper',
                   body: [
                     {
-                      renderer: 'mis-switch',
+                      renderer: 'switch',
                       name: 'collapse',
-                      target: 'umis-website__container',
+                      target: 'i-renderer-website__container',
                       hiddenOn: '1 === 1'
                     },
                     {
-                      renderer: 'mis-action',
+                      renderer: 'action',
                       icon: 'Expand',
                       type: 'icon',
                       remoteComponent: 'collapse',
@@ -53,7 +53,7 @@ export default {
                       size: 22
                     },
                     {
-                      renderer: 'mis-action',
+                      renderer: 'action',
                       icon: 'Fold',
                       type: 'icon',
                       remoteComponent: 'collapse',
@@ -61,52 +61,52 @@ export default {
                       size: 22
                     },
                     {
-                      renderer: 'mis-breadcrumb',
-                      classname: 'umis-website__breadcrumb'
+                      renderer: 'breadcrumb',
+                      classname: 'i-renderer-website__breadcrumb'
                     }
                   ]
                 },
                 {
-                  renderer: 'mis-wrapper',
+                  renderer: 'wrapper',
                   body: [
                     {
-                      renderer: 'mis-switch',
+                      renderer: 'switch',
                       name: 'preview',
-                      target: 'umis-website__container, umis-website-nav',
+                      target: 'i-renderer-website__container, i-renderer-website-nav',
                       hiddenOn: '1 === 1'
                     },
                     {
-                      renderer: 'mis-action',
+                      renderer: 'action',
                       actionType: 'actions',
-                      name: 'umis-website__header__actions',
+                      name: 'i-renderer-website__header__actions',
                       hiddenOn: 'data.activeIndex == "playground"',
                       actions: [
                         {
-                          renderer: 'mis-action',
+                          renderer: 'action',
                           icon: 'View',
                           remoteComponent: 'preview'
                         },
                         {
-                          renderer: 'mis-action',
+                          renderer: 'action',
                           icon: 'FullScreen',
-                          actionType: 'mis-fullscreen'
+                          actionType: 'fullscreen'
                         },
                         {
-                          renderer: 'mis-action',
+                          renderer: 'action',
                           icon: 'Edit',
-                          actionType: 'mis-drawer',
+                          actionType: 'drawer',
                           body: {
                             width: '100%',
                             appendToBody: true,
-                            classname: 'umis-website__drawer',
+                            classname: 'i-renderer-website__drawer',
                             header: {
-                              renderer: 'mis-html',
+                              renderer: 'html',
                               html:
                                 '<div style="text-align: left; color: white;">编辑Schema</div>'
                             },
                             body: [
                               {
-                                renderer: 'mis-editor',
+                                renderer: 'editor',
                                 editable: true,
                                 isJson: false
                               }
@@ -123,29 +123,29 @@ export default {
         }
       },
       {
-        renderer: 'mis-layout',
-        classname: 'umis-website__body',
+        renderer: 'layout',
+        classname: 'i-renderer-website__body',
         body: [
           {
-            renderer: 'mis-wrapper',
+            renderer: 'wrapper',
             visibleOn: 'data.preview === false',
             transition: 'el-zoom-in-left',
-            classname: 'umis-website__nav-fixed',
+            classname: 'i-renderer-website__nav-fixed',
             body: {
-              renderer: 'mis-menu',
-              name: 'umis-website-nav',
-              classname: 'umis-website_menu-vertical',
+              renderer: 'menu',
+              name: 'i-renderer-website-nav',
+              classname: 'i-renderer-website_menu-vertical',
               router: true,
               mode: 'vertical',
               backgroundColor: '#3a3f51',
               textColor: '#fff',
               activeTextColor: '#ffd04b',
               defaultActive: '',
-              target: 'umis-website__container,umis-website__header__actions',
+              target: 'i-renderer-website__container,i-renderer-website__header__actions',
               title: {
-                renderer: 'mis-html',
-                classname: 'umis-website__header__logo',
-                html: 'UMIS'
+                renderer: 'html',
+                classname: 'i-renderer-website__header__logo',
+                html: 'IRender'
               },
               body: [],
               inherit: {
@@ -155,19 +155,19 @@ export default {
             }
           },
           {
-            renderer: 'mis-aside',
-            name: 'umis-website__nav-poppet',
-            classname: 'umis-website__nav-poppet',
+            renderer: 'aside',
+            name: 'i-renderer-website__nav-poppet',
+            classname: 'i-renderer-website__nav-poppet',
             visibleOn: 'data.preview === false',
             transition: 'el-zoom-in-left'
           },
           {
-            renderer: 'mis-wrapper',
+            renderer: 'wrapper',
             visibleOn: 'data.preview === true',
-            classname: 'umis-website__goto-edit',
+            classname: 'i-renderer-website__goto-edit',
             body: [
               {
-                renderer: 'mis-action',
+                renderer: 'action',
                 remoteComponent: 'preview',
                 icon: 'HomeFilled',
                 text: ''
@@ -175,20 +175,20 @@ export default {
             ]
           },
           {
-            renderer: 'mis-layout',
+            renderer: 'layout',
             direction: 'vertical',
             body: [
               {
-                renderer: 'mis-main',
+                renderer: 'main',
                 routerView: true,
                 iProtal: true,
                 computedClass: 'data.preview ? \'preview\' : \'\''
               },
               {
-                renderer: 'mis-footer',
-                classname: 'umis-website__footer',
+                renderer: 'footer',
+                classname: 'i-renderer-website__footer',
                 body: {
-                  renderer: 'mis-html',
+                  renderer: 'html',
                   html: 'Copyright @ 2022 sshuzhong@outlook.com'
                 }
               }

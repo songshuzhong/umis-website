@@ -1,7 +1,7 @@
-.umis-website-app__container {
+.i-renderer-website-app__container {
   height: 100vh;
 }
-.umis-website__header__logo {
+.i-renderer-website__header__logo {
   height: 60px;
   color: white;
   text-align: center;
@@ -12,13 +12,13 @@
     font-size: 20px;
   }
 }
-.umis-website__body {
+.i-renderer-website__body {
   height: calc(100% - 60px);
   overflow: hidden;
-  .umis-main__container {
+  .i-renderer-main__container {
     position: relative;
   }
-  .umis-website__nav-fixed {
+  .i-renderer-website__nav-fixed {
     position: fixed;
     top: 0;
     height: 100vh;
@@ -31,7 +31,7 @@
     .el-menu {
       border-right: 0;
     }
-    .umis-website_menu-vertical {
+    .i-renderer-website_menu-vertical {
       .el-sub-menu .el-menu-item {
         background-color: rgba(0, 0, 0, 0.3);
         &::after {
@@ -69,24 +69,24 @@
       }
     }
   }
-  .umis-website__goto-edit {
+  .i-renderer-website__goto-edit {
     position: fixed;
     bottom: 100px;
     right: 100px;
     z-index: 9999;
   }
-  .umis-website__footer {
+  .i-renderer-website__footer {
     height: 60px;
     margin-top: 5px;
-    border-top: 1px dashed var(--el-border-color-base);
+    border-top: 1px dashed var(--el-border-color);
     line-height: 60px;
     text-align: center;
     color: var(--el-text-color-secondary);
   }
 }
-.umis-website__header__wrapper {
+.i-renderer-website__header__wrapper {
   width: 100%;
-  .umis-website__header {
+  .i-renderer-website__header {
     position: relative;
     height: 60px;
     border-bottom: 1px solid #dcdfe6;
@@ -98,7 +98,7 @@
     .el-button {
       border: 0;
     }
-    .umis-website__header__main {
+    .i-renderer-website__header__main {
       padding: 0 10px;
       display: flex;
       align-items: center;
@@ -107,17 +107,17 @@
   }
 }
 
-.umis-website__nav-poppet {
+.i-renderer-website__nav-poppet {
   height: 100%;
   background: #3a3f51;
   transition: 0.3s width ease-in-out;
 }
-.umis-website__breadcrumb {
+.i-renderer-website__breadcrumb {
   margin-left: 20px;
   display: inline-block;
   vertical-align: middle;
 }
-.umis-website__drawer {
+.i-renderer-website__drawer {
   background-color: #282a36;
   .el-drawer__header {
     display: flex;
@@ -128,7 +128,7 @@
     background: #282a36;
     color: #72767b;
   }
-  .umis-popup__container__body {
+  .i-renderer-popup__container__body {
     padding: 0;
     margin: 0;
   }
@@ -137,18 +137,18 @@
   }
 }
 
-.umis-website__code-viwer {
+.i-renderer-website__code-viwer {
   height: 200px;
   padding: 10px 20px;
   .monaco-editor {
     height: 180px;
   }
 }
-.umis-website__menu__logo {
+.i-renderer-website__menu__logo {
   height: 60px;
 }
-.umis-website-doc {
-  .umis-card__footer {
+.i-renderer-website-doc {
+  .i-renderer-card__footer {
     padding: 0;
     .el-button {
       width: 100%;
@@ -156,7 +156,7 @@
     }
   }
 }
-.umis-website-doc__next-section {
+.i-renderer-website-doc__next-section {
   width: 100%;
   margin-top: 30px;
   display: flex;
@@ -188,7 +188,7 @@
   }
 }
 
-.umis-website__router__loader {
+.i-renderer-website__router__loader {
   height: 3px;
   top: 0;
   &::before {

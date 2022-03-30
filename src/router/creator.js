@@ -27,7 +27,7 @@ export default {
       path: `${item.name}`,
       component: () => import('../../../umis-renderer/packages/renderer/component/schema.vue'),
       props: {
-        classname: 'umis-website-schema__container',
+        classname: 'i-renderer-website-schema__container',
         url: item.schemaUrl
       },
       meta: {
@@ -63,16 +63,16 @@ export default {
   },
   dynamicMenuCreator(routes, basename = '') {
     routes.forEach(menu => {
-      if (menu.renderer === 'mis-menu-submenu') {
+      if (menu.renderer === 'submenu') {
         const routeFold = this.initRouteFold(menu);
         menu.body.forEach(submenu => {
-          if (submenu.renderer === 'mis-menu-item-group') {
+          if (submenu.renderer === 'menu-item-group') {
             submenu.body.forEach(group => {
-              if (group.renderer === 'mis-menu-item' && group.schemaUrl) {
+              if (group.renderer === 'menuitem' && group.schemaUrl) {
                 const route = this.initRoute(group, basename);
                 this.menus.unshift(route);
               } else if (
-                submenu.renderer === 'mis-menu-item' &&
+                submenu.renderer === 'menuitem' &&
                 submenu.schemaUrl
               ) {
                 const route = this.initRoute(submenu, basename);
@@ -80,7 +80,7 @@ export default {
               }
             });
           } else if (
-            submenu.renderer === 'mis-menu-item' &&
+            submenu.renderer === 'menuitem' &&
             submenu.schemaUrl
           ) {
             submenu.name = `/${menu.name}/${submenu.name}`;
@@ -89,7 +89,7 @@ export default {
           }
         });
         this.menus.unshift(routeFold);
-      } else if (menu.renderer === 'mis-menu-item' && menu.schemaUrl) {
+      } else if (menu.renderer === 'menuitem' && menu.schemaUrl) {
         const route = this.initRoute(menu, basename);
         this.menus.unshift(route);
       }

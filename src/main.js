@@ -5,7 +5,7 @@ import ResizeObserver from 'resize-observer-polyfill';
 import menusCreator from './router/index';
 import Application from './App.vue';
 import UmisRenderer, { api } from './components/entry';
-import {MisEditor} from '../../umis-renderer/packages/canvas';
+import {Editor} from '../../umis-renderer/packages/canvas';
 
 import 'element-plus/dist/index.css';
 import '../../umis-renderer/packages/renderer/styles/index.scss';
@@ -14,6 +14,7 @@ import './registerServiceWorker';
 
 const app = createApp(Application);
 const UMIS_CONFIG = {
+  renderers: [Editor],
   domains: {
     default: process.env.VUE_APP_API_BASE
   },
@@ -24,7 +25,6 @@ req.headers.common.Authorization = cmsToken;
     `,
   }
 };
-app.component(MisEditor.name, MisEditor);
 
 api()
   .staticApi()
@@ -37,7 +37,7 @@ api()
       .use(ElementPlus)
       .use(UmisRenderer, UMIS_CONFIG)
       .use(routers)
-      .mount('.umis-website-app__container');
+      .mount('.i-renderer-website-app__container');
   });
 
 if (!window.ResizeObserver) {

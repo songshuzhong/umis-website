@@ -22,32 +22,34 @@ const requireComponent = require.context(
 export default {
   install(app, options = {}) {
     const misComponents = [];
-    const formItems = [];
+    const extendRenderer = options.renderers || [];
+    let formItems = '';
     for (const name in Icons) {
       app.component(name, Icons[name]);
     }
     requireComponent.keys().forEach(filePath => {
-      const componentConfig = requireComponent(filePath);
-      let componentName = filePath.replace(/(.*\/)*([^.]+).*/gi, '$2');
+      const componentConfig = requireComponent(filePath); //requireComponent[filePath];
+      let renderName = `i-${componentConfig.default.name.toLowerCase()}`;
       if (filePath.includes('form')) {
-        formItems.push(`mis-${componentName}`);
+        formItems += renderName;
       }
-      misComponents.push(`mis-${componentName}`);
-      componentName = componentName
-        .split('-')
-        .map(kebab => kebab.charAt(0).toUpperCase() + kebab.slice(1))
-        .join('');
+      misComponents.push(renderName);
 
       app.component(
-        `Mis${componentName}`,
+        renderName,
         componentConfig.default || componentConfig
       );
+    });
+    extendRenderer.forEach(renderer => {
+      app.component(renderer.name, renderer);
+      misComponents.push(renderer.name);
+      formItems += renderer.name;
     });
     app.component(FontAwesomeIcon.name, FontAwesomeIcon);
     app.config.globalProperties.$formItems = formItems;
     app.config.globalProperties.$api = api(options);
     app.config.globalProperties.$eventHub = new Eventhub();
-    app.config.globalProperties.$umisConfig = overwrite(options);
+    app.config.globalProperties.$iRenderConfig = overwrite(options);
     app.config.globalProperties.$renderTpl = renderTpl;
     app.config.globalProperties.$compiledUrl = compiledUrl;
     app.config.globalProperties.$compiledKey = compiledKey;
