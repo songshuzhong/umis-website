@@ -1,4 +1,4 @@
 /dist/
 /tests/unit/coverage/
 /node_modules
-../umis-renderer/packages
+../i-renderer/packages

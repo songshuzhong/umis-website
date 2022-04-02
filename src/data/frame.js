@@ -3,7 +3,7 @@ export default {
   iProtal: true,
   body: {
     renderer: 'layout',
-    name: 'i-renderer-website__container',
+    name: 'i-website__container',
     direction: 'vertical',
     initData: {
       preview: false,
@@ -13,17 +13,17 @@ export default {
     body: [
       {
         renderer: 'wrapper',
-        classname: 'i-renderer-website__header__wrapper',
+        classname: 'i-website__header__wrapper',
         hiddenOn: 'data.preview === true',
         transition: 'el-zoom-in-top',
         body: {
           renderer: 'layout',
-          classname: 'i-renderer-website__header',
+          classname: 'i-website__header',
           body: [
             {
               renderer: 'aside',
-              name: 'i-renderer-website__nav-poppet',
-              classname: 'i-renderer-website__header__logo',
+              name: 'i-website__nav-poppet',
+              classname: 'i-website__header__logo',
               visibleOn: 'data.preview === false',
               transition: 'el-zoom-in-left',
               body: {
@@ -33,7 +33,7 @@ export default {
             },
             {
               renderer: 'main',
-              classname: 'i-renderer-website__header__main',
+              classname: 'i-website__header__main',
               body: [
                 {
                   renderer: 'wrapper',
@@ -41,7 +41,7 @@ export default {
                     {
                       renderer: 'switch',
                       name: 'collapse',
-                      target: 'i-renderer-website__container',
+                      target: 'i-website__container',
                       hiddenOn: '1 === 1'
                     },
                     {
@@ -62,7 +62,7 @@ export default {
                     },
                     {
                       renderer: 'breadcrumb',
-                      classname: 'i-renderer-website__breadcrumb'
+                      classname: 'i-website__breadcrumb'
                     }
                   ]
                 },
@@ -72,13 +72,13 @@ export default {
                     {
                       renderer: 'switch',
                       name: 'preview',
-                      target: 'i-renderer-website__container, i-renderer-website-nav',
+                      target: 'i-website__container, i-website-nav',
                       hiddenOn: '1 === 1'
                     },
                     {
                       renderer: 'action',
                       actionType: 'actions',
-                      name: 'i-renderer-website__header__actions',
+                      name: 'i-website__header__actions',
                       hiddenOn: 'data.activeIndex == "playground"',
                       actions: [
                         {
@@ -98,7 +98,7 @@ export default {
                           body: {
                             width: '100%',
                             appendToBody: true,
-                            classname: 'i-renderer-website__drawer',
+                            classname: 'i-website__drawer',
                             header: {
                               renderer: 'html',
                               html:
@@ -124,27 +124,27 @@ export default {
       },
       {
         renderer: 'layout',
-        classname: 'i-renderer-website__body',
+        classname: 'i-website__body',
         body: [
           {
             renderer: 'wrapper',
             visibleOn: 'data.preview === false',
             transition: 'el-zoom-in-left',
-            classname: 'i-renderer-website__nav-fixed',
+            classname: 'i-website__nav-fixed',
             body: {
               renderer: 'menu',
-              name: 'i-renderer-website-nav',
-              classname: 'i-renderer-website_menu-vertical',
+              name: 'i-website-nav',
+              classname: 'i-website_menu-vertical',
               router: true,
               mode: 'vertical',
               backgroundColor: '#3a3f51',
               textColor: '#fff',
               activeTextColor: '#ffd04b',
               defaultActive: '',
-              target: 'i-renderer-website__container,i-renderer-website__header__actions',
+              target: 'i-website__container,i-website__header__actions',
               title: {
                 renderer: 'html',
-                classname: 'i-renderer-website__header__logo',
+                classname: 'i-website__header__logo',
                 html: 'IRender'
               },
               body: [],
@@ -156,15 +156,15 @@ export default {
           },
           {
             renderer: 'aside',
-            name: 'i-renderer-website__nav-poppet',
-            classname: 'i-renderer-website__nav-poppet',
+            name: 'i-website__nav-poppet',
+            classname: 'i-website__nav-poppet',
             visibleOn: 'data.preview === false',
             transition: 'el-zoom-in-left'
           },
           {
             renderer: 'wrapper',
             visibleOn: 'data.preview === true',
-            classname: 'i-renderer-website__goto-edit',
+            classname: 'i-website__goto-edit',
             body: [
               {
                 renderer: 'action',
@@ -186,7 +186,7 @@ export default {
               },
               {
                 renderer: 'footer',
-                classname: 'i-renderer-website__footer',
+                classname: 'i-website__footer',
                 body: {
                   renderer: 'html',
                   html: 'Copyright @ 2022 sshuzhong@outlook.com'

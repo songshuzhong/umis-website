@@ -1,7 +1,7 @@
-.i-renderer-website-app__container {
+.i-website-app__container {
   height: 100vh;
 }
-.i-renderer-website__header__logo {
+.i-website__header__logo {
   height: 60px;
   color: white;
   text-align: center;
@@ -12,13 +12,13 @@
     font-size: 20px;
   }
 }
-.i-renderer-website__body {
+.i-website__body {
   height: calc(100% - 60px);
   overflow: hidden;
-  .i-renderer-main__container {
+  .i-main__container {
     position: relative;
   }
-  .i-renderer-website__nav-fixed {
+  .i-website__nav-fixed {
     position: fixed;
     top: 0;
     height: 100vh;
@@ -31,7 +31,7 @@
     .el-menu {
       border-right: 0;
     }
-    .i-renderer-website_menu-vertical {
+    .i-website_menu-vertical {
       .el-sub-menu .el-menu-item {
         background-color: rgba(0, 0, 0, 0.3);
         &::after {
@@ -69,13 +69,13 @@
       }
     }
   }
-  .i-renderer-website__goto-edit {
+  .i-website__goto-edit {
     position: fixed;
     bottom: 100px;
     right: 100px;
     z-index: 9999;
   }
-  .i-renderer-website__footer {
+  .i-website__footer {
     height: 60px;
     margin-top: 5px;
     border-top: 1px dashed var(--el-border-color);
@@ -84,9 +84,9 @@
     color: var(--el-text-color-secondary);
   }
 }
-.i-renderer-website__header__wrapper {
+.i-website__header__wrapper {
   width: 100%;
-  .i-renderer-website__header {
+  .i-website__header {
     position: relative;
     height: 60px;
     border-bottom: 1px solid #dcdfe6;
@@ -98,7 +98,7 @@
     .el-button {
       border: 0;
     }
-    .i-renderer-website__header__main {
+    .i-website__header__main {
       padding: 0 10px;
       display: flex;
       align-items: center;
@@ -107,17 +107,17 @@
   }
 }
 
-.i-renderer-website__nav-poppet {
+.i-website__nav-poppet {
   height: 100%;
   background: #3a3f51;
   transition: 0.3s width ease-in-out;
 }
-.i-renderer-website__breadcrumb {
+.i-website__breadcrumb {
   margin-left: 20px;
   display: inline-block;
   vertical-align: middle;
 }
-.i-renderer-website__drawer {
+.i-website__drawer {
   background-color: #282a36;
   .el-drawer__header {
     display: flex;
@@ -128,7 +128,7 @@
     background: #282a36;
     color: #72767b;
   }
-  .i-renderer-popup__container__body {
+  .i-popup__container__body {
     padding: 0;
     margin: 0;
   }
@@ -137,18 +137,18 @@
   }
 }
 
-.i-renderer-website__code-viwer {
+.i-website__code-viwer {
   height: 200px;
   padding: 10px 20px;
   .monaco-editor {
     height: 180px;
   }
 }
-.i-renderer-website__menu__logo {
+.i-website__menu__logo {
   height: 60px;
 }
-.i-renderer-website-doc {
-  .i-renderer-card__footer {
+.i-website-doc {
+  .i-card__footer {
     padding: 0;
     .el-button {
       width: 100%;
@@ -156,7 +156,7 @@
     }
   }
 }
-.i-renderer-website-doc__next-section {
+.i-website-doc__next-section {
   width: 100%;
   margin-top: 30px;
   display: flex;
@@ -188,7 +188,7 @@
   }
 }
 
-.i-renderer-website__router__loader {
+.i-website__router__loader {
   height: 3px;
   top: 0;
   &::before {

@@ -1,9 +1,9 @@
 import { ElMessage, ElNotification } from 'element-plus';
 import * as Icons from '@element-plus/icons-vue/dist/lib';
-import api from '../../../umis-renderer/packages/utils/api';
-import Eventhub from '../../../umis-renderer/packages/utils/eventhub';
-import {overwrite} from '../../../umis-renderer/packages/utils/config';
-import {renderTpl, compiledKey, compiledUrl, compiledParams, expressionEval} from '../../../umis-renderer/packages/utils/tpl';
+import api from '../../../i-renderer/packages/utils/api';
+import Eventhub from '../../../i-renderer/packages/utils/eventhub';
+import {overwrite} from '../../../i-renderer/packages/utils/config';
+import {isObject, isArray, isString, renderTpl, compiledKey, compiledUrl, compiledParams, expressionEval} from '../../../i-renderer/packages/utils/tpl';
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
 import fontawesome from '@fortawesome/fontawesome';
 import solid from '@fortawesome/fontawesome-free-solid';
@@ -14,7 +14,7 @@ fontawesome.library.add(regular);
 fontawesome.library.add(brands);
 
 const requireComponent = require.context(
-  '@umis-renderer/packages/renderer/component',
+  '@i-renderer/packages/renderer/component',
   true,
   /[\w-]+\.vue$/
 );
@@ -50,6 +50,9 @@ export default {
     app.config.globalProperties.$api = api(options);
     app.config.globalProperties.$eventHub = new Eventhub();
     app.config.globalProperties.$iRenderConfig = overwrite(options);
+    app.config.globalProperties.$isObject = isObject;
+    app.config.globalProperties.$isArray = isArray;
+    app.config.globalProperties.$isString = isString;
     app.config.globalProperties.$renderTpl = renderTpl;
     app.config.globalProperties.$compiledUrl = compiledUrl;
     app.config.globalProperties.$compiledKey = compiledKey;

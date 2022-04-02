@@ -17,7 +17,7 @@ module.exports = {
     },
     resolve: {
       alias: {
-        '@umis-renderer': '../../../umis-renderer'
+        '@umis-renderer': '../../../i-renderer'
       }
     },
     plugins: [
