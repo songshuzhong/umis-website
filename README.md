@@ -1,4 +1,4 @@
-# umis-website
+# i-website
 
 ## Project setup
 ```

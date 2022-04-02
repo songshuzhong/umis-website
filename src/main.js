@@ -4,7 +4,7 @@ import ResizeObserver from 'resize-observer-polyfill';
 
 import menusCreator from './router/index';
 import Application from './App.vue';
-import UmisRenderer, { api } from './components/entry';
+import IRenderer, { api } from './components/entry';
 import {Editor} from '../../i-renderer/packages/canvas';
 
 import 'element-plus/dist/index.css';
@@ -35,9 +35,9 @@ api()
     const routers = menusCreator(res.data.menu);
     app
       .use(ElementPlus)
-      .use(UmisRenderer, UMIS_CONFIG)
+      .use(IRenderer, UMIS_CONFIG)
       .use(routers)
-      .mount('.i-renderer-website-app__container');
+      .mount('.i-website-app__container');
   });
 
 if (!window.ResizeObserver) {

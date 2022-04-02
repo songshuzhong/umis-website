@@ -27,7 +27,7 @@ const createMenus = menus => {
     routes: [
       {
         path: '/',
-        name: 'UmisWebsite',
+        name: 'IWebsite',
         component: () => import('../../../i-renderer/packages/renderer/component/schema.vue'),
         props: {
           initSchema: frameSchema,
@@ -47,7 +47,7 @@ const createMenus = menus => {
     }
   });
   dyRouter.forEach(item => {
-    router.addRoute('UmisWebsite', item);
+    router.addRoute('IWebsite', item);
   });
   router.beforeEach((to, from, next) => {
     if (to.path !== from.path) {
