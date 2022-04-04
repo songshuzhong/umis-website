@@ -28,7 +28,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/cs/video.min.css"
   },
   {
-    "revision": "ca2d6bf16a1d3c8f9d9a",
+    "revision": "f7f6dca8cab3629b0323",
     "url": "/i-website/dist/css/app.cdedb053.css"
   },
   {
@@ -48,12 +48,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/img/loading.ce9bbdf7.svg"
   },
   {
-    "revision": "1cbe294f685014673dd10a5dbf75f58f",
+    "revision": "47899260ade8abe2f4bc9dcc14791197",
     "url": "/i-website/dist/index.html"
   },
   {
-    "revision": "ca2d6bf16a1d3c8f9d9a",
-    "url": "/i-website/dist/js/app.1f120b.js"
+    "revision": "f7f6dca8cab3629b0323",
+    "url": "/i-website/dist/js/app.72df61.js"
   },
   {
     "revision": "d9c90eb26fd71e57360fb4d6f792cde3",
