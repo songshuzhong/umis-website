@@ -1,5 +1,5 @@
 import { ElMessage, ElNotification } from 'element-plus';
-import * as Icons from '@element-plus/icons-vue/dist/lib';
+import * as Icons from '@element-plus/icons-vue';
 import api from '../../../i-renderer/packages/utils/api';
 import Eventhub from '../../../i-renderer/packages/utils/eventhub';
 import {overwrite} from '../../../i-renderer/packages/utils/config';

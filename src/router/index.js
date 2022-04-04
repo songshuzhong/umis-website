@@ -53,7 +53,7 @@ const createMenus = menus => {
     if (to.path !== from.path) {
       routerMask = ElLoading.service({
         fullscreen: true,
-        customClass: 'i-renderer-website__router__loader'
+        customClass: 'i-website__router__loader'
       });
     }
     next();

@@ -1,11 +1,12 @@
 import {createApp} from 'vue';
-import ElementPlus from 'element-plus';
+import * as ElementPlus from 'element-plus';
 import ResizeObserver from 'resize-observer-polyfill';
 
 import menusCreator from './router/index';
 import Application from './App.vue';
 import IRenderer, { api } from './components/entry';
 import {Editor} from '../../i-renderer/packages/canvas';
+import {assets} from './data/assets';
 
 import 'element-plus/dist/index.css';
 import '../../i-renderer/packages/renderer/styles/index.scss';
@@ -15,6 +16,7 @@ import './registerServiceWorker';
 const app = createApp(Application);
 const UMIS_CONFIG = {
   renderers: [Editor],
+  assets,
   domains: {
     default: process.env.VUE_APP_API_BASE
   },
@@ -25,7 +27,6 @@ req.headers.common.Authorization = cmsToken;
     `,
   }
 };
-
 api()
   .staticApi()
   .get(

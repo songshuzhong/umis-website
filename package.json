@@ -9,7 +9,6 @@
     "dev": "vue-cli-service serve --mode=dev"
   },
   "devDependencies": {
-    "@element-plus/icons-vue": "^0.2.4",
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-free-brands": "^5.0.13",
     "@fortawesome/fontawesome-free-regular": "^5.0.13",
@@ -67,5 +66,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/songshuzhong/i-website.git"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^1.1.4"
   }
 }
