@@ -1,19 +1,22 @@
 import {createApp} from 'vue';
-import ElementPlus from 'element-plus';
+import * as ElementPlus from 'element-plus';
 import ResizeObserver from 'resize-observer-polyfill';
 
 import menusCreator from './router/index';
 import Application from './App.vue';
-import UmisRenderer, { api } from './components/entry';
-import {MisEditor} from '../../umis-renderer/packages/canvas';
+import IRenderer, { api } from './components/entry';
+import {Editor} from '../../i-renderer/packages/canvas';
+import {assets} from './data/assets';
 
 import 'element-plus/dist/index.css';
-import '../../umis-renderer/packages/renderer/styles/index.scss';
+import '../../i-renderer/packages/renderer/styles/index.scss';
 import './style/index.scss';
 import './registerServiceWorker';
 
 const app = createApp(Application);
 const UMIS_CONFIG = {
+  renderers: [Editor],
+  assets,
   domains: {
     default: process.env.VUE_APP_API_BASE
   },
@@ -24,8 +27,6 @@ req.headers.common.Authorization = cmsToken;
     `,
   }
 };
-app.component(MisEditor.name, MisEditor);
-
 api()
   .staticApi()
   .get(
@@ -35,9 +36,9 @@ api()
     const routers = menusCreator(res.data.menu);
     app
       .use(ElementPlus)
-      .use(UmisRenderer, UMIS_CONFIG)
+      .use(IRenderer, UMIS_CONFIG)
       .use(routers)
-      .mount('.umis-website-app__container');
+      .mount('.i-website-app__container');
   });
 
 if (!window.ResizeObserver) {

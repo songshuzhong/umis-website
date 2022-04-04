@@ -32,7 +32,7 @@ umis是一个基于vue和element-ui制作的渲染器组件库，让开发者可
       body: {
         renderer: 'mis-html',
         html: `
-import UmisRenderers from "umis-renderers";<br/>
+import UmisRenderers from "i-renderers";<br/>
 Vue.use(UmisRenderers, options);              
               `
       },
@@ -41,7 +41,7 @@ Vue.use(UmisRenderers, options);
         text: '点击复制',
         actionType: 'mis-copy',
         content:
-          'import UmisRenderers from "umis-renderers"; Vue.use(UmisRenderers, options);'
+          'import UmisRenderers from "i-renderers"; Vue.use(UmisRenderers, options);'
       }
     },
     {

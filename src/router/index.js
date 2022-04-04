@@ -16,9 +16,9 @@ const history =
 const createMenus = menus => {
   let routerMask;
   const dyRouter = menuCreator
-    .dynamicMenuCreator(menus)
-    .initDocMenu()
-    .docMenuCreator().menus;
+    .dynamicMenuCreator(menus).menus;
+    // .initDocMenu()
+    // .docMenuCreator().menus;
 
   frameSchema.body.body[1].body[0].body.body = menus;
 
@@ -27,11 +27,11 @@ const createMenus = menus => {
     routes: [
       {
         path: '/',
-        name: 'UmisWebsite',
-        component: () => import('../../../umis-renderer/packages/renderer/component/schema.vue'),
+        name: 'IWebsite',
+        component: () => import('../../../i-renderer/packages/renderer/component/schema.vue'),
         props: {
           initSchema: frameSchema,
-          classname: 'umis-website-schema__container',
+          classname: 'i-renderer-website-schema__container',
           canSchemaUpdate: false,
           iProtal: true
         },
@@ -47,13 +47,13 @@ const createMenus = menus => {
     }
   });
   dyRouter.forEach(item => {
-    router.addRoute('UmisWebsite', item);
+    router.addRoute('IWebsite', item);
   });
   router.beforeEach((to, from, next) => {
     if (to.path !== from.path) {
       routerMask = ElLoading.service({
         fullscreen: true,
-        customClass: 'umis-website__router__loader'
+        customClass: 'i-website__router__loader'
       });
     }
     next();

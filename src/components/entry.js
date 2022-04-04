@@ -1,9 +1,9 @@
 import { ElMessage, ElNotification } from 'element-plus';
-import * as Icons from '@element-plus/icons-vue/dist/lib';
-import api from '../../../umis-renderer/packages/utils/api';
-import Eventhub from '../../../umis-renderer/packages/utils/eventhub';
-import {overwrite} from '../../../umis-renderer/packages/utils/config';
-import {renderTpl, compiledKey, compiledUrl, compiledParams, expressionEval} from '../../../umis-renderer/packages/utils/tpl';
+import * as Icons from '@element-plus/icons-vue';
+import api from '../../../i-renderer/packages/utils/api';
+import Eventhub from '../../../i-renderer/packages/utils/eventhub';
+import {overwrite} from '../../../i-renderer/packages/utils/config';
+import {isObject, isArray, isString, renderTpl, compiledKey, compiledUrl, compiledParams, expressionEval} from '../../../i-renderer/packages/utils/tpl';
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
 import fontawesome from '@fortawesome/fontawesome';
 import solid from '@fortawesome/fontawesome-free-solid';
@@ -14,7 +14,7 @@ fontawesome.library.add(regular);
 fontawesome.library.add(brands);
 
 const requireComponent = require.context(
-  '@umis-renderer/packages/renderer/component',
+  '@i-renderer/packages/renderer/component',
   true,
   /[\w-]+\.vue$/
 );
@@ -22,32 +22,37 @@ const requireComponent = require.context(
 export default {
   install(app, options = {}) {
     const misComponents = [];
-    const formItems = [];
+    const extendRenderer = options.renderers || [];
+    let formItems = '';
     for (const name in Icons) {
       app.component(name, Icons[name]);
     }
     requireComponent.keys().forEach(filePath => {
-      const componentConfig = requireComponent(filePath);
-      let componentName = filePath.replace(/(.*\/)*([^.]+).*/gi, '$2');
+      const componentConfig = requireComponent(filePath); //requireComponent[filePath];
+      let renderName = `i-${componentConfig.default.name.toLowerCase()}`;
       if (filePath.includes('form')) {
-        formItems.push(`mis-${componentName}`);
+        formItems += renderName;
       }
-      misComponents.push(`mis-${componentName}`);
-      componentName = componentName
-        .split('-')
-        .map(kebab => kebab.charAt(0).toUpperCase() + kebab.slice(1))
-        .join('');
+      misComponents.push(renderName);
 
       app.component(
-        `Mis${componentName}`,
+        renderName,
         componentConfig.default || componentConfig
       );
+    });
+    extendRenderer.forEach(renderer => {
+      app.component(renderer.name, renderer);
+      misComponents.push(renderer.name);
+      formItems += renderer.name;
     });
     app.component(FontAwesomeIcon.name, FontAwesomeIcon);
     app.config.globalProperties.$formItems = formItems;
     app.config.globalProperties.$api = api(options);
     app.config.globalProperties.$eventHub = new Eventhub();
-    app.config.globalProperties.$umisConfig = overwrite(options);
+    app.config.globalProperties.$iRenderConfig = overwrite(options);
+    app.config.globalProperties.$isObject = isObject;
+    app.config.globalProperties.$isArray = isArray;
+    app.config.globalProperties.$isString = isString;
     app.config.globalProperties.$renderTpl = renderTpl;
     app.config.globalProperties.$compiledUrl = compiledUrl;
     app.config.globalProperties.$compiledKey = compiledKey;

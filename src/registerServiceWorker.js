@@ -2,7 +2,7 @@ import {ElNotification} from 'element-plus';
 import {register} from 'register-service-worker';
 
 const isDev = process.env.NODE_ENV === 'dev';
-const sw = isDev ? '/service-worker.js' : '/umis-website/dist/service-worker.js';
+const sw = isDev ? '/service-worker.js' : '/i-website/dist/service-worker.js';
 
 register(sw, {
   updatefound() {
