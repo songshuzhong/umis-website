@@ -6,6 +6,7 @@ const isDev = process.env.NODE_ENV === 'dev';
 module.exports = {
   publicPath: isDev ? './' : '/i-website/dist',
   transpileDependencies: ['element-plus'],
+  productionSourceMap: false,
   configureWebpack: {
     output: isDev? {
       filename: 'js/[name].[hash:6].js',

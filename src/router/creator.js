@@ -26,7 +26,7 @@ export default {
   initRoute(item) {
     return {
       path: `${item.name}`,
-      component: () => Schema,
+      component: Schema,
       props: {
         classname: 'i-renderer-website-schema__container',
         url: item.schemaUrl
@@ -46,7 +46,7 @@ export default {
       });
       routeFold.children.push({
         path: `${basename}/${item.name}`,
-        component: () => Schema,
+        component: Schema,
         props: {
           url: `https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/docs/${item.name}`,
         },

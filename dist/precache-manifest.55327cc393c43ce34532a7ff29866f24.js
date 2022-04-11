@@ -296,11 +296,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/thumbnail/Wrapper.svg"
   },
   {
-    "revision": "116aa4d613efa3677ce79b2fc6c8d4a2",
+    "revision": "bc5aa5b64cb0e29c8e502685cbc20293",
     "url": "/i-website/dist/worker/editor.worker.js"
   },
   {
-    "revision": "b3d51c3a75beaccf7270cdcb0e3effa2",
+    "revision": "2a6e3d32af8a17b92732e2e2e36105c4",
     "url": "/i-website/dist/worker/json.worker.js"
   }
 ]);
