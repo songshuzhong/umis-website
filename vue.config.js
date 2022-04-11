@@ -5,7 +5,6 @@ const isDev = process.env.NODE_ENV === 'dev';
 
 module.exports = {
   publicPath: isDev ? './' : '/i-website/dist',
-  productionSourceMap: false,
   transpileDependencies: ['element-plus'],
   configureWebpack: {
     output: isDev? {
@@ -14,11 +13,6 @@ module.exports = {
     }: {
       filename: 'js/[name].[contenthash:6].js',
       chunkFilename: 'chunk/[name].[contenthash:6].js',
-    },
-    resolve: {
-      alias: {
-        '@i-renderer': '../../../i-renderer'
-      }
     },
     plugins: [
       new MonacoWebpackPlugin({
@@ -30,10 +24,6 @@ module.exports = {
         skipWaiting: true
       })
     ],
-  },
-  css: {
-    extract: true,
-    sourceMap: false,
   },
   devServer: {
     port: 80,
