@@ -22,8 +22,8 @@ const assets = {
     script: 'https://songshuzhong.github.io/i-assets/public/js/watermark.min.js'
   },
   richeditor: {
-    link: 'https://songshuzhong.github.io/i-assets/public/css/wangeditor.min.css',
-    script: 'https://songshuzhong.github.io/umis-website/public/css/wangeditor.min.js'
+    link: 'https://songshuzhong.github.io/i-assets/public/css/richeditor.min.css',
+    script: 'https://songshuzhong.github.io/i-assets/public/js/richeditor.min.js'
   },
   video: {
     link: 'https://songshuzhong.github.io/i-assets/public/css/video.min.css',

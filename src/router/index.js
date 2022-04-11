@@ -4,7 +4,7 @@ import {
   // createWebHistory
 } from 'vue-router';
 import { ElLoading } from 'element-plus';
-
+import {Schema} from '../../../i-renderer/packages';
 import menuCreator from './creator';
 import frameSchema from '../data/frame';
 
@@ -28,7 +28,7 @@ const createMenus = menus => {
       {
         path: '/',
         name: 'IWebsite',
-        component: () => import('../../../i-renderer/packages/renderer/component/schema.vue'),
+        component: Schema,
         props: {
           initSchema: frameSchema,
           classname: 'i-renderer-website-schema__container',

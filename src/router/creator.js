@@ -1,5 +1,6 @@
 import Fold from './fold.vue';
 import {docList} from '../data/docs.js';
+import {Schema} from '../../../i-renderer/packages';
 
 const docRoute = {
   renderer: 'mis-menu-submenu',
@@ -25,7 +26,7 @@ export default {
   initRoute(item) {
     return {
       path: `${item.name}`,
-      component: () => import('../../../i-renderer/packages/renderer/component/schema.vue'),
+      component: () => Schema,
       props: {
         classname: 'i-renderer-website-schema__container',
         url: item.schemaUrl
@@ -45,7 +46,7 @@ export default {
       });
       routeFold.children.push({
         path: `${basename}/${item.name}`,
-        component: () => import('../../../i-renderer/packages/renderer/component/schema.vue'),
+        component: () => Schema,
         props: {
           url: `https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/docs/${item.name}`,
         },

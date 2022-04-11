@@ -1,42 +1,34 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
+    "revision": "5e38f09c16d0b32e0378",
+    "url": "/i-website/dist/chunk/chunk-24d31188.205c26.js"
+  },
+  {
     "revision": "bc950a28a20a5012ba2e",
     "url": "/i-website/dist/chunk/chunk-2d0c1ed0.7fc4eb.js"
   },
   {
-    "revision": "a90088475a88a74e5e0d",
-    "url": "/i-website/dist/chunk/chunk-vendors.af114a.js"
+    "revision": "9f41911b2f2ff6c075b9",
+    "url": "/i-website/dist/chunk/chunk-vendors.9c6543.js"
   },
   {
     "revision": "1dd85c9cd54bccaadcd7",
     "url": "/i-website/dist/chunk/less.7f4ade.js"
   },
   {
-    "revision": "e214067190c4e57858be",
-    "url": "/i-website/dist/chunk/monaco-editor.c2310d.js"
+    "revision": "1a615d3e257a33364f5b",
+    "url": "/i-website/dist/chunk/monaco-editor.33f089.js"
   },
   {
-    "revision": "3152200dcfe7a82f43f046ba233cbd02",
-    "url": "/i-website/dist/cs/driver.min.css"
+    "revision": "dfa4eaceba9d6b6bb4b3",
+    "url": "/i-website/dist/css/app.281663f6.css"
   },
   {
-    "revision": "d8eb359dfb51394b85982fa28671c1cd",
-    "url": "/i-website/dist/cs/richeditor.min.css"
+    "revision": "9f41911b2f2ff6c075b9",
+    "url": "/i-website/dist/css/chunk-vendors.d38c9f5b.css"
   },
   {
-    "revision": "79342a606cdff6aa76c5e1b366e40e03",
-    "url": "/i-website/dist/cs/video.min.css"
-  },
-  {
-    "revision": "f7f6dca8cab3629b0323",
-    "url": "/i-website/dist/css/app.cdedb053.css"
-  },
-  {
-    "revision": "a90088475a88a74e5e0d",
-    "url": "/i-website/dist/css/chunk-vendors.fa0c18c4.css"
-  },
-  {
-    "revision": "e214067190c4e57858be",
+    "revision": "1a615d3e257a33364f5b",
     "url": "/i-website/dist/css/monaco-editor.719b2d48.css"
   },
   {
@@ -48,52 +40,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/img/loading.ce9bbdf7.svg"
   },
   {
-    "revision": "47899260ade8abe2f4bc9dcc14791197",
+    "revision": "bd57f381d5d7f460ff126cc973b2dc9f",
     "url": "/i-website/dist/index.html"
   },
   {
-    "revision": "f7f6dca8cab3629b0323",
-    "url": "/i-website/dist/js/app.72df61.js"
-  },
-  {
-    "revision": "d9c90eb26fd71e57360fb4d6f792cde3",
-    "url": "/i-website/dist/js/clipboard.min.js"
-  },
-  {
-    "revision": "2634f23291a5d1ff333963c671b76550",
-    "url": "/i-website/dist/js/countup.js"
-  },
-  {
-    "revision": "b7bd5402944eb642b84fb3d8c3c29cc6",
-    "url": "/i-website/dist/js/driver.min.js"
-  },
-  {
-    "revision": "5cde2b071978ffa22cadd9ec6e7551e0",
-    "url": "/i-website/dist/js/echarts.min.js"
-  },
-  {
-    "revision": "349c8aca9d3d0518362d1982d08f1a0f",
-    "url": "/i-website/dist/js/filesaver.min.js"
-  },
-  {
-    "revision": "517b55d3688ce9ef1085a3d9632bcb97",
-    "url": "/i-website/dist/js/qrcode.min.js"
-  },
-  {
-    "revision": "df3145577e9a253df10976598e71cb53",
-    "url": "/i-website/dist/js/richeditor.min.js"
-  },
-  {
-    "revision": "4226a8c5f1d21f74f4d1ece6d9eb5f0a",
-    "url": "/i-website/dist/js/video.min.js"
-  },
-  {
-    "revision": "d15620d491dcdad155cdb1ad509be636",
-    "url": "/i-website/dist/js/watermark.min.js"
-  },
-  {
-    "revision": "8dc3ade6c6fa56f87e134b61ae74c63d",
-    "url": "/i-website/dist/js/xlsx.min.js"
+    "revision": "dfa4eaceba9d6b6bb4b3",
+    "url": "/i-website/dist/js/app.921654.js"
   },
   {
     "revision": "ce9bbdf78b2c215adf3c80bc4534ce4c",

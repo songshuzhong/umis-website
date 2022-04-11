@@ -1,11 +1,16 @@
 import {createApp} from 'vue';
 import * as ElementPlus from 'element-plus';
+import * as Icons from '@element-plus/icons-vue';
+import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
+import fontawesome from '@fortawesome/fontawesome';
+import solid from '@fortawesome/fontawesome-free-solid';
+import regular from '@fortawesome/fontawesome-free-regular';
+import brands from '@fortawesome/fontawesome-free-brands';
 import ResizeObserver from 'resize-observer-polyfill';
 
 import menusCreator from './router/index';
 import Application from './App.vue';
-import IRenderer, { api } from './components/entry';
-import {Editor} from '../../i-renderer/packages/canvas';
+import {Editor, IRenderer, api} from '../../i-renderer/packages';
 import {assets} from './data/assets';
 
 import 'element-plus/dist/index.css';
@@ -27,6 +32,15 @@ req.headers.common.Authorization = cmsToken;
     `,
   }
 };
+
+fontawesome.library.add(solid);
+fontawesome.library.add(regular);
+fontawesome.library.add(brands);
+
+app.component(FontAwesomeIcon.name, FontAwesomeIcon);
+for (const name in Icons) {
+  app.component(name, Icons[name]);
+}
 api()
   .staticApi()
   .get(
