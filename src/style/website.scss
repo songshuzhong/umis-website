@@ -76,10 +76,10 @@
     z-index: 9999;
   }
   .i-website__footer {
-    height: 60px;
+    height: 50px;
     margin-top: 5px;
     border-top: 1px dashed var(--el-border-color);
-    line-height: 60px;
+    line-height: 50px;
     text-align: center;
     color: var(--el-text-color-secondary);
   }
@@ -128,12 +128,12 @@
     background: #282a36;
     color: #72767b;
   }
-  .i-popup__container__body {
+  .el-drawer__body {
     padding: 0;
     margin: 0;
   }
   .monaco-editor {
-    height: calc(100vh - 110px);
+    height: calc(100vh - 120px);
   }
 }
 
