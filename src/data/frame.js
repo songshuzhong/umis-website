@@ -182,6 +182,7 @@ export default {
                 renderer: 'main',
                 routerView: true,
                 iProtal: true,
+                classname: 'i-website__main',
                 computedClass: 'data.preview ? \'preview\' : \'\''
               },
               {
