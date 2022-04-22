@@ -1,5 +1,6 @@
 const assets = {
   echarts: {
+    json: 'https://songshuzhong.github.io/i-assets/public/js/chinaMap.json',
     script: 'https://songshuzhong.github.io/i-assets/public/js/echarts.min.js'
   },
   countup: {

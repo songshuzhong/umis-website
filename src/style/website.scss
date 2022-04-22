@@ -8,7 +8,7 @@
   line-height: 60px;
   background: #3a3f51;
   transition: 0.3s width ease-in-out;
-  .mis-html {
+  .i-html {
     font-size: 20px;
   }
 }
@@ -16,7 +16,7 @@
   height: calc(100% - 60px);
   overflow: hidden;
   .i-main__container {
-    position: relative;
+    // position: relative;
   }
   .i-website__nav-fixed {
     position: fixed;
