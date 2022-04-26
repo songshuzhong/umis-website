@@ -19,12 +19,6 @@ const UMIS_CONFIG = {
   assets,
   domains: {
     default: process.env.VUE_APP_API_BASE
-  },
-  adaptor: {
-    req: `
-const cmsToken = localStorage.getItem('cmsToken');
-req.headers.common.Authorization = cmsToken;
-    `,
   }
 };
 
