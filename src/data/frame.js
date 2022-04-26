@@ -6,7 +6,6 @@ export default {
     name: 'i-website__container',
     direction: 'vertical',
     initData: {
-      preview: false,
       width: 200,
       collapse: false
     },
@@ -14,7 +13,6 @@ export default {
       {
         renderer: 'wrapper',
         classname: 'i-website__header__wrapper',
-        hiddenOn: 'data.preview === true',
         transition: 'el-zoom-in-top',
         body: {
           renderer: 'layout',
@@ -24,7 +22,6 @@ export default {
               renderer: 'aside',
               name: 'i-website__nav-poppet',
               classname: 'i-website__header__logo',
-              visibleOn: 'data.preview === false',
               transition: 'el-zoom-in-left',
               body: {
                 renderer: 'html',
@@ -70,21 +67,15 @@ export default {
                   renderer: 'wrapper',
                   body: [
                     {
-                      renderer: 'switch',
-                      name: 'preview',
-                      target: 'i-website__container, i-website-nav',
-                      hiddenOn: '1 === 1'
-                    },
-                    {
                       renderer: 'action',
                       actionType: 'actions',
                       name: 'i-website__header__actions',
-                      hiddenOn: 'data.activeIndex == "playground"',
                       actions: [
                         {
                           renderer: 'action',
-                          icon: 'View',
-                          remoteComponent: 'preview'
+                          icon: 'HomeFilled',
+                          actionType: 'url',
+                          url: 'https://songshuzhong.github.io/i-home/dist/index.html#/'
                         },
                         {
                           renderer: 'action',
@@ -128,7 +119,6 @@ export default {
         body: [
           {
             renderer: 'wrapper',
-            visibleOn: 'data.preview === false',
             transition: 'el-zoom-in-left',
             classname: 'i-website__nav-fixed',
             body: {
@@ -158,21 +148,7 @@ export default {
             renderer: 'aside',
             name: 'i-website__nav-poppet',
             classname: 'i-website__nav-poppet',
-            visibleOn: 'data.preview === false',
             transition: 'el-zoom-in-left'
-          },
-          {
-            renderer: 'wrapper',
-            visibleOn: 'data.preview === true',
-            classname: 'i-website__goto-edit',
-            body: [
-              {
-                renderer: 'action',
-                remoteComponent: 'preview',
-                icon: 'HomeFilled',
-                text: ''
-              }
-            ]
           },
           {
             renderer: 'layout',
@@ -183,7 +159,6 @@ export default {
                 routerView: true,
                 iProtal: true,
                 classname: 'i-website__main',
-                computedClass: 'data.preview ? \'preview\' : \'\''
               },
               {
                 renderer: 'footer',
