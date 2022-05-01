@@ -22,11 +22,7 @@ export default {
               renderer: 'aside',
               name: 'i-website__nav-poppet',
               classname: 'i-website__header__logo',
-              transition: 'el-zoom-in-left',
-              body: {
-                renderer: 'html',
-                html: 'IRender'
-              }
+              transition: 'el-zoom-in-left'
             },
             {
               renderer: 'main',
@@ -99,7 +95,8 @@ export default {
                               {
                                 renderer: 'editor',
                                 editable: true,
-                                isJson: false
+                                isJson: false,
+                                classname: 'i-website__json-editor'
                               }
                             ]
                           }

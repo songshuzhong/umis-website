@@ -15,8 +15,8 @@ import './registerServiceWorker';
 
 const app = createApp(Application);
 const UMIS_CONFIG = {
-  renderers: [Editor],
   assets,
+  renderers: [Editor],
   domains: {
     default: process.env.VUE_APP_API_BASE
   }

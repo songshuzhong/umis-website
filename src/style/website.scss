@@ -15,9 +15,6 @@
 .i-website__body {
   height: calc(100% - 60px);
   overflow: hidden;
-  .i-main__container {
-    // position: relative;
-  }
   .i-website__nav-fixed {
     position: fixed;
     top: 0;
@@ -68,12 +65,6 @@
         width: 200px;
       }
     }
-  }
-  .i-website__goto-edit {
-    position: fixed;
-    bottom: 100px;
-    right: 100px;
-    z-index: 9999;
   }
   .i-website__footer {
     height: 50px;
@@ -131,16 +122,10 @@
     padding: 0;
     margin: 0;
   }
-  .monaco-editor {
-    height: calc(100vh - 110px);
-  }
-}
-
-.i-website__code-viwer {
-  height: 200px;
-  padding: 10px 20px;
-  .monaco-editor {
-    height: 180px;
+  .i-website__json-editor {
+    & > .monaco-editor {
+      height: calc(100vh - 110px);
+    }
   }
 }
 .i-website__menu__logo {
