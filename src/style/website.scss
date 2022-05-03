@@ -96,10 +96,11 @@
       overflow: hidden;
       .i-avatar__container,
       .i-dropdown__container {
-        vertical-align: middle;
-      }
-      .i-dropdown__container {
         margin-left: 10px;
+        vertical-align: middle;
+        img {
+          width: 40px;
+        }
       }
     }
   }

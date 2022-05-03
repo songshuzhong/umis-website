@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/chunk/monaco-editor.33f089.js"
   },
   {
-    "revision": "f1af112396f1e983177a",
-    "url": "/i-website/dist/css/app.7dde9446.css"
+    "revision": "8b47ee5e4b659aa62dda",
+    "url": "/i-website/dist/css/app.12b4c935.css"
   },
   {
     "revision": "03f37f94a17815b52167",
@@ -40,12 +40,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/img/loading.ce9bbdf7.svg"
   },
   {
-    "revision": "08496e766c0822a83aafa4a94eb95c5b",
+    "revision": "a5f6e6fe76f0440484d12cc64c0d184c",
     "url": "/i-website/dist/index.html"
   },
   {
-    "revision": "f1af112396f1e983177a",
-    "url": "/i-website/dist/js/app.4efb47.js"
+    "revision": "8b47ee5e4b659aa62dda",
+    "url": "/i-website/dist/js/app.c3e145.js"
   },
   {
     "revision": "ce9bbdf78b2c215adf3c80bc4534ce4c",
