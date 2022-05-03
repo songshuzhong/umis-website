@@ -3,6 +3,9 @@ const assets = {
     json: 'https://songshuzhong.github.io/i-assets/public/js/chinaMap.json',
     script: 'https://songshuzhong.github.io/i-assets/public/js/echarts.min.js'
   },
+  china: {
+    script: 'https://songshuzhong.github.io/i-assets/public/js/china.min.js'
+  },
   countup: {
     script: 'https://songshuzhong.github.io/i-assets/public/js/countup.js'
   },

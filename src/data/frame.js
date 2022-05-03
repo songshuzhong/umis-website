@@ -60,7 +60,10 @@ export default {
                   ]
                 },
                 {
-                  renderer: 'wrapper',
+                  renderer: 'service',
+                  initApi: {
+                    url: 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/user'
+                  },
                   body: [
                     {
                       renderer: 'action',
@@ -99,6 +102,34 @@ export default {
                                 classname: 'i-website__json-editor'
                               }
                             ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      renderer: 'avatar',
+                      src: '${user_cover}',
+                      isComputedSrc: true,
+                      size: 'default'
+                    },
+                    {
+                      renderer: 'dropdown',
+                      text: '<%=data.user_name%>',
+                      body: [
+                        {
+                          renderer: 'action',
+                          text: '个人中心',
+                          type: 'text',
+                          actionType: 'url',
+                          url: '/manager/workbench'
+                        },
+                        {
+                          renderer: 'action',
+                          text: '退出登录',
+                          type: 'text',
+                          actionType: 'ajax',
+                          actionApi: {
+                            url: '/logout'
                           }
                         }
                       ]
