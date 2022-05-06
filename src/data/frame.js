@@ -83,6 +83,12 @@ export default {
                         },
                         {
                           renderer: 'action',
+                          icon: 'Refresh',
+                          actionType: 'reload',
+                          reload: 'AppMain'
+                        },
+                        {
+                          renderer: 'action',
                           icon: 'Edit',
                           actionType: 'drawer',
                           body: {
@@ -184,6 +190,7 @@ export default {
             body: [
               {
                 renderer: 'main',
+                name: 'AppMain',
                 routerView: true,
                 iProtal: true,
                 classname: 'i-website__main',
