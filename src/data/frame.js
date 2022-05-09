@@ -68,7 +68,6 @@ export default {
                     {
                       renderer: 'action',
                       actionType: 'actions',
-                      name: 'i-website__header__actions',
                       actions: [
                         {
                           renderer: 'action',
@@ -165,7 +164,7 @@ export default {
               textColor: '#fff',
               activeTextColor: '#ffd04b',
               defaultActive: '',
-              target: 'i-website__container,i-website__header__actions',
+              target: 'i-website__container',
               title: {
                 renderer: 'html',
                 classname: 'i-website__header__logo',
