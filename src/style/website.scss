@@ -94,13 +94,15 @@
       align-items: center;
       justify-content: space-between;
       overflow: hidden;
-      .i-avatar__container,
-      .i-dropdown__container {
+      .i-avatar__container {
         margin-left: 10px;
         vertical-align: middle;
         img {
           width: 40px;
         }
+      }
+      .i-dropdown__container {
+        vertical-align: middle;
       }
     }
   }

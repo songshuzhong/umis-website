@@ -124,6 +124,7 @@ export default {
                         {
                           renderer: 'action',
                           text: '个人中心',
+                          icon: 'Avatar',
                           type: 'primary',
                           actionType: 'url',
                           url: '/manager/workbench'
@@ -132,6 +133,7 @@ export default {
                           renderer: 'action',
                           text: '退出登录',
                           type: 'primary',
+                          icon: 'SwitchButton',
                           actionType: 'ajax',
                           actionApi: {
                             url: '/logout'
