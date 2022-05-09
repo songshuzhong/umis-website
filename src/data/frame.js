@@ -124,14 +124,14 @@ export default {
                         {
                           renderer: 'action',
                           text: '个人中心',
-                          type: 'text',
+                          type: 'primary',
                           actionType: 'url',
                           url: '/manager/workbench'
                         },
                         {
                           renderer: 'action',
                           text: '退出登录',
-                          type: 'text',
+                          type: 'primary',
                           actionType: 'ajax',
                           actionApi: {
                             url: '/logout'
