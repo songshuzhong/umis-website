@@ -61,55 +61,65 @@ export default {
                 },
                 {
                   renderer: 'service',
+                  classname: 'i-website__header__service',
                   initApi: {
                     url: 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/user'
                   },
                   body: [
                     {
                       renderer: 'action',
-                      actionType: 'actions',
-                      actions: [
-                        {
-                          renderer: 'action',
-                          icon: 'HomeFilled',
-                          actionType: 'url',
-                          url: 'https://songshuzhong.github.io/i-home/dist/index.html#/'
+                      icon: 'HomeFilled',
+                      actionType: 'url',
+                      name: 'IWebsiteHome',
+                      type: 'icon',
+                      size: 18,
+                      url: 'https://songshuzhong.github.io/i-home/dist/index.html#/'
+                    },
+                    {
+                      renderer: 'action',
+                      icon: 'FullScreen',
+                      name: 'IWebsiteFullScreen',
+                      type: 'icon',
+                      size: 18,
+                      actionType: 'fullscreen'
+                    },
+                    {
+                      renderer: 'theme'
+                    },
+                    {
+                      renderer: 'action',
+                      icon: 'Refresh',
+                      type: 'icon',
+                      size: 18,
+                      name: 'IWebsiteRefresh',
+                      actionType: 'reload',
+                      reload: 'AppMain'
+                    },
+                    {
+                      renderer: 'action',
+                      icon: 'Edit',
+                      type: 'icon',
+                      size: 18,
+                      name: 'IWebsiteEdit',
+                      actionType: 'drawer',
+                      body: {
+                        width: '100%',
+                        appendToBody: true,
+                        classname: 'i-website__drawer',
+                        header: {
+                          renderer: 'html',
+                          html:
+                            '<div style="text-align: left; color: white;">编辑Schema</div>'
                         },
-                        {
-                          renderer: 'action',
-                          icon: 'FullScreen',
-                          actionType: 'fullscreen'
-                        },
-                        {
-                          renderer: 'action',
-                          icon: 'Refresh',
-                          actionType: 'reload',
-                          reload: 'AppMain'
-                        },
-                        {
-                          renderer: 'action',
-                          icon: 'Edit',
-                          actionType: 'drawer',
-                          body: {
-                            width: '100%',
-                            appendToBody: true,
-                            classname: 'i-website__drawer',
-                            header: {
-                              renderer: 'html',
-                              html:
-                                '<div style="text-align: left; color: white;">编辑Schema</div>'
-                            },
-                            body: [
-                              {
-                                renderer: 'editor',
-                                editable: true,
-                                isJson: false,
-                                classname: 'i-website__json-editor'
-                              }
-                            ]
+                        body: [
+                          {
+                            renderer: 'editor',
+                            editable: true,
+                            isJson: false,
+                            classname: 'i-website__json-editor'
                           }
-                        }
-                      ]
+                        ]
+                      }
                     },
                     {
                       renderer: 'avatar',
