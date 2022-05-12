@@ -211,7 +211,7 @@ export default {
                 classname: 'i-website__footer',
                 body: {
                   renderer: 'html',
-                  html: 'Copyright @ 2022 sshuzhong@outlook.com'
+                  html: 'Copyright © 2022 sshuzhong@outlook.com'
                 }
               }
             ]
