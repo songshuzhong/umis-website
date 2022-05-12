@@ -77,6 +77,50 @@ export default {
                     },
                     {
                       renderer: 'action',
+                      icon: 'Bell',
+                      type: 'icon',
+                      size: 18,
+                      name: 'iWebsiteBell',
+                      popupType: 'over',
+                      popperWidth: '300px',
+                      body:
+                        {
+                          renderer: 'tabs',
+                          stretch: true,
+                          panels: [
+                            {
+                              label: '通知',
+                              body: [
+                                {
+                                  renderer: 'mapping',
+                                  value: 'todos',
+                                  body: {
+                                    renderer: 'each',
+                                    body: {
+                                      renderer: 'html',
+                                      html: '<div class="border-top padding-10"><%=data.title%></div>'
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              label: '待办',
+                              icon: '',
+                              body: [
+                                {
+                                  renderer: 'html',
+                                  html: '<div class="text-center">空</div>'
+                                }
+                              ]
+                            }
+                          ],
+                          activeIndex: 1,
+                          tabPosition: 'top'
+                        }
+                    },
+                    {
+                      renderer: 'action',
                       icon: 'FullScreen',
                       name: 'IWebsiteFullScreen',
                       type: 'icon',
@@ -179,7 +223,7 @@ export default {
               target: 'i-website__container',
               title: {
                 renderer: 'html',
-                classname: 'i-website__header__logo',
+                classname: 'i-website__header__logo font-size-20',
                 html: 'IRender'
               },
               body: [],
