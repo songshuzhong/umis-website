@@ -63,7 +63,8 @@ export default {
                   renderer: 'service',
                   classname: 'i-website__header__service',
                   initApi: {
-                    url: 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/user'
+                    url: 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/user',
+                    cached: true
                   },
                   body: [
                     {
@@ -213,6 +214,9 @@ export default {
             body: {
               renderer: 'menu',
               name: 'i-website-nav',
+              initApi: {
+                url: '/api/menu/0767bea4-c7e7-4aa7-a1b5-2fd5e1ec4a7f'
+              },
               classname: 'i-website_menu-vertical',
               router: true,
               mode: 'vertical',

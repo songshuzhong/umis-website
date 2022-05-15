@@ -1,8 +1,6 @@
 import {createApp} from 'vue';
 import * as ElementPlus from 'element-plus';
 
-import ResizeObserver from 'resize-observer-polyfill';
-
 import menusCreator from './router/index';
 import Application from './App.vue';
 import {Editor, IRenderer, api} from '../../i-renderer/packages';
@@ -25,18 +23,13 @@ const UMIS_CONFIG = {
 
 api()
   .staticApi()
-  .get(
-    `${process.env.VUE_APP_API_BASE}/api/menu/0767bea4-c7e7-4aa7-a1b5-2fd5e1ec4a7f`
-  )
+  .get('https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/user')
   .then(res => {
-    const routers = menusCreator(res.data.menu);
+    const routers = menusCreator([]);
+    UMIS_CONFIG.permissions = res.data['user_permissions'];
     app
       .use(ElementPlus)
       .use(IRenderer, UMIS_CONFIG)
       .use(routers)
       .mount('.i-website-app__container');
   });
-
-if (!window.ResizeObserver) {
-  window.ResizeObserver = ResizeObserver;
-}

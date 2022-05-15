@@ -15,10 +15,9 @@ const history =
 
 const createMenus = menus => {
   let routerMask;
-  const dyRouter = menuCreator
-    .dynamicMenuCreator(menus).menus;
-    // .initDocMenu()
-    // .docMenuCreator().menus;
+  const dyRouter = menuCreator.dynamicMenuCreator(menus).routes;
+  // .initDocMenu()
+  // .docMenuCreator().menus;
 
   frameSchema.body.body[1].body[0].body.body = menus;
 

@@ -1,4 +1,3 @@
-import Fold from './fold.vue';
 import {docList} from '../data/docs.js';
 import {Schema} from '../../../i-renderer/packages';
 
@@ -12,27 +11,27 @@ const docRoute = {
 let routesList = [];
 
 export default {
-  menus: [],
-  initRouteFold(item) {
+  routes: [],
+  initRoute(item, base) {
     return {
-      path: `${item.name}`,
-      component: Fold,
-      meta: {
-        title: item.title
-      },
-      children: []
-    };
-  },
-  initRoute(item) {
-    return {
-      path: `${item.name}`,
+      path: `/${base.name}/${item.name}`,
       component: Schema,
       props: {
         classname: 'i-renderer-website-schema__container',
         url: item.schemaUrl
       },
       meta: {
-        title: item.title
+        title: item.title,
+        breadcrumb: [
+          {
+            title: base.title,
+            path: base.name,
+          },
+          {
+            title: item.title,
+            path: item.name,
+          }
+        ]
       }
     };
   },
@@ -55,7 +54,7 @@ export default {
         }
       });
     });
-    this.menus.push(routeFold);
+    this.routes.push(routeFold);
     return this;
   },
   initDocMenu() {
@@ -65,37 +64,34 @@ export default {
   dynamicMenuCreator(routes, basename = '') {
     routes.forEach(menu => {
       if (menu.renderer === 'submenu') {
-        const routeFold = this.initRouteFold(menu);
         menu.body.forEach(submenu => {
-          if (submenu.renderer === 'menu-item-group') {
+          if (submenu.renderer === 'menugroup') {
             submenu.body.forEach(group => {
               if (group.renderer === 'menuitem' && group.schemaUrl) {
                 const route = this.initRoute(group, basename);
-                this.menus.unshift(route);
+                this.routes.unshift(route);
               } else if (
                 submenu.renderer === 'menuitem' &&
                 submenu.schemaUrl
               ) {
                 const route = this.initRoute(submenu, basename);
-                this.menus.unshift(route);
+                this.routes.unshift(route);
               }
             });
           } else if (
             submenu.renderer === 'menuitem' &&
             submenu.schemaUrl
           ) {
+            const route = this.initRoute(submenu, menu);
             submenu.name = `/${menu.name}/${submenu.name}`;
-            const route = this.initRoute(submenu, basename);
-            routeFold.children.unshift(route);
+            this.routes.unshift(route);
           }
         });
-        this.menus.unshift(routeFold);
       } else if (menu.renderer === 'menuitem' && menu.schemaUrl) {
-        const route = this.initRoute(menu, basename);
-        this.menus.unshift(route);
+        const route = this.initRoute(menu, menu.name);
+        this.routes.unshift(route);
       }
     });
-    routesList = routes;
     return this;
-  }
+  },
 };
