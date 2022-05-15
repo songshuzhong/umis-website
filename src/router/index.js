@@ -15,8 +15,7 @@ const history =
 const createRoutes = menus => {
   let routerMask;
   const dyRouter = dynamicRouter.create(menus).routes;
-
-  frameSchema.body.body[1].body[0].body.body = menus;
+  frameSchema.body.body[0].body.body = menus;
 
   const router = createRouter({
     history,
