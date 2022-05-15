@@ -214,9 +214,6 @@ export default {
             body: {
               renderer: 'menu',
               name: 'i-website-nav',
-              initApi: {
-                url: '/api/menu/0767bea4-c7e7-4aa7-a1b5-2fd5e1ec4a7f'
-              },
               classname: 'i-website_menu-vertical',
               router: true,
               mode: 'vertical',

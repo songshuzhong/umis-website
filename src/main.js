@@ -1,7 +1,7 @@
 import {createApp} from 'vue';
 import * as ElementPlus from 'element-plus';
 
-import menusCreator from './router/index';
+import createRoutes from './router/index';
 import Application from './App.vue';
 import {Editor, IRenderer, api} from '../../i-renderer/packages';
 import {assets} from './data/assets';
@@ -21,12 +21,13 @@ const UMIS_CONFIG = {
   }
 };
 
-api()
-  .staticApi()
-  .get('https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/user')
+Promise.all([
+  api().staticApi().get('/api/menu/0767bea4-c7e7-4aa7-a1b5-2fd5e1ec4a7f'),
+  api().staticApi().get('https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/user')
+])
   .then(res => {
-    const routers = menusCreator([]);
-    UMIS_CONFIG.permissions = res.data['user_permissions'];
+    const routers = createRoutes(res[0].data.menu);
+    UMIS_CONFIG.permissions = res[1].data['user_permissions'];
     app
       .use(ElementPlus)
       .use(IRenderer, UMIS_CONFIG)

@@ -3,9 +3,8 @@ import {
   createWebHashHistory,
   // createWebHistory
 } from 'vue-router';
-import { ElLoading } from 'element-plus';
-import {Schema} from '../../../i-renderer/packages';
-import menuCreator from './creator';
+import {ElLoading} from 'element-plus';
+import {Schema, dynamicRouter} from '../../../i-renderer/packages';
 import frameSchema from '../data/frame';
 
 const history =
@@ -13,11 +12,9 @@ const history =
     ? createWebHashHistory()
     : createWebHashHistory();
 
-const createMenus = menus => {
+const createRoutes = menus => {
   let routerMask;
-  const dyRouter = menuCreator.dynamicMenuCreator(menus).routes;
-  // .initDocMenu()
-  // .docMenuCreator().menus;
+  const dyRouter = dynamicRouter.create(menus).routes;
 
   frameSchema.body.body[1].body[0].body.body = menus;
 
@@ -31,8 +28,7 @@ const createMenus = menus => {
         props: {
           initSchema: frameSchema,
           classname: 'i-renderer-website-schema__container',
-          canSchemaUpdate: false,
-          iProtal: true
+          canSchemaUpdate: false
         },
         children: dyRouter
       }
@@ -69,4 +65,4 @@ const createMenus = menus => {
   return router;
 };
 
-export default createMenus;
+export default createRoutes;
