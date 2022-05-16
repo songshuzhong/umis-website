@@ -1,13 +1,12 @@
+$i-monaco-primary: #282a36 !default;
+$i-website-primary: #3a3f51 !default;
+
 .i-website-app__container {
   height: 100vh;
   overflow: hidden;
 }
 .i-website__header {
   position: relative;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   border-bottom: 1px solid var(--el-border-color);
   line-height: 60px;
   text-align: left;
@@ -29,13 +28,16 @@
 }
 .i-website__header__logo {
   height: 60px;
-  color: white;
+  color: var(--el-color-white);
   text-align: center;
   line-height: 60px;
-  background: #3a3f51;
+  background: $i-website-primary;
   transition: 0.3s width ease-in-out;
 }
 .i-website__header__service {
+  position: absolute;
+  top: 0;
+  right: 0;
   display: flex;
   align-items: center;
   .i-component__fragment {
@@ -44,7 +46,7 @@
 }
 .i-website__aside {
   height: 100%;
-  background: #3a3f51;
+  background: $i-website-primary;
   transition: 0.3s width ease-in-out;
   &::-webkit-scrollbar {
     width: 0;
@@ -119,8 +121,8 @@
     margin-bottom: 0;
     padding: 20px 20px 15px 20px;
     border-bottom: 0;
-    background: #282a36;
-    color: #72767b;
+    background: $i-monaco-primary;
+    color: var(--el-text-color-secondary);
   }
   .el-drawer__body {
     padding: 0;

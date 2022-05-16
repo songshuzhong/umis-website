@@ -4,18 +4,16 @@ import {
   // createWebHistory
 } from 'vue-router';
 import {ElLoading} from 'element-plus';
-import {Schema, dynamicRouter} from '../../../i-renderer/packages';
-import frameSchema from '../data/frame';
+import {Schema} from '../../../i-renderer/packages';
+import indexSchema from '../data/index';
 
 const history =
   process.env.NODE_ENV === 'dev'
     ? createWebHashHistory()
     : createWebHashHistory();
 
-const createRoutes = menus => {
+const createRoutes = dyRouter => {
   let routerMask;
-  const dyRouter = dynamicRouter.create(menus).routes;
-  frameSchema.body.body[0].body.body = menus;
 
   const router = createRouter({
     history,
@@ -25,23 +23,13 @@ const createRoutes = menus => {
         name: 'IWebsite',
         component: Schema,
         props: {
-          initSchema: frameSchema,
+          initSchema: indexSchema,
           classname: 'i-renderer-website-schema__container',
           canSchemaUpdate: false
-        },
-        children: dyRouter
-      }
-    ],
-    scrollBehavior(to, from, savedPosition) {
-      if (savedPosition) {
-        return savedPosition;
-      }
-
-      return { x: 0, y: 0 };
-    }
-  });
-  dyRouter.forEach(item => {
-    router.addRoute('IWebsite', item);
+        }
+      },
+      ...dyRouter
+    ]
   });
   router.beforeEach((to, from, next) => {
     if (to.path !== from.path) {

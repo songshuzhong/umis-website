@@ -3,8 +3,9 @@ import * as ElementPlus from 'element-plus';
 
 import createRoutes from './router/index';
 import Application from './App.vue';
-import {Editor, IRenderer, api} from '../../i-renderer/packages';
+import {Editor, IRenderer, api, dynamicRouter} from '../../i-renderer/packages';
 import {assets} from './data/assets';
+import frameSchema from './data/frame';
 
 import 'element-plus/dist/index.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';
@@ -13,7 +14,7 @@ import './style/index.scss';
 import './registerServiceWorker';
 
 const app = createApp(Application);
-const UMIS_CONFIG = {
+const config = {
   assets,
   renderers: [Editor],
   domains: {
@@ -26,11 +27,15 @@ Promise.all([
   api().staticApi().get('https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/user')
 ])
   .then(res => {
-    const routers = createRoutes(res[0].data.menu);
-    UMIS_CONFIG.permissions = res[1].data['user_permissions'];
+    const [menus, settings] = res;
+    const dyRouter = dynamicRouter.init(menus.data.menu).routes;
+    const routers = createRoutes(dyRouter);
+
+    frameSchema.body[0].body.body = menus.data.menu;
+    config.permissions = settings.data['user_permissions'];
     app
       .use(ElementPlus)
-      .use(IRenderer, UMIS_CONFIG)
+      .use(IRenderer, config)
       .use(routers)
       .mount('.i-website-app__container');
   });
