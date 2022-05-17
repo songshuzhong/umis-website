@@ -1,0 +1,37 @@
+.i-website-app__container {
+  &.mobile {
+    .i-website__container {
+      flex-direction: row-reverse;
+    }
+    .i-website__breadcrumb {
+      font-size: 12px;
+    }
+    .i-website__header__service {
+      height: 100%;
+      .i-component__fragment,
+      .i-avatar__container {
+        display: none;
+      }
+    }
+    .i-website__aside {
+      position: fixed;
+      z-index: 9;
+      &.width-64 {
+        visibility: hidden;
+      }
+      &.width-200 {
+        visibility: visible;
+      }
+    }
+    .i-crud__container__tools {
+      .el-button {
+          span:last-child {
+            display: none;
+          }
+      }
+    }
+    .i-form__container__viewer {
+      position: relative;
+    }
+  }
+}

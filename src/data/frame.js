@@ -1,6 +1,7 @@
 export default {
   renderer: 'layout',
   name: 'i-website__container',
+  classname: 'i-website__container',
   initData: {
     width: 200
   },
@@ -48,8 +49,10 @@ export default {
                   renderer: 'action',
                   icon: 'Expand',
                   type: 'icon',
+                  name: 'IWebsiteExpand',
                   remoteComponent: 'collapse',
                   visibleOn: 'data.collapse',
+                  immediate: true,
                   size: 22
                 },
                 {
@@ -182,6 +185,47 @@ export default {
                   renderer: 'dropdown',
                   text: '<%=data.user_name%>',
                   body: [
+                    {
+                      renderer: 'action',
+                      icon: 'HomeFilled',
+                      actionType: 'url',
+                      name: 'IWebsiteHome',
+                      text: '官网',
+                      url: 'https://songshuzhong.github.io/i-home/dist/index.html#/'
+                    },
+                    {
+                      renderer: 'action',
+                      icon: 'Refresh',
+                      text: '刷新',
+                      name: 'IWebsiteRefresh',
+                      actionType: 'reload',
+                      reload: 'AppMain'
+                    },
+                    {
+                      renderer: 'action',
+                      icon: 'Edit',
+                      text: '编辑',
+                      name: 'IWebsiteEdit',
+                      actionType: 'drawer',
+                      body: {
+                        width: '100%',
+                        appendToBody: true,
+                        classname: 'i-website__drawer',
+                        header: {
+                          renderer: 'html',
+                          html:
+                            '<div style="text-align: left; color: white;">编辑Schema</div>'
+                        },
+                        body: [
+                          {
+                            renderer: 'editor',
+                            editable: true,
+                            isJson: false,
+                            classname: 'i-website__json-editor'
+                          }
+                        ]
+                      }
+                    },
                     {
                       renderer: 'action',
                       text: '个人中心',

@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import {defineComponent} from 'vue';
+import {defineComponent, onMounted} from 'vue';
 import {ElConfigProvider} from 'element-plus';
 import zhCn from 'element-plus/es/locale/lang/zh-cn';
 import {Schema} from '../../i-renderer/packages';
@@ -22,6 +22,14 @@ export default defineComponent({
     [ElConfigProvider.name]: ElConfigProvider
   },
   setup() {
+    onMounted(() => {
+      const isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
+      document
+        .querySelector('.i-website-app__container')
+        .classList
+        .add(isMobile? 'mobile': 'pc');
+    });
+
     return {
       locale: zhCn,
       frameSchema
