@@ -21,6 +21,7 @@ const createRoutes = dyRouter => {
       {
         path: '/',
         name: 'IWebsite',
+        title: '零代码-IRender',
         component: Schema,
         props: {
           initSchema: indexSchema,
@@ -41,7 +42,7 @@ const createRoutes = dyRouter => {
     next();
   });
   router.afterEach((route) => {
-    document.title = route?.meta?.title || 'website';
+    document.title = route?.meta?.title || '零代码-IRender';
     const timer = setTimeout(() => {
       if (routerMask && typeof routerMask.close === 'function') {
         routerMask.close();
