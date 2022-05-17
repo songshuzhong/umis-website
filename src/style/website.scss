@@ -2,6 +2,7 @@ $i-monaco-primary: #282a36 !default;
 $i-website-primary: #3a3f51 !default;
 
 .i-website-app__container {
+  min-width: 1200px;
   height: 100vh;
   overflow: hidden;
 }

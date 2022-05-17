@@ -34,7 +34,6 @@ export default {
         {
           renderer: 'header',
           classname: 'i-website__header',
-          useTags: true,
           body: [
             {
               renderer: 'wrapper',
