@@ -37,6 +37,14 @@ html {
       font-size: 14px;
     }
     .i-form__container {
+      .i-form__list {
+        .el-radio-group {
+          flex-direction: column;
+        }
+        .i-list__item {
+          width: 100% !important;
+        }
+      }
       .el-form-item {
         flex-direction: column;
         .el-form-item__label-wrap {
