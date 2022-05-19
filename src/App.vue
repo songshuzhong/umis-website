@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import {defineComponent, onMounted} from 'vue';
+import {defineComponent, onMounted, getCurrentInstance} from 'vue';
 import {ElConfigProvider} from 'element-plus';
 import zhCn from 'element-plus/es/locale/lang/zh-cn';
 import {Schema} from '../../i-renderer/packages';
@@ -22,9 +22,12 @@ export default defineComponent({
     [ElConfigProvider.name]: ElConfigProvider
   },
   setup() {
+    const { proxy } = getCurrentInstance();
+
     onMounted(() => {
       const isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
       document.documentElement.classList.add(isMobile? 'mobile': 'pc');
+      isMobile && proxy.$message.success('切换到PC端体验更加哦！');
     });
 
     return {
