@@ -190,6 +190,9 @@ export default {
                       url: 'https://songshuzhong.github.io/i-home/dist/index.html#/'
                     },
                     {
+                      renderer: 'theme'
+                    },
+                    {
                       renderer: 'action',
                       icon: 'Refresh',
                       text: '刷新',
