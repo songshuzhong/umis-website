@@ -37,37 +37,32 @@ export default {
           classname: 'i-website__header',
           body: [
             {
-              renderer: 'wrapper',
-              body: [
-                {
-                  renderer: 'switch',
-                  name: 'collapse',
-                  target: 'i-website__container',
-                  hiddenOn: '1 === 1'
-                },
-                {
-                  renderer: 'action',
-                  icon: 'Expand',
-                  type: 'icon',
-                  name: 'IWebsiteExpand',
-                  remoteComponent: 'collapse',
-                  visibleOn: 'data.collapse',
-                  immediate: true,
-                  size: 22
-                },
-                {
-                  renderer: 'action',
-                  icon: 'Fold',
-                  type: 'icon',
-                  remoteComponent: 'collapse',
-                  visibleOn: '!data.collapse',
-                  size: 22
-                },
-                {
-                  renderer: 'breadcrumb',
-                  classname: 'i-website__breadcrumb'
-                }
-              ]
+              renderer: 'switch',
+              name: 'collapse',
+              target: 'i-website__container',
+              hiddenOn: '1 === 1'
+            },
+            {
+              renderer: 'action',
+              icon: 'Expand',
+              type: 'icon',
+              name: 'IWebsiteExpand',
+              remoteComponent: 'collapse',
+              visibleOn: 'data.collapse',
+              immediate: true,
+              size: 22
+            },
+            {
+              renderer: 'action',
+              icon: 'Fold',
+              type: 'icon',
+              remoteComponent: 'collapse',
+              visibleOn: '!data.collapse',
+              size: 22
+            },
+            {
+              renderer: 'breadcrumb',
+              classname: 'i-website__breadcrumb'
             },
             {
               renderer: 'service',
@@ -184,6 +179,7 @@ export default {
                 {
                   renderer: 'dropdown',
                   text: '<%=data.user_name%>',
+                  popperClass: 'i-website__header__dropdown',
                   body: [
                     {
                       renderer: 'action',
@@ -259,10 +255,7 @@ export default {
         {
           renderer: 'footer',
           classname: 'i-website__footer',
-          body: {
-            renderer: 'html',
-            html: 'Copyright © 2022 sshuzhong@outlook.com'
-          }
+          body: 'copyright © 2022 sshuzhong@outlook.com'
         }
       ]
     }

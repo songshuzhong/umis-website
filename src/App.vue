@@ -24,10 +24,7 @@ export default defineComponent({
   setup() {
     onMounted(() => {
       const isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
-      document
-        .querySelector('.i-website-app__container')
-        .classList
-        .add(isMobile? 'mobile': 'pc');
+      document.documentElement.classList.add(isMobile? 'mobile': 'pc');
     });
 
     return {

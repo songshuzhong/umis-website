@@ -1,4 +1,4 @@
-.i-website-app__container {
+html {
   &.mobile {
     .i-website__container {
       flex-direction: row-reverse;
@@ -15,7 +15,7 @@
     }
     .i-website__aside {
       position: fixed;
-      z-index: 9;
+      z-index: 2022;
       &.width-64 {
         visibility: hidden;
       }
@@ -32,6 +32,45 @@
     }
     .i-form__container__viewer {
       position: relative;
+    }
+    .i-website__footer {
+      font-size: 14px;
+    }
+    .i-form__container {
+      .el-form-item {
+        flex-direction: column;
+        .el-form-item__label-wrap {
+          margin-left: 0 !important;
+          margin-bottom: 4px;
+        }
+        .el-form-item__label {
+          text-align: left;
+        }
+      }
+      &.el-form--inline {
+        .el-form-item {
+          display: flex;
+        }
+      }
+    }
+    .i-popup__container {
+      width: 100% !important;
+    }
+    .el-message {
+      min-width: 95%;
+    }
+  }
+  &.pc {
+    .i-website__header__dropdown {
+      .el-dropdown-menu {
+        .el-dropdown-menu__item {
+          &:nth-of-type(1),
+          &:nth-of-type(2),
+          &:nth-of-type(3) {
+            display: none;
+          }
+        }
+      }
     }
   }
 }
