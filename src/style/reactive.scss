@@ -72,6 +72,16 @@ html {
         }
       }
     }
+    .i-form__datepicker__popper {
+      position: fixed;
+      top: auto !important;
+      left: 0 !important;
+      bottom: 0 !important;
+      .el-picker-panel__content,
+      .el-picker-panel {
+        width: auto;
+      }
+    }
     .i-popup__container {
       width: 100% !important;
     }
