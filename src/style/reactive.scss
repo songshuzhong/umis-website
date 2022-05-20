@@ -1,10 +1,17 @@
 html {
+  .el-message {
+    top: 70px !important;
+  }
   &.mobile {
     .i-website__container {
       flex-direction: row-reverse;
     }
     .i-website__breadcrumb {
       font-size: 12px;
+    }
+    .i-website__header {
+      display: flex;
+      align-items: center;
     }
     .i-website__header__service {
       height: 100%;
@@ -67,6 +74,11 @@ html {
     }
     .i-popup__container {
       width: 100% !important;
+    }
+    .i-steps__container {
+      .el-step__title {
+        font-size: 14px;
+      }
     }
     .el-message {
       min-width: 95%;
