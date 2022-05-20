@@ -13,6 +13,10 @@ html {
         display: none;
       }
     }
+    .i-website__header__dropdown {
+      left: 0 !important;
+      width: 100% !important;
+    }
     .i-website__aside {
       position: fixed;
       z-index: 2022;
