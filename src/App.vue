@@ -12,7 +12,6 @@
 import {defineComponent, onMounted, getCurrentInstance} from 'vue';
 import {ElConfigProvider} from 'element-plus';
 import zhCn from 'element-plus/es/locale/lang/zh-cn';
-import {debounce} from 'lodash';
 import {Schema} from '../../i-renderer/packages';
 import frameSchema from './data/frame';
 
@@ -25,7 +24,8 @@ export default defineComponent({
   setup() {
     const { proxy } = getCurrentInstance();
     const html = document.documentElement.classList;
-    const resize = debounce(() => {
+
+    onMounted(() => {
       const isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
       if (isMobile) {
         html.remove('pc');
@@ -35,13 +35,6 @@ export default defineComponent({
         html.add('pc');
       }
       isMobile && proxy.$message.success('切换到PC端体验更加哦！');
-    });
-
-    onMounted(() => {
-      resize();
-      window.onresize = function () {
-        resize();
-      };
     });
 
     return {
