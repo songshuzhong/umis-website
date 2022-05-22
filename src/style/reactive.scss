@@ -36,9 +36,9 @@ html {
     }
     .i-crud__container__tools {
       .el-button {
-          span:last-child {
-            display: none;
-          }
+        span:nth-child(2) {
+          display: none;
+        }
       }
     }
     .i-form__container__viewer {
