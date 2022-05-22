@@ -87,6 +87,14 @@ html {
           display: flex;
         }
       }
+      &.actions-fixed {
+        .i-form__actions--inline {
+          .i-component__fragment {
+            margin-top: 0;
+            margin-left: 10px;
+          }
+        }
+      }
     }
     .i-form__datepicker__popper {
       left: 0 !important;
