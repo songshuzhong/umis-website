@@ -56,6 +56,22 @@ html {
           width: 100% !important;
         }
       }
+      .el-form-item__content {
+        .el-select,
+        .el-input-number,
+        .el-input__wrapper {
+          width: 100%;
+        }
+        .i-component__fragment {
+          .el-button {
+            width: 100%;
+          }
+        }
+        .i-component__fragment + .i-component__fragment {
+          margin-top: 10px;
+          margin-left: 0;
+        }
+      }
       .el-form-item {
         flex-direction: column;
         .el-form-item__label-wrap {
