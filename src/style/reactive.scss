@@ -63,6 +63,7 @@ html {
           width: 100%;
         }
         .i-component__fragment {
+          width: 100%;
           .el-button {
             width: 100%;
           }
@@ -86,11 +87,13 @@ html {
       &.el-form--inline {
         .el-form-item {
           display: flex;
+          margin-right: 0;
         }
       }
       &.actions-fixed {
         .i-form__actions--inline {
           .i-component__fragment {
+            width: unset;
             margin-top: 0;
             margin-left: 10px;
           }
