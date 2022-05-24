@@ -81,7 +81,7 @@ html {
           margin-bottom: 4px;
         }
         .el-form-item__label {
-          text-align: left;
+          justify-content: flex-start;
         }
       }
       &.el-form--inline {
