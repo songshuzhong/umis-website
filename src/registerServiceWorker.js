@@ -11,6 +11,7 @@ register(sw, {
       message: '检测到新版本，正在下载中，请稍后...',
       type: 'info',
       position: 'bottom-right',
+      offset: 60,
     });
   },
   updated() {
@@ -19,7 +20,8 @@ register(sw, {
       message: '版本更新完成，10s后刷新项目',
       type: 'success',
       position: 'bottom-right',
-      duration: 10000
+      duration: 10000,
+      offset: 60,
     });
     const timer = setTimeout(() => {
       clearTimeout(timer);
