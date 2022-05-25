@@ -7,7 +7,7 @@ const assets = {
     script: 'https://songshuzhong.github.io/i-assets/public/js/china.min.js'
   },
   countup: {
-    script: 'https://songshuzhong.github.io/i-assets/public/js/countup.js'
+    script: 'https://songshuzhong.github.io/i-assets/public/js/countup.min.js'
   },
   filesaver: {
     script: 'https://songshuzhong.github.io/i-assets/public/js/filesaver.min.js'

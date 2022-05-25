@@ -56,6 +56,9 @@ html {
           width: 100% !important;
         }
       }
+      .i-form__combo__item {
+        flex-direction: column;
+      }
       .el-form-item__content {
         .el-select,
         .el-input-number,
