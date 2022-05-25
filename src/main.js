@@ -9,7 +9,6 @@ import {assets} from './data/assets';
 import frameSchema from './data/frame';
 
 import 'element-plus/dist/index.css';
-import 'element-plus/theme-chalk/display.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';
 import '../../i-renderer/packages/renderer/styles/index.scss';
 import './style/index.scss';
