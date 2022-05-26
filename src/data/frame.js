@@ -133,6 +133,10 @@ export default {
                   actionType: 'fullscreen'
                 },
                 {
+                  renderer: 'theme',
+                  type: false
+                },
+                {
                   renderer: 'theme'
                 },
                 {
@@ -188,9 +192,6 @@ export default {
                       name: 'IWebsiteHome',
                       text: '官网',
                       url: 'https://songshuzhong.github.io/i-home/dist/index.html#/'
-                    },
-                    {
-                      renderer: 'theme'
                     },
                     {
                       renderer: 'action',

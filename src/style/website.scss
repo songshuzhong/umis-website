@@ -25,6 +25,19 @@ $i-website-primary: #3a3f51 !default;
   .i-dropdown__container {
     vertical-align: middle;
   }
+  .el-color-picker__trigger {
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    .el-color-picker__color {
+      border: 0;
+    }
+    .el-color-picker__color-inner {
+      display: block;
+    }
+  }
 }
 .i-website__header__logo {
   height: 60px;
