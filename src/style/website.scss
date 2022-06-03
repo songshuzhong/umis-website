@@ -151,18 +151,6 @@ $i-website-primary: #3a3f51 !default;
   max-height: 60vh !important;
   overflow-y: scroll;
 }
-.el-loading-spinner {
-  cursor: not-allowed;
-  .circular {
-    background-image: url('../../public/loading.svg');
-    background-position: center;
-    background-size: cover;
-    animation: none;
-  }
-  .path {
-    display: none;
-  }
-}
 
 @keyframes grow {
   from {
