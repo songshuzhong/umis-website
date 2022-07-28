@@ -29,7 +29,7 @@ export default {
           header: [
             {
               renderer: 'html',
-              html: '基础版(￥699)',
+              html: '基础版',
               classname: 'font-size-16 text-center font-weight-600 margin-bottom-20'
             },
             {
@@ -102,7 +102,7 @@ export default {
           header: [
             {
               renderer: 'html',
-              html: '专业版(￥799)',
+              html: '专业版',
               classname: 'font-size-16 text-center font-weight-600 margin-bottom-20'
             },
             {
