@@ -133,13 +133,6 @@ export default {
                   actionType: 'fullscreen'
                 },
                 {
-                  renderer: 'theme',
-                  type: false
-                },
-                {
-                  renderer: 'theme'
-                },
-                {
                   renderer: 'action',
                   icon: 'Refresh',
                   type: 'icon',
@@ -147,6 +140,26 @@ export default {
                   name: 'IWebsiteRefresh',
                   actionType: 'reload',
                   reload: 'AppMain'
+                },
+                {
+                  renderer: 'action',
+                  icon: 'Setting',
+                  type: 'icon',
+                  size: 18,
+                  actionType: 'drawer',
+                  body: {
+                    width: '30%',
+                    appendToBody: true,
+                    header: {
+                      renderer: 'html',
+                      html: '设置'
+                    },
+                    body: [
+                      {
+                        renderer: 'setting'
+                      }
+                    ]
+                  }
                 },
                 {
                   renderer: 'action',

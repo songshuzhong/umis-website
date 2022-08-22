@@ -1,25 +1,20 @@
 <template>
-  <el-config-provider :locale="locale">
-    <schema
-      :init-schema="frameSchema"
-      :canSchemaUpdate="false"
-      classname="i-renderer-website-schema__container"
-    />
-  </el-config-provider>
+  <schema
+    :init-schema="frameSchema"
+    :canSchemaUpdate="false"
+    classname="i-renderer-website-schema__container"
+  />
 </template>
 
 <script>
 import {defineComponent, onMounted, getCurrentInstance} from 'vue';
-import {ElConfigProvider} from 'element-plus';
-import zhCn from 'element-plus/es/locale/lang/zh-cn';
 import {Schema} from '../../i-renderer/packages';
 import frameSchema from './data/frame';
 
 export default defineComponent({
   name: 'Application',
   components: {
-    Schema,
-    [ElConfigProvider.name]: ElConfigProvider
+    Schema
   },
   setup() {
     const { proxy } = getCurrentInstance();
@@ -41,7 +36,6 @@ export default defineComponent({
     });
 
     return {
-      locale: zhCn,
       frameSchema
     };
   }
