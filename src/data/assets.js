@@ -3,6 +3,9 @@ const assets = {
     json: 'https://songshuzhong.github.io/i-assets/public/js/chinaMap.json',
     script: 'https://songshuzhong.github.io/i-assets/public/js/echarts.min.js'
   },
+  wordcloud: {
+    script: 'https://songshuzhong.github.io/i-assets/public/js/wordcloud.min.js'
+  },
   china: {
     script: 'https://songshuzhong.github.io/i-assets/public/js/china.min.js'
   },
