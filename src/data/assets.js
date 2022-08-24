@@ -9,6 +9,9 @@ const assets = {
   china: {
     script: 'https://songshuzhong.github.io/i-assets/public/js/china.min.js'
   },
+  bmap: {
+    script: 'https://songshuzhong.github.io/i-assets/public/js/bmap.min.js'
+  },
   countup: {
     script: 'https://songshuzhong.github.io/i-assets/public/js/countup.min.js'
   },
