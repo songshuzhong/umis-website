@@ -10,7 +10,10 @@ const assets = {
     script: 'https://songshuzhong.github.io/i-assets/public/js/china.min.js'
   },
   bmap: {
-    script: 'https://songshuzhong.github.io/i-assets/public/js/bmap.min.js'
+    script: [
+      'https://songshuzhong.github.io/i-assets/public/js/bmap.min.js',
+      'https://api.map.baidu.com/getscript?ak=R1g6V9BEDdFBoOYlbOHPUXsHUaGjH2HL',
+    ]
   },
   countup: {
     script: 'https://songshuzhong.github.io/i-assets/public/js/countup.min.js'
