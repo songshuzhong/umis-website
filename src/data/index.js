@@ -260,6 +260,13 @@ export default {
                   previews: [
                     'https://songshuzhong.github.io/i-assets/public/img/case4.png'
                   ]
+                },
+                {
+                  renderer: 'image',
+                  src: 'https://songshuzhong.github.io/i-assets/public/img/case5.jpg',
+                  previews: [
+                    'https://songshuzhong.github.io/i-assets/public/img/case5.jpg'
+                  ]
                 }
               ],
               height: 140,
