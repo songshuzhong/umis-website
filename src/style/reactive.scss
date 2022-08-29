@@ -34,6 +34,14 @@ html {
         visibility: visible;
       }
     }
+    .i-header__container {
+      .i-header__container__tags {
+        display: none;
+      }
+    }
+    .i-header__container.has-tags + .i-main__container {
+      margin-top: 0;
+    }
     .i-crud__container__tools {
       .el-button {
         span:nth-child(2) {

@@ -1,5 +1,5 @@
 import {createApp} from 'vue';
-import * as ElementPlus from 'element-plus';
+import ElementPlus from 'element-plus';
 import ResizeObserver from 'resize-observer-polyfill';
 
 import createRoutes from './router/index';

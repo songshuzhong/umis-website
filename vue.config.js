@@ -1,5 +1,6 @@
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 const {GenerateSW} = require('workbox-webpack-plugin');
+const path = require('path');
 
 const isDev = process.env.NODE_ENV === 'dev';
 
@@ -14,6 +15,12 @@ module.exports = {
     }: {
       filename: 'js/[name].[contenthash:6].js',
       chunkFilename: 'chunk/[name].[contenthash:6].js',
+    },
+    resolve: {
+      alias: {
+        '@element-plus/icons-vue': path.resolve(process.cwd(), 'node_modules', '@element-plus/icons-vue'),
+        '@vueuse': path.resolve(process.cwd(), 'node_modules', '@vueuse')
+      }
     },
     plugins: [
       new MonacoWebpackPlugin({
