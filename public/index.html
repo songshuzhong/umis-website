@@ -22,31 +22,4 @@
   </div>
 </div>
 </body>
-<script id="website_reload" type="text/javascript">
-  (function() {
-    var ua = window.navigator.userAgent;
-    if (ua.match(/MicroMessenger/i)) {
-      const script = document.createElement('script')
-      script.type = 'text/javascript';
-      script.src = 'https://res.wx.qq.com/open/js/jweixin-1.6.0.js';
-      script.onload = script.onreadystatechange = function() {
-        if (
-          !script.readyState ||
-          script.readyState === 'loaded' ||
-          script.readyState === 'complete'
-        ) {
-          script.onload = script.onreadystatechange = null;
-          wx && wx.ready(function () {
-            wx.updateTimelineShareData({
-              title: '前端低代码工具库',
-              link: 'https://songshuzhong.github.io/i-website/dist/index.html',
-              imgUrl: 'https://songshuzhong.github.io/i-website/dist/img/icons/logo-300x300.jpg'
-            })
-          });
-        }
-      }
-      document.body.appendChild(script);
-    }
-  })();
-</script>
 </html>
