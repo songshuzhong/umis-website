@@ -15,13 +15,38 @@
   <meta property="og:description" content="IRenderer渲染器经典示例集合。">
   <link rel="icon" href="./favicon.ico">
   <script id="website_reload" type="text/javascript">
-    var isWebsiteloaded = false;
-    var timer = setTimeout(function() {
-      if (!isWebsiteloaded) {
-        window.location.reload();
-        clearTimeout(timer);
+    (function() {
+      var isWebsiteloaded = false;
+      var ua = window.navigator.userAgent;
+      var timer = setTimeout(function() {
+        if (!isWebsiteloaded) {
+          window.location.reload();
+          clearTimeout(timer);
+        }
+      }, 10000);
+      if (ua.match(/MicroMessenger/i) === 'micromessenger') {
+        const script = document.createElement('script')
+        script.type = 'text/javascript';
+        script.src = 'http://res.wx.qq.com/open/js/jweixin-1.6.0.js';
+        script.onload = script.onreadystatechange = function() {
+          if (
+            !script.readyState ||
+            script.readyState === 'loaded' ||
+            script.readyState === 'complete'
+          ) {
+            script.onload = script.onreadystatechange = null;
+            wx && wx.ready(function () {
+              wx.updateTimelineShareData({
+                title: '前端低代码工具库',
+                link: 'https://songshuzhong.github.io/i-website/dist/index.html',
+                imgUrl: 'https://songshuzhong.github.io/i-website/dist/img/icons/logo-300x300.jpg'
+              })
+            });
+          }
+        }
+        document.body.appendChild(script);
       }
-    }, 10000);
+    })();
   </script>
 </head>
 <body>
