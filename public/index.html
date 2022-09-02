@@ -16,14 +16,7 @@
   <link rel="icon" href="./favicon.ico">
   <script id="website_reload" type="text/javascript">
     (function() {
-      var isWebsiteloaded = false;
       var ua = window.navigator.userAgent;
-      var timer = setTimeout(function() {
-        if (!isWebsiteloaded) {
-          window.location.reload();
-          clearTimeout(timer);
-        }
-      }, 10000);
       if (ua.match(/MicroMessenger/i) === 'micromessenger') {
         const script = document.createElement('script')
         script.type = 'text/javascript';
@@ -56,5 +49,4 @@
   </div>
 </div>
 </body>
-<img src="./img/icons/logo-300x300.jpg" width="0" height="0" style="position: absolute;" />
 </html>
