@@ -324,42 +324,5 @@ export default {
       ]
     }
   ],
-  steps: [
-    {
-      element: 'IWebsiteEdit',
-      popover: {
-        title: '编辑',
-        description: '点击查看或编辑页面'
-      }
-    },
-    {
-      element: 'IWebsiteRefresh',
-      popover: {
-        title: '刷新',
-        description: '点击刷新页面'
-      }
-    },
-    {
-      element: 'IWebsiteFullScreen',
-      popover: {
-        title: '全屏',
-        description: '点击全屏显示'
-      }
-    },
-    {
-      element: 'IWebsiteHome',
-      popover: {
-        title: '官网',
-        description: '点击跳转官网'
-      }
-    },
-    {
-      element: 'IWebsiteExpand',
-      popover: {
-        title: '折叠',
-        description: '点击折叠展开菜单'
-      }
-    }
-  ],
   innerStyle: '.suitable-ul {\n    margin-bottom: 39px;\n}'
 };
