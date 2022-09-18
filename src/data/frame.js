@@ -9,24 +9,55 @@ export default {
     {
       renderer: 'aside',
       classname: 'i-website__aside',
-      body: {
-        renderer: 'menu',
-        name: 'i-website-nav',
-        classname: 'i-website_menu-vertical',
-        router: true,
-        mode: 'vertical',
-        backgroundColor: '#3a3f51',
-        textColor: '#fff',
-        activeTextColor: '#ffd04b',
-        defaultActive: '',
-        target: 'i-website__container',
-        title: {
-          renderer: 'html',
-          classname: 'i-website__header__logo font-size-20',
-          html: 'IRender'
+      body: [
+        {
+          renderer: 'menu',
+          name: 'i-website-nav',
+          classname: 'i-website_menu-vertical',
+          router: true,
+          mode: 'vertical',
+          backgroundColor: '#3a3f51',
+          textColor: '#fff',
+          activeTextColor: '#ffd04b',
+          defaultActive: '',
+          target: 'i-website__container',
+          title: {
+            renderer: 'html',
+            classname: 'i-website__header__logo font-size-20',
+            html: 'IRender'
+          },
+          body: []
         },
-        body: []
-      }
+        {
+          renderer: 'wrapper',
+          classname: 'i-website__ads',
+          body: [
+            {
+              renderer: 'carousel',
+              classname: 'i-home__carousel',
+              autoplay: true,
+              loop: true,
+              body: [
+                {
+                  renderer: 'html',
+                  html: '招租广告位1'
+                },
+                {
+                  renderer: 'html',
+                  html: '招租广告位2'
+                },
+                {
+                  renderer: 'html',
+                  html: '招租广告位3'
+                }
+              ],
+              height: 140,
+              indicatorPosition: 'none',
+              arrow: 'always'
+            }
+          ]
+        }
+      ]
     },
     {
       renderer: 'layout',
@@ -49,7 +80,6 @@ export default {
               name: 'IWebsiteExpand',
               remoteComponent: 'collapse',
               visibleOn: 'data.collapse',
-              immediate: true,
               size: 22
             },
             {
@@ -68,7 +98,8 @@ export default {
               renderer: 'service',
               classname: 'i-website__header__service',
               initApi: {
-                url: 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/user'
+                url: 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/user',
+                cached: true
               },
               body: [
                 {

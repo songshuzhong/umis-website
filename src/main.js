@@ -32,7 +32,7 @@ Promise.all([
     const dyRouter = dynamicRouter.init(menus.data.menu).routes;
     const routers = createRoutes(dyRouter);
 
-    frameSchema.body[0].body.body = menus.data.menu;
+    frameSchema.body[0].body[0].body = menus.data.menu;
     config.permissions = settings.data['user_permissions'];
     app
       .use(ElementPlus)

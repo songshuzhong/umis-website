@@ -58,6 +58,7 @@ $i-website-primary: #3a3f51 !default;
   }
 }
 .i-website__aside {
+  position: relative;
   height: 100%;
   background: $i-website-primary;
   transition: 0.3s width ease-in-out;
@@ -68,6 +69,7 @@ $i-website-primary: #3a3f51 !default;
     border-right: 0;
   }
   .i-website_menu-vertical {
+    margin-bottom: 50px;
     &.el-menu--collapse {
       .i-website__header__logo {
         font-size: 14px;
@@ -107,6 +109,27 @@ $i-website-primary: #3a3f51 !default;
     }
     &:not(.el-menu--collapse) {
       width: 200px;
+    }
+  }
+  .i-wrapper__container {
+    position: relative;
+    .i-website__ads {
+      position: fixed;
+      bottom: 0;
+      width: 200px;
+      height: 50px;
+      padding: 5px 8px;
+      background: $i-website-primary;
+      overflow: hidden;
+      .i-html__container {
+        width: 100%;
+        height: 40px;
+        border-radius: 4px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 12px;
+        background: whitesmoke;
+      }
     }
   }
 }
