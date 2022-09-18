@@ -121,14 +121,15 @@ $i-website-primary: #3a3f51 !default;
       padding: 5px 8px;
       background: $i-website-primary;
       overflow: hidden;
-      .i-html__container {
+      .i-render__container {
         width: 100%;
         height: 40px;
         border-radius: 4px;
         line-height: 40px;
         text-align: center;
         font-size: 12px;
-        background: whitesmoke;
+        background: white;
+        cursor: pointer;
       }
     }
   }

@@ -39,16 +39,58 @@ export default {
               loop: true,
               body: [
                 {
-                  renderer: 'html',
-                  html: '招租广告位1'
+                  renderer: 'render',
+                  body: [
+                    {
+                      innerHTML: '招租广告位1',
+                      tag: 'span',
+                      classname: 'i-render__container',
+                      action: {
+                        renderer: 'action',
+                        actionType: 'ajax',
+                        actionApi: {
+                          url: 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/ads_click?order=1',
+                          method: 'get'
+                        }
+                      }
+                    }
+                  ]
                 },
                 {
-                  renderer: 'html',
-                  html: '招租广告位2'
+                  renderer: 'render',
+                  body: [
+                    {
+                      innerHTML: '招租广告位2',
+                      tag: 'span',
+                      classname: 'i-render__container',
+                      action: {
+                        renderer: 'action',
+                        actionType: 'ajax',
+                        actionApi: {
+                          url: 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/ads_click?order=2',
+                          method: 'get'
+                        }
+                      }
+                    }
+                  ]
                 },
                 {
-                  renderer: 'html',
-                  html: '招租广告位3'
+                  renderer: 'render',
+                  body: [
+                    {
+                      innerHTML: '招租广告位3',
+                      tag: 'span',
+                      classname: 'i-render__container',
+                      action: {
+                        renderer: 'action',
+                        actionType: 'ajax',
+                        actionApi: {
+                          url: 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/ads_click?order=3',
+                          method: 'get'
+                        }
+                      }
+                    }
+                  ]
                 }
               ],
               height: 140,
