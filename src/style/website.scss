@@ -134,7 +134,7 @@ $i-website-primary: #3a3f51 !default;
         line-height: 40px;
         text-align: center;
         font-size: 12px;
-        background: white;
+        background: var(--el-fill-color-blank);
         cursor: pointer;
       }
     }

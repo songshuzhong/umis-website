@@ -193,7 +193,7 @@ export default {
                           ]
                         }
                       ],
-                      activeIndex: 1,
+                      activeTab: 1,
                       tabPosition: 'top'
                     }
                 },
