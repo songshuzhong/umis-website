@@ -118,7 +118,7 @@ export default {
             {
               renderer: 'action',
               icon: 'Expand',
-              type: 'icon',
+              category: 'icon',
               name: 'IWebsiteExpand',
               remoteComponent: 'collapse',
               visibleOn: 'data.collapse',
@@ -127,7 +127,7 @@ export default {
             {
               renderer: 'action',
               icon: 'Fold',
-              type: 'icon',
+              category: 'icon',
               remoteComponent: 'collapse',
               visibleOn: '!data.collapse',
               size: 22
@@ -149,14 +149,14 @@ export default {
                   icon: 'HomeFilled',
                   actionType: 'url',
                   name: 'IWebsiteHome',
-                  type: 'icon',
+                  category: 'icon',
                   size: 18,
                   url: 'https://songshuzhong.github.io/i-home/dist/index.html#/'
                 },
                 {
                   renderer: 'action',
                   icon: 'Bell',
-                  type: 'icon',
+                  category: 'icon',
                   size: 18,
                   name: 'iWebsiteBell',
                   popupType: 'over',
@@ -201,14 +201,14 @@ export default {
                   renderer: 'action',
                   icon: 'FullScreen',
                   name: 'IWebsiteFullScreen',
-                  type: 'icon',
+                  category: 'icon',
                   size: 18,
                   actionType: 'fullscreen'
                 },
                 {
                   renderer: 'action',
                   icon: 'Refresh',
-                  type: 'icon',
+                  category: 'icon',
                   size: 18,
                   name: 'IWebsiteRefresh',
                   actionType: 'reload',
@@ -217,7 +217,7 @@ export default {
                 {
                   renderer: 'action',
                   icon: 'Setting',
-                  type: 'icon',
+                  category: 'icon',
                   size: 18,
                   actionType: 'drawer',
                   body: {
@@ -237,7 +237,7 @@ export default {
                 {
                   renderer: 'action',
                   icon: 'Edit',
-                  type: 'icon',
+                  category: 'icon',
                   size: 18,
                   name: 'IWebsiteEdit',
                   actionType: 'drawer',
