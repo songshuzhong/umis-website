@@ -289,6 +289,27 @@ export default {
                     },
                     {
                       renderer: 'action',
+                      icon: 'Setting',
+                      text: '设置',
+                      category: 'icon',
+                      size: 18,
+                      actionType: 'drawer',
+                      body: {
+                        width: '30%',
+                        appendToBody: true,
+                        header: {
+                          renderer: 'html',
+                          html: '设置'
+                        },
+                        body: [
+                          {
+                            renderer: 'setting'
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      renderer: 'action',
                       icon: 'Edit',
                       text: '编辑',
                       name: 'IWebsiteEdit',
