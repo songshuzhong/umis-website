@@ -118,7 +118,7 @@ $i-website-primary: #3a3f51 !default;
   }
   .i-wrapper__container {
     position: relative;
-    .i-website__ads {
+    &.i-website__ads {
       position: fixed;
       bottom: 0;
       width: 200px;
