@@ -1,6 +1,5 @@
 import {createApp} from 'vue';
 import ElementPlus from 'element-plus';
-import ResizeObserver from 'resize-observer-polyfill';
 
 import createRoutes from './router/index';
 import Application from './App.vue';
@@ -40,7 +39,3 @@ Promise.all([
       .use(routers)
       .mount('.i-website-app__container');
   });
-
-if (!window.ResizeObserver) {
-  window.ResizeObserver = ResizeObserver;
-}
