@@ -130,7 +130,8 @@ export default {
               category: 'icon',
               remoteComponent: 'collapse',
               visibleOn: '!data.collapse',
-              size: 22
+              size: 22,
+              immediate: true
             },
             {
               renderer: 'breadcrumb',
