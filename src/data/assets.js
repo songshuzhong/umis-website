@@ -9,6 +9,13 @@ const assets = {
   china: {
     script: 'https://songshuzhong.github.io/i-assets/public/js/china.min.js'
   },
+  bpmn: {
+    script: 'https://songshuzhong.github.io/i-assets/public/bower_components/bpmn-js/dist/bpmn-modeler.js',
+    link: 'https://songshuzhong.github.io/i-assets/public/bower_components/bpmn-js/dist/assets/bpmn-font/css/bpmn.css'
+  },
+  diagram: {
+    link: 'https://songshuzhong.github.io/i-assets/public/bower_components/bpmn-js/dist/assets/diagram-js.css'
+  },
   bmap: {
     script: [
       'https://songshuzhong.github.io/i-assets/public/js/bmap.min.js',
