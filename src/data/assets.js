@@ -10,11 +10,11 @@ const assets = {
     script: 'https://songshuzhong.github.io/i-assets/public/js/china.min.js'
   },
   bpmn: {
-    script: 'https://songshuzhong.github.io/i-assets/public/bower_components/bpmn-js/dist/bpmn-modeler.js',
-    link: 'https://songshuzhong.github.io/i-assets/public/bower_components/bpmn-js/dist/assets/bpmn-font/css/bpmn.css'
-  },
-  diagram: {
-    link: 'https://songshuzhong.github.io/i-assets/public/bower_components/bpmn-js/dist/assets/diagram-js.css'
+    script: 'https://songshuzhong.github.io/i-assets/public/js/bpmn.min.js',
+    link: [
+      'https://songshuzhong.github.io/i-assets/public/lib/bpmn-js/dist/assets/diagram-js.css',
+      'https://songshuzhong.github.io/i-assets/public/lib/bpmn-js/dist/assets/bpmn-font/css/bpmn.css'
+    ]
   },
   bmap: {
     script: [
