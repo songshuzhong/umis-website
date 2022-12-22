@@ -4,7 +4,6 @@ import ElementPlus from 'element-plus';
 import createRoutes from './router/index';
 import Application from './App.vue';
 import {Editor, IRenderer, api, dynamicRouter} from '../../i-renderer/packages';
-import {assets} from './data/assets';
 import frameSchema from './data/frame';
 
 import 'element-plus/dist/index.css';
@@ -15,7 +14,6 @@ import './registerServiceWorker';
 
 const app = createApp(Application);
 const config = {
-  assets,
   renderers: [Editor],
   domains: {
     default: process.env.VUE_APP_API_BASE
