@@ -18,9 +18,9 @@ export default defineComponent({
   },
   setup() {
     const { proxy } = getCurrentInstance();
-    const html = document.documentElement.classList;
 
     onMounted(() => {
+      const html = document.documentElement.classList;
       const isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
       if (isMobile) {
         html.remove('pc');
