@@ -3,7 +3,8 @@ export default {
   name: 'i-website__container',
   classname: 'i-website__container',
   initData: {
-    width: 200
+    width: 200,
+    collapse: false
   },
   body: [
     {
@@ -131,7 +132,7 @@ export default {
               remoteComponent: 'collapse',
               visibleOn: '!data.collapse',
               size: 22,
-              immediate: true
+              immediateOn: 'data.collapse',
             },
             {
               renderer: 'breadcrumb',

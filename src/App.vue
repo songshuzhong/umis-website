@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import {defineComponent, onMounted, getCurrentInstance} from 'vue';
+import {defineComponent, onBeforeMount, getCurrentInstance} from 'vue';
 import {Schema} from '../../i-renderer/packages';
 import frameSchema from './data/frame';
 
@@ -19,10 +19,11 @@ export default defineComponent({
   setup() {
     const { proxy } = getCurrentInstance();
 
-    onMounted(() => {
+    onBeforeMount(() => {
       const html = document.documentElement.classList;
       const isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
       if (isMobile) {
+        frameSchema.initData.collapse = true;
         html.remove('pc');
         html.add('mobile');
       } else {
