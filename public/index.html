@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="pc">
 <head>
   <meta charset="UTF-8" />
   <meta id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
@@ -24,7 +24,7 @@
       margin: 0;
       padding: 0;
     }
-    .i-website-skeleton__aside {
+    html.pc .i-website-skeleton__aside {
       position: absolute;
       left: 0;
       width: 200px;
@@ -36,35 +36,49 @@
       color: white;
       background: #3a3f51;
     }
-    .i-website-skeleton__section {
+    html.pc .i-website-skeleton__header,
+    html.mobile .i-website-skeleton__header {
+      height: 60px;
+      border-bottom: 1px solid #dcdfe6;
+    }
+    html.pc .i-website-skeleton__section {
       display: flex;
       flex-direction: column;
       margin-left: 200px;
     }
-    .i-website-skeleton__main {
-      flex: 1;
-      margin: 20px;
+    html.pc .i-website-skeleton__main {
+        flex: 1;
+        margin: 20px;
     }
-    .i-website-skeleton__header {
-      height: 60px;
-      border-bottom: 1px solid #dcdfe6;
-    }
-    .i-website-skeleton__footer {
+    html.pc .i-website-skeleton__footer,
+    html.mobile .i-website-skeleton__footer {
       height: 60px;
       border-top: 1px solid #dcdfe6;
       color: #909399;
       line-height: 50px;
       text-align: center;
     }
-    .loading.i-website-skeleton__aside,
-    .loading.i-website-skeleton__main,
-    .loading.i-website-skeleton__header,
-    .loading.i-website-skeleton__footer {
+    html.mobile .i-website-skeleton__main,
+    html.pc .loading.i-website-skeleton__aside,
+    html.pc .loading.i-website-skeleton__main,
+    html.pc .loading.i-website-skeleton__header,
+    html.pc .loading.i-website-skeleton__footer {
       background-color: #ededed;
       background: linear-gradient(100deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 60%) #ededed;
       background-size: 200% 100%;
       background-position-x: 180%;
       animation: 1s loading ease-in-out infinite;
+    }
+    html.mobile .i-website-skeleton__section {
+      display: flex;
+      flex-direction: column;
+    }
+    html.mobile .i-website-skeleton__aside {
+      display: none;
+    }
+    html.mobile .i-website-skeleton__main {
+      flex: 1;
+      margin: 20px;
     }
     @keyframes loading {
       to {
@@ -72,6 +86,17 @@
       }
     }
   </style>
+  <script type="text/javascript">
+    const isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
+    const html = document.documentElement.classList;
+    if (isMobile) {
+      html.remove('pc');
+      html.add('mobile');
+    } else {
+      html.remove('mobile');
+      html.add('pc');
+    }
+  </script>
 </head>
 <body>
   <div class="i-website-app__container">

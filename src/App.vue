@@ -20,15 +20,9 @@ export default defineComponent({
     const { proxy } = getCurrentInstance();
 
     onBeforeMount(() => {
-      const html = document.documentElement.classList;
       const isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
       if (isMobile) {
         frameSchema.initData.collapse = true;
-        html.remove('pc');
-        html.add('mobile');
-      } else {
-        html.remove('mobile');
-        html.add('pc');
       }
       isMobile && proxy.$message.success('切换到PC端体验更加哦！');
     });
