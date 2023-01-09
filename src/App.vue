@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import {defineComponent, onBeforeMount, getCurrentInstance} from 'vue';
+import {defineComponent, onBeforeMount, onMounted, getCurrentInstance} from 'vue';
 import {Schema} from '../../i-renderer/packages';
 import frameSchema from './data/frame';
 
@@ -25,6 +25,13 @@ export default defineComponent({
         frameSchema.initData.collapse = true;
       }
       isMobile && proxy.$message.success('切换到PC端体验更加哦！');
+    });
+    onMounted(() => {
+      /* eslint-disable */
+      bszCaller.fetch('//busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback', function(a) {
+        bszTag.texts(a);
+        bszTag.shows();
+      });
     });
 
     return {
