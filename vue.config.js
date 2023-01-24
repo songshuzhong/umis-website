@@ -18,8 +18,7 @@ module.exports = {
     },
     resolve: {
       alias: {
-        '@element-plus/icons-vue': path.resolve(process.cwd(), 'node_modules', '@element-plus/icons-vue'),
-        '@vueuse': path.resolve(process.cwd(), 'node_modules', '@vueuse')
+        '@element-plus/icons-vue': path.resolve(process.cwd(), 'node_modules', '@element-plus/icons-vue')
       }
     },
     plugins: [
@@ -31,7 +30,7 @@ module.exports = {
         clientsClaim: true,
         skipWaiting: true
       })
-    ],
+    ]
   },
   devServer: {
     port: 80,
