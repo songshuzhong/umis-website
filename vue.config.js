@@ -18,7 +18,10 @@ module.exports = {
     },
     resolve: {
       alias: {
-        '@element-plus/icons-vue': path.resolve(process.cwd(), 'node_modules', '@element-plus/icons-vue')
+        '@element-plus/icons-vue': path.resolve(process.cwd(), 'node_modules', '@element-plus/icons-vue'),
+        'vue/dist': path.resolve(process.cwd(), 'node_modules', 'vue/dist'),
+        'element-plus': path.resolve(process.cwd(), 'node_modules', 'element-plus'),
+        lodash: path.resolve(process.cwd(), 'node_modules', 'lodash')
       }
     },
     plugins: [

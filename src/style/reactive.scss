@@ -3,6 +3,12 @@ html {
     top: 70px !important;
   }
   &.mobile {
+    .i-component__fragment {
+      .el-button {
+        -webkit-tap-highlight-color: transparent;
+        appearance: none;
+      }
+    }
     .i-website__container {
       flex-direction: row-reverse;
     }
@@ -129,7 +135,12 @@ html {
       }
     }
     .i-popup__container {
-      width: 100% !important;
+      &.el-dialog {
+        width: 80% !important;
+      }
+      &.el-drawer {
+        width: 100% !important;
+      }
     }
     .i-steps__container {
       .el-step__title {
