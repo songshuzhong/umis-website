@@ -1,10 +1,5 @@
 import {createApp} from 'vue';
 import ElementPlus from 'element-plus';
-import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
-import fontawesome from '@fortawesome/fontawesome';
-import solid from '@fortawesome/fontawesome-free-solid';
-import regular from '@fortawesome/fontawesome-free-regular';
-import brands from '@fortawesome/fontawesome-free-brands';
 import IRenderer, {api, dynamicRouter} from 'i-renderer/dist/js/renderer';
 import {Editor} from 'i-renderer/dist/js/editor';
 
@@ -26,11 +21,6 @@ const config = {
   }
 };
 
-app.component(FontAwesomeIcon.name, FontAwesomeIcon);
-
-fontawesome.library.add(solid);
-fontawesome.library.add(regular);
-fontawesome.library.add(brands);
 Promise.all([
   api().staticApi().get(`${process.env.VUE_APP_API_BASE}/api/menu/0767bea4-c7e7-4aa7-a1b5-2fd5e1ec4a7f`),
   api().staticApi().get('https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/user')
