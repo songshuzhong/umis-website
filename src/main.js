@@ -1,7 +1,6 @@
 import {createApp} from 'vue';
 import ElementPlus from 'element-plus';
 import IRenderer, {api, dynamicRouter} from 'i-renderer/dist/js/renderer';
-import {Editor} from 'i-renderer/dist/js/editor';
 
 import createRoutes from './router/index';
 import Application from './App.vue';
@@ -15,7 +14,6 @@ import './registerServiceWorker';
 
 const app = createApp(Application);
 const config = {
-  renderers: [Editor],
   domains: {
     default: process.env.VUE_APP_API_BASE
   }

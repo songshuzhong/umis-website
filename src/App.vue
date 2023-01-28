@@ -25,22 +25,6 @@ export default defineComponent({
         frameSchema.initData.collapse = true;
       }
       isMobile && proxy.$message.success('切换到PC端体验更加哦！');
-      Promise.all([
-        import('@fortawesome/vue-fontawesome'),
-        import('@fortawesome/fontawesome'),
-        import('@fortawesome/fontawesome-free-solid'),
-        import('@fortawesome/fontawesome-free-regular'),
-        import('@fortawesome/fontawesome-free-brands')
-      ])
-        .then(res => {
-          const [{FontAwesomeIcon}, fontawesome, solid, regular, brands] = res;
-          fontawesome.default.library.add(solid.default);
-          fontawesome.default.library.add(regular.default);
-          fontawesome.default.library.add(brands.default);
-          proxy.$.appContext.components[FontAwesomeIcon.name] = FontAwesomeIcon;
-        }).catch(e => {
-          console.log(e);
-        });
     });
     onMounted(() => {
       /* eslint-disable */
@@ -48,6 +32,28 @@ export default defineComponent({
         bszTag.texts(a);
         bszTag.shows();
       });
+      const timer = setTimeout(() => {
+        Promise.all([
+          import('@fortawesome/vue-fontawesome'),
+          import('@fortawesome/fontawesome'),
+          import('@fortawesome/fontawesome-free-solid'),
+          import('@fortawesome/fontawesome-free-regular'),
+          import('@fortawesome/fontawesome-free-brands'),
+          import('i-renderer/dist/js/editor')
+        ])
+        .then(res => {
+          const [{FontAwesomeIcon}, fontawesome, solid, regular, brands, {Editor}] = res;
+          fontawesome.default.library.add(solid.default);
+          fontawesome.default.library.add(regular.default);
+          fontawesome.default.library.add(brands.default);
+          proxy.$.appContext.components[FontAwesomeIcon.name] = FontAwesomeIcon;
+          proxy.$.appContext.components[Editor.name] = Editor;
+        }).catch(e => {
+          console.error(e);
+        }).finally(() => {
+          clearTimeout(timer);
+        });
+      }, 2000);
     });
 
     return {
