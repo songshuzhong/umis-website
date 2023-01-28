@@ -1,7 +1,6 @@
 import {createApp} from 'vue';
 import ElementPlus from 'element-plus';
 import IRenderer, {api, dynamicRouter} from 'i-renderer/dist/js/renderer';
-
 import createRoutes from './router/index';
 import Application from './App.vue';
 import frameSchema from './data/frame';
