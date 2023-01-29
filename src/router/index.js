@@ -4,7 +4,7 @@ import {
   // createWebHistory
 } from 'vue-router';
 import {ElLoading} from 'element-plus';
-import {Schema} from 'i-renderer/dist/js/renderer';
+import {Schema, checkPermission} from 'i-renderer/dist/js/renderer';
 import indexSchema from '../data/index';
 
 const history =
@@ -32,20 +32,36 @@ const createRoutes = dyRouter => {
       ...dyRouter,
       {
         path: '/:pathMatch(.*)*',
-        name: 'ErrorPage',
+        name: 'NotFound',
         component: () => import('../Error'),
         props: {
           status: 404
         }
       },
+      {
+        path: '/forbidden',
+        name: 'Forbidden',
+        component: () => import('../Error'),
+        props: {
+          status: 401
+        }
+      },
     ]
   });
+
   router.beforeEach((to, from, next) => {
     if (to.path !== from.path) {
       routerMask = ElLoading.service({
         fullscreen: true,
         customClass: 'i-website__router__loader'
       });
+    }
+
+    if (to?.meta?.permission) {
+      const hasPermission = checkPermission(to.meta.permission);
+      if (!hasPermission) {
+        return next('/forbidden');
+      }
     }
     next();
   });

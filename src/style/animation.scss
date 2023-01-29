@@ -10,9 +10,11 @@
 }
 @keyframes error-img {
   0% {
+    transform: translateX(60px);
     opacity: 0;
   }
   100% {
+    transform: translateX(0);
     opacity: 1;
   }
 }

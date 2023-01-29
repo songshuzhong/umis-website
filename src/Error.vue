@@ -12,8 +12,15 @@
       </div>
       <el-button
         type="primary"
-        size="default"
         round
+        @click="goBack"
+        class="i-website__error__action"
+      >
+        返回上一页
+      </el-button>
+      <el-button
+        round
+        link
         @click="goHome"
         class="i-website__error__action"
       >
@@ -45,13 +52,15 @@ export default defineComponent({
   setup(props) {
     const router = useRouter();
     const goHome = () => router.push('/');
+    const goBack = () => router.back();
     const iError = computed(() => {
       return ERRORS[props.status];
     });
 
     return {
       iError,
-      goHome
+      goHome,
+      goBack
     };
   }
 });
