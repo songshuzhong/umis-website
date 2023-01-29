@@ -29,7 +29,15 @@ const createRoutes = dyRouter => {
           canSchemaUpdate: false
         }
       },
-      ...dyRouter
+      ...dyRouter,
+      {
+        path: '/:pathMatch(.*)*',
+        name: 'ErrorPage',
+        component: () => import('../Error'),
+        props: {
+          status: 404
+        }
+      },
     ]
   });
   router.beforeEach((to, from, next) => {
