@@ -14,7 +14,8 @@ import './registerServiceWorker';
 const app = createApp(Application);
 const config = {
   domains: {
-    default: process.env.VUE_APP_API_BASE
+    default: process.env.VUE_APP_API_BASE,
+    contextPath: process.env.PUBLIC_PATH
   }
 };
 
