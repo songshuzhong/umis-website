@@ -1,4 +1,4 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d221862"],{cb5b:function(t,n,e){"use strict";e.r(n),e.d(n,"config",(function(){return Yn})),e.d(n,"icon",(function(){return Xn})),e.d(n,"noAuto",(function(){return In})),e.d(n,"layer",(function(){return Hn})),e.d(n,"text",(function(){return Rn})),e.d(n,"library",(function(){return Tn})),e.d(n,"dom",(function(){return Dn})),e.d(n,"parse",(function(){return Bn})),e.d(n,"findIconDefinition",(function(){return Sn}));
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["fontawesome"],{cb5b:function(t,n,e){"use strict";e.r(n),e.d(n,"config",(function(){return Yn})),e.d(n,"icon",(function(){return Xn})),e.d(n,"noAuto",(function(){return In})),e.d(n,"layer",(function(){return Hn})),e.d(n,"text",(function(){return Rn})),e.d(n,"library",(function(){return Tn})),e.d(n,"dom",(function(){return Dn})),e.d(n,"parse",(function(){return Bn})),e.d(n,"findIconDefinition",(function(){return Sn}));
 /*!
  * Font Awesome Free 5.0.13 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)

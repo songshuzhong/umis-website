@@ -34,12 +34,12 @@ export default defineComponent({
       });
       const timer = setTimeout(() => {
         Promise.all([
-          import('@fortawesome/vue-fontawesome'),
-          import('@fortawesome/fontawesome'),
-          import('@fortawesome/fontawesome-free-solid'),
-          import('@fortawesome/fontawesome-free-regular'),
-          import('@fortawesome/fontawesome-free-brands'),
-          import('i-renderer/dist/js/editor')
+          import(/* webpackChunkName:"vue-fontawesome",webpackPrefetch:false,webpackMode:"lazy" */ '@fortawesome/vue-fontawesome'),
+          import(/* webpackChunkName:"fontawesome",webpackPrefetch:false,webpackMode:"lazy" */ '@fortawesome/fontawesome'),
+          import(/* webpackChunkName:"fontawesome-solid",webpackPrefetch:false,webpackMode:"lazy" */ '@fortawesome/fontawesome-free-solid'),
+          import(/* webpackChunkName:"fontawesome-regular",webpackPrefetch:false,webpackMode:"lazy" */ '@fortawesome/fontawesome-free-regular'),
+          import(/* webpackChunkName:"fontawesome-brands",webpackPrefetch:false,webpackMode:"lazy" */ '@fortawesome/fontawesome-free-brands'),
+          import(/* webpackChunkName:"i-editor",webpackPrefetch:false,webpackMode:"lazy" */ 'i-renderer/dist/js/editor')
         ])
         .then(res => {
           const [{FontAwesomeIcon}, fontawesome, solid, regular, brands, {Editor}] = res;
