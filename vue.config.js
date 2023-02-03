@@ -5,7 +5,7 @@ const path = require('path');
 const isDev = process.env.NODE_ENV === 'dev';
 
 module.exports = {
-  publicPath: isDev ? './' : '/i-website/dist',
+  publicPath: process.env.PUBLIC_PATH,
   transpileDependencies: ['element-plus'],
   productionSourceMap: false,
   configureWebpack: {
