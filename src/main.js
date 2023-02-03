@@ -14,11 +14,11 @@ import './registerServiceWorker';
 const app = createApp(Application);
 const config = {
   domains: {
-    default: process.env.VUE_APP_API_BASE,
-    contextPath: process.env.PUBLIC_PATH
-  }
+    default: process.env.VUE_APP_API_BASE
+  },
+  contextPath: process.env.PUBLIC_PATH
 };
-
+console.log(config);
 Promise.all([
   api().staticApi().get(`${process.env.VUE_APP_API_BASE}/api/menu/0767bea4-c7e7-4aa7-a1b5-2fd5e1ec4a7f`),
   api().staticApi().get('https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/user')
