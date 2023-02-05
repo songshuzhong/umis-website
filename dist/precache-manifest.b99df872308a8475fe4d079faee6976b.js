@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/chunk/chunk-cb2af0f4.bef883.js"
   },
   {
-    "revision": "4a8071618ebd1e717de4",
-    "url": "/i-website/dist/chunk/chunk-vendors.fd0eef.js"
+    "revision": "a8efb591af548849e2c4",
+    "url": "/i-website/dist/chunk/chunk-vendors.129f18.js"
   },
   {
     "revision": "57bcc9e70f0eb1c9c734",
@@ -36,8 +36,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/chunk/fontawesome.e55c57.js"
   },
   {
-    "revision": "6cbe59db516210e9d95d",
-    "url": "/i-website/dist/chunk/i-editor.4eb4b0.js"
+    "revision": "2a1de708fbccd0f7ccc8",
+    "url": "/i-website/dist/chunk/i-editor.f772c9.js"
   },
   {
     "revision": "d0d9bb1f29bc45eff279",
@@ -48,8 +48,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/circle.svg"
   },
   {
-    "revision": "96b316384fe5dc1e7fe1",
-    "url": "/i-website/dist/css/app.67098d87.css"
+    "revision": "ca9019b38bd9dcc33cb2",
+    "url": "/i-website/dist/css/app.2c223072.css"
   },
   {
     "revision": "b07c4c739f542e9e4e69",
@@ -60,8 +60,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/css/chunk-cb2af0f4.719b2d48.css"
   },
   {
-    "revision": "4a8071618ebd1e717de4",
-    "url": "/i-website/dist/css/chunk-vendors.a5a56f7b.css"
+    "revision": "a8efb591af548849e2c4",
+    "url": "/i-website/dist/css/chunk-vendors.62f7a304.css"
   },
   {
     "revision": "805fb6ad1751ed8b849b5bf9be742ab5",
@@ -80,12 +80,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/img/not-found.06512621.jpeg"
   },
   {
-    "revision": "d17e5030589efd4598d6ff3cb54df7fe",
+    "revision": "bce4c77e780da1bdd3f71fafd4658857",
     "url": "/i-website/dist/index.html"
   },
   {
-    "revision": "96b316384fe5dc1e7fe1",
-    "url": "/i-website/dist/js/app.b335b4.js"
+    "revision": "ca9019b38bd9dcc33cb2",
+    "url": "/i-website/dist/js/app.0644c0.js"
   },
   {
     "revision": "6cc0b8c4be9a71f032824bbef584340e",
