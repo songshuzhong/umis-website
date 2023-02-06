@@ -55,6 +55,14 @@ html {
         }
       }
     }
+    .el-pagination__jump,
+    .el-pagination__goto,
+    .el-pagination__sizes {
+      display: none;
+    }
+    .el-pagination__total {
+      margin-left: 0;
+    }
     .i-form__container__viewer {
       position: relative;
       top: 0;
