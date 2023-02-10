@@ -18,6 +18,8 @@ module.exports = {
     },
     resolve: {
       alias: {
+        '@vueuse/core': path.resolve(process.cwd(), 'node_modules', '@vueuse/core'),
+        '@vueuse/shared': path.resolve(process.cwd(), 'node_modules', '@vueuse/shared'),
         '@element-plus/icons-vue': path.resolve(process.cwd(), 'node_modules', '@element-plus/icons-vue'),
         'element-plus': path.resolve(process.cwd(), 'node_modules', 'element-plus'),
         lodash: path.resolve(process.cwd(), 'node_modules', 'lodash')
@@ -37,6 +39,7 @@ module.exports = {
   devServer: {
     port: 80,
     disableHostCheck: true,
+    https: true,
     proxy: {
       '/fansSupportOrder': {
         target: 'http://terra.bpdev.biz.weibo.com',
