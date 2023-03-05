@@ -8,7 +8,7 @@
 
 <script>
 import {defineComponent, onBeforeMount, onMounted, getCurrentInstance} from 'vue';
-import {Schema} from 'i-renderer/dist/js/renderer';
+import {Schema} from '../../i-renderer/packages/renderer/index';
 import frameSchema from './data/frame';
 
 export default defineComponent({
@@ -39,7 +39,7 @@ export default defineComponent({
           import(/* webpackChunkName:"fontawesome-solid",webpackPrefetch:false,webpackMode:"lazy" */ '@fortawesome/fontawesome-free-solid'),
           import(/* webpackChunkName:"fontawesome-regular",webpackPrefetch:false,webpackMode:"lazy" */ '@fortawesome/fontawesome-free-regular'),
           import(/* webpackChunkName:"fontawesome-brands",webpackPrefetch:false,webpackMode:"lazy" */ '@fortawesome/fontawesome-free-brands'),
-          import(/* webpackChunkName:"i-editor",webpackPrefetch:false,webpackMode:"lazy" */ 'i-renderer/dist/js/editor')
+          import('../../i-renderer/packages/canvas/index')
         ])
         .then(res => {
           const [{FontAwesomeIcon}, fontawesome, solid, regular, brands, {Editor}] = res;

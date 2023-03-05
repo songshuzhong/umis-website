@@ -1,13 +1,13 @@
 import {createApp} from 'vue';
 import ElementPlus from 'element-plus';
-import IRenderer, {api, dynamicRouter} from 'i-renderer/dist/js/renderer';
+import IRenderer, {api, dynamicRouter} from '../../i-renderer/packages/renderer';
 import createRoutes from './router/index';
 import Application from './App.vue';
 import frameSchema from './data/frame';
 
 import 'element-plus/dist/index.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';
-import 'i-renderer/dist/css/index.css';
+import '../../i-renderer/packages/assets/styles/index.scss';
 import './style/index.scss';
 import './registerServiceWorker';
 

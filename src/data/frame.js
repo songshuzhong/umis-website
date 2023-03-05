@@ -223,7 +223,7 @@ export default {
                   size: 18,
                   actionType: 'drawer',
                   body: {
-                    width: '30%',
+                    width: 30,
                     appendToBody: true,
                     header: {
                       renderer: 'html',
@@ -244,13 +244,13 @@ export default {
                   name: 'IWebsiteEdit',
                   actionType: 'drawer',
                   body: {
-                    width: '100%',
+                    width: 100,
                     appendToBody: true,
                     classname: 'i-website__drawer',
                     header: {
                       renderer: 'html',
                       html:
-                        '<div style="text-align: left; color: white;">编辑Schema</div>'
+                        '<div style="text-align: left; color: white;">编辑页面</div>'
                     },
                     body: [
                       {
@@ -272,6 +272,7 @@ export default {
                   renderer: 'dropdown',
                   text: '<%=data.user_name%>',
                   popperClass: 'i-website__header__dropdown',
+                  name: 'IWebsiteDropdown',
                   body: [
                     {
                       renderer: 'action',
@@ -297,7 +298,7 @@ export default {
                       size: 18,
                       actionType: 'drawer',
                       body: {
-                        width: '30%',
+                        width: 30,
                         appendToBody: true,
                         header: {
                           renderer: 'html',
@@ -317,13 +318,13 @@ export default {
                       name: 'IWebsiteEdit',
                       actionType: 'drawer',
                       body: {
-                        width: '100%',
+                        width: 100,
                         appendToBody: true,
                         classname: 'i-website__drawer',
                         header: {
                           renderer: 'html',
                           html:
-                            '<div style="text-align: left; color: white;">编辑Schema</div>'
+                            '<div style="text-align: left; color: white;">编辑页面</div>'
                         },
                         body: [
                           {
