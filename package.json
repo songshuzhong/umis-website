@@ -6,7 +6,8 @@
   "scripts": {
     "build": "vue-cli-service build --mode=gp --report",
     "lint": "vue-cli-service lint",
-    "dev": "vue-cli-service serve --mode=dev"
+    "dev": "vue-cli-service serve --mode=dev",
+    "start": "node index.js"
   },
   "browserslist": [
     "> 1%",
@@ -68,9 +69,6 @@
     "vue-router": "^4.1.6",
     "webpack-cli": "^4.9.1",
     "workbox-webpack-plugin": "^6.5.4"
-=======
-    "start": "node index.js"
->>>>>>> 4beb9ae1cc9e8c5a934d740ca6cb6de368c41df9
   },
   "author": "",
   "license": "Apache-2.0",
