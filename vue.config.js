@@ -39,16 +39,7 @@ module.exports = {
   devServer: {
     port: 80,
     disableHostCheck: true,
-    https: true,
     proxy: {
-      '/fansSupportOrder': {
-        target: 'http://terra.bpdev.biz.weibo.com',
-        changeOrigin: true
-      },
-      '/api/templates': {
-        target: 'http://ashina.biz.weibo.com',
-        changeOrigin: true
-      },
       '/api': {
         target: 'http://localhost:1026',
         changeOrigin: true

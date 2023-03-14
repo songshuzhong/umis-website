@@ -1,13 +1,13 @@
 {
-  "name": "wxcloudrun-express",
+  "name": "i-website",
   "version": "1.0.0",
-  "description": "微信云托管 express 框架模版",
-  "main": "index.js",
+  "private": false,
+  "author": "songshuzhong",
+  "description": "IRenderer渲染器经典示例集合",
   "scripts": {
     "build": "vue-cli-service build --mode=gp --report",
     "lint": "vue-cli-service lint",
-    "dev": "vue-cli-service serve --mode=dev",
-    "start": "node index.js"
+    "dev": "vue-cli-service serve --mode=dev"
   },
   "browserslist": [
     "> 1%",
@@ -41,7 +41,7 @@
     "cross-env": "^5.2.1",
     "css-loader": "^3.5.3",
     "echarts": "^5.4.1",
-    "element-plus": "^2.2.33",
+    "element-plus": "^2.3.0",
     "eslint": "^7.14.0",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-import": "^2.23.4",
@@ -68,13 +68,5 @@
     "vue-router": "^4.1.6",
     "webpack-cli": "^4.9.1",
     "workbox-webpack-plugin": "^6.5.4"
-  },
-  "author": "",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.16.4",
-    "morgan": "^1.10.0",
-    "mysql2": "^2.3.2",
-    "sequelize": "^6.8.0"
   }
 }

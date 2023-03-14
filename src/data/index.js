@@ -11,23 +11,6 @@ export default {
           classname: 'font-size-20 font-weight-800'
         }
       ],
-      footer: [
-        {
-          renderer: 'plugin',
-          script: 'https://songshuzhong.github.io/i-assets/public/js/Driver.e3ce14.min.js',
-          props: {
-            steps: [
-              {
-                item: {
-                  element: 'IWebsiteDropdown',
-                  title: '高级功能',
-                  description: '点击查看源码、编辑页面、设置系统'
-                }
-              }
-            ]
-          }
-        }
-      ],
       classname: 'margin-bottom-20',
       shadow: 'always',
       body: [

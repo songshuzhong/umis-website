@@ -12,7 +12,7 @@ const history =
     ? createWebHashHistory()
     : createWebHashHistory();
 
-const createRoutes = dyRouter => {
+const createRoutes = () => {
   let routerMask;
 
   const router = createRouter({
@@ -29,7 +29,6 @@ const createRoutes = dyRouter => {
           canSchemaUpdate: false
         }
       },
-      ...dyRouter,
       {
         path: '/:pathMatch(.*)*',
         name: 'NotFound',
@@ -43,7 +42,7 @@ const createRoutes = dyRouter => {
         name: 'Forbidden',
         component: () => import('../Error'),
         props: {
-          status: 401
+          status: 403
         }
       },
     ]
