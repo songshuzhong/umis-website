@@ -17,16 +17,9 @@ export default {
           classname: 'i-website_menu-vertical',
           router: true,
           mode: 'vertical',
-          backgroundColor: '#3a3f51',
-          textColor: '#fff',
-          activeTextColor: '#ffd04b',
           defaultActive: '',
           target: 'i-website__container',
-          title: {
-            renderer: 'html',
-            classname: 'i-website__header__logo font-size-20',
-            html: 'IRender'
-          },
+          title: 'IRender',
           initApi: {
             url: '/api/menu/0767bea4-c7e7-4aa7-a1b5-2fd5e1ec4a7f'
           },
