@@ -39,14 +39,6 @@ $i-website-primary: #3a3f51 !default;
     }
   }
 }
-.i-website__header__logo {
-  height: 60px;
-  color: var(--el-color-white);
-  text-align: center;
-  line-height: 60px;
-  background: $i-website-primary;
-  transition: 0.3s width ease-in-out;
-}
 .i-website__header__service {
   position: absolute;
   top: 0;
@@ -75,11 +67,6 @@ $i-website-primary: #3a3f51 !default;
   }
   .i-website_menu-vertical {
     margin-bottom: 50px;
-    &.el-menu--collapse {
-      .i-website__header__logo {
-        font-size: 14px;
-      }
-    }
     .el-sub-menu .el-menu-item {
       background-color: rgba(0, 0, 0, 0.3);
       &::after {
@@ -191,7 +178,7 @@ $i-website-primary: #3a3f51 !default;
   }
 }
 .i-website__router__loader {
-  height: 3px;
+  height: 2px;
   top: 0;
   &::before {
     content: '';
