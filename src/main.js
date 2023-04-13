@@ -1,12 +1,12 @@
 import {createApp} from 'vue';
 import ElementPlus, {ElNotification} from 'element-plus';
-import IRenderer, {api} from '../../i-renderer/packages/renderer';
+import IRenderer, {api} from 'i-renderer/dist/js/index';
 import createRoutes from './router/index';
 import Application from './App.vue';
 
 import 'element-plus/dist/index.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';
-import '../../i-renderer/packages/assets/styles/index.scss';
+import 'i-renderer/dist/css/index.css';
 import './style/index.scss';
 import './registerServiceWorker';
 

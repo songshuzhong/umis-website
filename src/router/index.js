@@ -4,7 +4,7 @@ import {
   // createWebHistory
 } from 'vue-router';
 import {ElLoading} from 'element-plus';
-import {Schema, checkPermission} from '../../../i-renderer/packages/renderer/index';
+import {Schema, checkPermission} from 'i-renderer/dist/js/index';
 import indexSchema from '../data/index';
 
 const history =
