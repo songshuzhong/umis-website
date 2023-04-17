@@ -1,6 +1,6 @@
 import {createApp} from 'vue';
 import ElementPlus, {ElNotification} from 'element-plus';
-import IRenderer, {api} from 'i-renderer/dist/js/index';
+import IRenderer, {api} from 'i-renderer/dist/js/renderer';
 import createRoutes from './router/index';
 import Application from './App.vue';
 
