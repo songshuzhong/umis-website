@@ -125,9 +125,6 @@ html {
 }
 .i-home__page {
   position: relative;
-  &>.i-layout__container {
-    border-bottom: 1px solid #000;
-  }
   .el-menu {
     backdrop-filter: saturate(50%) blur(4px);
     background: transparent;
@@ -151,6 +148,7 @@ html {
     .el-menu-item {
       color: #777;
       z-index: 10;
+      background: transparent;
     }
   }
   .i-grid__container {
