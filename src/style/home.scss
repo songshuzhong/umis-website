@@ -212,7 +212,7 @@ html {
   .i-home__banner__container {
     &.i-grid__container {
       padding: 0;
-      background: linear-gradient(to bottom, white, rgba(64,158,255,0.4));
+      background: transparent;
     }
     .i-home__banner__wrapper {
       padding: 0 100px;
@@ -526,7 +526,7 @@ html {
   position: absolute;
   width: 100% !important;
   height: 509px !important;
-  z-index: 20;
+  background: linear-gradient(180deg,#fff,rgba(64,158,255,.4));
 }
 @keyframes grow {
   from {
