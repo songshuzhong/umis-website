@@ -18,7 +18,7 @@ glob.sync('./src/pages/*.js').forEach(entry => {
 
 module.exports = {
   pages,
-  publicPath: isDev ? '' : '',
+  publicPath: isDev ? '' : '/i-website/dist',
   transpileDependencies: ['element-plus'],
   productionSourceMap: false,
   configureWebpack: {
