@@ -9,7 +9,7 @@
 <script>
 import {defineComponent, onBeforeMount, onMounted, getCurrentInstance} from 'vue';
 import {Schema} from 'i-renderer/dist/js/renderer';
-import frameSchema from './data/frame';
+import frameSchema from '../data/indexFrame';
 
 export default defineComponent({
   name: 'Application',
@@ -41,14 +41,14 @@ export default defineComponent({
           import(/* webpackChunkName:"fontawesome-brands",webpackPrefetch:false,webpackMode:"lazy" */ '@fortawesome/fontawesome-free-brands'),
           import(/* webpackChunkName:"editor",webpackPrefetch:false,webpackMode:"lazy" */ 'i-renderer/dist/js/editor')
         ])
-        .then(res => {
-          const [{FontAwesomeIcon}, fontawesome, solid, regular, brands, {Editor}] = res;
-          fontawesome.default.library.add(solid.default);
-          fontawesome.default.library.add(regular.default);
-          fontawesome.default.library.add(brands.default);
-          proxy.$.appContext.components[FontAwesomeIcon.name] = FontAwesomeIcon;
-          proxy.$.appContext.components[Editor.name] = Editor;
-        }).catch(e => {
+            .then(res => {
+              const [{FontAwesomeIcon}, fontawesome, solid, regular, brands, {Editor}] = res;
+              fontawesome.default.library.add(solid.default);
+              fontawesome.default.library.add(regular.default);
+              fontawesome.default.library.add(brands.default);
+              proxy.$.appContext.components[FontAwesomeIcon.name] = FontAwesomeIcon;
+              proxy.$.appContext.components[Editor.name] = Editor;
+            }).catch(e => {
           console.error(e);
         }).finally(() => {
           clearTimeout(timer);

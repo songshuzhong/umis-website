@@ -1,11 +1,24 @@
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 const {GenerateSW} = require('workbox-webpack-plugin');
 const path = require('path');
-
+const glob = require('glob');
 const isDev = process.env.NODE_ENV === 'dev';
+const rewrites = [];
+const pages = {};
+
+glob.sync('./src/pages/*.js').forEach(entry => {
+  const filename = entry.replace(/(.*\/)*([^.]+).*/ig,'$2');
+  rewrites.push({from: new RegExp('^/' + filename), to: `/${filename}.html`});
+  pages[filename] = {
+    entry,
+    template: path.join(__dirname, '/public/index.html'),
+    filename:  `${filename}.html`
+  };
+});
 
 module.exports = {
-  publicPath: process.env.PUBLIC_PATH,
+  pages,
+  publicPath: isDev ? '' : '',
   transpileDependencies: ['element-plus'],
   productionSourceMap: false,
   configureWebpack: {

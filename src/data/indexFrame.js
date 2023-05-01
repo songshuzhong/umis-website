@@ -153,7 +153,7 @@ export default {
                   name: 'IWebsiteHome',
                   category: 'icon',
                   size: 18,
-                  url: 'https://songshuzhong.github.io/i-home/dist/index.html#/'
+                  url: 'https://songshuzhong.github.io/i-website/dist/home.html#/'
                 },
                 {
                   renderer: 'action',
@@ -280,7 +280,7 @@ export default {
                       actionType: 'url',
                       name: 'IWebsiteHome',
                       text: '官网',
-                      url: 'https://songshuzhong.github.io/i-home/dist/index.html#/'
+                      url: 'https://songshuzhong.github.io/i-website/dist/home.html#/'
                     },
                     {
                       renderer: 'action',
