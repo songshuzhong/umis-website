@@ -6,7 +6,7 @@ export default {
       header: [
         {
           renderer: 'html',
-          html: '欢迎使用IRender',
+          html: '欢迎使用IRenderer',
           inline: true,
           classname: 'font-size-20 font-weight-800'
         }

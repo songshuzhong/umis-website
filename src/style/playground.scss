@@ -4,6 +4,22 @@ body,
 .i-home__playground {
   height: 100%;
 }
+html {
+  &.mobile {
+    &.playground {
+      height: 100%;
+      body {
+        width: 1440px;
+        &.horizontal {
+          position: relative;
+          height: 100%;
+          transform: rotate(90deg);
+          overflow-y: hidden;
+        }
+      }
+    }
+  }
+}
 .i-home__playground {
   overflow-y: hidden;
   .el-divider--vertical {
