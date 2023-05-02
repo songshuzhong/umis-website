@@ -53,6 +53,7 @@ export default defineComponent({
         pageSchema: DEFAULT_SCHEMA
       };
       uaManager.setWidth(window.innerHeight);
+      proxy.$message.success('编辑器加载中，请稍等。');
     });
     return {
       initSchema: DEFAULT_SCHEMA,
