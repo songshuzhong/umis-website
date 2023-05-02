@@ -39,7 +39,7 @@ export default defineComponent({
           import(/* webpackChunkName:"fontawesome-solid",webpackPrefetch:false,webpackMode:"lazy" */ '@fortawesome/fontawesome-free-solid'),
           import(/* webpackChunkName:"fontawesome-regular",webpackPrefetch:false,webpackMode:"lazy" */ '@fortawesome/fontawesome-free-regular'),
           import(/* webpackChunkName:"fontawesome-brands",webpackPrefetch:false,webpackMode:"lazy" */ '@fortawesome/fontawesome-free-brands'),
-          import('../../i-renderer/packages/canvas/index')
+          import(/* webpackChunkName:"i-editor",webpackPrefetch:false,webpackMode:"lazy" */ '../../i-renderer/packages/canvas/index')
         ])
         .then(res => {
           const [{FontAwesomeIcon}, fontawesome, solid, regular, brands, {Editor}] = res;
