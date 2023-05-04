@@ -72,6 +72,6 @@
   "dependencies": {
     "@vueuse/core": "^10.1.0",
     "@vueuse/shared": "^10.1.0",
-    "i-renderer": "^1.0.0-beta.10.5"
+    "i-renderer": "^1.0.1-beta"
   }
 }

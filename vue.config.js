@@ -27,6 +27,13 @@ glob.sync('./src/pages/*.js').forEach(entry => {
     title: pageConfig.title,
     skeleton: pageConfig.skeleton || '',
     skeletonStyle: pageConfig.skeletonStyle || '',
+    minify: isDev ? {} : {
+      minifyJS: true,
+      minifyCSS: true,
+      removeComments: true,
+      collapseWhitespace: true,
+      removeAttributeQuotes: true,
+    },
   };
 });
 

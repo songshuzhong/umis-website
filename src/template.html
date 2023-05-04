@@ -10,17 +10,7 @@
     <meta name="description" content="前端低代码工具库" />
     <meta id="keywords" name="keywords" content="IRenderer" />
     <style type="text/css"><%=htmlWebpackPlugin.options.skeletonStyle%></style>
-    <script type="text/javascript">
-      const isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
-      const html = document.documentElement.classList;
-      if (isMobile) {
-        html.remove('pc');
-        html.add('mobile');
-      } else {
-        html.remove('mobile');
-        html.add('pc');
-      }
-    </script>
+    <script type="text/javascript">const isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);const html = document.documentElement.classList;if (isMobile) {html.remove('pc');html.add('mobile');} else {html.remove('mobile');html.add('pc');}</script>
 </head>
 <body>
 <div class="i-website-app__container"><%=htmlWebpackPlugin.options.skeleton%></div>
