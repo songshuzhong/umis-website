@@ -225,9 +225,13 @@ html {
       margin-top: 50px;
       text-align: center;
       font-size: 60px;
-      font-weight: 500;
       color: #1890ff;
       line-height: 60px;
+      font-weight: 900;
+      background: linear-gradient(120deg, rgb(64,158,255) 30%, #41d1ff);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-box-reflect: below 0 -webkit-linear-gradient(transparent, transparent 50%, rgba(255, 255, 255, 0.3));
     }
     .i-home__banner__desc {
       margin-top: 40px;
