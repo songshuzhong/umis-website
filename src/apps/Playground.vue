@@ -6,10 +6,10 @@
       <i-editor v-else :is-json="false" />
       <el-divider direction="vertical" />
       <i-schema
-          :init-schema="initSchema"
-          :can-schema-update="false"
-          path="/editor"
-          classname="i-home__playground__preview"
+        :init-schema="initSchema"
+        :can-schema-update="false"
+        path="/editor"
+        classname="i-home__playground__preview"
       />
     </div>
   </div>
@@ -42,18 +42,20 @@ export default defineComponent({
         proxy.$.appContext.components[FontAwesomeIcon.name] = FontAwesomeIcon;
         proxy.$.appContext.components[Editor.name] = Editor;
         isEditorReady.value = true;
+        notice && notice.close();
       }).catch(e => {
         console.error(e);
       }).finally(() => {
         clearTimeout(timer);
       });
     }, 2000);
+    let notice;
     onBeforeMount(() => {
       window.IRender = {
         pageSchema: DEFAULT_SCHEMA
       };
       uaManager.setWidth(window.innerHeight);
-      proxy.$message.success('编辑器加载中，请稍等。');
+      notice = proxy.$message.success('编辑器加载中，请稍等...');
     });
     return {
       initSchema: DEFAULT_SCHEMA,
