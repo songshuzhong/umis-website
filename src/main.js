@@ -13,7 +13,7 @@ import './registerServiceWorker';
 const app = createApp(Application);
 const config = {
   domains: [process.env.VUE_APP_API_BASE],
-  contextPath: process.env.BASE_URL
+  pageDomain: process.env.VUE_APP_API_BASE
 };
 
 Promise.all([
