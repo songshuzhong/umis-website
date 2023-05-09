@@ -68,9 +68,5 @@
     "vue-router": "^4.1.6",
     "webpack-cli": "^4.9.1",
     "workbox-webpack-plugin": "^6.5.4"
-  },
-  "dependencies": {
-    "@vueuse/core": "^9.13.0",
-    "@vueuse/shared": "^9.13.0"
   }
 }
