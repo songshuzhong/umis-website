@@ -70,6 +70,8 @@
     "workbox-webpack-plugin": "^6.5.4"
   },
   "dependencies": {
-    "i-renderer": "^1.0.1-beta.6"
+    "@vueuse/core": "^10.1.2",
+    "@vueuse/shared": "^10.1.2",
+    "i-renderer": "^1.0.1-beta.7"
   }
 }
