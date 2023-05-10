@@ -25,8 +25,7 @@ const createRoutes = () => {
         component: Schema,
         props: {
           initSchema: indexSchema,
-          classname: 'i-renderer-website-schema__container',
-          canSchemaUpdate: false
+          classname: 'i-renderer-website-schema__container'
         }
       },
       {
