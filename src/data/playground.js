@@ -134,7 +134,8 @@ export default {
                 {
                   fixed: false,
                   sortable: false,
-                  type: 'index'
+                  type: 'index',
+                  body: []
                 },
                 {
                   label: '封面',
@@ -149,15 +150,42 @@ export default {
                 },
                 {
                   label: '名称',
-                  name: 'name'
+                  name: 'name',
+                  body: []
                 },
                 {
                   label: '视频时长',
-                  name: 'length'
+                  name: 'length',
+                  body: []
                 },
                 {
                   label: '视频ID',
-                  name: 'id'
+                  name: 'id',
+                  body: []
+                },
+                {
+                  label: '操作',
+                  sortable: false,
+                  fixed: false,
+                  type: '-',
+                  align: 'none',
+                  body: [
+                    {
+                      renderer: 'action',
+                      category: 'icon',
+                      icon: 'Delete',
+                      body: {},
+                      popupType: 'confirm',
+                      tipContent: '确认删除吗？',
+                      actionType: 'ajax',
+                      actionApi: {
+                        url: '/api/delete',
+                        method: 'delete',
+                        params: {}
+                      },
+                      confirmTitle: '确定删除吗？'
+                    }
+                  ]
                 }
               ],
               actions: [],
@@ -172,8 +200,7 @@ export default {
               initData: {
                 type: 3
               },
-              height: 85,
-              showDynamicColumn: false,
+              height: 81,
               showHeader: false
             }
           ]
@@ -181,19 +208,13 @@ export default {
         {
           label: '在线人数',
           icon: '',
-          body: [
-            {
-              renderer: 'html',
-              html: '空',
-              inline: false,
-              classname: 'text-center'
-            },
-          ]
+          body: []
         }
       ],
       activeIndex: 1,
       stretch: true,
-      tabPosition: 'top'
+      tabPosition: 'top',
+      activeTab: 1
     },
     {
       renderer: 'divider',
@@ -214,11 +235,11 @@ export default {
       initData: {},
       body: [
         {
-          renderer: 'data',
+          renderer: 'data'
         }
       ],
       silentLoading: false
-    },
+    }
   ],
   initData: {
     title: '欢迎体验，纵享丝滑',

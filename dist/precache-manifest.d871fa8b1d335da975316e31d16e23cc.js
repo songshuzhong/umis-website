@@ -92,7 +92,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/css/index.cfb1ea96.css"
   },
   {
-    "revision": "ff7c66fa3179e34d858b",
+    "revision": "36cdb19fce44e800a810",
     "url": "/i-website/dist/css/playground.a2833d96.css"
   },
   {
@@ -128,15 +128,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/js/index.a2796b.js"
   },
   {
-    "revision": "ff7c66fa3179e34d858b",
-    "url": "/i-website/dist/js/playground.d54f9f.js"
+    "revision": "36cdb19fce44e800a810",
+    "url": "/i-website/dist/js/playground.fef818.js"
   },
   {
     "revision": "3866f3ee76597fcdadc88a83a339fdae",
     "url": "/i-website/dist/manifest.json"
   },
   {
-    "revision": "ef296f25e16dc7a8ba31cdb59c30abf5",
+    "revision": "eae9caccb46dba97937d3b1ba54bb535",
     "url": "/i-website/dist/playground.html"
   },
   {
