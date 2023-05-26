@@ -321,6 +321,46 @@ export default {
           ]
         }
       ]
+    },
+    {
+      renderer: 'card',
+      header: [
+        {
+          renderer: 'html',
+          html: '使用方式',
+          inline: true,
+          classname: 'font-size-16 text-center font-weight-600'
+        }
+      ],
+      footer: [],
+      classname: 'margin-bottom-20',
+      body: [
+        {
+          renderer: 'html',
+          html: '<pre>// 安装\nnpm i "i-renderer";\n\n// 引入\nimport {IRenderer, Schema} from "i-renderer";\nimport "i-renderer/dist/css/index.css";\n\n// 使用\napp.use(IRenderer);</pre>'
+        },
+        {
+          renderer: 'data',
+          initData: {
+            JSON: {
+              renderer: 'page',
+              initData: {
+                name: 'IRenderer',
+              },
+              body: [
+                {
+                  renderer: 'html',
+                  html: 'Hi,欢迎使用<%=data.name%>',
+                }
+              ]
+            }
+          }
+        },
+        {
+          renderer: 'html',
+          html: '<pre>&lt;schema\n  :init-schema="JSON"\n  :can-schema-update="false"\n  classname="i-renderer-schema__container"\n/&gt;</pre>'
+        }
+      ]
     }
   ],
   innerStyle: '.suitable-ul {\n    margin-bottom: 39px;\n}'
