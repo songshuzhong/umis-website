@@ -390,6 +390,9 @@ html {
     width: auto;
     height: 4rem;
     margin: 1rem;
+    .el-image__inner {
+      width: unset;
+    }
   }
 }
 .i-home__qrcode {
