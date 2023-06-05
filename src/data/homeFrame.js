@@ -1,6 +1,5 @@
 export default {
   renderer: 'page',
-  iProtal: true,
   classname: 'i-home__page',
   body: {
     renderer: 'layout',
