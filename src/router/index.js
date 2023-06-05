@@ -1,22 +1,13 @@
-import {
-  createRouter,
-  createWebHashHistory,
-  // createWebHistory
-} from 'vue-router';
+import {createRouter, createWebHashHistory} from 'vue-router';
 import {ElLoading} from 'element-plus';
 import {Schema, checkPermission} from '../../../i-renderer/packages/renderer/index';
 import indexSchema from '../data/index';
-
-const history =
-  process.env.NODE_ENV === 'dev'
-    ? createWebHashHistory()
-    : createWebHashHistory();
 
 const createRoutes = () => {
   let routerMask;
 
   const router = createRouter({
-    history,
+    history: createWebHashHistory(),
     routes: [
       {
         path: '/',
