@@ -66,6 +66,9 @@ html {
         height: 100%;
         padding: 10px 40%;
         margin: auto;
+        .el-image__inner {
+          width: 100%;
+        }
       }
     }
     .i-home__me {
