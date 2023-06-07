@@ -32,12 +32,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/chunk/chunk-5be386f4.17984d.js"
   },
   {
-    "revision": "723a3f0065a4c988900a",
-    "url": "/i-website/dist/chunk/chunk-vendors.16d9c9.js"
+    "revision": "afb6005c250d9295cb5c",
+    "url": "/i-website/dist/chunk/chunk-vendors.a9f1e8.js"
   },
   {
-    "revision": "81d123333fbe01d65c0c",
-    "url": "/i-website/dist/chunk/editor.559d3d.js"
+    "revision": "870458e65350be98fd80",
+    "url": "/i-website/dist/chunk/editor.4f5be8.js"
   },
   {
     "revision": "57bcc9e70f0eb1c9c734",
@@ -72,19 +72,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/css/chunk-529d03e8.a9b80e5f.css"
   },
   {
-    "revision": "723a3f0065a4c988900a",
-    "url": "/i-website/dist/css/chunk-vendors.923b6f10.css"
+    "revision": "afb6005c250d9295cb5c",
+    "url": "/i-website/dist/css/chunk-vendors.64a3a0c1.css"
   },
   {
     "revision": "3cae3c6bb5e0877b9b10",
     "url": "/i-website/dist/css/home.0297e287.css"
   },
   {
-    "revision": "3fa32ddff6351026afc7",
+    "revision": "1270f7437301e91716fb",
     "url": "/i-website/dist/css/index.cfb1ea96.css"
   },
   {
-    "revision": "987ccfc0fea8e1e61e3b",
+    "revision": "33c1fb2dfe7b77888010",
     "url": "/i-website/dist/css/playground.a2833d96.css"
   },
   {
@@ -92,7 +92,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/fonts/codicon.805fb6ad.ttf"
   },
   {
-    "revision": "c11102abcb5b8fd254ae91015d5b28a4",
+    "revision": "578d04a8b8f81030c748c54ff13e5e44",
     "url": "/i-website/dist/home.html"
   },
   {
@@ -108,7 +108,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/img/not-found.06512621.jpeg"
   },
   {
-    "revision": "7fa05f357a11cacc710b320e47b20a80",
+    "revision": "3926b82c663c6024b6d8d64dcd9f0b91",
     "url": "/i-website/dist/index.html"
   },
   {
@@ -116,19 +116,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/js/home.f4c709.js"
   },
   {
-    "revision": "3fa32ddff6351026afc7",
-    "url": "/i-website/dist/js/index.3b345d.js"
+    "revision": "1270f7437301e91716fb",
+    "url": "/i-website/dist/js/index.d29c21.js"
   },
   {
-    "revision": "987ccfc0fea8e1e61e3b",
-    "url": "/i-website/dist/js/playground.824565.js"
+    "revision": "33c1fb2dfe7b77888010",
+    "url": "/i-website/dist/js/playground.87bb7c.js"
   },
   {
     "revision": "3866f3ee76597fcdadc88a83a339fdae",
     "url": "/i-website/dist/manifest.json"
   },
   {
-    "revision": "05251552235050bc48e3cd4b2f0e8a02",
+    "revision": "064fdbefce918eb4640f12f3d31965c3",
     "url": "/i-website/dist/playground.html"
   },
   {
