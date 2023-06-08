@@ -30,26 +30,6 @@ export default defineComponent({
       } else {
         uaManager.toPc();
       }
-      const timer = setTimeout(() => {
-        Promise.all([
-          import(/* webpackChunkName:"vue-fontawesome",webpackPrefetch:false,webpackMode:"lazy" */ '@fortawesome/vue-fontawesome'),
-          import(/* webpackChunkName:"fontawesome",webpackPrefetch:false,webpackMode:"lazy" */ '@fortawesome/fontawesome'),
-          import(/* webpackChunkName:"fontawesome-solid",webpackPrefetch:false,webpackMode:"lazy" */ '@fortawesome/fontawesome-free-solid'),
-          import(/* webpackChunkName:"fontawesome-regular",webpackPrefetch:false,webpackMode:"lazy" */ '@fortawesome/fontawesome-free-regular'),
-          import(/* webpackChunkName:"fontawesome-brands",webpackPrefetch:false,webpackMode:"lazy" */ '@fortawesome/fontawesome-free-brands'),
-        ]).then(res => {
-          const [{FontAwesomeIcon}, fontawesome, solid, regular, brands] = res;
-          fontawesome.default.library.add(solid.default);
-          fontawesome.default.library.add(regular.default);
-          fontawesome.default.library.add(brands.default);
-          proxy.$.appContext.components[FontAwesomeIcon.name] = FontAwesomeIcon;
-        }).catch(e => {
-          console.error(e);
-        }).finally(() => {
-          clearTimeout(timer);
-        });
-      }, 2000);
-      // isMobile && proxy.$message.success('切换到PC端体验更加哦！');
     });
     return {
       locale: zhCn
