@@ -22,7 +22,7 @@ export default {
           activeTextColor: '#ffd04b',
           defaultActive: '',
           target: 'i-website__container',
-          title: 'IRender',
+          title: 'IRenderer',
           initApi: {
             url: '/api/menu/0767bea4-c7e7-4aa7-a1b5-2fd5e1ec4a7f'
           },
@@ -153,7 +153,7 @@ export default {
                   name: 'IWebsiteHome',
                   category: 'icon',
                   size: 18,
-                  url: 'https://songshuzhong.github.io/i-home/dist/index.html#/'
+                  url: 'https://songshuzhong.github.io/i-website/dist/home.html#/'
                 },
                 {
                   renderer: 'action',
@@ -280,7 +280,7 @@ export default {
                       actionType: 'url',
                       name: 'IWebsiteHome',
                       text: '官网',
-                      url: 'https://songshuzhong.github.io/i-home/dist/index.html#/'
+                      url: 'https://songshuzhong.github.io/i-website/dist/home.html#/'
                     },
                     {
                       renderer: 'action',

@@ -1,19 +1,18 @@
 import {createApp} from 'vue';
 import ElementPlus, {ElNotification} from 'element-plus';
-import IRenderer, {api} from '../../i-renderer/packages/renderer';
-import createRoutes from './router/index';
-import Application from './App.vue';
+import IRenderer, {api} from '../../../i-renderer/packages/index';
+import createRoutes from '../router/index';
+import Application from '../apps/Index.vue';
 
 import 'element-plus/dist/index.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';
-import '../../i-renderer/packages/assets/styles/index.scss';
-import './style/index.scss';
-import './registerServiceWorker';
+import 'i-renderer/dist/css/index.css';
+import '../style/index.scss';
+import '../registerServiceWorker';
 
 const app = createApp(Application);
 const config = {
-  domains: [process.env.VUE_APP_API_BASE],
-  pageDomain: process.env.VUE_APP_API_BASE
+  domains: [process.env.VUE_APP_API_BASE]
 };
 
 Promise.all([

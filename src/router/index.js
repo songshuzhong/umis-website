@@ -1,6 +1,6 @@
 import {createRouter, createWebHashHistory} from 'vue-router';
 import {ElLoading} from 'element-plus';
-import {Schema, checkPermission} from '../../../i-renderer/packages/renderer/index';
+import {Schema, checkPermission} from '../../../i-renderer/packages/index';
 import indexSchema from '../data/index';
 
 const createRoutes = () => {
@@ -12,7 +12,7 @@ const createRoutes = () => {
       {
         path: '/',
         name: 'IWebsite',
-        title: '零代码-IRender',
+        title: '零代码-IRenderer案例',
         component: Schema,
         props: {
           initSchema: indexSchema,
@@ -55,7 +55,7 @@ const createRoutes = () => {
     next();
   });
   router.afterEach((route) => {
-    document.title = route?.meta?.title || '零代码-IRender';
+    document.title = route?.meta?.title || '零代码-IRenderer案例';
     const timer = setTimeout(() => {
       if (routerMask && typeof routerMask.close === 'function') {
         routerMask.close();

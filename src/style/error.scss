@@ -1,3 +1,16 @@
+html {
+  &.mobile {
+    .i-website__error {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 0;
+      .i-website__error__info {
+        padding-top: 0;
+      }
+    }
+  }
+}
 .i-website__error {
   position: relative;
   height: 100%;
