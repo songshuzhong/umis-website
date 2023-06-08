@@ -61,9 +61,7 @@ html {
     height: calc(100vh - 110px);
     overflow: auto;
   }
-  .i-page__container__pops {
-    &.page {
-      display: none;
-    }
+  .i-page-container__pop {
+    display: none;
   }
 }
