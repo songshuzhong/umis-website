@@ -256,6 +256,7 @@ export default {
                       {
                         renderer: 'editor',
                         editable: true,
+                        nimble: true,
                         isJson: false,
                         classname: 'i-website__json-editor'
                       }
