@@ -46,6 +46,7 @@
     "eslint-loader": "^4.0.2",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-vue": "^7.20.0",
+    "i-renderer": "latest",
     "less": "^4.1.2",
     "lint-staged": "^8.2.1",
     "lodash": "^4.17.21",
@@ -68,8 +69,5 @@
     "vue-router": "^4.1.6",
     "webpack-cli": "^4.9.1",
     "workbox-webpack-plugin": "^6.5.4"
-  },
-  "dependencies": {
-    "i-renderer": "^1.0.1-beta.28"
   }
 }
