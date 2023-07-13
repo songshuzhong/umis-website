@@ -28,7 +28,7 @@ export default defineComponent({
     });
     onMounted(() => {
       /* eslint-disable */
-      bszCaller.fetch('//busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback', function(a) {
+      bszCaller&&bszCaller.fetch&&bszCaller.fetch('//busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback', function(a) {
         bszTag.texts(a);
         bszTag.shows();
       });
