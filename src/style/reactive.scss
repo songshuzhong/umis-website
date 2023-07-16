@@ -12,10 +12,11 @@ html {
     .i-website__header {
       display: flex;
       align-items: center;
+      height: 100%;
     }
     .i-website__header__service {
       height: 100%;
-      .i-component__fragment,
+      .i-action,
       .i-avatar__container {
         display: none;
       }
