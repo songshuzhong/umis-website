@@ -10,12 +10,13 @@ html {
       font-size: 12px;
     }
     .i-website__header {
+      height: 100%;
       display: flex;
       align-items: center;
     }
     .i-website__header__service {
       height: 100%;
-      .i-component__fragment,
+      .i-action,
       .i-avatar__container {
         display: none;
       }
