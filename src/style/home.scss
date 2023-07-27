@@ -421,13 +421,15 @@ html {
     font-size: 18px;
     font-weight: 500;
   }
-  .i-component__fragment {
+  .i-action {
+    width: 100%;
     display: block;
+    text-align: center;
     .el-button {
       color: #fff;
     }
   }
-  .i-component__fragment + .i-component__fragment {
+  .i-action + .i-action {
     margin-left: 0;
   }
 }
