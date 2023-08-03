@@ -142,7 +142,7 @@ export default {
               renderer: 'service',
               classname: 'i-website__header__service',
               initApi: {
-                url: 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/user',
+                url: '/api/user',
                 cached: true
               },
               body: [

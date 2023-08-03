@@ -16,7 +16,7 @@ const config = {
 };
 
 Promise.all([
-  api().staticApi().get('https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/user')
+  api().staticApi().get('/api/user')
 ])
   .then(res => {
     const [settings] = res;
