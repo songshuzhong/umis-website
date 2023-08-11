@@ -162,6 +162,9 @@ $i-website-primary: #3a3f51 !default;
     }
   }
 }
+.i-website__setting__container {
+  padding-bottom: 50px;
+}
 .el-menu--popup {
   max-height: 60vh !important;
   overflow-y: scroll;

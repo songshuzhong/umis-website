@@ -225,6 +225,7 @@ export default {
                   body: {
                     width: 30,
                     appendToBody: true,
+                    classname: 'i-website__setting__container',
                     header: {
                       renderer: 'html',
                       html: '设置'
