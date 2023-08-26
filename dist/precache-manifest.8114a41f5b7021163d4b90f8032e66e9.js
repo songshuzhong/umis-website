@@ -1,5 +1,9 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
+    "revision": "bdea07cdff89e0acbb49",
+    "url": "/i-website/dist/chunk/chunk-25009bae.423dd2.js"
+  },
+  {
     "revision": "2398567077f330955f72",
     "url": "/i-website/dist/chunk/chunk-2d0b8b3e.85d3ce.js"
   },
@@ -20,16 +24,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/chunk/chunk-2d225f49.1a8097.js"
   },
   {
-    "revision": "17a5b476d83d80ac3b0b",
-    "url": "/i-website/dist/chunk/chunk-476d9766.fb89ca.js"
-  },
-  {
     "revision": "bafe63f5cd9f4edb4976",
     "url": "/i-website/dist/chunk/chunk-63ab760a.9427da.js"
   },
   {
-    "revision": "4b1a937db73814c92f84",
-    "url": "/i-website/dist/chunk/chunk-6ce51b6e.a03f47.js"
+    "revision": "950ed3fd3c5aee88c8b3",
+    "url": "/i-website/dist/chunk/chunk-6ce51b6e.48a23e.js"
   },
   {
     "revision": "27c6b7029ecd973027b3",
@@ -40,23 +40,23 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/chunk/chunk-b2126b70.6a540e.js"
   },
   {
-    "revision": "bac51d40bdb66a3031fb",
-    "url": "/i-website/dist/chunk/chunk-vendors.b00c71.js"
+    "revision": "a31705e0820b60d16d61",
+    "url": "/i-website/dist/chunk/chunk-vendors.1bece3.js"
   },
   {
-    "revision": "0044380ac60a5283d202",
-    "url": "/i-website/dist/chunk/editor.f6c185.js"
+    "revision": "fba9954970a811be1cd0",
+    "url": "/i-website/dist/chunk/editor.b1b1d3.js"
   },
   {
     "revision": "ae48e2078551e8a64156f767f51e5254",
     "url": "/i-website/dist/circle.svg"
   },
   {
-    "revision": "17a5b476d83d80ac3b0b",
-    "url": "/i-website/dist/css/chunk-476d9766.ba4ddaba.css"
+    "revision": "bdea07cdff89e0acbb49",
+    "url": "/i-website/dist/css/chunk-25009bae.ba4ddaba.css"
   },
   {
-    "revision": "4b1a937db73814c92f84",
+    "revision": "950ed3fd3c5aee88c8b3",
     "url": "/i-website/dist/css/chunk-6ce51b6e.90717131.css"
   },
   {
@@ -64,19 +64,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/css/chunk-76d1d221.c6997ae2.css"
   },
   {
-    "revision": "bac51d40bdb66a3031fb",
-    "url": "/i-website/dist/css/chunk-vendors.51db839c.css"
+    "revision": "a31705e0820b60d16d61",
+    "url": "/i-website/dist/css/chunk-vendors.d122d4db.css"
   },
   {
-    "revision": "88b35c8af3869cc7244e",
+    "revision": "bfa6d08d6e7700917b0c",
     "url": "/i-website/dist/css/home.9d267e69.css"
   },
   {
-    "revision": "fc5840d74f45fe12330e",
+    "revision": "ff09ee04351aa8d265bb",
     "url": "/i-website/dist/css/index.a45c11e5.css"
   },
   {
-    "revision": "79c2a4a89191141f19a0",
+    "revision": "753b33d0e4b7cf1fdb50",
     "url": "/i-website/dist/css/playground.33084e77.css"
   },
   {
@@ -84,7 +84,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/fonts/codicon.805fb6ad.ttf"
   },
   {
-    "revision": "c47428d3a64a58dccf12381878df8fce",
+    "revision": "695777045889039140bd9d54d87ff756",
     "url": "/i-website/dist/home.html"
   },
   {
@@ -100,27 +100,27 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/img/not-found.06512621.jpeg"
   },
   {
-    "revision": "e5291383bcf7e1824b91264d9ce5d84c",
+    "revision": "26056840ef31d9cb139088974ccece04",
     "url": "/i-website/dist/index.html"
   },
   {
-    "revision": "88b35c8af3869cc7244e",
-    "url": "/i-website/dist/js/home.0b8069.js"
+    "revision": "bfa6d08d6e7700917b0c",
+    "url": "/i-website/dist/js/home.70e9d9.js"
   },
   {
-    "revision": "fc5840d74f45fe12330e",
-    "url": "/i-website/dist/js/index.0111cb.js"
+    "revision": "ff09ee04351aa8d265bb",
+    "url": "/i-website/dist/js/index.5be706.js"
   },
   {
-    "revision": "79c2a4a89191141f19a0",
-    "url": "/i-website/dist/js/playground.c0147a.js"
+    "revision": "753b33d0e4b7cf1fdb50",
+    "url": "/i-website/dist/js/playground.0bd2bf.js"
   },
   {
     "revision": "3866f3ee76597fcdadc88a83a339fdae",
     "url": "/i-website/dist/manifest.json"
   },
   {
-    "revision": "8d77b11b2d93b782508d0386510f04ca",
+    "revision": "5acd176546b814e7b28f4efbd8e5c274",
     "url": "/i-website/dist/playground.html"
   },
   {
