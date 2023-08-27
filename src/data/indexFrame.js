@@ -1,6 +1,6 @@
 export default {
   renderer: 'layout',
-  name: 'i-website__container',
+  name: 'IWebsiteContainer',
   classname: 'i-website__container',
   initData: {
     width: 200,
@@ -13,7 +13,7 @@ export default {
       body: [
         {
           renderer: 'menu',
-          name: 'i-website-nav',
+          name: 'IWebsiteNav',
           classname: 'i-website_menu-vertical',
           router: true,
           mode: 'vertical',
@@ -21,7 +21,7 @@ export default {
           textColor: '#fff',
           activeTextColor: '#ffd04b',
           defaultActive: '',
-          target: 'i-website__container',
+          target: 'IWebsiteContainer',
           title: 'IRenderer',
           initApi: {
             url: '/api/menu/0767bea4-c7e7-4aa7-a1b5-2fd5e1ec4a7f'
@@ -113,7 +113,7 @@ export default {
             {
               renderer: 'switch',
               name: 'collapse',
-              target: 'i-website__container',
+              target: 'IWebsiteContainer',
               hiddenOn: '1 === 1'
             },
             {
