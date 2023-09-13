@@ -226,10 +226,6 @@ export default {
                     width: 30,
                     appendToBody: true,
                     classname: 'i-website__setting__container',
-                    header: {
-                      renderer: 'html',
-                      html: '设置'
-                    },
                     body: [
                       {
                         renderer: 'setting'
@@ -248,11 +244,6 @@ export default {
                     width: 100,
                     appendToBody: true,
                     classname: 'i-website__drawer',
-                    header: {
-                      renderer: 'html',
-                      html:
-                        '<div style="text-align: left; color: white;">编辑页面</div>'
-                    },
                     body: [
                       {
                         renderer: 'editor',
@@ -302,10 +293,6 @@ export default {
                       body: {
                         width: 30,
                         appendToBody: true,
-                        header: {
-                          renderer: 'html',
-                          html: '设置'
-                        },
                         body: [
                           {
                             renderer: 'setting'
@@ -323,11 +310,6 @@ export default {
                         width: 100,
                         appendToBody: true,
                         classname: 'i-website__drawer',
-                        header: {
-                          renderer: 'html',
-                          html:
-                            '<div style="text-align: left; color: white;">编辑页面</div>'
-                        },
                         body: [
                           {
                             renderer: 'editor',

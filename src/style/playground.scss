@@ -51,6 +51,9 @@ html {
   display: flex;
   flex-direction: row;
   overflow: hidden;
+  .i-toolmaker__container {
+    margin-left: 0;
+  }
 }
 .i-home__playground__preview {
   width: 50%;
