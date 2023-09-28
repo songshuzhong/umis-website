@@ -145,22 +145,23 @@ $i-website-primary: #3a3f51 !default;
 }
 .i-website__drawer {
   .el-drawer__header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0;
-    padding: 20px 20px 15px 20px;
-    border-bottom: 0;
-    background: $i-monaco-primary;
-    color: var(--el-text-color-secondary);
+    height: 100%;
+    padding: 0;
+    display: block;
+    background-color: unset;
+    .i-editor__container__tools {
+      padding-right: 30px;
+    }
+    .el-drawer__close-btn {
+      position: absolute;
+      top: 8px;
+      right: 0;
+      z-index: 100;
+    }
   }
   .el-drawer__body {
     padding: 0;
     margin: 0;
-  }
-  .i-website__json-editor {
-    & > .monaco-editor {
-      height: calc(100vh - 110px);
-    }
   }
 }
 .i-website__setting__container {
