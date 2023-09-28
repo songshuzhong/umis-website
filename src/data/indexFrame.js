@@ -244,15 +244,13 @@ export default {
                     width: 100,
                     appendToBody: true,
                     classname: 'i-website__drawer',
-                    body: [
-                      {
-                        renderer: 'editor',
-                        editable: true,
-                        nimble: true,
-                        isJson: false,
-                        classname: 'i-website__json-editor'
-                      }
-                    ]
+                    header: {
+                      renderer: 'editor',
+                      editable: true,
+                      nimble: true,
+                      isJson: false,
+                      classname: 'i-website__json-editor'
+                    }
                   }
                 },
                 {
