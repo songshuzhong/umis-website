@@ -199,6 +199,7 @@ $i-website-primary: #3a3f51 !default;
       position: absolute;
       top: 0;
       right: 0;
+      left: unset;
       height: 25px !important;
       width: 25px !important;
       display: inline;
@@ -206,6 +207,7 @@ $i-website-primary: #3a3f51 !default;
       background-position: center;
       background-size: cover;
       animation: loading-rotate 2s linear infinite;
+      transform: unset;
     }
     .path {
       display: block;
