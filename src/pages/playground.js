@@ -4,7 +4,7 @@ import Playground from '../apps/Playground.vue';
 import IRenderer, {Schema} from '../../../i-renderer/packages/index';
 
 import 'element-plus/dist/index.css';
-import 'i-renderer/dist/css/index.css';
+import '../../../i-renderer/packages/assets/styles/index.scss';
 import '../style/playground.scss';
 import '../registerServiceWorker';
 
