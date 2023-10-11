@@ -150,12 +150,12 @@ $i-website-primary: #3a3f51 !default;
     display: block;
     background-color: unset;
     .i-editor__container__tools {
-      padding-right: 36px;
+      padding-right: 50px;
     }
     .el-drawer__close-btn {
       position: absolute;
       top: 8px;
-      right: 0;
+      right: 10px;
       z-index: 100;
     }
   }
