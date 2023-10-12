@@ -31,15 +31,19 @@ html {
     padding-right: 10px;
   }
   .i-toolmaker__container {
+    height: 100%;
     border: 1px dashed var(--el-border-color-lighter) !important;
     &::before {
       position: absolute;
       content: '点击元素进行编辑';
       color: rgba(144, 147, 153, 0.3);
       left: 16px;
-      bottom: 12px;
+      bottom: 80px;
       font-size: 20px;
       z-index: 10;
+    }
+    .i-page__container {
+      height: calc(100vh - 60px);
     }
   }
 }
@@ -51,9 +55,6 @@ html {
   display: flex;
   flex-direction: row;
   overflow: hidden;
-  .i-toolmaker__container {
-    margin-left: 0;
-  }
 }
 .i-home__playground__preview {
   width: 50%;
@@ -61,7 +62,7 @@ html {
   .i-page__container {
     border: 1px solid var(--el-border-color-lighter);
     padding: 6px;
-    height: calc(100vh - 110px);
+    height: calc(100vh - 60px);
     overflow: auto;
   }
   .i-page-container__pop {
