@@ -32,6 +32,7 @@ html {
   }
   .i-toolmaker__container {
     height: 100%;
+    margin-left: 0;
     border: 1px dashed var(--el-border-color-lighter) !important;
     &::before {
       position: absolute;
