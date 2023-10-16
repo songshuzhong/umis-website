@@ -84,7 +84,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/fonts/codicon.805fb6ad.ttf"
   },
   {
-    "revision": "3c76b805e4606f1af5d42dc7c2e5f032",
+    "revision": "e0eb167be994cbb7fd74e04da3a2bdb3",
     "url": "/i-website/dist/home.html"
   },
   {
@@ -100,7 +100,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/img/not-found.06512621.jpeg"
   },
   {
-    "revision": "4a690814a57b577f0819a5b28ef3ffe2",
+    "revision": "dbf4aae9f0d44087dba717a46ccf6cd0",
     "url": "/i-website/dist/index.html"
   },
   {
@@ -120,7 +120,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/manifest.json"
   },
   {
-    "revision": "ca9a489dfe57720ddc2d8ba2f68740e3",
+    "revision": "2d4c039a7ecd45c1de1483215519fd74",
     "url": "/i-website/dist/playground.html"
   },
   {
