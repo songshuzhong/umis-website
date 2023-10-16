@@ -1,32 +1,51 @@
 <template>
+  <div v-if="isFrame" class="i-device-ios">
+    <div class="i-device-inner">
+      <iframe
+        class="i-device-inner__frame"
+        :src="`/mobile.html?pageId=${pageId}`"
+      />
+    </div>
+  </div>
   <i-schema
+    v-else
     :url="url"
     :can-schema-update="false"
     ref="schema"
     path="/mobile"
-    classname="i-home__playground__preview"
+    classname="i-mobile__container i-website__main"
   />
 </template>
 
 <script>
-import {defineComponent, onMounted} from 'vue';
+import {defineComponent, onMounted, ref} from 'vue';
+import qs from 'qs';
 
 export default defineComponent({
   name: 'Mobile',
   setup() {
     const isPro = process.env.NODE_ENV === 'production';
-    let url = window.location.search.replace('?pageId=', '');
+    const query = qs.parse(window.location.href.split('?')[1]);
+    const isFrame = ref(query.isFrame);
+    let url;
     if (isPro) {
-      url = 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/page/' + url;
+      url = 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/page/' + query.pageId;
     } else {
-      url = '/api/page/' + url;
+      url = '/api/page/' + query.pageId;
     }
     onMounted(() => {
-      window.requestIdleCallback(() => {
-        document.querySelector('.i-page__container').classList.add('h5');
-      });
+      if (!isFrame.value) {
+        const timer = window.setTimeout(() => {
+          const page = document.querySelector('.i-page__container');
+          page && page.classList.add('h5');
+          document.documentElement.classList.add('mobile');
+          clearTimeout(timer);
+        }, 500);
+      }
     });
     return {
+      pageId: query.pageId,
+      isFrame,
       isPro,
       url
     };

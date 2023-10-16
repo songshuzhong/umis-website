@@ -17,7 +17,7 @@ export default defineComponent({
           {
             renderer: 'action',
             actionType: 'url',
-            url: isPro? 'https://songshuzhong.github.io/i-website/dist/mobille.html?pageId=' + window.IRenderer.pageInfo.pageId: `${window.location.protocol}//${window.location.host}/mobile.html?pageId=${window.IRenderer.pageInfo.pageId}`
+            url: isPro? 'https://songshuzhong.github.io/i-website/dist/mobille.html?isFrame=true&pageId=' + window.IRenderer.pageInfo.pageId: `${window.location.protocol}//${window.location.host}/mobile.html?isFrame=true&pageId=${window.IRenderer.pageInfo.pageId}`
           },
           {},
           () => {},

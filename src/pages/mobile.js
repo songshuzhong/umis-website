@@ -5,6 +5,7 @@ import IRenderer from '../../../i-renderer/packages/index';
 
 import 'element-plus/dist/index.css';
 import 'i-renderer/dist/css/index.css';
+import '../style/mobile.scss';
 import '../registerServiceWorker';
 
 const app = createApp(Application);
