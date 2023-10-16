@@ -156,6 +156,9 @@ export default {
                   url: 'https://songshuzhong.github.io/i-website/dist/home.html#/'
                 },
                 {
+                  renderer: 'tomobile'
+                },
+                {
                   renderer: 'action',
                   icon: 'Bell',
                   category: 'icon',
