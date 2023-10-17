@@ -3,6 +3,7 @@ import ElementPlus, {ElNotification} from 'element-plus';
 import IRenderer, {api} from 'i-renderer/dist/js/renderer';
 import createRoutes from '../router/index';
 import Application from '../apps/Index.vue';
+import ToMobile from '../component/ToMobile.vue';
 
 import 'element-plus/dist/index.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';
@@ -12,7 +13,8 @@ import '../registerServiceWorker';
 
 const app = createApp(Application);
 const config = {
-  domains: [process.env.VUE_APP_API_BASE]
+  domains: [process.env.VUE_APP_API_BASE],
+  renderers: [ToMobile]
 };
 
 Promise.all([
