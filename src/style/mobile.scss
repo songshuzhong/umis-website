@@ -1,5 +1,8 @@
 .i-mobile__container {
   overflow: hidden;
+  &>.el-skeleton {
+    padding: 10px;
+  }
 }
 .i-device-ios {
   position: relative;
