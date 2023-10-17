@@ -2,9 +2,11 @@
   <div v-if="isFrame" class="i-device-ios">
     <div class="i-device-inner">
       <iframe
+        :key="update"
         class="i-device-inner__frame"
         :src="`/mobile.html?pageId=${pageId}`"
       />
+      <div class="i-device-inner__home" @click="refresh"/>
     </div>
   </div>
   <i-schema
@@ -27,12 +29,16 @@ export default defineComponent({
     const isPro = process.env.NODE_ENV === 'dev';
     const query = qs.parse(window.location.href.split('?')[1]);
     const isFrame = ref(query.isFrame);
+    const update = ref(0);
     let url;
     if (isPro) {
       url = 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/page/' + query.pageId;
     } else {
       url = '/api/page/' + query.pageId;
     }
+    const refresh = () => {
+      update.value++;
+    };
     onMounted(() => {
       if (!isFrame.value) {
         const timer = window.setTimeout(() => {
@@ -49,7 +55,9 @@ export default defineComponent({
       pageId: query.pageId,
       isFrame,
       isPro,
-      url
+      url,
+      update,
+      refresh
     };
   }
 });
