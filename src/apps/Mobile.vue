@@ -13,7 +13,7 @@
     :can-schema-update="false"
     ref="schema"
     path="/mobile"
-    classname="i-mobile__container i-website__main"
+    classname="i-mobile__container i-website__main i-main__container"
   />
 </template>
 
@@ -24,7 +24,7 @@ import qs from 'qs';
 export default defineComponent({
   name: 'Mobile',
   setup() {
-    const isPro = process.env.NODE_ENV === 'production';
+    const isPro = process.env.NODE_ENV === 'dev';
     const query = qs.parse(window.location.href.split('?')[1]);
     const isFrame = ref(query.isFrame);
     let url;
@@ -37,8 +37,10 @@ export default defineComponent({
       if (!isFrame.value) {
         const timer = window.setTimeout(() => {
           const page = document.querySelector('.i-page__container');
+          const doc = document.documentElement;
           page && page.classList.add('h5');
-          document.documentElement.classList.add('mobile');
+          doc.classList.remove('pc');
+          doc.classList.add('mobile');
           clearTimeout(timer);
         }, 500);
       }
