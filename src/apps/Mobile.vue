@@ -24,7 +24,7 @@ import qs from 'qs';
 export default defineComponent({
   name: 'Mobile',
   setup() {
-    const isPro = process.env.NODE_ENV === 'dev';
+    const isPro = process.env.NODE_ENV === 'production';
     const query = qs.parse(window.location.href.split('?')[1]);
     const isFrame = ref(query.isFrame);
     let src = '';
