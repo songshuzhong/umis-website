@@ -3,7 +3,7 @@
     <div class="i-device-inner">
       <iframe
         class="i-device-inner__frame"
-        :src="`/mobile.html?pageId=${pageId}`"
+        :src="`${src}/mobile.html?pageId=${pageId}`"
       />
     </div>
   </div>
@@ -27,9 +27,11 @@ export default defineComponent({
     const isPro = process.env.NODE_ENV === 'dev';
     const query = qs.parse(window.location.href.split('?')[1]);
     const isFrame = ref(query.isFrame);
+    let src = '';
     let url;
     if (isPro) {
       url = 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/page/' + query.pageId;
+      src = 'https://songshuzhong.github.io/i-website/dist';
     } else {
       url = '/api/page/' + query.pageId;
     }
@@ -49,6 +51,7 @@ export default defineComponent({
       pageId: query.pageId,
       isFrame,
       isPro,
+      src,
       url
     };
   }
