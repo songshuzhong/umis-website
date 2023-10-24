@@ -8,6 +8,7 @@
 
 <script>
 import {defineComponent, onBeforeMount, onMounted, getCurrentInstance} from 'vue';
+import {useScriptTag} from '@vueuse/core/index.cjs';
 import {Schema} from 'i-renderer/dist/js/renderer';
 import frameSchema from '../data/indexFrame';
 
@@ -18,7 +19,14 @@ export default defineComponent({
   },
   setup() {
     const { proxy } = getCurrentInstance();
-
+    const appendAssets = () => {
+      return useScriptTag(
+        'https://cdn.jsdelivr.net/npm/vue3-sfc-loader@0.8.4/dist/vue3-sfc-loader.min.js',
+        el => {
+          console.log(el);
+        },
+      );
+    };
     onBeforeMount(() => {
       const isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
       if (isMobile) {
@@ -42,7 +50,8 @@ export default defineComponent({
           }).finally(() => {
             clearTimeout(timer);
           });
-      }, 2000);
+        appendAssets();
+      }, 5000);
     });
 
     return {
