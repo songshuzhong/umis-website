@@ -41,7 +41,7 @@
     "cross-env": "^5.2.1",
     "css-loader": "^3.5.3",
     "echarts": "^5.4.1",
-    "element-plus": "^2.4.0",
+    "element-plus": "latest",
     "eslint": "^7.14.0",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-import": "^2.23.4",
