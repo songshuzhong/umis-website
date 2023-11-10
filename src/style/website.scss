@@ -1,5 +1,4 @@
 $i-monaco-primary: #282a36 !default;
-$i-website-primary: #3a3f51 !default;
 
 .i-website-app__container {
   height: 100vh;
@@ -51,7 +50,7 @@ $i-website-primary: #3a3f51 !default;
 .i-website__aside {
   position: relative;
   height: 100%;
-  background: $i-website-primary;
+  background: var(--i-menu-background-color);
   transition: 0.3s width ease-in-out;
   &.width-64 {
     .i-website__ads {
@@ -66,41 +65,6 @@ $i-website-primary: #3a3f51 !default;
   }
   .i-website_menu-vertical {
     margin-bottom: 50px;
-    .el-sub-menu .el-menu-item {
-      background-color: rgba(0, 0, 0, 0.3);
-      &::after {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        top: 0;
-        height: 0;
-        width: 0;
-        content: '';
-        display: block;
-        background-color: currentColor;
-        transform: scale(0);
-        transition: transform 0.3s;
-      }
-      &:hover {
-        background-color: #001528;
-        &::after {
-          height: 100%;
-          width: 3px;
-          transform: scale(1);
-        }
-      }
-      .el-submenu .el-menu-item {
-        min-width: 210px;
-        background-color: #1f2d3d;
-      }
-    }
-    .icon {
-      margin-right: 5px;
-      color: white;
-    }
-    &:not(.el-menu--collapse) {
-      width: 200px;
-    }
   }
   .i-wrapper__container {
     position: relative;
@@ -110,7 +74,7 @@ $i-website-primary: #3a3f51 !default;
       width: 200px;
       height: 50px;
       padding: 5px 8px;
-      background: $i-website-primary;
+      background: var(--i-menu-background-color);
       overflow: hidden;
       transition: 0.3s width ease-in-out;
       .i-render__container {
