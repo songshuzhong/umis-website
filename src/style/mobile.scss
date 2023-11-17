@@ -1,3 +1,8 @@
+html,
+body,
+.i-website-app__container {
+  height: 100%;
+}
 .i-mobile__container {
   overflow: hidden;
   &>.el-skeleton {
