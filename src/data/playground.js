@@ -56,8 +56,8 @@ export default {
           {
             renderer: 'action',
             text: '提交',
-            actionType: 'submit',
-            remoteComponent: 'DemoForm',
+            actionType: 'trigger',
+            triggered: 'DemoForm',
             body: {}
           }
         ],
