@@ -28,10 +28,12 @@ export default defineComponent({
     });
     onMounted(() => {
       /* eslint-disable */
-      bszCaller && bszCaller.fetch('//busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback', function(a) {
-        bszTag.texts(a);
-        bszTag.shows();
-      });
+      if (process.env.NODE_ENV !== 'dev') {
+        bszCaller && bszCaller.fetch('//busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback', function(a) {
+          bszTag.texts(a);
+          bszTag.shows();
+        });
+      }
       const timer = setTimeout(() => {
         import(/* webpackChunkName:"editor",webpackPrefetch:false,webpackMode:"lazy" */ '../../../i-renderer/packages/canvas/index').then(res => {
           const {Editor} = res;
