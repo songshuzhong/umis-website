@@ -27,13 +27,6 @@ export default defineComponent({
       isMobile && proxy.$message.success('切换到PC端体验更加哦！');
     });
     onMounted(() => {
-      /* eslint-disable */
-      if (process.env.NODE_ENV !== 'dev') {
-        bszCaller && bszCaller.fetch('//busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback', function(a) {
-          bszTag.texts(a);
-          bszTag.shows();
-        });
-      }
       const timer = setTimeout(() => {
         import(/* webpackChunkName:"editor",webpackPrefetch:false,webpackMode:"lazy" */ '../../../i-renderer/packages/canvas/index').then(res => {
           const {Editor} = res;

@@ -257,13 +257,13 @@ export default {
                 },
                 {
                   renderer: 'avatar',
-                  src: '${user_cover}',
+                  src: '${avatar}',
                   isComputedSrc: true,
                   size: 'default'
                 },
                 {
                   renderer: 'dropdown',
-                  text: '<%=data.user_name%>',
+                  text: '<%=data.username%>',
                   popperClass: 'i-website__header__dropdown',
                   name: 'IWebsiteDropdown',
                   body: [
@@ -333,7 +333,7 @@ export default {
                       text: '退出登录',
                       type: 'primary',
                       icon: 'SwitchButton',
-                      actionType: 'ajax',
+                      actionType: 'logout',
                       actionApi: {
                         url: '/logout'
                       }
