@@ -12,7 +12,41 @@ const app = createApp(Application);
 const options = {
   actions: {
     register: function (proxy, props, config, context, onActionFeedback) {
-      onActionFeedback&&onActionFeedback('CANCEL_LOADING');
+      const form = proxy.$parent.$parent.$parent;
+      form.validate((valid) => {
+        if (valid) {
+          api()
+            .staticApi()
+            .post('/api/user', form.$parent.state.data)
+            .then(() => {
+              ElNotification({
+                title: '错误：初始化接口调用失败',
+                message: '注册成功，请登录！',
+                type: 'error',
+                duration: 4000,
+                offset: 50
+              });
+              const timer = setTimeout(() => {
+                clearTimeout(timer);
+                window.location.reload();
+              }, 4000);
+            })
+            .catch((e) => {
+              ElNotification({
+                title: '错误：初始化接口调用失败',
+                message: e.config.url,
+                type: 'error',
+                duration: 10000,
+                offset: 50
+              });
+            })
+            .finally(() => {
+              onActionFeedback&&onActionFeedback('CANCEL_LOADING');
+            });
+        } else {
+          onActionFeedback&&onActionFeedback('CANCEL_LOADING');
+        }
+      });
     },
     login: function (proxy, props, config, context, onActionFeedback) {
       const form = proxy.$parent.$parent.$parent;
@@ -37,6 +71,8 @@ const options = {
             .finally(() => {
               onActionFeedback&&onActionFeedback('CANCEL_LOADING');
             });
+        } else {
+          onActionFeedback&&onActionFeedback('CANCEL_LOADING');
         }
       });
     },

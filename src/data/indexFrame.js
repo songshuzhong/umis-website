@@ -242,6 +242,7 @@ export default {
                   size: 18,
                   name: 'IWebsiteEdit',
                   actionType: 'drawer',
+                  trustOn: [-1],
                   body: {
                     width: 100,
                     appendToBody: true,
@@ -306,6 +307,7 @@ export default {
                       text: '编辑',
                       name: 'IWebsiteEdit',
                       actionType: 'drawer',
+                      trustOn: [-1],
                       body: {
                         width: 100,
                         appendToBody: true,
