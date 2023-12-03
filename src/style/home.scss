@@ -296,8 +296,8 @@ html {
     height: 100%;
     .i-html__container {
       position: absolute;
-      bottom: 30px;
-      right: 70px;
+      bottom: 50px;
+      right: 90px;
       display: block;
       font-size: 20px;
       font-weight: bolder;
@@ -305,8 +305,8 @@ html {
     }
     .i-component__fragment {
       position: absolute;
-      bottom: 40px;
-      right: 100px;
+      bottom: 0;
+      right: 90px;
       display: block;
     }
   }
@@ -387,6 +387,8 @@ html {
   padding: 0 130px 40px 130px;
   text-align: center;
   .i-image__container {
+    width: auto;
+    height: 50px;
     display: inline;
   }
   .el-image {
@@ -422,15 +424,16 @@ html {
     font-size: 18px;
     font-weight: 500;
   }
-  .i-action {
+  .i-component__fragment {
     width: 100%;
+    height: 32px;
     display: block;
     text-align: center;
     .el-button {
       color: #fff;
     }
   }
-  .i-action + .i-action {
+  .i-component__fragment + .i-component__fragment {
     margin-left: 0;
   }
 }
@@ -440,6 +443,8 @@ html {
   color: #fff;
   background-color: #000;
   text-align: center;
+  font-size: 16px;
+  font-weight: bold;
 }
 .i-home__ball {
   z-index: 2;
