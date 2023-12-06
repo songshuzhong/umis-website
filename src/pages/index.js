@@ -45,6 +45,7 @@ api()
   .then(res => {
     const routers = createRoutes();
     config.permissions = res.data['permissions'];
+    config.roles = res.data['roles'];
     app
       .use(ElementPlus)
       .use(IRenderer, config)

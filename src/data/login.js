@@ -50,7 +50,7 @@ export default {
                   plain: true
                 }
               ]
-            }
+            },
           ]
         },
         {
@@ -83,13 +83,79 @@ export default {
                 },
                 {
                   renderer: 'input',
+                  name: 'mail',
+                  label: '邮箱',
+                  required: false,
+                  type: 'text',
+                  validType: 'normal',
+                  requiredOn: '1',
+                  rules: [
+                    {
+                      exp: '!/^([a-zA-Z0-9]+[_|\\_|\\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\\_|\\.]?)*[a-zA-Z0-9]+\\.[a-zA-Z]{2,3}$/.test(data.mail)',
+                      message: '邮箱格式不正确',
+                      trigger: 'blur',
+                      type: 'exp'
+                    }
+                  ],
+                  append:
+                    {
+                      renderer: 'sendmail',
+                      classname: 'verify'
+                    }
+                },
+                {
+                  renderer: 'action',
+                  name: 'SendMailAction',
+                  actionType: 'ajax',
+                  text: '获取验证码',
+                  visibleOn: '1==2',
+                  actionApi: {
+                    url: '/api/mail',
+                    method: 'post',
+                    params: {
+                      '*': '*'
+                    }
+                  },
+                  body: {}
+                },
+                {
+                  renderer: 'input',
+                  name: 'code',
+                  label: '验证码',
+                  requiredOn: '1==1',
+                  placeholder: '请输入',
+                  type: 'text',
+                  showPassword: false,
+                  rules: []
+                },
+                {
+                  renderer: 'input',
                   name: 'password',
                   label: '密码',
                   requiredOn: '1==1',
                   placeholder: '请输入',
                   type: 'text',
                   showPassword: true,
-                  rules: []
+                  rules: [{
+                    type: 'exp',
+                    trigger: 'blur',
+                    message: '密码必须相等',
+                    exp: 'data.password !== data.repassword'
+                  }]
+                },                {
+                  renderer: 'input',
+                  name: 'repassword',
+                  label: '确认密码',
+                  requiredOn: '1==1',
+                  placeholder: '请输入',
+                  type: 'text',
+                  showPassword: true,
+                  rules: [{
+                    type: 'exp',
+                    trigger: 'blur',
+                    message: '密码必须相等',
+                    exp: 'data.password !== data.repassword'
+                  }]
                 },
                 {
                   renderer: 'input',
@@ -105,7 +171,7 @@ export default {
                 {
                   renderer: 'action',
                   text: '注册',
-                  actionType: 'register',
+                  actionType: 'submit',
                   body: {}
                 }
               ]

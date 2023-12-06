@@ -47,7 +47,7 @@ const createRoutes = () => {
     }
 
     if (to?.meta?.permission) {
-      const hasPermission = checkPermission(to.meta.permission);
+      const hasPermission = checkPermission(to.meta.permission, 'roles');
       if (!hasPermission) {
         return next('/forbidden');
       }
