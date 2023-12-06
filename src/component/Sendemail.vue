@@ -10,7 +10,7 @@
 <script>
 import {defineComponent, getCurrentInstance, ref, watch, computed} from 'vue';
 export default defineComponent({
-  name: 'Sendmail',
+  name: 'Sendemail',
   props: {
     path: String,
     track: String,
@@ -42,12 +42,12 @@ export default defineComponent({
         {
           renderer: 'action',
           actionType: 'trigger',
-          triggered: 'SendMailAction'
+          triggered: 'SendEmailAction'
         },
         {
           renderer: 'action',
           actionType: 'trigger',
-          triggered: 'SendMailAction'
+          triggered: 'SendEmailAction'
         },
         {},
         () => {},

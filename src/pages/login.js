@@ -2,7 +2,7 @@ import {createApp} from 'vue';
 import ElementPlus, {ElNotification} from 'element-plus';
 import Application from '../apps/Login.vue';
 import IRenderer, {api} from '../../../i-renderer/packages/index';
-import Sendmail from '../component/Sendmail';
+import Sendemail from '../component/Sendemail';
 
 import 'element-plus/dist/index.css';
 import 'i-renderer/dist/css/index.css';
@@ -11,7 +11,7 @@ import '../registerServiceWorker';
 const app = createApp(Application);
 
 const options = {
-  renderers: [Sendmail],
+  renderers: [Sendemail],
   actions: {
     login: function (proxy, props, config, context, onActionFeedback) {
       const form = proxy.$parent.$parent.$parent;

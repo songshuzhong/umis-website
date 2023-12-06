@@ -83,7 +83,7 @@ export default {
                 },
                 {
                   renderer: 'input',
-                  name: 'mail',
+                  name: 'email',
                   label: '邮箱',
                   required: false,
                   type: 'text',
@@ -91,7 +91,7 @@ export default {
                   requiredOn: '1',
                   rules: [
                     {
-                      exp: '!/^([a-zA-Z0-9]+[_|\\_|\\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\\_|\\.]?)*[a-zA-Z0-9]+\\.[a-zA-Z]{2,3}$/.test(data.mail)',
+                      exp: '!/^([a-zA-Z0-9]+[_|\\_|\\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\\_|\\.]?)*[a-zA-Z0-9]+\\.[a-zA-Z]{2,3}$/.test(data.email)',
                       message: '邮箱格式不正确',
                       trigger: 'blur',
                       type: 'exp'
@@ -99,18 +99,18 @@ export default {
                   ],
                   append:
                     {
-                      renderer: 'sendmail',
+                      renderer: 'sendemail',
                       classname: 'verify'
                     }
                 },
                 {
                   renderer: 'action',
-                  name: 'SendMailAction',
+                  name: 'SendEmailAction',
                   actionType: 'ajax',
                   text: '获取验证码',
                   visibleOn: '1==2',
                   actionApi: {
-                    url: '/api/mail',
+                    url: '/api/email',
                     method: 'post',
                     params: {
                       '*': '*'
