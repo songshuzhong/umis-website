@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import {defineComponent, getCurrentInstance, ref, watch, computed} from 'vue';
+import {defineComponent, getCurrentInstance, ref, watch, computed, onBeforeUnmount} from 'vue';
 export default defineComponent({
   name: 'Sendemail',
   props: {
@@ -65,9 +65,12 @@ export default defineComponent({
       intervalId = null;
     };
     watch(() => props.initData, val => {
-      iEmail.value = val.mail;
+      iEmail.value = val.email;
     }, {
       deep: true
+    });
+    onBeforeUnmount(() => {
+      stopCountdown();
     });
     return {
       iEmail,

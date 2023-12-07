@@ -17,7 +17,7 @@
 
 <script>
 import {defineComponent, getCurrentInstance, onBeforeMount, onMounted, ref} from 'vue';
-import PLAYGROUND_SCHEMA from '../data/playground';
+import PLAYGROUND_SCHEMA from '../data/playground.json';
 import uaManager from '../utils/ua';
 
 const DEFAULT_SCHEMA = PLAYGROUND_SCHEMA;

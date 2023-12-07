@@ -1,7 +1,7 @@
 import {createRouter, createWebHashHistory} from 'vue-router';
 import {ElLoading, ElMessageBox} from 'element-plus';
 import {Schema, checkPermission} from '../../../i-renderer/packages/index';
-import frameSchema from '../data/homeFrame';
+import frameSchema from '../data/homeFrame.json';
 // import homeSchema from '../data/home';
 // import meSchema from '../data/me';
 import uaManager from '../utils/ua';

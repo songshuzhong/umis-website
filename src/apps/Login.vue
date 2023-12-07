@@ -7,7 +7,7 @@
 
 <script>
 import {defineComponent, onMounted} from 'vue';
-import loginSchema from '../data/login';
+import loginSchema from '../data/login.json';
 
 export default defineComponent({
   name: 'Login',

@@ -296,23 +296,24 @@ html {
     height: 100%;
     .i-html__container {
       position: absolute;
-      bottom: 0;
-      right: 100px;
+      bottom: 40px;
+      right: 60px;
       display: block;
       font-size: 20px;
       font-weight: bolder;
       color: #409EFF;
     }
-    .i-component__fragment {
+    .i-action {
       position: absolute;
-      bottom: 40px;
-      right: 100px;
+      bottom: 0;
+      right: 60px;
       display: block;
     }
   }
   .el-carousel__item {
     .i-image__container {
       position: relative;
+      height: 100%;
     }
     .el-image {
       position: absolute;
@@ -325,6 +326,9 @@ html {
   }
 }
 .el-card {
+  .el-card__header {
+    text-align: center;
+  }
   &:hover {
     cursor: pointer;
     .el-card__header {
@@ -386,11 +390,13 @@ html {
   padding: 0 130px 40px 130px;
   text-align: center;
   .i-image__container {
-    display: inline;
+    width: auto;
+    height: 50px;
+    display: inline-block;
   }
   .el-image {
     width: auto;
-    height: 4rem;
+    height: 1.5rem;
     margin: 1rem;
     .el-image__inner {
       width: unset;
@@ -423,6 +429,7 @@ html {
   }
   .i-action {
     width: 100%;
+    height: 32px;
     display: block;
     text-align: center;
     .el-button {
@@ -439,6 +446,8 @@ html {
   color: #fff;
   background-color: #000;
   text-align: center;
+  font-size: 16px;
+  font-weight: bold;
 }
 .i-home__ball {
   z-index: 2;

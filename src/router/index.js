@@ -1,7 +1,7 @@
 import {createRouter, createWebHashHistory} from 'vue-router';
 import {ElLoading} from 'element-plus';
 import {Schema, checkPermission} from '../../../i-renderer/packages/index';
-import indexSchema from '../data/index';
+import indexSchema from '../data';
 
 const createRoutes = () => {
   let routerMask;

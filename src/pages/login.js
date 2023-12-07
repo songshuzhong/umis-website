@@ -6,6 +6,7 @@ import Sendemail from '../component/Sendemail';
 
 import 'element-plus/dist/index.css';
 import 'i-renderer/dist/css/index.css';
+import '../style/index.scss';
 import '../registerServiceWorker';
 
 const app = createApp(Application);
