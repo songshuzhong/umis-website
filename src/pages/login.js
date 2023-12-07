@@ -3,6 +3,7 @@ import ElementPlus, {ElNotification} from 'element-plus';
 import Application from '../apps/Login.vue';
 import IRenderer, {api} from '../../../i-renderer/packages/index';
 import Sendemail from '../component/Sendemail';
+import Verify from '../component/Verify';
 
 import 'element-plus/dist/index.css';
 import 'i-renderer/dist/css/index.css';
@@ -12,7 +13,7 @@ import '../registerServiceWorker';
 const app = createApp(Application);
 
 const options = {
-  renderers: [Sendemail],
+  renderers: [Sendemail, Verify],
   actions: {
     login: function (proxy, props, config, context, onActionFeedback) {
       const form = proxy.$parent.$parent.$parent;

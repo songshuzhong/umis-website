@@ -1,0 +1,235 @@
+{
+  "renderer": "page",
+  "body": [
+    {
+      "renderer": "avatar",
+      "src": "./shuttle.png",
+      "classname": "i-login__logo",
+      "previews": [],
+      "title": "IRenderer平台",
+      "shape": "square",
+      "borderRadius": 0,
+      "color": "#606266",
+      "bgColor": "#ffffff"
+    },
+    {
+      "renderer": "image",
+      "src": "./img/qqb.png",
+      "classname": "i-login__browser-star",
+      "previews": []
+    },
+    {
+      "renderer": "tabs",
+      "panels": [
+        {
+          "label": "登录",
+          "icon": "",
+          "keepAlive": true,
+          "body": [
+            {
+              "renderer": "form",
+              "actionApi": {
+                "url": "/api/auth/login",
+                "method": "post",
+                "params": {
+                  "*": "*"
+                }
+              },
+              "controls": [
+                {
+                  "renderer": "input",
+                  "name": "username",
+                  "requiredOn": "1 === 1",
+                  "placeholder": "用户名",
+                  "type": "text",
+                  "rules": [],
+                  "minlength": 0,
+                  "maxlength": 8,
+                  "showWordLimit": true
+                },
+                {
+                  "renderer": "input",
+                  "name": "password",
+                  "requiredOn": "1 === 1",
+                  "placeholder": "密码",
+                  "type": "password",
+                  "rules": []
+                },
+                {
+                  "renderer": "input",
+                  "name": "code",
+                  "requiredOn": "1 === 1",
+                  "placeholder": "验证码",
+                  "type": "text",
+                  "rules": [
+                    {
+                      "type": "exp",
+                      "exp": "data.code !== data.verify",
+                      "message": "验证码不正确"
+                    }
+                  ]
+                },
+                {
+                  "renderer": "verify",
+                  "name": "verify"
+                },
+                {
+                  "renderer": "wrapper",
+                  "body": [
+                    {
+                      "renderer": "action",
+                      "text": "忘记密码？",
+                      "type": "success",
+                      "isText": true,
+                      "plain": true,
+                      "tag": "div",
+                      "body": {}
+                    }
+                  ],
+                  "classname": "i-login_forget"
+                },
+                {
+                  "renderer": "action",
+                  "text": "登录",
+                  "actionType": "login",
+                  "body": {}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "注册",
+          "icon": "",
+          "keepAlive": true,
+          "body": [
+            {
+              "renderer": "form",
+              "actionApi": {
+                "url": "/api/user",
+                "method": "post",
+                "params": {
+                  "*": "*"
+                }
+              },
+              "redirect": "localhost/",
+              "controls": [
+                {
+                  "renderer": "input",
+                  "name": "namespace",
+                  "placeholder": "命名空间（瓜子花生工作室）",
+                  "type": "text",
+                  "minlength": 0,
+                  "maxlength": 8,
+                  "rules": [],
+                  "requiredOn": "1==1",
+                  "showWordLimit": true
+                },
+                {
+                  "renderer": "input",
+                  "name": "username",
+                  "requiredOn": "1==1",
+                  "placeholder": "用户名（令狐瓜子）",
+                  "type": "text",
+                  "minlength": 0,
+                  "maxlength": 8,
+                  "showWordLimit": true,
+                  "rules": []
+                },
+                {
+                  "renderer": "input",
+                  "name": "email",
+                  "placeholder": "邮箱",
+                  "required": false,
+                  "type": "text",
+                  "validType": "normal",
+                  "requiredOn": "1",
+                  "rules": [
+                    {
+                      "exp": "!/^([a-zA-Z0-9]+[_|\\_|\\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\\_|\\.]?)*[a-zA-Z0-9]+\\.[a-zA-Z]{2,3}$/.test(data.email)",
+                      "trigger": "blur",
+                      "type": "exp"
+                    },
+                    {
+                      "type": "api",
+                      "trigger": "blur",
+                      "exp": "/api/user/email/valid?email=${email}"
+                    }
+                  ],
+                  "append": {
+                    "renderer": "sendemail",
+                    "classname": "verify"
+                  }
+                },
+                {
+                  "renderer": "action",
+                  "name": "SendEmailAction",
+                  "actionType": "ajax",
+                  "text": "获取验证码",
+                  "visibleOn": "1==2",
+                  "actionApi": {
+                    "url": "/api/email",
+                    "method": "post",
+                    "params": {
+                      "*": "*"
+                    }
+                  },
+                  "body": {}
+                },
+                {
+                  "renderer": "input",
+                  "name": "code",
+                  "requiredOn": "1==1",
+                  "placeholder": "验证码",
+                  "type": "text",
+                  "rules": []
+                },
+                {
+                  "renderer": "input",
+                  "name": "password",
+                  "requiredOn": "1==1",
+                  "placeholder": "密码",
+                  "type": "text",
+                  "showPassword": true,
+                  "rules": [
+                    {
+                      "type": "exp",
+                      "trigger": "blur",
+                      "message": "密码必须相等",
+                      "exp": "data.password !== data.repassword"
+                    }
+                  ]
+                },
+                {
+                  "renderer": "input",
+                  "name": "repassword",
+                  "requiredOn": "1==1",
+                  "placeholder": "确认密码",
+                  "type": "text",
+                  "showPassword": true,
+                  "rules": [
+                    {
+                      "type": "exp",
+                      "trigger": "blur",
+                      "message": "密码必须相等",
+                      "exp": "data.password !== data.repassword"
+                    }
+                  ]
+                },
+                {
+                  "renderer": "action",
+                  "text": "注册",
+                  "actionType": "submit",
+                  "body": {}
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "activeTab": 0,
+      "tabPosition": "top"
+    }
+  ],
+  "innerStyle": ".i-page__container {\n  .i-login__logo {\n    position: absolute;\n    top: 20px;\n    left: 20px;\n    z-index: 2023;\n  }\n  .i-login__browser-star {\n    .el-image__inner {\n      position: absolute;\n      top: 45%;\n      left: 40%;\n      width: 320px;\n      height: 250px;\n      transform: translate(-50%, -50%);\n      animation-name: tada;\n      animation-duration: 15s;\n      animation-iteration-count: infinite;\n    }\n  }\n  .i-tabs__container {\n    position: absolute;\n    top: 45%;\n    right: 10%;\n    width: 300px;\n    margin: auto;\n    transform: translateY(-40%);\n    .i-form__container {\n      padding: 10px 0;\n    }\n    .code-input {\n      max-width: 160px;\n    }\n  .code {\n      width: 160px;\n    }\n  .verify {\n      margin-left: 180px;\n      margin-top: -50px;\n    }\n    .el-button--primary {\n      width: 100%;\n    }\n    .i-login_forget {\n      position: absolute;\n      width: 65px;\n      right: 0;\n    }\n  }\n}\n .i-login__browser-star {\n    position: absolute;\n    width: 70%;\n\n    &::after {\n      content: '';\n      position: absolute;\n      top: -50%;\n      right: 350px;\n      transform: translateY(100%);\n      background-color: #79bbff;\n    }\n\n    &::after {\n      height: 2200px;\n      width: 2200px;\n      border-radius: 48% 40% 48% 40%;\n      animation:\n        wave-color 17s linear infinite alternate both,\n        wave-rotate 13s linear infinite;\n    }\n  }\n@keyframes wave-color {\n  from {\n    opacity: .1;\n  }\n  30% {\n    opacity: .25;\n  }\n  60% {\n    opacity: .1;\n  }\n  to {\n    opacity: .25;\n  }\n}\n@keyframes wave-rotate {\n  from {\n    transform: rotate(0);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}\n@keyframes tada {\n  0% {\n    transform: scale(1) translate(-50%, -50%);\n  }\n  10%, 20% {\n    transform: scale(0.9) rotate(-3deg) translate(-50%, -50%);\n  }\n  30%, 50%, 70%, 90% {\n    transform: scale(1.1) rotate(3deg) translate(-50%, -50%);\n  }\n  40%, 60%, 80% {\n    transform: scale(1.1) rotate(-3deg) translate(-50%, -50%);\n  }\n  100% {\n    transform: scale(1) rotate(0) translate(-50%, -50%);\n  }\n}"
+}
