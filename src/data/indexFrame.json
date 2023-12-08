@@ -242,7 +242,8 @@
                 "name": "IWebsiteEdit",
                 "actionType": "drawer",
                 "trustOn": [
-                  -1
+                  -1,
+                  -5
                 ],
                 "body": {
                   "width": 100,
@@ -258,10 +259,37 @@
                 }
               },
               {
-                "renderer": "avatar",
-                "src": "${avatar}",
-                "isComputedSrc": true,
-                "size": "default"
+                "renderer": "action",
+                "category": "image",
+                "icon": "${avatar}",
+                "popupType": "over",
+                "popperWidth": "210px",
+                "body": {
+                  "renderer": "upload",
+                  "name": "avatar",
+                  "preview": true,
+                  "validType": "normal",
+                  "listType": "picture-card",
+                  "rules": [
+                    {
+                      "required": false
+                    }
+                  ],
+                  "autoUpload": false,
+                  "actionUrl": "/api/user/avatar",
+                  "limit": 1,
+                  "feedbackConfig": [],
+                  "accept": ".webp,.jpg,.png",
+                  "spliced": false,
+                  "astrict": {
+                    "maxByte": "32",
+                    "width": "60",
+                    "height": "60"
+                  },
+                  "label": "",
+                  "data": {},
+                  "requiredOn": "true"
+                }
               },
               {
                 "renderer": "dropdown",
@@ -309,7 +337,8 @@
                     "name": "IWebsiteEdit",
                     "actionType": "drawer",
                     "trustOn": [
-                      -1
+                      -1,
+                      -5
                     ],
                     "body": {
                       "width": 100,
@@ -324,14 +353,6 @@
                         }
                       ]
                     }
-                  },
-                  {
-                    "renderer": "action",
-                    "text": "个人中心",
-                    "icon": "Avatar",
-                    "type": "primary",
-                    "actionType": "url",
-                    "url": "/manager/workbench"
                   },
                   {
                     "renderer": "action",
