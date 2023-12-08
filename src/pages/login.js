@@ -24,7 +24,7 @@ const options = {
             .staticApi()
             .post('/api/auth/login', form.$parent.state.data)
             .then((res) => {
-              localStorage.setItem('token', res.data);
+              localStorage.setItem('token', `Bearer ${res.data}`);
               proxy.$dispatchAction(proxy, props, {url: 'localhost/', actionType: 'url'}, {}, () => {});
             })
             .catch((e) => {
