@@ -52,20 +52,6 @@ $i-monaco-primary: #282a36 !default;
   height: 100%;
   background: var(--i-menu-background-color);
   transition: 0.3s width ease-in-out;
-  &.width-64 {
-    .i-website__ads {
-      width: 0 !important;
-    }
-  }
-  &::-webkit-scrollbar {
-    width: 0;
-  }
-  .el-menu {
-    border-right: 0;
-  }
-  .i-website_menu-vertical {
-    margin-bottom: 50px;
-  }
   .i-website__ads {
     position: fixed;
     bottom: 0;
@@ -90,6 +76,20 @@ $i-monaco-primary: #282a36 !default;
       background: var(--el-fill-color-blank);
       cursor: pointer;
     }
+  }
+  &.width-64 {
+    .i-website__ads {
+      width: 0 !important;
+    }
+  }
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  .el-menu {
+    border-right: 0;
+  }
+  .i-website_menu-vertical {
+    margin-bottom: 50px;
   }
 }
 .i-website__footer {
@@ -137,7 +137,11 @@ $i-monaco-primary: #282a36 !default;
   max-height: 60vh !important;
   overflow-y: scroll;
 }
-
+.i-website__header__upload {
+  &.el-popover.el-popper {
+    padding-bottom: 0;
+  }
+}
 @keyframes grow {
   from {
     transform: scaleX(0);

@@ -8,7 +8,7 @@ import Verify from '../component/Verify';
 import 'element-plus/dist/index.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';
 import '../../../i-renderer/packages/assets/styles/index.scss';
-import '../style/index.scss';
+import '../style/login.scss';
 import '../registerServiceWorker';
 
 const app = createApp(Application);

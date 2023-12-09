@@ -226,6 +226,22 @@
               ]
             }
           ]
+        },
+        {
+          "label": "会员权益",
+          "icon": "",
+          "keepAlive": false,
+          "body": [
+            {
+              "renderer": "image",
+              "src": "./img/attitude.jpg"
+            },
+            {
+              "renderer": "html",
+              "classname": "i-login__attitude",
+              "html": "成为会员后会获得组建团队、项目管理的能力"
+            }
+          ]
         }
       ],
       "activeTab": 0,

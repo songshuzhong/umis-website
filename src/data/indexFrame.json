@@ -264,31 +264,37 @@
                 "icon": "${avatar}",
                 "popupType": "over",
                 "popperWidth": "210px",
+                "popperClass": "i-website__header__upload",
                 "body": {
-                  "renderer": "upload",
-                  "name": "avatar",
-                  "preview": true,
-                  "validType": "normal",
-                  "listType": "picture-card",
-                  "rules": [
+                  "renderer": "form",
+                  "controls": [
                     {
-                      "required": false
+                      "renderer": "upload",
+                      "name": "avatar",
+                      "preview": true,
+                      "validType": "normal",
+                      "listType": "picture-card",
+                      "rules": [
+                        {
+                          "required": false
+                        }
+                      ],
+                      "autoUpload": false,
+                      "actionUrl": "/api/user/avatar",
+                      "limit": 1,
+                      "feedbackConfig": [],
+                      "accept": ".webp,.jpg,.png",
+                      "spliced": false,
+                      "astrict": {
+                        "maxByte": "30",
+                        "maxWidth": "300",
+                        "maxHeight": "300"
+                      },
+                      "label": "",
+                      "data": {},
+                      "requiredOn": "true"
                     }
-                  ],
-                  "autoUpload": false,
-                  "actionUrl": "/api/user/avatar",
-                  "limit": 1,
-                  "feedbackConfig": [],
-                  "accept": ".webp,.jpg,.png",
-                  "spliced": false,
-                  "astrict": {
-                    "maxByte": "32",
-                    "width": "60",
-                    "height": "60"
-                  },
-                  "label": "",
-                  "data": {},
-                  "requiredOn": "true"
+                  ]
                 }
               },
               {
