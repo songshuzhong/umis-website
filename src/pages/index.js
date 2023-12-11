@@ -4,6 +4,7 @@ import IRenderer, {api} from '../../../i-renderer/packages/index';
 import createRoutes from '../router/index';
 import ToMobile from '../component/ToMobile.vue';
 import Application from '../apps/Index.vue';
+import ToMobile from '../component/ToMobile.vue';
 
 import 'element-plus/dist/index.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';
@@ -14,6 +15,7 @@ import '../registerServiceWorker';
 const app = createApp(Application);
 const config = {
   domains: [process.env.VUE_APP_API_BASE],
+<<<<<<< HEAD
   renderers: [ToMobile],
   actions: {
     logout: function(proxy, props, config, context, onActionFeedback) {
@@ -37,6 +39,9 @@ const config = {
     }
     return res;
   }
+=======
+  renderers: [ToMobile]
+>>>>>>> origin/master
 };
 
 api()

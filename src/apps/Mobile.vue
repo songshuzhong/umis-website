@@ -2,9 +2,15 @@
   <div v-if="isFrame" class="i-device-ios">
     <div class="i-device-inner">
       <iframe
+<<<<<<< HEAD
         :key="update"
         class="i-device-inner__frame"
         :src="`/mobile.html?pageId=${pageId}`"
+=======
+        class="i-device-inner__frame"
+        :key="update"
+        :src="`${src}/mobile.html?pageId=${pageId}`"
+>>>>>>> origin/master
       />
       <div class="i-device-inner__home" @click="refresh"/>
     </div>
@@ -30,9 +36,17 @@ export default defineComponent({
     const query = qs.parse(window.location.href.split('?')[1]);
     const isFrame = ref(query.isFrame);
     const update = ref(0);
+<<<<<<< HEAD
     let url;
     if (isPro) {
       url = 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/page/' + query.pageId;
+=======
+    let src = '';
+    let url;
+    if (isPro) {
+      url = 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/page/' + query.pageId;
+      src = 'https://songshuzhong.github.io/i-website/dist';
+>>>>>>> origin/master
     } else {
       url = '/api/page/' + query.pageId;
     }
@@ -55,6 +69,10 @@ export default defineComponent({
       pageId: query.pageId,
       isFrame,
       isPro,
+<<<<<<< HEAD
+=======
+      src,
+>>>>>>> origin/master
       url,
       update,
       refresh

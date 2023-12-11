@@ -90,6 +90,32 @@ $i-monaco-primary: #282a36 !default;
   }
   .i-website_menu-vertical {
     margin-bottom: 50px;
+<<<<<<< HEAD
+=======
+  }
+  .i-wrapper__container {
+    position: relative;
+    &.i-website__ads {
+      position: fixed;
+      bottom: 0;
+      width: 200px;
+      height: 50px;
+      padding: 5px 8px;
+      background: var(--i-menu-background-color);
+      overflow: hidden;
+      transition: 0.3s width ease-in-out;
+      .i-render__container {
+        width: 100%;
+        height: 40px;
+        border-radius: 4px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 12px;
+        background: var(--el-fill-color-blank);
+        cursor: pointer;
+      }
+    }
+>>>>>>> origin/master
   }
 }
 .i-website__footer {
@@ -149,6 +175,9 @@ $i-monaco-primary: #282a36 !default;
   to {
     transform: scaleX(1);
   }
+}
+.el-loading-mask .el-loading-spinner {
+  margin-top: calc((0 - var(--el-loading-spinner-size)) / 2);
 }
 .i-website__router__loader {
   height: 2px;
