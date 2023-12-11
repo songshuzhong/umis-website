@@ -39,7 +39,7 @@ glob.sync('./src/pages/*.js').forEach(entry => {
 
 module.exports = {
   pages,
-  publicPath: isDev ? '' : '/i-website/dist',
+  publicPath: isDev ? '' : '',
   transpileDependencies: ['element-plus'],
   productionSourceMap: false,
   configureWebpack: {
@@ -68,12 +68,22 @@ module.exports = {
       })
     ]
   },
+  chainWebpack: config => {
+    const loaders = ['preload', 'prefetch'];
+    for (const loader of loaders) {
+      if (Array.isArray(config.plugins)) {
+        config.plugins = config.plugins.filter(plugin => !plugin.constructor || plugin.constructor.name !== loader);
+      } else {
+        delete config[loader];
+      }
+    }
+  },
   devServer: {
     port: 80,
     disableHostCheck: true,
     proxy: {
       '/api': {
-        target: 'http://localhost:3000',
+        target: 'http://0.0.0.0:9000',
         changeOrigin: true
       }
     }

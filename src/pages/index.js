@@ -19,7 +19,7 @@ const config = {
     logout: function(proxy, props, config, context, onActionFeedback) {
       localStorage.removeItem('token');
       onActionFeedback&&onActionFeedback('CANCEL_LOADING');
-      proxy.$dispatchAction(proxy, props, {url: 'localhost/login.html', actionType: 'url'}, {}, () => {});
+      proxy.$dispatchAction(proxy, props, {url: 'localhost/login', actionType: 'url'}, {}, () => {});
     },
   },
   request: function(req) {
@@ -33,7 +33,7 @@ const config = {
   },
   response: function(res) {
     if (res.data && [400, 401].includes(res.data.code)) {
-      window.location.href = '/login.html';
+      window.location.href = '/login';
     }
     return res;
   }
@@ -54,7 +54,7 @@ api()
   })
   .catch((e) => {
     if (e.data && e.data.code === 401) {
-      window.location.href = '/login.html';
+      window.location.href = '/login';
     }
     console.log(e);
     ElNotification({

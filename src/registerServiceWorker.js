@@ -1,8 +1,8 @@
 import {ElNotification} from 'element-plus';
 import {register} from 'register-service-worker';
 
-const isDev = process.env.NODE_ENV === 'dev';
-const sw = isDev ? '/service-worker.js' : '/i-website/dist/service-worker.js';
+const isGp = process.env.NODE_ENV === 'gp';
+const sw = isGp? '/i-website/src/service-worker.js': '/service-worker.js';
 
 register(sw, {
   updatefound() {

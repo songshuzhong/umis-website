@@ -1,17 +1,23 @@
-import {createRouter, createWebHashHistory} from 'vue-router';
+import {createRouter, createWebHashHistory, createWebHistory} from 'vue-router';
 import {ElLoading} from 'element-plus';
 import {Schema, checkPermission} from '../../../i-renderer/packages/index';
 import indexSchema from '../data';
-
+const isGp = process.env.NODE_ENV === 'gp';
+const isDev = process.env.NODE_ENV === 'dev';
 const createRoutes = () => {
   let routerMask;
 
   const router = createRouter({
-    history: createWebHashHistory(),
+    history: isGp || isDev? createWebHashHistory(): createWebHistory(),
     routes: [
       {
         path: '/',
         name: 'IWebsite',
+        redirect: '/index',
+      },
+      {
+        path: '/index',
+        name: 'IWebsitePlus',
         title: '零代码-IRenderer案例',
         component: Schema,
         props: {

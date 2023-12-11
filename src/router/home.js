@@ -1,18 +1,23 @@
-import {createRouter, createWebHashHistory} from 'vue-router';
+import {createRouter, createWebHashHistory, createWebHistory} from 'vue-router';
 import {ElLoading, ElMessageBox} from 'element-plus';
 import {Schema, checkPermission} from '../../../i-renderer/packages/index';
 import frameSchema from '../data/homeFrame.json';
 // import homeSchema from '../data/home';
 // import meSchema from '../data/me';
 import uaManager from '../utils/ua';
-
+const isGp = process.env.NODE_ENV === 'gp';
 let routerMask;
 const router = createRouter({
-  history: process.env.NODE_ENV === 'dev'? createWebHashHistory(): createWebHashHistory(),
+  history: isGp? createWebHashHistory(): createWebHistory(),
   routes: [
     {
       path: '/',
       name: 'IHome',
+      redirect: '/index',
+    },
+    {
+      path: '/index',
+      name: 'IHomePlus',
       component: Schema,
       props: {
         initSchema: frameSchema,

@@ -25,7 +25,7 @@ const options = {
             .post('/api/auth/login', form.$parent.state.data)
             .then((res) => {
               localStorage.setItem('token', `Bearer ${res.data}`);
-              proxy.$dispatchAction(proxy, props, {url: 'localhost/', actionType: 'url'}, {}, () => {});
+              proxy.$dispatchAction(proxy, props, {url: 'localhost/index', actionType: 'url'}, {}, () => {});
             })
             .catch((e) => {
               ElNotification({
