@@ -27,6 +27,8 @@ glob.sync('./src/pages/*.js').forEach(entry => {
     title: pageConfig.title,
     skeleton: pageConfig.skeleton || '',
     skeletonStyle: pageConfig.skeletonStyle || '',
+    preload: false,
+    prefetch: false,
     minify: isDev ? {} : {
       minifyJS: true,
       minifyCSS: true,
@@ -69,14 +71,8 @@ module.exports = {
     ]
   },
   chainWebpack: config => {
-    const loaders = ['preload', 'prefetch'];
-    for (const loader of loaders) {
-      if (Array.isArray(config.plugins)) {
-        config.plugins = config.plugins.filter(plugin => !plugin.constructor || plugin.constructor.name !== loader);
-      } else {
-        delete config[loader];
-      }
-    }
+    config.plugins.delete('prefetch');
+    config.plugins.delete('preload');
   },
   devServer: {
     port: 80,

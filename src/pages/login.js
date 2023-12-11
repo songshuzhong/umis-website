@@ -1,13 +1,13 @@
 import {createApp} from 'vue';
 import ElementPlus, {ElNotification} from 'element-plus';
+import IRenderer, {api} from 'i-renderer/dist/js/renderer';
 import Application from '../apps/Login.vue';
-import IRenderer, {api} from '../../../i-renderer/packages/index';
 import Sendemail from '../component/Sendemail';
 import Verify from '../component/Verify';
 
 import 'element-plus/dist/index.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';
-import '../../../i-renderer/packages/assets/styles/index.scss';
+import 'i-renderer/dist/css/index.css';
 import '../style/login.scss';
 import '../registerServiceWorker';
 

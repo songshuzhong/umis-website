@@ -1,11 +1,7 @@
 import {createApp} from 'vue';
 import ElementPlus from 'element-plus';
-import Application from '../apps/Mobile.vue';
-<<<<<<< HEAD
-import IRenderer from '../../../i-renderer/packages/index';
-=======
 import IRenderer from 'i-renderer/dist/js/renderer';
->>>>>>> origin/master
+import Application from '../apps/Mobile.vue';
 
 import 'element-plus/dist/index.css';
 import 'i-renderer/dist/css/index.css';

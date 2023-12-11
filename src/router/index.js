@@ -1,6 +1,6 @@
 import {createRouter, createWebHashHistory, createWebHistory} from 'vue-router';
 import {ElLoading} from 'element-plus';
-import {Schema, checkPermission} from '../../../i-renderer/packages/index';
+import {Schema, checkPermission} from 'i-renderer/dist/js/renderer';
 import indexSchema from '../data';
 const isGp = process.env.NODE_ENV === 'gp';
 const isDev = process.env.NODE_ENV === 'dev';

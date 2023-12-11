@@ -1,21 +1,19 @@
 import {createApp} from 'vue';
 import ElementPlus, {ElNotification} from 'element-plus';
-import IRenderer, {api} from '../../../i-renderer/packages/index';
+import IRenderer, {api} from 'i-renderer/dist/js/renderer';
 import createRoutes from '../router/index';
 import ToMobile from '../component/ToMobile.vue';
 import Application from '../apps/Index.vue';
-import ToMobile from '../component/ToMobile.vue';
 
 import 'element-plus/dist/index.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';
-import '../../../i-renderer/packages/assets/styles/index.scss';
+import 'i-renderer/dist/css/index.css';
 import '../style/index.scss';
 import '../registerServiceWorker';
 
 const app = createApp(Application);
 const config = {
   domains: [process.env.VUE_APP_API_BASE],
-<<<<<<< HEAD
   renderers: [ToMobile],
   actions: {
     logout: function(proxy, props, config, context, onActionFeedback) {
@@ -39,9 +37,6 @@ const config = {
     }
     return res;
   }
-=======
-  renderers: [ToMobile]
->>>>>>> origin/master
 };
 
 api()

@@ -20,11 +20,7 @@ export default defineComponent({
         {
           renderer: 'action',
           actionType: 'url',
-<<<<<<< HEAD
-          url: isPro? 'https://songshuzhong.github.io/i-website/dist/mobille.html?isFrame=true&pageId=' + pageId: `${window.location.protocol}//${window.location.host}/mobile.html?isFrame=true&pageId=${pageId}`
-=======
           url: isPro? 'https://songshuzhong.github.io/i-website/dist/mobile.html?isFrame=true&pageId=' + pageId: `${window.location.protocol}//${window.location.host}/mobile.html?isFrame=true&pageId=${pageId}`
->>>>>>> origin/master
         },
         {},
         () => {},

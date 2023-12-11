@@ -2,7 +2,7 @@ import {createApp} from 'vue';
 import ElementPlus from 'element-plus';
 import routers from '../router/home';
 import Application from '../apps/Home.vue';
-import IRenderer from '../../../i-renderer/packages/index';
+import IRenderer from 'i-renderer/dist/js/renderer';
 
 import 'element-plus/dist/index.css';
 import 'i-renderer/dist/css/index.css';
