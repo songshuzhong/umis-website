@@ -11,12 +11,12 @@ const createRoutes = () => {
     history: isGp || isDev? createWebHashHistory(): createWebHistory(),
     routes: [
       {
-        path: '/',
+        path: `${process.env.PUBLIC_PATH_WEBSITE}`,
         name: 'IWebsite',
         redirect: '/index',
       },
       {
-        path: '/index',
+        path: `${process.env.PUBLIC_PATH_WEBSITE}/index`,
         name: 'IWebsitePlus',
         title: '零代码-IRenderer案例',
         component: Schema,
@@ -26,7 +26,7 @@ const createRoutes = () => {
         }
       },
       {
-        path: '/:pathMatch(.*)*',
+        path: `${process.env.PUBLIC_PATH_WEBSITE}/:pathMatch(.*)*`,
         name: 'NotFound',
         component: () => import('../Error'),
         props: {
@@ -34,7 +34,7 @@ const createRoutes = () => {
         }
       },
       {
-        path: '/forbidden',
+        path: `${process.env.PUBLIC_PATH_WEBSITE}/forbidden`,
         name: 'Forbidden',
         component: () => import('../Error'),
         props: {
@@ -55,7 +55,7 @@ const createRoutes = () => {
     if (to?.meta?.permission) {
       const hasPermission = checkPermission(to.meta.permission, 'roles');
       if (!hasPermission) {
-        return next('/forbidden');
+        return next(`${process.env.PUBLIC_PATH_WEBSITE}/forbidden`);
       }
     }
     next();

@@ -11,12 +11,12 @@ const router = createRouter({
   history: isGp? createWebHashHistory(): createWebHistory(),
   routes: [
     {
-      path: '/',
+      path: `${process.env.PUBLIC_PATH_HOME}`,
       name: 'IHome',
       redirect: '/index',
     },
     {
-      path: '/index',
+      path: `${process.env.PUBLIC_PATH_HOME}/index`,
       name: 'IHomePlus',
       component: Schema,
       props: {
@@ -27,7 +27,7 @@ const router = createRouter({
       },
       children: [
         {
-          path: '/',
+          path: `${process.env.PUBLIC_PATH_HOME}`,
           component: Schema,
           props: {
             // initSchema: homeSchema,
@@ -35,14 +35,14 @@ const router = createRouter({
           },
         },
         {
-          path: '/logs',
+          path: `${process.env.PUBLIC_PATH_HOME}/logs`,
           component: Schema,
           props: {
             url: 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/page/logs',
           },
         },
         {
-          path: '/me',
+          path: `${process.env.PUBLIC_PATH_HOME}/me`,
           component: Schema,
           props: {
             url: 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/page/me',
@@ -50,7 +50,7 @@ const router = createRouter({
           },
         },
         {
-          path: '/quality',
+          path: `${process.env.PUBLIC_PATH_HOME}/quality`,
           component: Schema,
           props: {
             url: 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/page/me',
@@ -61,7 +61,7 @@ const router = createRouter({
           }
         },
         {
-          path: '/playground',
+          path: `${process.env.PUBLIC_PATH_HOME}/playground`,
           component: Schema,
           classname: 'i-renderer-website-schema__playground',
           props: {
@@ -74,7 +74,7 @@ const router = createRouter({
           }
         },
         {
-          path: '/:pathMatch(.*)*',
+          path: `${process.env.PUBLIC_PATH_HOME}/:pathMatch(.*)*`,
           name: 'NotFound',
           component: () => import('../Error.vue'),
           props: {
@@ -82,7 +82,7 @@ const router = createRouter({
           }
         },
         {
-          path: '/forbidden',
+          path: `${process.env.PUBLIC_PATH_HOME}/forbidden`,
           name: 'Forbidden',
           component: () => import('../Error.vue'),
           props: {
