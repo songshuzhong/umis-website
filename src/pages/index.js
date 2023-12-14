@@ -14,6 +14,7 @@ import '../registerServiceWorker';
 const app = createApp(Application);
 const config = {
   domains: [process.env.VUE_APP_API_BASE],
+  contextPath: process.env.VUE_APP_CONTEXT_PATH_WEBSITE,
   renderers: [ToMobile],
   actions: {
     logout: function(proxy, props, config, context, onActionFeedback) {

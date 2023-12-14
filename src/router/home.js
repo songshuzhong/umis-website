@@ -11,12 +11,12 @@ const router = createRouter({
   history: isGp? createWebHashHistory(): createWebHistory(),
   routes: [
     {
-      path: `${process.env.PUBLIC_PATH_HOME}`,
+      path: `${process.env.VUE_APP_CONTEXT_PATH_HOME}`,
       name: 'IHome',
       redirect: '/index',
     },
     {
-      path: `${process.env.PUBLIC_PATH_HOME}/index`,
+      path: `${process.env.VUE_APP_CONTEXT_PATH_HOME}/index`,
       name: 'IHomePlus',
       component: Schema,
       props: {
@@ -27,7 +27,7 @@ const router = createRouter({
       },
       children: [
         {
-          path: `${process.env.PUBLIC_PATH_HOME}`,
+          path: `${process.env.VUE_APP_CONTEXT_PATH_HOME}`,
           component: Schema,
           props: {
             // initSchema: homeSchema,
@@ -35,14 +35,14 @@ const router = createRouter({
           },
         },
         {
-          path: `${process.env.PUBLIC_PATH_HOME}/logs`,
+          path: `${process.env.VUE_APP_CONTEXT_PATH_HOME}/logs`,
           component: Schema,
           props: {
             url: 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/page/logs',
           },
         },
         {
-          path: `${process.env.PUBLIC_PATH_HOME}/me`,
+          path: `${process.env.VUE_APP_CONTEXT_PATH_HOME}/me`,
           component: Schema,
           props: {
             url: 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/page/me',
@@ -50,7 +50,7 @@ const router = createRouter({
           },
         },
         {
-          path: `${process.env.PUBLIC_PATH_HOME}/quality`,
+          path: `${process.env.VUE_APP_CONTEXT_PATH_HOME}/quality`,
           component: Schema,
           props: {
             url: 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/page/me',
@@ -61,7 +61,7 @@ const router = createRouter({
           }
         },
         {
-          path: `${process.env.PUBLIC_PATH_HOME}/playground`,
+          path: `${process.env.VUE_APP_CONTEXT_PATH_HOME}/playground`,
           component: Schema,
           classname: 'i-renderer-website-schema__playground',
           props: {
@@ -74,7 +74,7 @@ const router = createRouter({
           }
         },
         {
-          path: `${process.env.PUBLIC_PATH_HOME}/:pathMatch(.*)*`,
+          path: `${process.env.VUE_APP_CONTEXT_PATH_HOME}/:pathMatch(.*)*`,
           name: 'NotFound',
           component: () => import('../Error.vue'),
           props: {
@@ -82,7 +82,7 @@ const router = createRouter({
           }
         },
         {
-          path: `${process.env.PUBLIC_PATH_HOME}/forbidden`,
+          path: `${process.env.VUE_APP_CONTEXT_PATH_HOME}/forbidden`,
           name: 'Forbidden',
           component: () => import('../Error.vue'),
           props: {
@@ -110,7 +110,7 @@ router.beforeEach((to, from, next) => {
   if (to?.meta?.permission) {
     const hasPermission = checkPermission(to.meta.permission);
     if (!hasPermission) {
-      return next('/forbidden');
+      return next(`${process.env.VUE_APP_CONTEXT_PATH_HOME}/forbidden`);
     }
   }
   next();

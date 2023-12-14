@@ -4,6 +4,7 @@ import {Schema, checkPermission} from 'i-renderer/dist/js/renderer';
 import indexSchema from '../data';
 const isGp = process.env.NODE_ENV === 'gp';
 const isDev = process.env.NODE_ENV === 'dev';
+
 const createRoutes = () => {
   let routerMask;
 
@@ -11,12 +12,12 @@ const createRoutes = () => {
     history: isGp || isDev? createWebHashHistory(): createWebHistory(),
     routes: [
       {
-        path: `${process.env.PUBLIC_PATH_WEBSITE}`,
+        path: `${process.env.VUE_APP_CONTEXT_PATH_WEBSITE}`,
         name: 'IWebsite',
         redirect: '/index',
       },
       {
-        path: `${process.env.PUBLIC_PATH_WEBSITE}/index`,
+        path: `${process.env.VUE_APP_CONTEXT_PATH_WEBSITE}/index`,
         name: 'IWebsitePlus',
         title: '零代码-IRenderer案例',
         component: Schema,
@@ -26,7 +27,7 @@ const createRoutes = () => {
         }
       },
       {
-        path: `${process.env.PUBLIC_PATH_WEBSITE}/:pathMatch(.*)*`,
+        path: `${process.env.VUE_APP_CONTEXT_PATH_WEBSITE}/:pathMatch(.*)*`,
         name: 'NotFound',
         component: () => import('../Error'),
         props: {
@@ -34,7 +35,7 @@ const createRoutes = () => {
         }
       },
       {
-        path: `${process.env.PUBLIC_PATH_WEBSITE}/forbidden`,
+        path: `${process.env.VUE_APP_CONTEXT_PATH_WEBSITE}/forbidden`,
         name: 'Forbidden',
         component: () => import('../Error'),
         props: {
@@ -55,7 +56,7 @@ const createRoutes = () => {
     if (to?.meta?.permission) {
       const hasPermission = checkPermission(to.meta.permission, 'roles');
       if (!hasPermission) {
-        return next(`${process.env.PUBLIC_PATH_WEBSITE}/forbidden`);
+        return next(`${process.env.VUE_APP_CONTEXT_PATH_WEBSITE}/forbidden`);
       }
     }
     next();

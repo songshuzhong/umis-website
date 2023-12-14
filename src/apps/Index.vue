@@ -35,11 +35,6 @@ export default defineComponent({
       isMobile && proxy.$message.success('切换到PC端体验更加哦！');
     });
     onMounted(() => {
-      /* eslint-disable */
-      bszCaller&&bszCaller.fetch&&bszCaller.fetch('//busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback', function(a) {
-        bszTag.texts(a);
-        bszTag.shows();
-      });
       const timer = setTimeout(() => {
         import(/* webpackChunkName:"editor",webpackPrefetch:false,webpackMode:"lazy" */ 'i-renderer/dist/js/editor')
           .then(res => {

@@ -13,6 +13,8 @@ const app = createApp(Application);
 
 app
   .use(ElementPlus)
-  .use(IRenderer)
+  .use(IRenderer, {
+    contextPath: process.env.VUE_APP_CONTEXT_PATH_HOME,
+  })
   .use(routers)
   .mount('.i-website-app__container');
