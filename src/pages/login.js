@@ -14,6 +14,7 @@ import '../style/login.scss';
 const app = createApp(Application);
 
 const options = {
+  domains: [process.env.VUE_APP_API_BASE],
   renderers: [Sendemail, Verify],
   actions: {
     login: function (proxy, props, config, context, onActionFeedback) {
