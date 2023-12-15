@@ -70,6 +70,12 @@ module.exports = {
       })
     ]
   },
+  chainWebpack: config => {
+    ['home', 'login', 'website', 'playground', 'mobile'].forEach(entryName => {
+      config.plugins.delete(`prefetch-${entryName}`);
+      config.plugins.delete(`preload-${entryName}`);
+    });
+  },
   devServer: {
     port: 80,
     disableHostCheck: true,
