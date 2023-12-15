@@ -1,24 +1,19 @@
-import {createRouter, createWebHashHistory, createWebHistory} from 'vue-router';
+import {createRouter, createWebHashHistory} from 'vue-router';
 import {ElLoading} from 'element-plus';
 import {Schema, checkPermission} from 'i-renderer/dist/js/renderer';
-import indexSchema from '../data';
-const isGp = process.env.NODE_ENV === 'gp';
-const isDev = process.env.NODE_ENV === 'dev';
+import indexSchema from '../data/website.json';
+// const isGp = process.env.NODE_ENV === 'gp'; createWebHistory
+// const isDev = process.env.NODE_ENV === 'dev';
 
 const createRoutes = () => {
   let routerMask;
 
   const router = createRouter({
-    history: isGp || isDev? createWebHashHistory(): createWebHistory(),
+    history: createWebHashHistory(process.env.VUE_APP_CONTEXT_PATH_WEBSITE),
     routes: [
       {
-        path: `${process.env.VUE_APP_CONTEXT_PATH_WEBSITE}`,
+        path: '/',
         name: 'IWebsite',
-        redirect: `${process.env.VUE_APP_CONTEXT_PATH_WEBSITE}/index`,
-      },
-      {
-        path: `${process.env.VUE_APP_CONTEXT_PATH_WEBSITE}/index`,
-        name: 'IWebsitePlus',
         title: '零代码-IRenderer案例',
         component: Schema,
         props: {
@@ -27,7 +22,7 @@ const createRoutes = () => {
         }
       },
       {
-        path: `${process.env.VUE_APP_CONTEXT_PATH_WEBSITE}/:pathMatch(.*)*`,
+        path: '/:pathMatch(.*)*',
         name: 'NotFound',
         component: () => import('../Error'),
         props: {
@@ -35,7 +30,7 @@ const createRoutes = () => {
         }
       },
       {
-        path: `${process.env.VUE_APP_CONTEXT_PATH_WEBSITE}/forbidden`,
+        path: '/forbidden',
         name: 'Forbidden',
         component: () => import('../Error'),
         props: {
@@ -56,7 +51,7 @@ const createRoutes = () => {
     if (to?.meta?.permission) {
       const hasPermission = checkPermission(to.meta.permission, 'roles');
       if (!hasPermission) {
-        return next(`${process.env.VUE_APP_CONTEXT_PATH_WEBSITE}/forbidden`);
+        return next('/forbidden');
       }
     }
     next();

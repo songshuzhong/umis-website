@@ -9,7 +9,7 @@
 <script>
 import {defineComponent, onBeforeMount, onMounted, getCurrentInstance} from 'vue';
 import {Schema} from 'i-renderer/dist/js/renderer';
-import frameSchema from '../data/indexFrame';
+import frameSchema from '../data/websiteFrame.json';
 
 export default defineComponent({
   name: 'Application',
@@ -18,14 +18,36 @@ export default defineComponent({
   },
   setup() {
     const { proxy } = getCurrentInstance();
-    /*const appendAssets = () => {
-      return useScriptTag(
-        'https://cdn.jsdelivr.net/npm/vue3-sfc-loader@0.8.4/dist/vue3-sfc-loader.min.js',
-        el => {
-          console.log(el);
-        },
-      );
-    };*/
+    const appendAssets = () => {
+      return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://cdn.jsdelivr.net/npm/vue3-sfc-loader@0.8.4/dist/vue3-sfc-loader.min.js';
+        script.onload = script.onreadystatechange = function() {
+          if (
+            !script.readyState ||
+            script.readyState === 'loaded' ||
+            script.readyState === 'complete'
+          ) {
+            script.onload = script.onreadystatechange = null;
+            resolve();
+          } else {
+            reject({
+              message: '脚本『vue3-sfc-loader』加载失败'
+            });
+          }
+        };
+        script.onerror = function() {
+          reject({
+            message: '脚本『vue3-sfc-loader』加载失败'
+          });
+        };
+        const timer = setTimeout(() => {
+          document.head.appendChild(script);
+          clearTimeout(timer);
+        }, 230);
+      });
+    };
     onBeforeMount(() => {
       const isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
       if (isMobile) {
@@ -44,7 +66,7 @@ export default defineComponent({
           }).finally(() => {
             clearTimeout(timer);
           });
-        // appendAssets();
+        appendAssets();
       }, 5000);
     });
 

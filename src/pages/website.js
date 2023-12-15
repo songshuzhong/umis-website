@@ -1,9 +1,9 @@
 import {createApp} from 'vue';
 import ElementPlus, {ElNotification} from 'element-plus';
 import IRenderer, {api} from 'i-renderer/dist/js/renderer';
-import createRoutes from '../router/index';
+import createRoutes from '../router/website';
 import ToMobile from '../component/ToMobile.vue';
-import Application from '../apps/Index.vue';
+import Application from '../apps/Website.vue';
 
 import 'element-plus/dist/index.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';
@@ -14,7 +14,6 @@ import '../registerServiceWorker';
 const app = createApp(Application);
 const config = {
   domains: [process.env.VUE_APP_API_BASE],
-  contextPath: process.env.VUE_APP_CONTEXT_PATH_WEBSITE,
   renderers: [ToMobile],
   actions: {
     logout: function(proxy, props, config, context, onActionFeedback) {
@@ -42,7 +41,7 @@ const config = {
 
 api()
   .dynamicApi('', {headers: {Authorization: localStorage.getItem('token')}})
-  .get('/api/user')
+  .get(`${process.env.VUE_APP_API_BASE}/api/user`)
   .then(res => {
     const routers = createRoutes();
     config.permissions = res.data['permissions'];
