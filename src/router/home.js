@@ -11,13 +11,14 @@ const router = createRouter({
   history: isGp? createWebHashHistory(): createWebHistory(),
   routes: [
     {
-      path: `${process.env.VUE_APP_CONTEXT_PATH_HOME}`,
+      path: '/',
       name: 'IHome',
-      redirect: '/index',
+      redirect: `${process.env.VUE_APP_CONTEXT_PATH_HOME}`,
     },
     {
-      path: `${process.env.VUE_APP_CONTEXT_PATH_HOME}/index`,
+      path: `${process.env.VUE_APP_CONTEXT_PATH_HOME}`,
       name: 'IHomePlus',
+      redirect: `${process.env.VUE_APP_CONTEXT_PATH_HOME}/index`,
       component: Schema,
       props: {
         initSchema: frameSchema,
@@ -27,7 +28,7 @@ const router = createRouter({
       },
       children: [
         {
-          path: `${process.env.VUE_APP_CONTEXT_PATH_HOME}`,
+          path: `${process.env.VUE_APP_CONTEXT_PATH_HOME}/index`,
           component: Schema,
           props: {
             // initSchema: homeSchema,

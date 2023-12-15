@@ -14,7 +14,7 @@ const createRoutes = () => {
       {
         path: `${process.env.VUE_APP_CONTEXT_PATH_WEBSITE}`,
         name: 'IWebsite',
-        redirect: '/index',
+        redirect: `${process.env.VUE_APP_CONTEXT_PATH_WEBSITE}/index`,
       },
       {
         path: `${process.env.VUE_APP_CONTEXT_PATH_WEBSITE}/index`,
