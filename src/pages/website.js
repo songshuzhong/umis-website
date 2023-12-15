@@ -4,12 +4,12 @@ import IRenderer, {api} from 'i-renderer/dist/js/renderer';
 import createRoutes from '../router/website';
 import ToMobile from '../component/ToMobile.vue';
 import Application from '../apps/Website.vue';
+import registrySw from '../registerServiceWorker';
 
 import 'element-plus/dist/index.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';
 import 'i-renderer/dist/css/index.css';
 import '../style/index.scss';
-import '../registerServiceWorker';
 
 const app = createApp(Application);
 const config = {
@@ -38,6 +38,8 @@ const config = {
     return res;
   }
 };
+
+registrySw(process.env.VUE_APP_CONTEXT_PATH_WEBSITE);
 
 api()
   .dynamicApi('', {headers: {Authorization: localStorage.getItem('token')}})

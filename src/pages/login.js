@@ -4,12 +4,12 @@ import IRenderer, {api} from 'i-renderer/dist/js/renderer';
 import Application from '../apps/Login.vue';
 import Sendemail from '../component/Sendemail';
 import Verify from '../component/Verify';
+import registrySw from '../registerServiceWorker';
 
 import 'element-plus/dist/index.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';
 import 'i-renderer/dist/css/index.css';
 import '../style/login.scss';
-import '../registerServiceWorker';
 
 const app = createApp(Application);
 
@@ -46,6 +46,9 @@ const options = {
     },
   }
 };
+
+registrySw(process.env.VUE_APP_CONTEXT_PATH_LOGIN);
+
 app
   .use(ElementPlus)
   .use(IRenderer, options)

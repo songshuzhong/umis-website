@@ -1,15 +1,17 @@
 import {createApp} from 'vue';
 import ElementPlus from 'element-plus';
+import IRenderer from 'i-renderer/dist/js/renderer';
 import routers from '../router/home';
 import Application from '../apps/Home.vue';
-import IRenderer from 'i-renderer/dist/js/renderer';
+import registrySw from '../registerServiceWorker';
 
 import 'element-plus/dist/index.css';
 import 'i-renderer/dist/css/index.css';
 import '../style/home.scss';
-import '../registerServiceWorker';
 
 const app = createApp(Application);
+
+registrySw(process.env.VUE_APP_CONTEXT_PATH_HOME);
 
 app
   .use(ElementPlus)

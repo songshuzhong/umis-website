@@ -2,13 +2,15 @@ import {createApp} from 'vue';
 import ElementPlus from 'element-plus';
 import IRenderer from 'i-renderer/dist/js/renderer';
 import Application from '../apps/Mobile.vue';
+import registrySw from '../registerServiceWorker';
 
 import 'element-plus/dist/index.css';
 import 'i-renderer/dist/css/index.css';
 import '../style/mobile.scss';
-import '../registerServiceWorker';
 
 const app = createApp(Application);
+
+registrySw(process.env.VUE_APP_CONTEXT_PATH_MOBILE);
 
 app
   .use(ElementPlus)
