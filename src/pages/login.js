@@ -47,7 +47,7 @@ const options = {
   }
 };
 
-registrySw(process.env.VUE_APP_CONTEXT_PATH_LOGIN);
+registrySw(process.env.VUE_APP_SERVICE_WORKER + process.env.VUE_APP_CONTEXT_PATH_LOGIN);
 
 app
   .use(ElementPlus)

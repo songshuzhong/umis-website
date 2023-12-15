@@ -39,7 +39,7 @@ const config = {
   }
 };
 
-registrySw(process.env.VUE_APP_CONTEXT_PATH_WEBSITE);
+registrySw(process.env.VUE_APP_SERVICE_WORKER + process.env.VUE_APP_CONTEXT_PATH_WEBSITE);
 
 api()
   .dynamicApi('', {headers: {Authorization: localStorage.getItem('token')}})

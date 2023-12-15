@@ -11,7 +11,7 @@ import '../style/home.scss';
 
 const app = createApp(Application);
 
-registrySw(process.env.VUE_APP_CONTEXT_PATH_HOME);
+registrySw(process.env.VUE_APP_SERVICE_WORKER + process.env.VUE_APP_CONTEXT_PATH_HOME);
 
 app
   .use(ElementPlus)
