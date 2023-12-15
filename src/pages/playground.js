@@ -10,7 +10,7 @@ import '../style/playground.scss';
 
 const app = createApp(Playground);
 
-registrySw(process.env.VUE_APP_SERVICE_WORKER + process.env.VUE_APP_CONTEXT_PATH_PLAYGROUND);
+registrySw(process.env.VUE_APP_SERVICE_WORKER);
 
 app.component(Schema);
 app

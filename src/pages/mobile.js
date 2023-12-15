@@ -10,7 +10,7 @@ import '../style/mobile.scss';
 
 const app = createApp(Application);
 
-registrySw(process.env.VUE_APP_SERVICE_WORKER + process.env.VUE_APP_CONTEXT_PATH_MOBILE);
+registrySw(process.env.VUE_APP_SERVICE_WORKER);
 
 app
   .use(ElementPlus)
