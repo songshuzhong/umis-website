@@ -113,7 +113,7 @@
                   "*": "*"
                 }
               },
-              "redirect": "localhost/",
+              "redirect": "localhost/login",
               "controls": [
                 {
                   "renderer": "input",

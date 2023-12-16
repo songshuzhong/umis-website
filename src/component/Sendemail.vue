@@ -1,9 +1,12 @@
 <template>
   <el-button
-    :disabled="isCounting || !iEmail"
-     @click="startCountdown"
+    :disabled="isCounting || !iEmail || isLoading"
+    :loading="isLoading"
+     @click="starting"
   >
-    {{isCounting? `${countdown}s`: '发送'}}
+    <template v-if="!isLoading">
+      {{isCounting? `${countdown}s`: '发送'}}
+    </template>
   </el-button>
 </template>
 
@@ -25,10 +28,21 @@ export default defineComponent({
     const {proxy} = getCurrentInstance();
     const iEmail = ref('');
     const countdown = ref(60);
+    const isLoading = ref(false);
     let intervalId;
     const isCounting = computed(() => {
       return countdown.value > 0 && countdown.value < 60;
     });
+    const starting = () => {
+      isLoading.value = true;
+      const timer = setTimeout(() => {
+        clearTimeout(timer);
+        isLoading.value = false;
+        if (proxy.$parent.$parent.$parent.$parent.validateState === 'success') {
+          startCountdown();
+        }
+      }, 3000);
+    };
     const startCountdown = () => {
       const isValid = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(iEmail.value);
       if (!isValid) {
@@ -74,9 +88,10 @@ export default defineComponent({
     });
     return {
       iEmail,
+      isLoading,
       isCounting,
       countdown,
-      startCountdown
+      starting
     };
   }
 });
