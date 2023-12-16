@@ -153,7 +153,7 @@
                 "name": "IWebsiteHome",
                 "category": "icon",
                 "size": 18,
-                "url": "https://songshuzhong.github.io/i-website/dist/home.html#/"
+                "url": "localhost/home"
               },
               {
                 "renderer": "tomobile"
@@ -287,9 +287,9 @@
                       "accept": ".webp,.jpg,.png",
                       "spliced": false,
                       "astrict": {
-                        "maxByte": "30",
-                        "maxWidth": "300",
-                        "maxHeight": "300"
+                        "maxByte": "2",
+                        "maxWidth": "32",
+                        "maxHeight": "32"
                       },
                       "label": "",
                       "data": {},
