@@ -40,7 +40,7 @@
                   "renderer": "input",
                   "name": "username",
                   "requiredOn": "1 === 1",
-                  "placeholder": "用户名",
+                  "placeholder": "用户名（guest）",
                   "type": "text",
                   "rules": [],
                   "minlength": 0,
@@ -51,7 +51,7 @@
                   "renderer": "input",
                   "name": "password",
                   "requiredOn": "1 === 1",
-                  "placeholder": "密码",
+                  "placeholder": "密码（_123456qwerty）",
                   "type": "password",
                   "rules": []
                 },
