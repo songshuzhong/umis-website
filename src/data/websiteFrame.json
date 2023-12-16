@@ -310,7 +310,7 @@
                     "actionType": "url",
                     "name": "IWebsiteHome",
                     "text": "官网",
-                    "url": "https://songshuzhong.github.io/i-website/dist/home.html#/"
+                    "url": "localhost/home"
                   },
                   {
                     "renderer": "action",
