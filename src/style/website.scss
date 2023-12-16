@@ -15,6 +15,9 @@ $i-monaco-primary: #282a36 !default;
   .el-button {
     border: 0;
   }
+  .i-action__avatar {
+    background: transparent;
+  }
   .i-avatar__container {
     margin-left: 20px;
     vertical-align: middle;
