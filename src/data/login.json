@@ -51,7 +51,7 @@
                   "renderer": "input",
                   "name": "password",
                   "requiredOn": "1 === 1",
-                  "placeholder": "密   码（_123456qwerty）",
+                  "placeholder": "密码（_123456qwerty）",
                   "type": "password",
                   "rules": []
                 },

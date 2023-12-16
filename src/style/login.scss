@@ -1,6 +1,30 @@
+html {
+  &.mobile {
+    .i-page__container {
+      .i-tabs__container {
+        top: 50%;
+        background: var(--el-color-white);
+        transform: translate(3%, -40%);
+        z-index: 2023;
+        .verify {
+          margin-left: 155px;
+        }
+      }
+      .i-login__browser-star {
+        width: 100%;
+        .el-image__inner {
+          top: 25%;
+          width: 182px;
+          height: 146px;
+        }
+      }
+    }
+  }
+}
 .i-login__attitude {
   padding: 10px 0 15px 0;
   text-align: center;
+  font-size: 14px;
   font-weight: 500;
 }
 .i-page__container {
