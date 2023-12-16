@@ -36,6 +36,16 @@ html {
         visibility: visible;
       }
     }
+    .i-html__container,
+    .i-static__item,
+    .i-website__footer {
+      font-size: 14px;
+    }
+    .i-form__container.actions-fixed {
+      .i-form__actions--inline {
+        top: 60px;
+      }
+    }
   }
   &.pc {
     .i-website__header__dropdown {
