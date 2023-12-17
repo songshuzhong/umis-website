@@ -44,7 +44,7 @@
                   "type": "text",
                   "rules": [],
                   "minlength": 0,
-                  "maxlength": 8,
+                  "maxlength": 16,
                   "showWordLimit": true
                 },
                 {
@@ -121,7 +121,7 @@
                   "placeholder": "命名空间（瓜子花生工作室）",
                   "type": "text",
                   "minlength": 0,
-                  "maxlength": 8,
+                  "maxlength": 16,
                   "rules": [],
                   "requiredOn": "1==1",
                   "showWordLimit": true
@@ -133,7 +133,7 @@
                   "placeholder": "用户名（令狐瓜子）",
                   "type": "text",
                   "minlength": 0,
-                  "maxlength": 8,
+                  "maxlength": 16,
                   "showWordLimit": true,
                   "rules": []
                 },
