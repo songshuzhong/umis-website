@@ -55,13 +55,13 @@ api()
       .mount('.i-website-app__container');
   })
   .catch((e) => {
-    if (e.data && e.data.code === 401) {
+    if (e.data && (e.data.code === 401 || e.data.code === 400)) {
       window.location.href = '/login';
     }
     console.log(e);
     ElNotification({
-      title: '错误：初始化接口调用失败',
-      message: e.config.url,
+      title: `错误${e?.data?.code || e?.response?.data?.code || e.code}`,
+      message: e?.data?.message || e?.response?.data?.message || e.message,
       type: 'error',
       duration: 10000,
       offset: 50
