@@ -31,8 +31,8 @@ const options = {
             .catch((e) => {
               form.$parent.$refs.field[3].$refs.component.handleDraw();
               ElNotification({
-                title: `错误${e?.data?.code || e.response.data.code}`,
-                message: e?.data?.message || e.response.data.message,
+                title: `错误${e?.data?.code || e?.response?.data?.code || e.code}`,
+                message: e?.data?.message || e?.response?.data?.message || e.message,
                 type: 'error',
                 duration: 10000,
                 offset: 50
