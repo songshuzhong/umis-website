@@ -41,7 +41,6 @@
     "cross-env": "^5.2.1",
     "css-loader": "^3.5.3",
     "echarts": "^5.4.1",
-    "electron": "^27.1.0",
     "element-plus": "latest",
     "eslint": "^7.14.0",
     "eslint-loader": "^4.0.2",
@@ -71,7 +70,6 @@
     "stylelint-scss": "3.3.x",
     "video.js": "^8.0.4",
     "vue": "^3.2.47",
-    "vue-devtools": "^5.1.4",
     "vue-router": "^4.1.6",
     "webpack-cli": "^4.9.1",
     "workbox-webpack-plugin": "^6.5.4"
