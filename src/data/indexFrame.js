@@ -16,6 +16,7 @@ export default {
           name: 'IWebsiteNav',
           classname: 'i-website_menu-vertical',
           router: true,
+          discolor: true,
           mode: 'vertical',
           defaultActive: '',
           target: 'IWebsiteContainer',
