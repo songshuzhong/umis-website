@@ -2,3 +2,4 @@
 /tests/unit/coverage/
 /node_modules
 ../i-renderer/packages
+./src/data/login.js
