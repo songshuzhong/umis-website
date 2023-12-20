@@ -1,9 +1,9 @@
-{
+export default {
   "renderer": "page",
   "body": [
     {
       "renderer": "avatar",
-      "src": "./shuttle.png",
+      "src": `${process.env.VUE_APP_PUBLIC_PATH_HOME}/shuttle.png`,
       "classname": "i-login__logo",
       "previews": [],
       "title": "IRenderer平台",
@@ -14,7 +14,7 @@
     },
     {
       "renderer": "image",
-      "src": "./img/qqb.png",
+      "src": `${process.env.VUE_APP_PUBLIC_PATH_HOME}/img/qqb.png`,
       "classname": "i-login__browser-star",
       "previews": []
     },
