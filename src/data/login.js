@@ -235,7 +235,7 @@ export default {
           "body": [
             {
               "renderer": "image",
-              "src": "./img/attitude.jpg"
+              "src": `${process.env.VUE_APP_PUBLIC_PATH_HOME}/img/attitude.jpg`
             },
             {
               "renderer": "html",
