@@ -1,6 +1,6 @@
 import {createApp} from 'vue';
 import ElementPlus, {ElNotification} from 'element-plus';
-import IRenderer, {api} from 'i-renderer/dist/js/renderer';
+import IRenderer, {api} from '../../../i-renderer/packages/index';
 import createRoutes from '../router/website';
 import ToMobile from '../component/ToMobile.vue';
 import Application from '../apps/Website.vue';
@@ -8,7 +8,7 @@ import registrySw from '../registerServiceWorker';
 
 import 'element-plus/dist/index.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';
-import 'i-renderer/dist/css/index.css';
+import '../../../i-renderer/packages/assets/styles/index.scss';
 import '../style/index.scss';
 
 const app = createApp(Application);
