@@ -28,7 +28,7 @@ html {
     }
     .i-website__aside {
       position: fixed;
-      z-index: 2022;
+      z-index: 2000;
       &.width-64 {
         visibility: hidden;
       }
@@ -44,6 +44,41 @@ html {
     .i-form__container.actions-fixed {
       .i-form__actions--inline {
         top: 80px !important;
+      }
+    }
+    .i-website-intro {
+      position: relative;
+      padding: 0;
+      background-color: var(--el-color-white);
+      .el-dialog__header {
+        border-bottom: 1px solid var(--el-border-color-lighter);
+      }
+      .el-dialog__title {
+        position: unset;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: left;
+        transform: unset;
+      }
+      .el-dialog__footer {
+        display: none;
+      }
+      .i-website-intro__teacher {
+        display: none;
+      }
+      .i-static__container {
+        margin-top: 20px;
+        padding: 0;
+      }
+      .i-html__container {
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+        color: var(--el-color-black);
+      }
+      .i-static__item {
+        font-size: 16px;
+        font-weight: 500;
       }
     }
   }
