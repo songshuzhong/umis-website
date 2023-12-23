@@ -1,9 +1,40 @@
-{
+/* eslint-disable */
+export default {
   "renderer": "page",
   "body": [
   {
     "renderer": "card",
     "header": [
+      {
+        "renderer": "action",
+        "immediateOn": "1===1",
+        "actionType": "dialog",
+        "visibleOn": "1===2",
+        "body": {
+          "classname": "i-website-intro",
+          "title": "新手指引",
+          "body": [
+            {
+              "renderer": "image",
+              "src": `${process.env.VUE_APP_PUBLIC_PATH_HOME}/img/tercher.png`,
+              "classname": "i-website-intro__teacher",
+              "previews": []
+            },
+            {
+              "renderer": "static",
+              "table": false,
+              "column": 0,
+              "width": 0,
+              "columns": [
+                "第一步：项目立项(/系统配置/项目管理)",
+                "第二步：创建项目页面(/系统配置/页面管理)",
+                "第三步：编辑页面信息",
+                "第四部：发布上线"
+              ]
+            }
+          ]
+        }
+      },
       {
         "renderer": "html",
         "html": "欢迎使用IRenderer",
