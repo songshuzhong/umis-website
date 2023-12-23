@@ -16,7 +16,7 @@ export default {
           "body": [
             {
               "renderer": "image",
-              "src": `${process.env.VUE_APP_PUBLIC_PATH_HOME}/img/tercher.png`,
+              "src": `${process.env.VUE_APP_PUBLIC_PATH_HOME}/img/teacher.png`,
               "classname": "i-website-intro__teacher",
               "previews": []
             },
