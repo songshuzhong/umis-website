@@ -16,7 +16,7 @@ export default {
           "body": [
             {
               "renderer": "image",
-              "src": `${process.env.VUE_APP_PUBLIC_PATH_HOME}/img/tercher.png`,
+              "src": `${process.env.VUE_APP_PUBLIC_PATH_HOME}/img/teacher.png`,
               "classname": "i-website-intro__teacher",
               "previews": []
             },
@@ -29,7 +29,7 @@ export default {
                 "第一步：项目立项(/系统配置/项目管理)",
                 "第二步：创建项目页面(/系统配置/页面管理)",
                 "第三步：编辑页面信息",
-                "第四部：发布上线"
+                "第四步：发布上线"
               ]
             }
           ]

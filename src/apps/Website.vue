@@ -57,7 +57,7 @@ export default defineComponent({
     });
     onMounted(() => {
       const timer = setTimeout(() => {
-        import(/* webpackChunkName:"editor",webpackPrefetch:false,webpackMode:"lazy" */ 'i-renderer/dist/js/editor')
+        import('../../../i-renderer/packages/canvas/index')
           .then(res => {
             const {Editor} = res;
             proxy.$.appContext.components[Editor.name] = Editor;
