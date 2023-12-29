@@ -35,13 +35,6 @@
               "icon": "LocationInformation"
             },
             {
-              "name": "https://songshuzhong.github.io/i-website/dist/index.html",
-              "title": " 案例合集",
-              "renderer": "menuitem",
-              "icon": "DataBoard",
-              "extra": true
-            },
-            {
               "name": "logs",
               "title": "更新日志",
               "renderer": "menuitem",

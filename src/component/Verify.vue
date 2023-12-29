@@ -25,7 +25,7 @@ export default defineComponent({
   setup(props, ctx) {
     const verify = ref(null);
     const state = reactive({
-      pool: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890',   // 随机字符串
+      pool: 'abcdefghijklmnopqrstuvwxyz1234567890',   // 随机字符串
       width: 120,                                     //展示区域宽度
       height: 32,                                     //展示区域高度
       imgCode: '',                                    //保存页面的内容（用来判断输入验证是否满足改code）
