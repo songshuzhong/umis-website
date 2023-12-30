@@ -37,7 +37,7 @@ export default {
       },
       {
         "renderer": "html",
-        "html": "欢迎使用IRenderer",
+        "html": "欢迎使用百搭云",
         "inline": true,
         "classname": "font-size-20 font-weight-800"
       }

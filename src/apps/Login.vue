@@ -13,7 +13,7 @@ export default defineComponent({
   name: 'Login',
   setup() {
     onMounted(() => {
-      document.title = '欢迎使用IRenderer';
+      document.title = '欢迎使用百搭云';
     });
 
     return {
