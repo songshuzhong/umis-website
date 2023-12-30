@@ -174,7 +174,7 @@ $i-monaco-primary: #282a36 !default;
   padding: 0 30px 0 80px;
   box-shadow: unset;
   .el-dialog__header {
-    position: relative;
+    position: unset;
     background-color: transparent;
     border-bottom: 0;
   }
@@ -189,6 +189,18 @@ $i-monaco-primary: #282a36 !default;
   }
   .el-dialog__footer {
     display: none;
+  }
+  .el-dialog__headerbtn {
+    left: 50%;
+    bottom: 0;
+    top: unset;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid white;
+    border-radius: 100%;
+    padding-top: 4px;
+    margin-bottom: -80px;
+    transform: translate(-50%, -50%);
   }
   .i-website-intro__teacher {
     position: absolute;

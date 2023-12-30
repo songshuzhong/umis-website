@@ -5,6 +5,7 @@
   "author": "songshuzhong",
   "description": "IRenderer渲染器经典示例集合",
   "scripts": {
+    "deploy": "sh ./scripts/deploy.sh",
     "build": "vue-cli-service build --mode=nestjs --report",
     "build:gp": "vue-cli-service build --mode=gp --report",
     "lint": "vue-cli-service lint",
