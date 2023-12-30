@@ -201,6 +201,9 @@ $i-monaco-primary: #282a36 !default;
     padding-top: 4px;
     margin-bottom: -80px;
     transform: translate(-50%, -50%);
+    svg {
+      color: white;
+    }
   }
   .i-website-intro__teacher {
     position: absolute;
