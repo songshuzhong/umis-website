@@ -37,8 +37,8 @@ export default {
       },
       {
         "renderer": "html",
-        "html": "欢迎使用百搭云",
-        "inline": true,
+        "html": "早上好、中午好、下午好，欢迎使用百搭云！",
+        "inline": false,
         "classname": "font-size-20 font-weight-800"
       }
     ],
@@ -48,6 +48,21 @@ export default {
       {
         "renderer": "html",
         "html": "这是一款开箱即用的低代码前端开发工具库，同时它也经历过数十个真实项目的技术沉淀，确保框架在开发中可落地、可使用、可维护（注：在作者就职的公司，本框架已在电商、直播、OA、ERP等多个不同领域的中后台系统中应用并稳定运行）。"
+      }
+    ]
+  },
+  {
+    "renderer": "card",
+    "classname": "margin-bottom-20",
+    "shadow": "always",
+    "body": [
+      {
+        "renderer": "html",
+        "html": "- 🤔 When you arise in the morning,think of what a precious privilege it is to be alive - to breathe,to think,to enjoy,to love. ~Marcus Aurelius."
+      },
+      {
+        "renderer": "html",
+        "html": "- 😄 当你早晨起来的时候，想想活着是多么宝贵的特权——还能呼吸，还能思考，还能享受，还能去爱。~马尔克·奥列里乌斯。"
       }
     ]
   },
