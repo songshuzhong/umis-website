@@ -63,11 +63,6 @@ export default {
             "classname": "font-size-16 text-center font-weight-600 margin-bottom-20"
           },
           {
-            "renderer": "html",
-            "html": "<span id=\"busuanzi_container_site_pv\">本站总访问量<span id=\"busuanzi_value_site_pv\"></span>次</span>",
-            "classname": "font-size-14 text-center font-weight-400 margin-bottom-10"
-          },
-          {
             "renderer": "wrapper",
             "body": [
               {
@@ -125,11 +120,6 @@ export default {
             "renderer": "html",
             "html": "专业版",
             "classname": "font-size-16 text-center font-weight-600 margin-bottom-20"
-          },
-          {
-            "renderer": "html",
-            "html": "<span id=\"busuanzi_container_site_uv\">本站访客数<span id=\"busuanzi_value_site_uv\"></span>人次</span>",
-            "classname": "font-size-14 text-center font-weight-400 margin-bottom-10"
           },
           {
             "renderer": "wrapper",
