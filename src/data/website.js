@@ -53,7 +53,7 @@ export default {
   },
   {
     "renderer": "html",
-    "classname": "margin-bottom-20",
+    "classname": "margin-bottom-10",
     "html": "- 🤔 When you arise in the morning,think of what a precious privilege it is to be alive - to breathe,to think,to enjoy,to love. ~Marcus Aurelius."
   },
   {
