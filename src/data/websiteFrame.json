@@ -40,17 +40,9 @@
                 "renderer": "render",
                 "body": [
                   {
-                    "innerHTML": "招租广告位1",
+                    "innerHTML": "右上角有个编辑按钮哦",
                     "tag": "span",
-                    "classname": "i-render__container",
-                    "action": {
-                      "renderer": "action",
-                      "actionType": "ajax",
-                      "actionApi": {
-                        "url": "https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/ads_click?order=1",
-                        "method": "get"
-                      }
-                    }
+                    "classname": "i-render__container"
                   }
                 ]
               },
@@ -58,17 +50,9 @@
                 "renderer": "render",
                 "body": [
                   {
-                    "innerHTML": "招租广告位2",
+                    "innerHTML": "用户头像可以点击上传",
                     "tag": "span",
-                    "classname": "i-render__container",
-                    "action": {
-                      "renderer": "action",
-                      "actionType": "ajax",
-                      "actionApi": {
-                        "url": "https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/ads_click?order=2",
-                        "method": "get"
-                      }
-                    }
+                    "classname": "i-render__container"
                   }
                 ]
               },
@@ -76,7 +60,7 @@
                 "renderer": "render",
                 "body": [
                   {
-                    "innerHTML": "招租广告位3",
+                    "innerHTML": "点击「本地保存」是个好习惯",
                     "tag": "span",
                     "classname": "i-render__container",
                     "action": {
