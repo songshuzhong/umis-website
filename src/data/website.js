@@ -96,20 +96,6 @@ export default {
                 },
                 "params": {},
                 "body": {}
-              },
-              {
-                "renderer": "action",
-                "text": "提供发票",
-                "type": "warning",
-                "plain": true,
-                "static": true,
-                "actionApi": {
-                  "url": "",
-                  "method": "post",
-                  "params": {}
-                },
-                "params": {},
-                "body": {}
               }
             ],
             "footer": [],
@@ -165,20 +151,6 @@ export default {
                 "renderer": "action",
                 "text": "赠送VIP群",
                 "type": "success",
-                "plain": true,
-                "static": true,
-                "actionApi": {
-                  "url": "",
-                  "method": "post",
-                  "params": {}
-                },
-                "params": {},
-                "body": {}
-              },
-              {
-                "renderer": "action",
-                "text": "提供发票",
-                "type": "warning",
                 "plain": true,
                 "static": true,
                 "actionApi": {
