@@ -52,19 +52,14 @@ export default {
     ]
   },
   {
-    "renderer": "card",
+    "renderer": "html",
     "classname": "margin-bottom-20",
-    "shadow": "always",
-    "body": [
-      {
-        "renderer": "html",
-        "html": "- 🤔 When you arise in the morning,think of what a precious privilege it is to be alive - to breathe,to think,to enjoy,to love. ~Marcus Aurelius."
-      },
-      {
-        "renderer": "html",
-        "html": "- 😄 当你早晨起来的时候，想想活着是多么宝贵的特权——还能呼吸，还能思考，还能享受，还能去爱。~马尔克·奥列里乌斯。"
-      }
-    ]
+    "html": "- 🤔 When you arise in the morning,think of what a precious privilege it is to be alive - to breathe,to think,to enjoy,to love. ~Marcus Aurelius."
+  },
+  {
+    "renderer": "html",
+    "classname": "margin-bottom-20",
+    "html": "- 😄 当你早晨起来的时候，想想活着是多么宝贵的特权——还能呼吸，还能思考，还能享受，还能去爱。~马尔克·奥列里乌斯。"
   },
   {
     "renderer": "grid",
