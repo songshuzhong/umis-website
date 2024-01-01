@@ -271,7 +271,7 @@ export default {
                 ]
               }
             ],
-            "height": 140,
+            "height": 285,
             "indicatorPosition": "none",
             "arrow": "always"
           }
