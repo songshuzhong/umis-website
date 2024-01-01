@@ -37,42 +37,19 @@
             "loop": true,
             "body": [
               {
-                "renderer": "render",
-                "body": [
-                  {
-                    "innerHTML": "右上角有个编辑按钮哦",
-                    "tag": "span",
-                    "classname": "i-render__container"
-                  }
-                ]
+                "html": "右上角有个编辑按钮哦",
+                "renderer": "html",
+                "classname": "i-render__container"
               },
               {
-                "renderer": "render",
-                "body": [
-                  {
-                    "innerHTML": "用户头像可以点击上传",
-                    "tag": "span",
-                    "classname": "i-render__container"
-                  }
-                ]
+                "html": "用户头像可以点击上传",
+                "renderer": "html",
+                "classname": "i-render__container"
               },
               {
-                "renderer": "render",
-                "body": [
-                  {
-                    "innerHTML": "点击「本地保存」是个好习惯",
-                    "tag": "span",
-                    "classname": "i-render__container",
-                    "action": {
-                      "renderer": "action",
-                      "actionType": "ajax",
-                      "actionApi": {
-                        "url": "https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/ads_click?order=3",
-                        "method": "get"
-                      }
-                    }
-                  }
-                ]
+                "innerHTML": "点击「本地保存」是个好习惯",
+                "renderer": "html",
+                "classname": "i-render__container"
               }
             ],
             "height": 140,
