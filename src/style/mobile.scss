@@ -5,6 +5,7 @@ body,
   overflow: hidden;
 }
 .i-mobile__container {
+  overflow-y: scroll;
   &>.el-skeleton {
     padding: 10px;
   }
