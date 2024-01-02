@@ -20,7 +20,7 @@ export default defineComponent({
         {
           renderer: 'action',
           actionType: 'url',
-          url: isPro? 'https://songshuzhong.github.io/i-website/dist/mobile.html?isFrame=true&pageId=' + pageId: `${window.location.protocol}//${window.location.host}/mobile.html?isFrame=true&pageId=${pageId}`
+          url: isPro? '/mobile?isFrame=true&pageId=' + pageId: `/mobile?isFrame=true&pageId=${pageId}`
         },
         {},
         () => {},
