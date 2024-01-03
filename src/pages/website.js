@@ -5,6 +5,7 @@ import createRoutes from '../router/website';
 import ToMobile from '../component/ToMobile.vue';
 import Application from '../apps/Website.vue';
 import registrySw from '../registerServiceWorker';
+import '../utils/debug';
 
 import 'element-plus/dist/index.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';

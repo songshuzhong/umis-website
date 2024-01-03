@@ -5,6 +5,7 @@ import Application from '../apps/Login.vue';
 import Sendemail from '../component/Sendemail';
 import Verify from '../component/Verify';
 import registrySw from '../registerServiceWorker';
+import '../utils/debug';
 
 import 'element-plus/dist/index.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';

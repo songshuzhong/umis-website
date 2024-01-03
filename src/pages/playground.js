@@ -3,6 +3,7 @@ import ElementPlus from 'element-plus';
 import IRenderer, {Schema} from 'i-renderer/dist/js/renderer';
 import Playground from '../apps/Playground.vue';
 import registrySw from '../registerServiceWorker';
+import '../utils/debug';
 
 import 'element-plus/dist/index.css';
 import 'i-renderer/dist/css/index.css';
