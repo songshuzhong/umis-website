@@ -18,6 +18,12 @@ const config = {
       req.headers['Authorization'] = localStorage.getItem('token');
     }
     return req;
+  },
+  response: function(res) {
+    if (res.data && [400, 401].includes(res.data.code)) {
+      window.location.href = '/login';
+    }
+    return res;
   }
 };
 registrySw(process.env.VUE_APP_SERVICE_WORKER);
