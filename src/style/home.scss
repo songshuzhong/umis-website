@@ -1,6 +1,12 @@
 /* stylelint-disable */
 @import './animation';
-
+.i-avatar__container {
+  .i-avatar__logo {
+    .el-avatar {
+      padding: 0;
+    }
+  }
+}
 html {
   .el-message {
     top: 70px !important;

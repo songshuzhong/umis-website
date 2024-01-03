@@ -1,5 +1,11 @@
 $i-monaco-primary: #282a36 !default;
-
+.i-avatar__container {
+  .i-avatar__logo {
+    .el-avatar {
+      padding: 0;
+    }
+  }
+}
 .i-website-app__container {
   height: 100vh;
   overflow: hidden;
