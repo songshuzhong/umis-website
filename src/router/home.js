@@ -101,7 +101,7 @@ router.beforeEach((to, from, next) => {
   if (to?.meta?.permission) {
     const hasPermission = checkPermission(to.meta.permission);
     if (!hasPermission) {
-      return next('/home/forbidden');
+      return next('/forbidden');
     }
   }
   next();
