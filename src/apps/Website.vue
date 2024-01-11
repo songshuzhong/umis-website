@@ -57,7 +57,7 @@ export default defineComponent({
     });
     onMounted(() => {
       const timer = setTimeout(() => {
-        /*import('../../../i-renderer/packages/canvas/index')
+        import('../../../i-renderer/packages/canvas/index')
           .then(res => {
             const {Editor} = res;
             proxy.$.appContext.components[Editor.name] = Editor;
@@ -65,7 +65,7 @@ export default defineComponent({
             console.error(e);
           }).finally(() => {
             clearTimeout(timer);
-          });*/
+          });
         appendAssets();
         clearTimeout(timer);
       }, 5000);
