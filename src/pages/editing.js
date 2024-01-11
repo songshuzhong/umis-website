@@ -3,6 +3,7 @@ import ElementPlus from 'element-plus';
 import IRenderer from 'i-renderer/dist/js/renderer';
 import Application from '../apps/Editing.vue';
 import registrySw from '../registerServiceWorker';
+import '../utils/debug';
 
 import 'element-plus/dist/index.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';
