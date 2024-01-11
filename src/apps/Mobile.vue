@@ -29,7 +29,10 @@ export default defineComponent({
     const query = qs.parse(window.location.href.split('?')[1]);
     const isFrame = ref(query.isFrame);
     const update = ref(0);
-    const url = '/api/page/' + query.pageId;
+    let url = '/api/page/' + query.pageId;
+    if (query.shared) {
+      url += '/shared';
+    }
     const refresh = () => {
       update.value++;
     };
