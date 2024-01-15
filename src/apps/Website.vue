@@ -67,7 +67,7 @@ export default defineComponent({
             clearTimeout(timer);
           });
         appendAssets();
-      }, 5000);
+      }, 2000);
     });
 
     return {

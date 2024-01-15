@@ -3,8 +3,6 @@ import {ElLoading, ElMessageBox} from 'element-plus';
 import {Schema, checkPermission} from 'i-renderer/dist/js/renderer';
 import frameSchema from '../data/homeFrame.json';
 import uaManager from '../utils/ua';
-// const isGp = process.env.NODE_ENV === 'gp'; createWebHistory
-// const isDev = process.env.NODE_ENV === 'dev';
 let routerMask;
 const router = createRouter({
   history: createWebHashHistory(process.env.VUE_APP_CONTEXT_PATH_HOME),
