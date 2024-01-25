@@ -24,20 +24,6 @@ export default defineComponent({
   setup() {
     const isMounted = ref(false);
     const onShow = () => {
-      if (!isMounted.value) {
-        const timer = setTimeout(() => {
-          clearTimeout(timer);
-          const frame = document.getElementsByClassName('i-website__ai-frame')[0];
-          frame.onload = function () {
-            let iframeDocument = document.getElementsByClassName('i-website__ai-frame')[0].contentDocument || document.getElementsByClassName('i-website__ai-frame')[0].contentWindow.document;
-            iframeDocument.body.style.backgroundColor = 'black';
-            iframeDocument.getElementsByClassName('ul')[0].style.color = 'blue';
-            console.log(iframeDocument);
-            // const style = document.createElement('style');
-            // style.textContent = 'body { background-color: red; }';
-          };
-        }, 2000);
-      }
       isMounted.value = true;
     };
     return {
