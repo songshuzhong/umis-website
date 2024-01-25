@@ -3,6 +3,7 @@ import ElementPlus, {ElNotification} from 'element-plus';
 import IRenderer, {api} from '../../../i-renderer/packages/index';
 import createRoutes from '../router/website';
 import ToMobile from '../component/ToMobile.vue';
+import Ai from '../component/Ai.vue';
 import Application from '../apps/Website.vue';
 import registrySw from '../registerServiceWorker';
 
@@ -14,7 +15,7 @@ import '../style/index.scss';
 const app = createApp(Application);
 const config = {
   domains: [process.env.VUE_APP_API_BASE],
-  renderers: [ToMobile],
+  renderers: [ToMobile, Ai],
   actions: {
     logout: function(proxy, props, config, context, onActionFeedback) {
       localStorage.removeItem('token');
