@@ -1,8 +1,9 @@
 <template>
   <div class="i-website__ai">
     <el-popover
-      :width="400"
+      :width="300"
       trigger="click"
+      popper-class="i-website__ai__popper"
       @show="onShow"
     >
       <template #reference>
