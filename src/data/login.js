@@ -29,6 +29,7 @@ export default {
           "body": [
             {
               "renderer": "form",
+              "hideRequiredAsterisk": true,
               "actionApi": {
                 "url": "/api/auth/login",
                 "method": "post",
@@ -107,6 +108,7 @@ export default {
           "body": [
             {
               "renderer": "form",
+              "hideRequiredAsterisk": true,
               "actionApi": {
                 "url": "/api/user",
                 "method": "post",

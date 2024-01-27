@@ -219,6 +219,10 @@ $i-monaco-primary: #282a36 !default;
   z-index: 2024;
   cursor: pointer;
 }
+.i-website__ai__popper {
+  min-height: 607px;
+  padding: 0 !important;
+}
 .i-website__ai-frame {
   width: 100%;
   height: 600px;
