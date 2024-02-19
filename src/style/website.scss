@@ -136,6 +136,8 @@ $i-monaco-primary: #282a36 !default;
   vertical-align: middle;
 }
 .i-website__drawer {
+  animation: unset;
+  transition: unset;
   .el-drawer__header {
     height: 100%;
     padding: 0;
