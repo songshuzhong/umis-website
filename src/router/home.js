@@ -23,28 +23,28 @@ const router = createRouter({
           path: '/index',
           component: Schema,
           props: {
-            url: `${process.env.VUE_APP_CONTEXT_PATH_HOME}/home.json`,
+            url: `${process.env.VUE_APP_PUBLIC_PATH_HOME}/home.json`,
           },
         },
         {
           path: '/logs',
           component: Schema,
           props: {
-            url: `${process.env.VUE_APP_CONTEXT_PATH_HOME}/logs.json`,
+            url: `${process.env.VUE_APP_PUBLIC_PATH_HOME}/logs.json`,
           },
         },
         {
           path: '/me',
           component: Schema,
           props: {
-            url: `${process.env.VUE_APP_CONTEXT_PATH_HOME}/me.json`,
+            url: `${process.env.VUE_APP_PUBLIC_PATH_HOME}/me.json`,
           },
         },
         {
           path: '/quality',
           component: Schema,
           props: {
-            url: `${process.env.VUE_APP_CONTEXT_PATH_HOME}/me.json`,
+            url: `${process.env.VUE_APP_PUBLIC_PATH_HOME}/me.json`,
           },
           meta: {
             permission: 'quality'
@@ -55,7 +55,7 @@ const router = createRouter({
           component: Schema,
           classname: 'i-renderer-website-schema__playground',
           props: {
-            url: `${process.env.VUE_APP_CONTEXT_PATH_HOME}/playground.json`,
+            url: `${process.env.VUE_APP_PUBLIC_PATH_HOME}/playground.json`,
           },
           beforeEnter: () => {
             document.documentElement.classList.add('playground');
