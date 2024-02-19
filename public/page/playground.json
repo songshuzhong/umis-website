@@ -1,0 +1,19 @@
+{
+  "data": {
+    "projectId": "2f487a94-34fd-467d-b5e9-1ef3c785840d",
+    "pageId": "21af0420-a9ff-458e-98d4-4334502dfa04",
+    "pageName": "frame",
+    "pageTitle": "frame",
+    "pageIcon": "",
+    "groupBy": "",
+    "hidden": null,
+    "assets": [],
+    "visible": [],
+    "pageDesc": null,
+    "pageSchema": "{\"renderer\":\"page\",\"body\":[{\"renderer\":\"frame\",\"src\":\"http://www.i-renderer.love/playground.html\"}],\"innerStyle\":\".i-frame__container {\\n  height: 737px;\\n}\"}",
+    "createdAt": "2023-03-16T02:22:54.000Z",
+    "updatedAt": "2023-04-20T04:51:25.000Z"
+  },
+  "status": 0,
+  "msg": "请求成功"
+}
