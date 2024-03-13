@@ -1,11 +1,11 @@
-import {createRouter, createWebHashHistory} from 'vue-router';
+import {createRouter, createWebHistory} from 'vue-router';
 import {ElLoading, ElMessageBox} from 'element-plus';
 import {Schema, checkPermission} from 'i-renderer/dist/js/renderer';
 import frameSchema from '../data/homeFrame.json';
 import uaManager from '../utils/ua';
 let routerMask;
 const router = createRouter({
-  history: createWebHashHistory(process.env.VUE_APP_CONTEXT_PATH_HOME),
+  history: createWebHistory(process.env.VUE_APP_CONTEXT_PATH_HOME),
   routes: [
     {
       path: '/',

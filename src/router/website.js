@@ -1,4 +1,4 @@
-import {createRouter, createWebHashHistory} from 'vue-router';
+import {createRouter, createWebHistory} from 'vue-router';
 import {ElLoading} from 'element-plus';
 import {Schema, checkPermission} from 'i-renderer/dist/js/renderer';
 import indexSchema from '../data/website.js';
@@ -6,7 +6,7 @@ const createRoutes = () => {
   let routerMask;
 
   const router = createRouter({
-    history: createWebHashHistory(process.env.VUE_APP_CONTEXT_PATH_WEBSITE),
+    history: createWebHistory(process.env.VUE_APP_CONTEXT_PATH_WEBSITE),
     routes: [
       {
         path: '/',
