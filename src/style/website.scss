@@ -86,7 +86,7 @@ $i-monaco-primary: #282a36 !default;
       cursor: pointer;
     }
   }
-  &.width-64 {
+  &.collapse {
     .i-website__ads {
       width: 0 !important;
     }
@@ -142,6 +142,8 @@ $i-monaco-primary: #282a36 !default;
   vertical-align: middle;
 }
 .i-website__drawer {
+  animation: unset;
+  transition: unset;
   .el-drawer__header {
     height: 100%;
     padding: 0;
