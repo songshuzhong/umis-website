@@ -17,7 +17,7 @@ const options = {
   domains: [process.env.VUE_APP_API_BASE],
   renderers: [Sendemail, Verify],
   actions: {
-    login: function (proxy, props, config, context, onActionFeedback) {
+    login: function (proxy, config, context, onActionFeedback) {
       const form = proxy.$parent.$parent.$parent;
       form.validate((valid) => {
         if (valid) {
@@ -26,7 +26,7 @@ const options = {
             .post(`${process.env.VUE_APP_API_BASE}/api/auth/login`, form.$parent.state.data)
             .then((res) => {
               localStorage.setItem('token', `Bearer ${res.data}`);
-              proxy.$dispatchAction(proxy, props, {url: 'localhost/website', actionType: 'url'}, {}, () => {});
+              proxy.$dispatchAction(proxy, {url: 'localhost/website', actionType: 'url'}, {}, () => {});
             })
             .catch((e) => {
               form.$parent.$refs.field[3].$refs.component.handleDraw();
