@@ -18,7 +18,7 @@ const options = {
   domains: [process.env.VUE_APP_API_BASE],
   renderers: [Sendemail, Verify],
   actions: {
-    login: function (proxy, props, config, context, onActionFeedback) {
+    login: function (proxy, props, context, onActionFeedback) {
       const form = proxy.$parent.$parent.$parent;
       form.validate((valid) => {
         if (valid) {

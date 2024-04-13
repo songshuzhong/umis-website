@@ -18,7 +18,7 @@ const config = {
   domains: [process.env.VUE_APP_API_BASE],
   renderers: [ToMobile, Ai],
   actions: {
-    logout: function(proxy, props, config, context, onActionFeedback) {
+    logout: function(proxy, props, context, onActionFeedback) {
       localStorage.removeItem('token');
       onActionFeedback&&onActionFeedback('CANCEL_LOADING');
       proxy.$dispatchAction(proxy, props, {url: 'localhost/login', actionType: 'url'}, {}, () => {});
