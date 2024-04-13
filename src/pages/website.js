@@ -21,7 +21,7 @@ const config = {
     logout: function(proxy, props, context, onActionFeedback) {
       localStorage.removeItem('token');
       onActionFeedback&&onActionFeedback('CANCEL_LOADING');
-      proxy.$dispatchAction(proxy, props, {url: 'localhost/login', actionType: 'url'}, {}, () => {});
+      proxy.$dispatchAction(proxy, {url: 'localhost/login', actionType: 'url'}, {}, () => {});
     },
   },
   request: function(req) {
