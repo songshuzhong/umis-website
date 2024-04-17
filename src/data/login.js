@@ -39,6 +39,17 @@ export default {
               "controls": [
                 {
                   "renderer": "input",
+                  "name": "namespace",
+                  "placeholder": "命名空间",
+                  "type": "text",
+                  "minlength": 0,
+                  "maxlength": 16,
+                  "rules": [],
+                  "requiredOn": "1==1",
+                  "showWordLimit": true
+                },
+                {
+                  "renderer": "input",
                   "name": "username",
                   "requiredOn": "1 === 1",
                   "placeholder": "用户名（guest）",
