@@ -60,11 +60,6 @@ export default defineComponent({
           actionType: 'trigger',
           triggered: 'SendEmailAction'
         },
-        {
-          renderer: 'action',
-          actionType: 'trigger',
-          triggered: 'SendEmailAction'
-        },
         {},
         () => {},
       );

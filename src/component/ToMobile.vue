@@ -15,7 +15,6 @@ export default defineComponent({
       }
       proxy.$dispatchAction(
         proxy,
-        {},
         {
           renderer: 'action',
           actionType: 'url',
