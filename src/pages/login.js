@@ -26,7 +26,8 @@ const options = {
             .post(`${process.env.VUE_APP_API_BASE}/api/auth/login`, form.$parent.state.data)
             .then((res) => {
               localStorage.setItem('token', `Bearer ${res.data}`);
-              proxy.$dispatchAction(proxy, {url: 'localhost/website', actionType: 'url'}, {}, () => {});
+              const url = process.env.NODE_ENV === 'dev'? 'localhost/website.html': 'localhost/website';
+              proxy.$dispatchAction(proxy, {url, actionType: 'url'}, {}, () => {});
             })
             .catch((e) => {
               form.$parent.$refs.field[4].$refs.component.handleDraw();
