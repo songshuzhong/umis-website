@@ -6,6 +6,7 @@ import ToMobile from '../component/ToMobile.vue';
 import Ai from '../component/Ai.vue';
 import Application from '../apps/Website.vue';
 import registrySw from '../registerServiceWorker';
+import '../utils/debug';
 
 import 'element-plus/dist/index.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';
@@ -17,10 +18,17 @@ const config = {
   domains: [process.env.VUE_APP_API_BASE],
   renderers: [ToMobile, Ai],
   actions: {
+<<<<<<< HEAD
     logout: function(proxy, config, context, onActionFeedback) {
       localStorage.removeItem('token');
       onActionFeedback&&onActionFeedback('CANCEL_LOADING');
       proxy.$dispatchAction(proxy, {url: process.env.NODE_ENV === 'dev'? 'localhost/login.html': 'localhost/login', actionType: 'url'}, {}, () => {});
+=======
+    logout: function(proxy, props, context, onActionFeedback) {
+      localStorage.removeItem('token');
+      onActionFeedback&&onActionFeedback('CANCEL_LOADING');
+      proxy.$dispatchAction(proxy, {url: 'localhost/login', actionType: 'url'}, {}, () => {});
+>>>>>>> feature/nestjs
     },
   },
   request: function(req) {

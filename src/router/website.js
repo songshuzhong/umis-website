@@ -1,20 +1,25 @@
-import {createRouter, createWebHashHistory} from 'vue-router';
+import {createRouter, createWebHistory} from 'vue-router';
 import {ElLoading} from 'element-plus';
+<<<<<<< HEAD
 import {Schema, checkPermission} from '../../../i-renderer/packages/index';
 import indexSchema from '../data/website.js';
 // const isGp = process.env.NODE_ENV === 'gp'; createWebHistory
 // const isDev = process.env.NODE_ENV === 'dev';
 
+=======
+import {Schema, checkPermission} from 'i-renderer/dist/js/renderer';
+import indexSchema from '../data/website.js';
+>>>>>>> feature/nestjs
 const createRoutes = () => {
   let routerMask;
 
   const router = createRouter({
-    history: createWebHashHistory(process.env.VUE_APP_CONTEXT_PATH_WEBSITE),
+    history: createWebHistory(process.env.VUE_APP_CONTEXT_PATH_WEBSITE),
     routes: [
       {
         path: '/',
         name: 'IWebsite',
-        title: '零代码-IRenderer案例',
+        title: '零代码-百搭云案例',
         component: Schema,
         props: {
           initSchema: indexSchema,
@@ -57,7 +62,7 @@ const createRoutes = () => {
     next();
   });
   router.afterEach((route) => {
-    document.title = route?.meta?.title || '零代码-IRenderer案例';
+    document.title = route?.meta?.title || '零代码-百搭云案例';
     const timer = setTimeout(() => {
       if (routerMask && typeof routerMask.close === 'function') {
         routerMask.close();

@@ -13,7 +13,7 @@
           "renderer": "avatar",
           "fit": "contain",
           "src": "https://songshuzhong.github.io/i-assets/public/img/shuttle.png",
-          "title": "IRenderer"
+          "title": "百搭云"
         },
         {
           "renderer": "menu",
@@ -33,13 +33,6 @@
               "title": "即刻体验",
               "renderer": "menuitem",
               "icon": "LocationInformation"
-            },
-            {
-              "name": "https://songshuzhong.github.io/i-website/dist/index.html",
-              "title": " 案例合集",
-              "renderer": "menuitem",
-              "icon": "DataBoard",
-              "extra": true
             },
             {
               "name": "logs",

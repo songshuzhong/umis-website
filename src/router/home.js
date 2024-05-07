@@ -1,13 +1,11 @@
-import {createRouter, createWebHashHistory} from 'vue-router';
+import {createRouter, createWebHistory} from 'vue-router';
 import {ElLoading, ElMessageBox} from 'element-plus';
 import {Schema, checkPermission} from '../../../i-renderer/packages/index';
 import frameSchema from '../data/homeFrame.json';
 import uaManager from '../utils/ua';
-// const isGp = process.env.NODE_ENV === 'gp'; createWebHistory
-// const isDev = process.env.NODE_ENV === 'dev';
 let routerMask;
 const router = createRouter({
-  history: createWebHashHistory(process.env.VUE_APP_CONTEXT_PATH_HOME),
+  history: createWebHistory(process.env.VUE_APP_CONTEXT_PATH_HOME),
   routes: [
     {
       path: '/',
@@ -25,28 +23,28 @@ const router = createRouter({
           path: '/index',
           component: Schema,
           props: {
-            url: 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/page/home',
+            url: `${process.env.VUE_APP_PUBLIC_PATH_HOME}/page/home.json`,
           },
         },
         {
           path: '/logs',
           component: Schema,
           props: {
-            url: 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/page/logs',
+            url: `${process.env.VUE_APP_PUBLIC_PATH_HOME}/page/logs.json`,
           },
         },
         {
           path: '/me',
           component: Schema,
           props: {
-            url: 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/page/me',
+            url: `${process.env.VUE_APP_PUBLIC_PATH_HOME}/page/me.json`,
           },
         },
         {
           path: '/quality',
           component: Schema,
           props: {
-            url: 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/page/me',
+            url: `${process.env.VUE_APP_PUBLIC_PATH_HOME}/page/me.json`,
           },
           meta: {
             permission: 'quality'
@@ -57,7 +55,7 @@ const router = createRouter({
           component: Schema,
           classname: 'i-renderer-website-schema__playground',
           props: {
-            url: 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/page/playground',
+            url: `${process.env.VUE_APP_PUBLIC_PATH_HOME}/page/playground.json`,
           },
           beforeEnter: () => {
             document.documentElement.classList.add('playground');
@@ -101,7 +99,7 @@ router.beforeEach((to, from, next) => {
   if (to?.meta?.permission) {
     const hasPermission = checkPermission(to.meta.permission);
     if (!hasPermission) {
-      return next('/home/forbidden');
+      return next('/forbidden');
     }
   }
   next();

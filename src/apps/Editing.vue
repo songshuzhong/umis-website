@@ -1,5 +1,12 @@
 <template>
-  <i-editor
+  <div
+    v-if="!isEditorReady"
+    v-loading="!isEditorReady"
+    class="i-editor__container"
+  />
+  <component
+    v-else
+    v-bind:is="'i-editor'"
     :editable="true"
     :nimble="true"
     :is-json="false"
@@ -7,15 +14,13 @@
 </template>
 
 <script>
-import {defineComponent, onBeforeMount} from 'vue';
-import {Editor} from '../../../i-renderer/packages/canvas/index';
+import {defineComponent, getCurrentInstance, onBeforeMount, onMounted, ref} from 'vue';
 
 export default defineComponent({
   name: 'ToEditor',
-  components: {
-    IEditor: Editor
-  },
   setup() {
+    const {proxy} = getCurrentInstance();
+    const isEditorReady = ref(false);
     onBeforeMount(() => {
       window.IRenderer = {
         pageInfo: {
@@ -29,7 +34,17 @@ export default defineComponent({
         }
       };
     });
+    onMounted(() => {
+      import(/* webpackChunkName:"editor",webpackPrefetch:false,webpackMode:"lazy" */ 'i-renderer/dist/js/editor').then(res => {
+        const {Editor} = res;
+        proxy.$.appContext.components[Editor.name] = Editor;
+        isEditorReady.value = true;
+      }).catch(e => {
+        console.error(e);
+      });
+    });
     return {
+      isEditorReady
     };
   }
 });

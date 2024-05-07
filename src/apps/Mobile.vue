@@ -37,7 +37,7 @@ export default defineComponent({
       update.value++;
     };
     onMounted(() => {
-      if (!isFrame.value) {
+      if (!isFrame.value && !query.shared) {
         const timer = window.setTimeout(() => {
           const page = document.querySelector('.i-page__container');
           const doc = document.documentElement;

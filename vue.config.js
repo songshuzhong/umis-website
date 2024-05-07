@@ -62,7 +62,7 @@ module.exports = {
     plugins: [
       new MonacoWebpackPlugin({
         filename: 'worker/[name].worker.js',
-        languages: ['json', 'less', 'javascript'],
+        languages: ['json', 'less', 'sql', 'javascript'],
       }),
       new GenerateSW ({
         clientsClaim: true,
@@ -71,7 +71,7 @@ module.exports = {
     ]
   },
   chainWebpack: config => {
-    ['home', 'login', 'website', 'playground', 'mobile'].forEach(entryName => {
+    ['home', 'login', 'website', 'playground', 'mobile', 'editing'].forEach(entryName => {
       config.plugins.delete(`prefetch-${entryName}`);
       config.plugins.delete(`preload-${entryName}`);
     });

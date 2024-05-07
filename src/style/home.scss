@@ -1,6 +1,12 @@
 /* stylelint-disable */
 @import './animation';
-
+.i-avatar__container {
+  .i-avatar__logo {
+    .el-avatar {
+      padding: 0;
+    }
+  }
+}
 html {
   .el-message {
     top: 70px !important;
@@ -49,7 +55,8 @@ html {
         .i-home__banner__wrapper {
           padding: 0;
           .el-button {
-            padding: 8px 15px
+            padding: 4px 40px;
+            box-sizing: content-box;
           }
         }
       }
@@ -220,7 +227,8 @@ html {
       padding: 0 100px;
       text-align: center;
       .el-button {
-        padding: 20px 30px;
+        padding: 4px 40px;
+        box-sizing: content-box;
       }
     }
     .i-home__banner__title {

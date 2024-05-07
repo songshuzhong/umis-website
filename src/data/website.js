@@ -37,8 +37,8 @@ export default {
       },
       {
         "renderer": "html",
-        "html": "欢迎使用IRenderer",
-        "inline": true,
+        "html": "早上好、中午好、下午好，欢迎使用百搭云！",
+        "inline": false,
         "classname": "font-size-20 font-weight-800"
       }
     ],
@@ -52,6 +52,16 @@ export default {
     ]
   },
   {
+    "renderer": "html",
+    "classname": "margin-bottom-10 padding-left-20",
+    "html": "- 🤔 When you arise in the morning,think of what a precious privilege it is to be alive - to breathe,to think,to enjoy,to love. ~Marcus Aurelius."
+  },
+  {
+    "renderer": "html",
+    "classname": "margin-bottom-20 padding-left-20",
+    "html": "- 😄 当你早晨起来的时候，想想活着是多么宝贵的特权——还能呼吸，还能思考，还能享受，还能去爱。~马尔克·奥列里乌斯。"
+  },
+  {
     "renderer": "grid",
     "body": [
       {
@@ -61,11 +71,6 @@ export default {
             "renderer": "html",
             "html": "基础版",
             "classname": "font-size-16 text-center font-weight-600 margin-bottom-20"
-          },
-          {
-            "renderer": "html",
-            "html": "<span id=\"busuanzi_container_site_pv\">本站总访问量<span id=\"busuanzi_value_site_pv\"></span>次</span>",
-            "classname": "font-size-14 text-center font-weight-400 margin-bottom-10"
           },
           {
             "renderer": "wrapper",
@@ -87,20 +92,6 @@ export default {
                 "renderer": "action",
                 "text": "赠送VIP群",
                 "type": "success",
-                "plain": true,
-                "static": true,
-                "actionApi": {
-                  "url": "",
-                  "method": "post",
-                  "params": {}
-                },
-                "params": {},
-                "body": {}
-              },
-              {
-                "renderer": "action",
-                "text": "提供发票",
-                "type": "warning",
                 "plain": true,
                 "static": true,
                 "actionApi": {
@@ -141,11 +132,6 @@ export default {
             "classname": "font-size-16 text-center font-weight-600 margin-bottom-20"
           },
           {
-            "renderer": "html",
-            "html": "<span id=\"busuanzi_container_site_uv\">本站访客数<span id=\"busuanzi_value_site_uv\"></span>人次</span>",
-            "classname": "font-size-14 text-center font-weight-400 margin-bottom-10"
-          },
-          {
             "renderer": "wrapper",
             "body": [
               {
@@ -165,20 +151,6 @@ export default {
                 "renderer": "action",
                 "text": "赠送VIP群",
                 "type": "success",
-                "plain": true,
-                "static": true,
-                "actionApi": {
-                  "url": "",
-                  "method": "post",
-                  "params": {}
-                },
-                "params": {},
-                "body": {}
-              },
-              {
-                "renderer": "action",
-                "text": "提供发票",
-                "type": "warning",
                 "plain": true,
                 "static": true,
                 "actionApi": {
@@ -309,7 +281,7 @@ export default {
                 ]
               }
             ],
-            "height": 140,
+            "height": 285,
             "indicatorPosition": "none",
             "arrow": "always"
           }
@@ -350,46 +322,6 @@ export default {
           "可视化编辑，无文档、无代码、无api",
           "长期维护、精益求精、客户至上"
         ]
-      }
-    ]
-  },
-  {
-    "renderer": "card",
-    "header": [
-      {
-        "renderer": "html",
-        "html": "使用方式",
-        "inline": true,
-        "classname": "font-size-16 text-center font-weight-600"
-      }
-    ],
-    "footer": [],
-    "classname": "margin-bottom-20",
-    "body": [
-      {
-        "renderer": "html",
-        "html": "<pre>// 安装\nnpm i \"i-renderer\";\n\n// 引入\nimport {IRenderer, Schema} from \"i-renderer\";\nimport \"i-renderer/dist/css/index.css\";\n\n// 使用\napp.use(IRenderer);</pre>"
-      },
-      {
-        "renderer": "data",
-        "initData": {
-          "JSON": {
-            "renderer": "page",
-            "initData": {
-              "name": "IRenderer"
-            },
-            "body": [
-              {
-                "renderer": "html",
-                "html": "Hi,欢迎使用<%=data.name%>"
-              }
-            ]
-          }
-        }
-      },
-      {
-        "renderer": "html",
-        "html": "<pre>&lt;schema\n  :init-schema=\"JSON\"\n  :can-schema-update=\"false\"\n  classname=\"i-renderer-schema__container\"\n/&gt;</pre>"
       }
     ]
   }
