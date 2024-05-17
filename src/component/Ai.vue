@@ -19,17 +19,12 @@
 </template>
 <script>
 import {defineComponent, ref} from 'vue';
-<<<<<<< HEAD
 
-=======
->>>>>>> feature/nestjs
 export default defineComponent({
   name: 'Ai',
   setup() {
     const isMounted = ref(false);
     const onShow = () => {
-<<<<<<< HEAD
-=======
       if (!isMounted.value) {
         const timer = setTimeout(() => {
           clearTimeout(timer);
@@ -44,7 +39,6 @@ export default defineComponent({
           };
         }, 2000);
       }
->>>>>>> feature/nestjs
       isMounted.value = true;
     };
     return {

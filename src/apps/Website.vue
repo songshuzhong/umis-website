@@ -8,7 +8,7 @@
 
 <script>
 import {defineComponent, onBeforeMount, onMounted, getCurrentInstance} from 'vue';
-import {Schema} from '../../../i-renderer/packages/index';
+import {Schema} from 'i-renderer/dist/js/renderer';
 import frameSchema from '../data/websiteFrame.json';
 
 export default defineComponent({
