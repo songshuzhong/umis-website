@@ -22,77 +22,6 @@
             "url": "/api/menu/0767bea4-c7e7-4aa7-a1b5-2fd5e1ec4a7f"
           },
           "body": []
-        },
-        {
-          "renderer": "wrapper",
-          "classname": "i-website__ads",
-          "body": [
-            {
-              "renderer": "carousel",
-              "classname": "i-home__carousel",
-              "autoplay": true,
-              "loop": true,
-              "body": [
-                {
-                  "renderer": "render",
-                  "body": [
-                    {
-                      "innerHTML": "招租广告位1",
-                      "tag": "span",
-                      "classname": "i-render__container",
-                      "action": {
-                        "renderer": "action",
-                        "actionType": "ajax",
-                        "actionApi": {
-                          "url": "https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/ads_click?order=1",
-                          "method": "get"
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "renderer": "render",
-                  "body": [
-                    {
-                      "innerHTML": "招租广告位2",
-                      "tag": "span",
-                      "classname": "i-render__container",
-                      "action": {
-                        "renderer": "action",
-                        "actionType": "ajax",
-                        "actionApi": {
-                          "url": "https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/ads_click?order=2",
-                          "method": "get"
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "renderer": "render",
-                  "body": [
-                    {
-                      "innerHTML": "招租广告位3",
-                      "tag": "span",
-                      "classname": "i-render__container",
-                      "action": {
-                        "renderer": "action",
-                        "actionType": "ajax",
-                        "actionApi": {
-                          "url": "https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/ads_click?order=3",
-                          "method": "get"
-                        }
-                      }
-                    }
-                  ]
-                }
-              ],
-              "height": 140,
-              "indicatorPosition": "none",
-              "arrow": "always"
-            }
-          ]
         }
       ]
     },
@@ -126,61 +55,6 @@
                 "cached": true
               },
               "body": [
-                {
-                  "renderer": "action",
-                  "icon": "HomeFilled",
-                  "actionType": "url",
-                  "name": "IWebsiteHome",
-                  "category": "icon",
-                  "size": 18,
-                  "url": "localhost/home"
-                },
-                {
-                  "renderer": "tomobile"
-                },
-                {
-                  "renderer": "action",
-                  "icon": "Bell",
-                  "category": "icon",
-                  "size": 18,
-                  "name": "iWebsiteBell",
-                  "popupType": "over",
-                  "popperWidth": "300px",
-                  "body": {
-                    "renderer": "tabs",
-                    "stretch": true,
-                    "panels": [
-                      {
-                        "label": "通知",
-                        "body": [
-                          {
-                            "renderer": "mapping",
-                            "value": "todos",
-                            "body": {
-                              "renderer": "each",
-                              "body": {
-                                "renderer": "html",
-                                "html": "<div class=\"border-top padding-10\"><%=data.title%></div>"
-                              }
-                            }
-                          }
-                        ]
-                      },
-                      {
-                        "label": "待办",
-                        "icon": "",
-                        "body": [
-                          {
-                            "renderer": "html",
-                            "html": "<div class=\"text-center\">空</div>"
-                          }
-                        ]
-                      }
-                    ],
-                    "activeTab": 1,
-                    "tabPosition": "top"
-                  }
-                },
                 {
                   "renderer": "action",
                   "icon": "FullScreen",
@@ -285,81 +159,6 @@
                       }
                     ]
                   }
-                },
-                {
-                  "renderer": "dropdown",
-                  "text": "<%=data.username%>",
-                  "popperClass": "i-website__header__dropdown",
-                  "name": "IWebsiteDropdown",
-                  "body": [
-                    {
-                      "renderer": "action",
-                      "icon": "HomeFilled",
-                      "actionType": "url",
-                      "name": "IWebsiteHome",
-                      "text": "官网",
-                      "url": "localhost/home"
-                    },
-                    {
-                      "renderer": "action",
-                      "icon": "Refresh",
-                      "text": "刷新",
-                      "name": "IWebsiteRefresh",
-                      "actionType": "reload",
-                      "reload": "AppMain"
-                    },
-                    {
-                      "renderer": "action",
-                      "icon": "Setting",
-                      "text": "设置",
-                      "category": "icon",
-                      "size": 18,
-                      "actionType": "drawer",
-                      "body": {
-                        "width": 30,
-                        "appendToBody": true,
-                        "body": [
-                          {
-                            "renderer": "setting"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "renderer": "action",
-                      "icon": "Edit",
-                      "text": "编辑",
-                      "name": "IWebsiteEdit",
-                      "actionType": "drawer",
-                      "trustOn": [
-                        -1,
-                        -5
-                      ],
-                      "body": {
-                        "width": 100,
-                        "appendToBody": true,
-                        "classname": "i-website__drawer",
-                        "body": [
-                          {
-                            "renderer": "editor",
-                            "editable": true,
-                            "isJson": false,
-                            "classname": "i-website__json-editor"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "renderer": "action",
-                      "text": "退出登录",
-                      "type": "primary",
-                      "icon": "SwitchButton",
-                      "actionType": "logout",
-                      "actionApi": {
-                        "url": "/logout"
-                      }
-                    }
-                  ]
                 }
               ]
             }
@@ -379,8 +178,4 @@
       ]
     }
   ]
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> feature/nestjs

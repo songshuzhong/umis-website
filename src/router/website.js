@@ -1,15 +1,7 @@
 import {createRouter, createWebHistory} from 'vue-router';
 import {ElLoading} from 'element-plus';
-<<<<<<< HEAD
-import {Schema, checkPermission} from '../../../i-renderer/packages/index';
-import indexSchema from '../data/website.js';
-// const isGp = process.env.NODE_ENV === 'gp'; createWebHistory
-// const isDev = process.env.NODE_ENV === 'dev';
-
-=======
 import {Schema, checkPermission} from 'i-renderer/dist/js/renderer';
 import indexSchema from '../data/website.js';
->>>>>>> feature/nestjs
 const createRoutes = () => {
   let routerMask;
 
@@ -19,7 +11,7 @@ const createRoutes = () => {
       {
         path: '/',
         name: 'IWebsite',
-        title: '零代码-百搭云案例',
+        title: '充电桩系统',
         component: Schema,
         props: {
           initSchema: indexSchema,
@@ -62,7 +54,7 @@ const createRoutes = () => {
     next();
   });
   router.afterEach((route) => {
-    document.title = route?.meta?.title || '零代码-百搭云案例';
+    document.title = route?.meta?.title || '充电桩系统';
     const timer = setTimeout(() => {
       if (routerMask && typeof routerMask.close === 'function') {
         routerMask.close();

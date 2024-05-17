@@ -1,6 +1,6 @@
 import {createApp} from 'vue';
 import ElementPlus, {ElNotification} from 'element-plus';
-import IRenderer, {api} from '../../../i-renderer/packages/index';
+import IRenderer, {api} from 'i-renderer/dist/js/renderer';
 import createRoutes from '../router/website';
 import ToMobile from '../component/ToMobile.vue';
 import Ai from '../component/Ai.vue';
@@ -10,7 +10,7 @@ import '../utils/debug';
 
 import 'element-plus/dist/index.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';
-import '../../../i-renderer/packages/assets/styles/index.scss';
+import 'i-renderer/dist/css/index.scss';
 import '../style/index.scss';
 
 const app = createApp(Application);
@@ -18,17 +18,10 @@ const config = {
   domains: [process.env.VUE_APP_API_BASE],
   renderers: [ToMobile, Ai],
   actions: {
-<<<<<<< HEAD
-    logout: function(proxy, config, context, onActionFeedback) {
-      localStorage.removeItem('token');
-      onActionFeedback&&onActionFeedback('CANCEL_LOADING');
-      proxy.$dispatchAction(proxy, {url: process.env.NODE_ENV === 'dev'? 'localhost/login.html': 'localhost/login', actionType: 'url'}, {}, () => {});
-=======
     logout: function(proxy, props, context, onActionFeedback) {
       localStorage.removeItem('token');
       onActionFeedback&&onActionFeedback('CANCEL_LOADING');
       proxy.$dispatchAction(proxy, {url: 'localhost/login', actionType: 'url'}, {}, () => {});
->>>>>>> feature/nestjs
     },
   },
   request: function(req) {
