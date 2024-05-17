@@ -159,6 +159,24 @@
                       }
                     ]
                   }
+                },
+                {
+                  "renderer": "dropdown",
+                  "text": "<%=data.username%>",
+                  "popperClass": "i-website__header__dropdown",
+                  "name": "IWebsiteDropdown",
+                  "body": [
+                    {
+                      "renderer": "action",
+                      "text": "退出登录",
+                      "type": "primary",
+                      "icon": "SwitchButton",
+                      "actionType": "logout",
+                      "actionApi": {
+                        "url": "/logout"
+                      }
+                    }
+                  ]
                 }
               ]
             }
