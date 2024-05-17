@@ -182,11 +182,7 @@ $i-monaco-primary: #282a36 !default;
   padding: 0 30px 0 80px;
   box-shadow: unset;
   .el-dialog__header {
-<<<<<<< HEAD
-    position: relative;
-=======
     position: unset;
->>>>>>> feature/nestjs
     background-color: transparent;
     border-bottom: 0;
   }
@@ -202,11 +198,6 @@ $i-monaco-primary: #282a36 !default;
   .el-dialog__footer {
     display: none;
   }
-<<<<<<< HEAD
-  .el-dialog__close {
-    font-weight: bold;
-    color: var(--el-color-black);
-=======
   .el-dialog__headerbtn {
     left: 50%;
     bottom: 0;
@@ -221,7 +212,6 @@ $i-monaco-primary: #282a36 !default;
     svg {
       color: white;
     }
->>>>>>> feature/nestjs
   }
   .i-website-intro__teacher {
     position: absolute;
@@ -236,23 +226,16 @@ $i-monaco-primary: #282a36 !default;
     font-size: 16px;
     font-weight: 500;
   }
-<<<<<<< HEAD
   .i-static__item-text {
     color: var(--el-text-color-primary);
   }
-=======
->>>>>>> feature/nestjs
 }
 .i-website__ai {
   position: absolute;
   top: 10px;
   right: 190px;
   padding-right: 5px;
-<<<<<<< HEAD
-  z-index: 2024;
-=======
   z-index: 10;
->>>>>>> feature/nestjs
   cursor: pointer;
 }
 .i-website__ai__popper {
