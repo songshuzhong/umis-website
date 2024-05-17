@@ -10,7 +10,7 @@ import '../utils/debug';
 
 import 'element-plus/dist/index.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';
-import 'i-renderer/dist/css/index.scss';
+import 'i-renderer/dist/css/index.css';
 import '../style/index.scss';
 
 const app = createApp(Application);
