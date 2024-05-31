@@ -40,7 +40,7 @@ export default {
                 {
                   "renderer": "input",
                   "name": "namespace",
-                  "placeholder": "命名空间",
+                  "placeholder": "命名空间（guest）",
                   "type": "text",
                   "minlength": 0,
                   "maxlength": 16,
