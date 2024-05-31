@@ -106,6 +106,16 @@ export default {
                   "renderer": "action",
                   "text": "登录",
                   "actionType": "login",
+                  "type": "primary",
+                  "body": {}
+                },
+                {
+                  "renderer": "action",
+                  "text": "游客访问",
+                  "actionType": "visitor",
+                  "classname": "i-login__visitor",
+                  "type": "success",
+                  "plain": true,
                   "body": {}
                 }
               ]
