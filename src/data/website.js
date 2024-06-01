@@ -14,10 +14,10 @@ export default {
       },
       "steps": [
         {
-          "target": "/layout/body/0/body/0/4/submenu",
+          "target": "/layout/body/0/body/0",
           "title": "新手指引",
           "description": "",
-          "placement": "right",
+          "placement": "right-start",
           "body": {
             "renderer": "wrapper",
             "classname": "i-website-intro",
@@ -48,8 +48,14 @@ export default {
           "title": "新手指引",
           "placement": "top",
           "description": "点击编辑页面、查看源码"
+        },
+        {
+          "target": "/page/body/3",
+          "title": "新手指引",
+          "placement": "top",
+          "description": "祝您财源滚滚，万事胜意！！"
         }
-      ]
+      ],
     },
     {
       "renderer": "action",
