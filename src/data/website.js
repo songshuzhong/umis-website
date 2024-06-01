@@ -14,10 +14,10 @@ export default {
       },
       "steps": [
         {
-          "target": "/layout/body/0/body/0/4/submenu",
+          "target": "/layout/body/0/body/0",
           "title": "新手指引",
           "description": "",
-          "placement": "right",
+          "placement": "right-start",
           "body": {
             "renderer": "wrapper",
             "classname": "i-website-intro",
@@ -48,6 +48,12 @@ export default {
           "title": "新手指引",
           "placement": "top",
           "description": "点击编辑页面、查看源码"
+        },
+        {
+          "target": "/page/body/3",
+          "title": "新手指引",
+          "placement": "top",
+          "description": "祝您财源滚滚，万事胜意！！"
         }
       ]
     },
@@ -75,6 +81,21 @@ export default {
           "renderer": "html",
           "html": "这是一款开箱即用的低代码前端开发工具库，同时它也经历过数十个真实项目的技术沉淀，确保框架在开发中可落地、可使用、可维护（注：在作者就职的公司，本框架已在电商、直播、OA、ERP等多个不同领域的中后台系统中应用并稳定运行）。"
         }
+      ]
+    },
+    {
+      "renderer": "wrapper",
+      "body": [
+        {
+          "renderer": "html",
+          "classname": "margin-bottom-10 padding-left-20",
+          "html": "- 🤔 When you arise in the morning,think of what a precious privilege it is to be alive - to breathe,to think,to enjoy,to love. ~Marcus Aurelius."
+        },
+        {
+          "renderer": "html",
+          "classname": "margin-bottom-20 padding-left-20",
+          "html": "- 😄 当你早晨起来的时候，想想活着是多么宝贵的特权——还能呼吸，还能思考，还能享受，还能去爱。~马尔克·奥列里乌斯。"
+        },
       ]
     },
     {
