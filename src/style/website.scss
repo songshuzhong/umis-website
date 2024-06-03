@@ -173,8 +173,22 @@ $i-monaco-primary: #282a36 !default;
 .i-website-intro {
   position: relative;
   background-color: transparent;
-  padding: 0 30px 0 80px;
   box-shadow: unset;
+  &.info2 {
+    height: 220px;
+    .i-website-intro__teacher {
+      margin-top: -60px;
+      margin-left: 140px;
+    }
+  }
+  &.info3 {
+    height: 300px;
+    .i-website-intro__teacher {
+      transform: scale3d(0.8, 0.8, 0.8);
+      margin-top: -70px;
+      margin-left: 160px;
+    }
+  }
   .el-dialog__header {
     position: relative;
     background-color: transparent;
@@ -196,15 +210,8 @@ $i-monaco-primary: #282a36 !default;
     font-weight: bold;
     color: var(--el-color-black);
   }
-  .i-website-intro__teacher {
-    position: absolute;
-    width: 250px;
-    margin: -80px 0 0 -45px;
-    height: auto;
-  }
   .i-static__container {
     margin: 80px 0 80px 0;
-    padding-left: 200px;
   }
   .i-static__item {
     font-size: 16px;
@@ -213,6 +220,13 @@ $i-monaco-primary: #282a36 !default;
   .i-static__item-text {
     color: var(--el-text-color-primary);
   }
+}
+.i-website-intro__teacher {
+  position: absolute;
+  width: 250px;
+  height: auto;
+  margin-left: 330px;
+  z-index: -1;
 }
 .i-website__ai {
   position: absolute;
