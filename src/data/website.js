@@ -10,13 +10,12 @@ export default {
       "showClose": true,
       "showIcon": true,
       "contentStyle": {
-        "width": "50%"
+        "width": "28%"
       },
       "steps": [
         {
           "target": "/layout/body/0/body/0",
           "title": "新手指引",
-          "description": "",
           "placement": "right-start",
           "body": {
             "renderer": "wrapper",
@@ -24,7 +23,7 @@ export default {
             "body": [
               {
                 "renderer": "image",
-                "src": `${process.env.VUE_APP_PUBLIC_PATH_HOME}/img/teacher.png`,
+                "src": `${process.env.VUE_APP_PUBLIC_PATH_HOME}/img/teacher20240603202012.png`,
                 "classname": "i-website-intro__teacher",
                 "previews": []
               },
@@ -47,15 +46,46 @@ export default {
           "target": "/layout/body/1/body/0/body/2/body/6",
           "title": "新手指引",
           "placement": "top",
-          "description": "点击编辑页面、查看源码"
+          "body": {
+            "renderer": "wrapper",
+            "classname": "i-website-intro info2",
+            "body": [
+              {
+                "renderer": "image",
+                "src": `${process.env.VUE_APP_PUBLIC_PATH_HOME}/img/teacher20240603202001.png`,
+                "classname": "i-website-intro__teacher",
+                "previews": []
+              },
+              {
+                "renderer": "html",
+                "html": "<h3>点击编辑页面、查看源码</h3>"
+              }
+            ]
+          }
         },
         {
           "target": "/page/body/3",
           "title": "新手指引",
           "placement": "top",
-          "description": "祝您财源滚滚，万事胜意！！"
+          "description": "",
+          "body": {
+            "renderer": "wrapper",
+            "classname": "i-website-intro info3",
+            "body": [
+              {
+                "renderer": "image",
+                "src": `${process.env.VUE_APP_PUBLIC_PATH_HOME}/img/teacher20240603202536.png`,
+                "classname": "i-website-intro__teacher",
+                "previews": []
+              },
+              {
+                "renderer": "html",
+                "html": "<h3>祝您财源滚滚，万事胜意！！</h3>"
+              }
+            ]
+          }
         }
-      ],
+      ]
     },
     {
       "renderer": "action",
