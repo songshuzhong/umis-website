@@ -74,7 +74,7 @@ export default {
             "body": [
               {
                 "renderer": "image",
-                "src": "/img/teacher20240603202536.png",
+                "src": "/img/teacher20240604070713.png",
                 "classname": "i-website-intro__teacher",
                 "previews": []
               },
