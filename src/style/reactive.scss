@@ -29,11 +29,9 @@ html {
     .i-website__aside {
       position: fixed;
       z-index: 2000;
-      &.width-64 {
+      visibility: visible;
+      &.collapse {
         visibility: hidden;
-      }
-      &.width-200 {
-        visibility: visible;
       }
     }
     .i-html__container,

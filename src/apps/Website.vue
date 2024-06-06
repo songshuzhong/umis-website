@@ -51,7 +51,21 @@ export default defineComponent({
     onBeforeMount(() => {
       const isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
       if (isMobile) {
-        frameSchema.initData.collapse = true;
+        proxy.$dispatchAction(
+          proxy,
+          {
+            renderer: 'action',
+            actionType: 'trigger',
+            triggered: 'IWebsiteNav'
+          },
+          {
+            renderer: 'action',
+            actionType: 'trigger',
+            triggered: 'IWebsiteNav'
+          },
+          {},
+          () => {},
+        );
       }
       isMobile && proxy.$message.success('切换到PC端体验更加哦！');
     });

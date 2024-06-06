@@ -3,7 +3,6 @@ import ElementPlus, {ElNotification} from 'element-plus';
 import IRenderer, {api} from '../../../i-renderer/packages/index';
 import createRoutes from '../router/website';
 import ToMobile from '../component/ToMobile.vue';
-import Weather from '../component/Weather.vue';
 import Ai from '../component/Ai.vue';
 import Application from '../apps/Website.vue';
 import registrySw from '../registerServiceWorker';
@@ -22,7 +21,7 @@ const config = {
     }));
   },
   domains: [process.env.VUE_APP_API_BASE],
-  renderers: [ToMobile, Ai, Weather],
+  renderers: [ToMobile, Ai],
   actions: {
     logout: function(proxy, config, context, onActionFeedback) {
       localStorage.removeItem('token');
