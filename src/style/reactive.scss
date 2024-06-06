@@ -3,6 +3,16 @@ html {
     top: 70px !important;
   }
   &.mobile {
+    .el-tour__content {
+      width: 100% !important;
+      max-width: 100% !important;
+      top: 25% !important;
+      left: 0 !important;
+      right: 0 !important;
+      .i-html__container {
+        font-size: large !important;
+      }
+    }
     .i-website__container {
       flex-direction: row-reverse;
     }
@@ -62,7 +72,10 @@ html {
         display: none;
       }
       .i-website-intro__teacher {
-        display: none;
+        margin-top: 5px;
+        margin-left: 120px;
+        z-index: 123;
+        transform: scale(.5);
       }
       .i-static__container {
         margin-top: 20px;
