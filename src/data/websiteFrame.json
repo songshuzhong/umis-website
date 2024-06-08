@@ -17,7 +17,7 @@
           "mode": "vertical",
           "defaultActive": "",
           "target": "IWebsiteContainer",
-          "title": "IRenderer",
+          "title": "百搭云",
           "initApi": {
             "url": "/api/menu/0767bea4-c7e7-4aa7-a1b5-2fd5e1ec4a7f"
           },
