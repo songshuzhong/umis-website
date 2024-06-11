@@ -8,7 +8,7 @@
       <i-schema
         :init-schema="initSchema"
         :can-schema-update="false"
-        path="/editor"
+        track="/editor"
         classname="i-home__playground__preview"
       />
     </div>
