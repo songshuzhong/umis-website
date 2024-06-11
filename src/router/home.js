@@ -39,6 +39,9 @@ const router = createRouter({
           props: {
             url: `${process.env.VUE_APP_PUBLIC_PATH_HOME}/page/me.json`,
           },
+          meta: {
+            permission: 'quality'
+          }
         },
         {
           path: '/quality',
