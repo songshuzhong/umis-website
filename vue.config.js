@@ -62,7 +62,7 @@ module.exports = {
     plugins: [
       new MonacoWebpackPlugin({
         filename: 'worker/[name].worker.js',
-        languages: ['json', 'less', 'sql', 'javascript'],
+        languages: ['json', 'less', 'sql', 'javascript', 'html'],
       }),
       new GenerateSW ({
         clientsClaim: true,
