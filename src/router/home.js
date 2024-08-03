@@ -25,21 +25,21 @@ const router = createRouter({
           path: '/index',
           component: Schema,
           props: {
-            url: 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/page/home',
+            url: `${process.env.VUE_APP_PUBLIC_PATH_HOME}/page/home.json`,
           },
         },
         {
           path: '/logs',
           component: Schema,
           props: {
-            url: 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/page/logs',
+            url: `${process.env.VUE_APP_PUBLIC_PATH_HOME}/page/logs.json`,
           },
         },
         {
           path: '/me',
           component: Schema,
           props: {
-            url: 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/page/me',
+            url: `${process.env.VUE_APP_PUBLIC_PATH_HOME}/page/me.json`,
           },
         },
         {

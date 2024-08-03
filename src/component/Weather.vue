@@ -25,6 +25,7 @@
           <p id="reporttime">消息发布时间:{{ state.reporttime }}</p>
         </div>
     </div>
+    <iframe src='https://view.officeapps.live.com/op/view.aspx?src=https://songshuzhong.github.io/i-assets/public/thor.docx' width='100%' height='500px' frameborder='0'></iframe>
   </el-card>
 </template>
 <script>

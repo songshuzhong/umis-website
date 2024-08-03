@@ -9,6 +9,11 @@
       "classname": "i-website__aside",
       "body": [
         {
+          "renderer": "html",
+          "classname": "i-website__title",
+          "html": "IRenderer"
+        },
+        {
           "renderer": "menu",
           "name": "IWebsiteNav",
           "classname": "i-website_menu-vertical",
@@ -17,7 +22,7 @@
           "mode": "vertical",
           "defaultActive": "",
           "target": "IWebsiteContainer",
-          "title": "IRenderer",
+          "title": "",
           "initApi": {
             "url": "/api/menu/0767bea4-c7e7-4aa7-a1b5-2fd5e1ec4a7f"
           },
