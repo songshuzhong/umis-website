@@ -50,15 +50,25 @@ $i-monaco-primary: #282a36 !default;
   display: flex;
   align-items: center;
 }
-.i-website__title {
+.i-website__logo__wrapper {
   width: 100%;
   height: 60px;
   margin-top: -60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.i-website__title {
+  margin-left: 20px;
   line-height: 60px;
   font-size: 20px;
   font-weight: 900;
-  text-align: center;
-  color: var(--el-color-white);
+  color: var(--i-menu-text-color);
+  animation: zoom_3 0.7s ease-in-out;;
+}
+.i-website__logo {
+  width: 36px;
+  height: 36px;
 }
 .i-website__aside {
   position: relative;
@@ -94,8 +104,7 @@ $i-monaco-primary: #282a36 !default;
   }
   &.collapse {
     .i-website__title {
-      font-size: 12px;
-      font-size: 500;
+      display: none;
     }
     .i-website__ads {
       width: 0 !important;

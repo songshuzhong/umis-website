@@ -9,9 +9,22 @@
       "classname": "i-website__aside",
       "body": [
         {
-          "renderer": "html",
-          "classname": "i-website__title",
-          "html": "IRenderer"
+          "renderer": "render",
+          "classname": "i-website__logo__wrapper",
+          "body": [
+            {
+              "renderer": "image",
+              "src": "/shuttle.png",
+              "classname": "i-website__logo",
+              "previews": []
+            },
+            {
+              "renderer": "html",
+              "classname": "i-website__title",
+              "html": "百搭云平台",
+              "inline": true
+            }
+          ]
         },
         {
           "renderer": "menu",
