@@ -14,7 +14,7 @@
           "body": [
             {
               "renderer": "image",
-              "src": "/shuttle.png",
+              "src": "https://songshuzhong.github.io/i-assets/public/img/shuttle.png",
               "classname": "i-website__logo",
               "previews": []
             },
