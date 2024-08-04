@@ -10,8 +10,8 @@ export default defineComponent({
     const {proxy} = getCurrentInstance();
     const onClick = () => {
       let pageId = '8f287653-1059-414b-9485-dffbfe91d2b0';
-      if (window.IRenderer.pageInfo && window.IRenderer.pageInfo.pageId) {
-        pageId = window.IRenderer.pageInfo.pageId;
+      if (proxy.$.appContext.$IRenderer.pageInfo && proxy.$.appContext.$IRenderer.pageInfo.pageId) {
+        pageId = proxy.$.appContext.$IRenderer.pageInfo.pageId;
       }
       proxy.$dispatchAction(
         proxy,

@@ -28,7 +28,7 @@ export default defineComponent({
     const isEditorReady = ref(false);
     let notice;
     onBeforeMount(() => {
-      window.IRenderer = {
+      proxy.$.appContext.$IRenderer = {
         pageSchema: DEFAULT_SCHEMA
       };
       uaManager.setWidth(window.innerHeight);
