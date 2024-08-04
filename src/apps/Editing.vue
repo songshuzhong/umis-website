@@ -22,7 +22,7 @@ export default defineComponent({
     const {proxy} = getCurrentInstance();
     const isEditorReady = ref(false);
     onBeforeMount(() => {
-      window.IRenderer = {
+      proxy.$.appContext.$IRenderer = {
         pageInfo: {
           assets: []
         },
