@@ -15,6 +15,13 @@
     <style type="text/css"><%=htmlWebpackPlugin.options.skeletonStyle%></style>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="11a6942e-b7e8-4651-8afa-d3f045651ea9"></script>
     <script type="text/javascript">
+      try {
+        var IRENDERER_ENV = JSON.parse(localStorage.getItem('RENDERER_ENV'));
+        var menuBgColor = IRENDERER_ENV.menuBgColor;
+        var menuTextColor = IRENDERER_ENV.menuTextColor;
+        document.documentElement.style.setProperty('--i-menu-text-color', menuTextColor);
+        document.documentElement.style.setProperty('--i-menu-background-color', menuBgColor);
+      } catch(e) {}
       (function flexible (window, document) {const docEl = document.documentElement;const dpr = window.devicePixelRatio || 1;const isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);const html = docEl.classList;if (isMobile) {html.remove('pc');html.add('mobile');} else {html.remove('mobile');html.add('pc');}function setBodyFontSize () {if (document.body && document.body.clientWidth <= 750) {document.body.style.fontSize = (12 * dpr) + 'px';} else if (document.body && document.body.clientWidth >= 750) {} else {document.addEventListener('DOMContentLoaded', setBodyFontSize);}}setBodyFontSize();function setRemUnit () {var rem = 0;if (document.body && document.body.clientWidth >= 375) {rem = 375 / 10;} else if (!document.body && docEl.clientWidth > 375) {rem = 375 / 10;} else {rem = docEl.clientWidth / 10;}docEl.style.fontSize = '37.5px';}setRemUnit();window.addEventListener('resize', setRemUnit);window.addEventListener('pageshow', function (e) {if (e.persisted) {setRemUnit();}});if (dpr >= 2) {var fakeBody = document.createElement('body');var testElement = document.createElement('div');testElement.style.border = '.5px solid transparent';fakeBody.appendChild(testElement);docEl.appendChild(fakeBody);if (testElement.offsetHeight === 1) {docEl.classList.add('hairlines');}docEl.removeChild(fakeBody);}}(window, document))
     </script>
   </head>

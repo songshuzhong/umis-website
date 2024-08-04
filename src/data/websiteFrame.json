@@ -16,6 +16,7 @@
               "renderer": "image",
               "src": "https://songshuzhong.github.io/i-assets/public/img/shuttle.png",
               "classname": "i-website__logo",
+              "placeholder": " ",
               "previews": []
             },
             {
