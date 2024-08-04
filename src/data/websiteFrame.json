@@ -16,6 +16,7 @@
               "renderer": "image",
               "src": "/shuttle.png",
               "classname": "i-website__logo",
+              "placeholder": " ",
               "previews": []
             },
             {
