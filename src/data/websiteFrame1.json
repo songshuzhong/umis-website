@@ -264,8 +264,7 @@
       }
     ]
   },
-  "aside": {
-    "renderer": "aside",
+  "body": {
     "name": "IWebsiteNav",
     "classname": "i-website__aside",
     "body": [
@@ -341,12 +340,6 @@
         ]
       }
     ]
-  },
-  "main": {
-    "renderer": "main",
-    "name": "AppMain",
-    "routerView": true,
-    "classname": "i-website__main"
   },
   "footer": {
     "renderer": "footer",
