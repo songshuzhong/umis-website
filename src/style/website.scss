@@ -5,28 +5,15 @@ $i-monaco-primary: #282a36 !default;
   overflow: hidden;
 }
 .i-website__header {
-  position: relative;
-  border-bottom: 1px solid var(--el-bg-color-page);
-  line-height: 60px;
-  text-align: left;
-  font-size: 12px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
-  z-index: 1;
   .el-button {
     border: 0;
   }
   .i-action__avatar {
     background: transparent;
   }
-  .i-avatar__container {
-    margin-left: 20px;
-    vertical-align: middle;
-    img {
-      width: 40px;
-    }
-  }
   .i-dropdown__container {
     vertical-align: middle;
+    color: inherit;
   }
   .el-color-picker__trigger {
     width: 18px;
@@ -50,33 +37,15 @@ $i-monaco-primary: #282a36 !default;
   display: flex;
   align-items: center;
 }
-.i-website__logo__wrapper {
-  width: 100%;
-  height: 60px;
-  margin-top: -60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.i-website__title {
-  margin-left: 20px;
-  line-height: 60px;
-  font-size: 20px;
-  font-weight: 900;
-  color: var(--i-menu-text-color);
-  animation: zoom_move_2 0.4s ease-in-out;
-}
-.i-website__logo {
-  width: 36px;
-  height: 36px;
+.i-website__container {
+  &.collapse {
+    .i-website__ads {
+      width: 0 !important;
+    }
+  }
 }
 .i-website__aside {
-  position: relative;
-  height: 100%;
-  padding: 60px 0 50px 0;
-  background: var(--i-menu-background-color);
-  transition: 0.3s width ease-in-out;
-  overflow: hidden;
+  padding-bottom: 56px;
   .i-website__ads {
     position: fixed;
     bottom: 0;
@@ -101,25 +70,6 @@ $i-monaco-primary: #282a36 !default;
       background: var(--el-fill-color-blank);
       cursor: pointer;
     }
-  }
-  &.collapse {
-    .i-website__title {
-      display: none;
-    }
-    .i-website__ads {
-      width: 0 !important;
-    }
-  }
-  &::-webkit-scrollbar {
-    width: 0;
-  }
-  .el-menu {
-    height: 100%;
-    border-right: 0;
-    overflow: scroll;
-  }
-  .i-website_menu-vertical {
-    margin-bottom: 50px;
   }
   .i-wrapper__container {
     position: relative;
@@ -157,11 +107,6 @@ $i-monaco-primary: #282a36 !default;
     text-align: center;
   }
 }
-.i-website__breadcrumb {
-  margin-left: 20px;
-  display: inline-block;
-  vertical-align: middle;
-}
 .i-website__drawer {
   animation: unset;
   transition: unset;
@@ -187,10 +132,6 @@ $i-monaco-primary: #282a36 !default;
 }
 .i-website__setting__container {
   padding-bottom: 50px;
-}
-.el-menu--popup {
-  max-height: 60vh !important;
-  overflow-y: scroll;
 }
 .i-website__header__upload {
   &.el-popover.el-popper {

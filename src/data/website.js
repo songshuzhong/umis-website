@@ -14,7 +14,7 @@ export default {
       },
       "steps": [
         {
-          "target": "/layout/body/0/body/0",
+          "target": "/admin/menu",
           "title": "新手指引",
           "placement": "right-start",
           "body": {
@@ -43,7 +43,7 @@ export default {
           }
         },
         {
-          "target": "/layout/body/1/body/0/body/2/body/6",
+          "target": "/admin/header/0/body/6",
           "title": "新手指引",
           "placement": "top",
           "body": {

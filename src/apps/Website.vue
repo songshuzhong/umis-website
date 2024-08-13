@@ -9,7 +9,7 @@
 <script>
 import {defineComponent, onBeforeMount, onMounted, getCurrentInstance} from 'vue';
 import {Schema} from '../../../i-renderer/packages/index';
-import frameSchema from '../data/websiteFrame.json';
+import frameSchema from '../data/websiteFrame1.json';
 
 export default defineComponent({
   name: 'Application',
@@ -86,7 +86,10 @@ export default defineComponent({
     });
 
     return {
-      frameSchema
+      frameSchema: {
+        renderer: 'admin',
+        ...frameSchema
+      }
     };
   }
 });
