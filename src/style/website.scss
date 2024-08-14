@@ -225,13 +225,12 @@ $i-monaco-primary: #282a36 !default;
   margin-top: calc((0 - var(--el-loading-spinner-size)) / 2);
 }
 .i-website__router__loader {
-  height: 4px;
-  top: 0;
+  height: 0;
   &::before {
     content: '';
     display: block;
     width: 100%;
-    height: 100%;
+    height: 4px;
     background: linear-gradient(to right, #c6e2ff, #1677ff);
     transform-origin: 0 50%;
     animation: grow 1s ease-out;
