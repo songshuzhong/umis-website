@@ -1,5 +1,5 @@
 <template>
-  <i-icon class="i-action" icon="Iphone" @click="onClick" />
+  <i-icon class="i-action" icon="Iphone" color="inherit" @click="onClick" />
 </template>
 
 <script>
