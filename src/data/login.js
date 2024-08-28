@@ -110,7 +110,7 @@ export default {
                 },
                 {
                   "renderer": "action",
-                  "text": "游客访问",
+                  "text": "游客访问(免密码)",
                   "actionType": "visitor",
                   "classname": "i-login__visitor",
                   "type": "success",
