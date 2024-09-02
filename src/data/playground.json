@@ -13,6 +13,19 @@
       ],
       "body": [
         {
+          "renderer": "service",
+          "body": [
+            {
+              "renderer": "html",
+              "inline": true,
+              "html": "<span><%=$.date%></span>\r\n<h1 class=\"time__container\">\r\n  <span class=\"time\"><%=$.hours%></span>\r\n  <span>:</span>\r\n  <span class=\"time\"><%=$.min%></span>\r\n  <span class=\"time\">:</span>\r\n  <span class=\"time\"><%=$.sec%></span>\r\n</h1>"
+            }
+          ],
+          "promiseType": "sw",
+          "silentLoading": true,
+          "interval": 1000
+        },
+        {
           "renderer": "action",
           "text": "跳转到外链",
           "actionType": "url",
@@ -253,5 +266,6 @@
     "title": "欢迎体验，纵享丝滑",
     "showForm": false
   },
-  "mergeUrlQuery": true
+  "mergeUrlQuery": true,
+  "worker": "e => {   \r\n  if (e.jobOrigin == '/page/body/1') {\r\n    return Promise.reject({message: 'sw校验不通过'});\r\n  }   \r\n  var monthNames = [ \"January\", \"February\", \"March\", \"April\", \"May\", \"June\",\"July\", \"August\", \"September\", \"October\", \"November\", \"December\" ]; \r\n  var dayNames= [\"Sunday\",\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\",\"Saturday\"]\r\n\r\n  var today = new Date();\r\n\r\n  var date = (dayNames[today.getDay()] + \" \" + \r\n  today.getDate() + ' ' + monthNames[today.getMonth()] + ' ' +today.getFullYear());\r\n\r\n  var h = today.getHours();\r\n  var m = today.getMinutes();\r\n  var s = today.getSeconds();\r\n  var day = h<11 ? 'AM': 'PM';\r\n\r\n  h = h<10? '0'+h: h;\r\n  m = m<10? '0'+m: m;\r\n  s = s<10? '0'+s: s;               \r\n  return {\r\n    hours: h,\r\n    min: m,\r\n    sec: s,\r\n    day,\r\n    date\r\n  };\r\n}"
 }
