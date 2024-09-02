@@ -113,6 +113,11 @@
               "width": 30,
               "appendToBody": true,
               "classname": "i-website__setting__container",
+              "header": {
+                "renderer": "notice",
+                "title": "菜单背景色修改后需刷新浏览器",
+                "type": "info"
+              },
               "body": [
                 {
                   "renderer": "setting"
@@ -135,13 +140,20 @@
               "width": 100,
               "appendToBody": true,
               "classname": "i-website__drawer",
-              "header": [
+              "body": [
                 {
                   "renderer": "editor",
                   "editable": true,
                   "nimble": true,
                   "isJson": false,
                   "classname": "i-website__json-editor"
+                },
+                {
+                  "renderer": "action",
+                  "icon": "Close",
+                  "category": "icon",
+                  "size": 18,
+                  "classname": "i-website__editor__close"
                 }
               ]
             }
@@ -217,6 +229,7 @@
                 "body": {
                   "width": 30,
                   "appendToBody": true,
+                  "title": "菜单背景色修改后需刷新浏览器",
                   "body": [
                     {
                       "renderer": "setting"

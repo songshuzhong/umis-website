@@ -66,7 +66,12 @@ export default {
                   "requiredOn": "1 === 1",
                   "placeholder": "密码（_123456qwerty）",
                   "type": "password",
-                  "rules": []
+                  "rules": [
+                    {
+                      "type": "sw",
+                      "trigger": "blur"
+                    }
+                  ]
                 },
                 {
                   "renderer": "input",
@@ -272,5 +277,5 @@ export default {
       "tabPosition": "top"
     }
   ],
-  "innerStyle": ""
+  "worker": "e => {\n  let password = e.data.password;\n  let message = '';\n  let strength = 0;\n  if (password.length > 8) {\n    strength += 1;\n  }\n  if (password.match(/([a-z]+)/)) {\n    strength += 1;\n  }\n  if (password.match(/([A-Z]+)/)) {\n    strength += 1;\n  }\n  if (password.match(/([0-9]+)/)) {\n    strength += 1;\n  }\n  if (password.match(/([!,%,&,@,#,$,^,*,?,_,~])/)) {\n    strength += 1;\n  }\n  if (password.length > 12 && strength < 4) {\n    strength += 1;\n  }\n  switch(strength){\n    case 0:\n      message = '密码过于简单';\n      break;\n    case 1:\n      message = '密码需要包含字母或数字';\n      break;\n    case 2:\n      message = '密码需要包含字母、数字和特殊字符';\n      break;\n    case 3:\n      message = '密码需要包含字母、数字、特殊字符和长度大于8位';\n      break;\n    case 4:\n      message = '密码符合要求';\n      break;\n    default:\n      message = '未知错误';\n  }\n  if (strength === 4) {\n    return Promise.resolve();\n  } else {\n    return Promise.reject({\n      message,\n      status: 'error'\n    });\n  }\n};"
 }
