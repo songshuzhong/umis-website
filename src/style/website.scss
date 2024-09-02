@@ -110,28 +110,30 @@ $i-monaco-primary: #282a36 !default;
 .i-website__drawer {
   animation: unset;
   transition: unset;
-  .el-drawer__header {
-    height: 100%;
-    padding: 0;
-    display: block;
-    background-color: unset;
-    .i-editor__container__tools {
-      padding-right: 50px;
-    }
-    .el-drawer__close-btn {
-      position: absolute;
-      top: 8px;
-      right: 10px;
-      z-index: 100;
-    }
+  .el-drawer__header,
+  .el-drawer__footer {
+    display: none;
   }
   .el-drawer__body {
     padding: 0;
     margin: 0;
   }
 }
+.i-editor__container__tools {
+  padding-right: 50px;
+}
+.i-website__editor__close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-weight: 900;
+  z-index: 100;
+}
 .i-website__setting__container {
   padding-bottom: 50px;
+  .el-alert {
+    background: transparent;
+  }
 }
 .i-website__header__upload {
   &.el-popover.el-popper {
