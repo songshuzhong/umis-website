@@ -110,6 +110,7 @@ $i-monaco-primary: #282a36 !default;
 .i-website__drawer {
   animation: unset;
   transition: unset;
+  animation: reappearing 0.4s ease-in;
   .el-drawer__header,
   .el-drawer__footer {
     display: none;
