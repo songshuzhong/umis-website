@@ -13,7 +13,7 @@
           "renderer": "avatar",
           "fit": "contain",
           "src": "https://songshuzhong.github.io/i-assets/public/img/shuttle.png",
-          "title": "百搭云"
+          "title": "百搭云博客"
         },
         {
           "renderer": "menu",
@@ -154,7 +154,7 @@
     {
       "renderer": "footer",
       "classname": "i-home__copyright",
-      "body": "copyright © 2022 sshuzhong@outlook.com"
+      "body": "copyright © 2022 sshuzhong@outlook.com(京ICP备2023038110号)"
     }
   ]
 }

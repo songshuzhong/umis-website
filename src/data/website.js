@@ -99,7 +99,7 @@ export default {
       "header": [
         {
           "renderer": "html",
-          "html": "早上好、中午好、下午好，欢迎使用百搭云！",
+          "html": "早上好、中午好、下午好，欢迎来到百搭云博客！",
           "inline": false,
           "classname": "font-size-20 font-weight-800"
         }

@@ -1,7 +1,7 @@
 {
   "name": "IWebsiteContainer",
   "classname": "i-website__container",
-  "title": "百搭云平台",
+  "title": "百搭云博客",
   "logo": "https://songshuzhong.github.io/i-assets/public/img/shuttle.png",
   "menu": {
     "renderer": "menu",
@@ -357,6 +357,6 @@
   "footer": {
     "renderer": "footer",
     "classname": "i-website__footer",
-    "body": "copyright © 2022 sshuzhong@outlook.com"
+    "body": "copyright © 2022 sshuzhong@outlook.com(京ICP备2023038110号)"
   }
 }

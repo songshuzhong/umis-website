@@ -11,7 +11,7 @@ const createRoutes = () => {
       {
         path: '/',
         name: 'IWebsite',
-        title: '零代码-百搭云案例',
+        title: '零代码-百搭案例',
         component: Schema,
         props: {
           initSchema: indexSchema,
@@ -54,7 +54,7 @@ const createRoutes = () => {
     next();
   });
   router.afterEach((route) => {
-    document.title = route?.meta?.title || '零代码-百搭云案例';
+    document.title = route?.meta?.title || '零代码-百搭案例';
     const timer = setTimeout(() => {
       if (routerMask && typeof routerMask.close === 'function') {
         routerMask.close();
