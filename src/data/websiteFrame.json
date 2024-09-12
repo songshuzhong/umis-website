@@ -1,7 +1,7 @@
 {
   "name": "IWebsiteContainer",
   "classname": "i-website__container",
-  "title": "百搭云博客",
+  "title": "个人组件库分享",
   "logo": "https://songshuzhong.github.io/i-assets/public/img/shuttle.png",
   "menu": {
     "renderer": "menu",

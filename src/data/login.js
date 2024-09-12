@@ -7,7 +7,7 @@ export default {
       "src": `${process.env.VUE_APP_PUBLIC_PATH_HOME}/shuttle.png`,
       "classname": "i-login__logo",
       "previews": [],
-      "title": "百搭云博客",
+      "title": "个人组件库分享",
       "shape": "square",
       "borderRadius": 0,
       "color": "#606266",
