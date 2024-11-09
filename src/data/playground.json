@@ -76,7 +76,7 @@
                 "renderer": "action",
                 "text": "提交",
                 "actionType": "trigger",
-                "triggered": "DemoForm",
+                "triggered": "DemoForm.submit",
                 "body": {}
               }
             ],
