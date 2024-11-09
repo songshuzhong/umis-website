@@ -6,7 +6,7 @@ import ToMobile from '../component/ToMobile.vue';
 import Ai from '../component/Ai.vue';
 import Application from '../apps/Website.vue';
 import registrySw from '../registerServiceWorker';
-
+import Verify from '../component/Verify';
 import 'element-plus/dist/index.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';
 import '../../../i-renderer/packages/assets/styles/index.scss';
@@ -21,7 +21,7 @@ const config = {
     }));
   },
   domains: [process.env.VUE_APP_API_BASE],
-  renderers: [ToMobile, Ai],
+  renderers: [ToMobile, Verify, Ai],
   actions: {
     logout: function(proxy, config, context, onActionFeedback) {
       localStorage.removeItem('token');

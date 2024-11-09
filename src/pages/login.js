@@ -12,7 +12,7 @@ import '../../../i-renderer/packages/assets/styles/index.scss';
 import '../style/login.scss';
 
 const app = createApp(Application);
-const onLogin = (proxy, config, context, onActionFeedback, formdata, form) => {
+const onLogin = (proxy, config, context, onActionFeedback, formdata) => {
   api().staticApi()
     .post(`${process.env.VUE_APP_API_BASE}/api/auth/login`, formdata)
     .then((res) => {
@@ -21,7 +21,7 @@ const onLogin = (proxy, config, context, onActionFeedback, formdata, form) => {
       proxy.$dispatchAction(proxy, {url, actionType: 'url'}, {}, () => {});
     })
     .catch((e) => {
-      form && form.$parent.$refs.field[4].$refs.component.handleDraw();
+      // form && form.$parent.$refs.field[4].$refs.component.handleDraw();
       ElNotification({
         title: `错误${e?.data?.code || e?.response?.data?.code || e.code}`,
         message: e?.data?.message || e?.response?.data?.message || e.message,
@@ -54,13 +54,17 @@ const options = {
       });
     },
     login: function (proxy, config, context, onActionFeedback) {
-      const form = proxy.$parent.$parent.$parent;
-      form.validate((valid) => {
-        if (valid) {
-          onLogin(proxy, config, context, onActionFeedback, form.$parent.state.data, form);
-        } else {
-          onActionFeedback&&onActionFeedback('CANCEL_LOADING');
+      config.actionType = 'extends';
+      config.triggered = 'valid';
+      this.extends(proxy, config, context, onActionFeedback, {}).then((isValid) => {
+        if (isValid) {
+          const data = this.extends(proxy, {actionType: 'extends', triggered: 'getData'}, context, onActionFeedback, {});
+          onLogin(proxy, config, context, onActionFeedback, data);
         }
+      }).catch(e => {
+        console.log(e);
+      }).finally(() => {
+        onActionFeedback&&onActionFeedback('CANCEL_LOADING');
       });
     },
   }
