@@ -1,0 +1,31 @@
+{
+  "code": 200,
+  "data": {
+    "id": 17,
+    "username": "guest",
+    "nickname": null,
+    "avatar": "/avatars/7ace12ccae0aeb68e016a1201aaf0578.png",
+    "email": "15510351839@163.com",
+    "namespace": "guest",
+    "level": 0,
+    "space": 24,
+    "memory": 2,
+    "createdAt": "2023-12-16T03:46:19.000Z",
+    "updatedAt": "2023-12-16T03:46:19.000Z",
+    "until": null,
+    "roles": [
+      0
+    ],
+    "permissions": [
+      -8,
+      -7,
+      -5,
+      -4,
+      -3,
+      -2,
+      -1,
+      0
+    ]
+  },
+  "describe": "请求成功"
+}
