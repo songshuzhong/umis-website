@@ -29,7 +29,7 @@ const config = {
       proxy.$dispatchAction(proxy, {url: process.env.NODE_ENV === 'dev'? 'localhost/login.html': 'localhost/login', actionType: 'url'}, {}, () => {});
     },
   },
-  req: "if (url.startsWith('/api')) {\n  url += '.json';\n}",
+  req: "if (url.includes('/api')) {\n  url += '.json';\n}",
   request: function(req) {
     if (localStorage.getItem('token')) {
       if (!req.headers) {
