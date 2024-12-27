@@ -38,7 +38,7 @@ glob.sync('./src/pages/*.js').forEach(entry => {
     },
   };
 });
-
+console.log(process.env.VUE_API_NODE_ENV, 888);
 module.exports = {
   pages,
   publicPath: isDev ? '' : process.env.PUBLIC_PATH,
