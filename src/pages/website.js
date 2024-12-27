@@ -48,10 +48,10 @@ const config = {
 };
 
 registrySw(process.env.VUE_APP_SERVICE_WORKER);
-
+console.log(process.env.VUE_API_NODE_ENV);
 api()
   .dynamicApi('', {headers: {Authorization: localStorage.getItem('token')}})
-  .get(process.env.NODE_ENV === 'gp'? 'https://songshuzhong.github.io/i-website/public/api/user.json': `${process.env.VUE_APP_API_BASE}/api/user`)
+  .get(process.env.VUE_API_NODE_ENV === 'gp'? 'https://songshuzhong.github.io/i-website/public/api/user.json': `${process.env.VUE_APP_API_BASE}/api/user`)
   .then(res => {
     const routers = createRoutes();
     config.permissions = res.data['permissions'];
