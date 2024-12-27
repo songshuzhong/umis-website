@@ -1,18 +1,32 @@
 <template>
   <canvas
     ref="verify"
-    :width="width"
-    :height="height"
+    :width="config.width"
+    :height="config.height"
     @click="handleDraw"
   ></canvas>
 </template>
 
 <script>
-import {defineComponent, onMounted, toRefs, reactive, ref, nextTick, watch} from 'vue';
-
+import {defineComponent, onMounted, nextTick, watch, reactive, getCurrentInstance} from 'vue';
+import {useInitData} from '../../../i-renderer/packages/index';
 export default defineComponent({
   name: 'Verify',
   props: {
+    initData: {
+      type: [Object, String],
+      required: false
+    },
+    inherit: {
+      type: Object,
+      required: false,
+      default() {
+        return {
+          type: 'all',
+          value: [],
+        };
+      },
+    },
     width: {
       type: String,
       required: false
@@ -21,16 +35,18 @@ export default defineComponent({
       type: String,
       required: false
     },
+    action: Function,
+    name: String
   },
   setup(props, ctx) {
-    const verify = ref(null);
-    const state = reactive({
+    const {proxy} = getCurrentInstance();
+    const state = useInitData(props);
+    const config = reactive({
       pool: 'abcdefghijklmnopqrstuvwxyz1234567890',   // 随机字符串
       width: 120,                                     //展示区域宽度
       height: 32,                                     //展示区域高度
       imgCode: '',                                    //保存页面的内容（用来判断输入验证是否满足改code）
     });
-
     const randomNum = (min, max) => {
       return parseInt(Math.random() * (max - min + 1) + min);
     };
@@ -42,15 +58,15 @@ export default defineComponent({
     };
     const handleDraw = () => {
       draw();
-      state.imgCode = draw();
+      config.imgCode = draw();
     };
     const draw = () => {
-      const ctx = verify.value.getContext('2d');
+      const ctx = proxy.$refs.verify.getContext('2d');
       ctx.fillStyle = randomColor(180, 230);
-      ctx.fillRect(0, 0, state.width, state.height);
+      ctx.fillRect(0, 0, config.width, config.height);
       let imgCode = '';
       for (let i = 0; i < 4; i++) {
-        const text = state.pool[randomNum(0, state.pool.length - 1)];
+        const text = config.pool[randomNum(0, config.pool.length - 1)];
 
         const fontSize = randomNum(18, 40);
         const deg = randomNum(-30, 30);
@@ -69,8 +85,8 @@ export default defineComponent({
       }
       for (let i = 0; i < 5; i++) {
         ctx.beginPath();
-        ctx.moveTo(randomNum(0, state.width), randomNum(0, state.height));
-        ctx.lineTo(randomNum(0, state.width), randomNum(0, state.height));
+        ctx.moveTo(randomNum(0, config.width), randomNum(0, config.height));
+        ctx.lineTo(randomNum(0, config.width), randomNum(0, config.height));
         ctx.strokeStyle = randomColor(180, 230);
         ctx.closePath();
         ctx.stroke();
@@ -78,8 +94,8 @@ export default defineComponent({
       for (let i = 0; i < 40; i++) {
         ctx.beginPath();
         ctx.arc(
-          randomNum(0, state.width),
-          randomNum(0, state.height),
+          randomNum(0, config.width),
+          randomNum(0, config.height),
           1,
           0,
           2 * Math.PI
@@ -90,20 +106,20 @@ export default defineComponent({
       }
       return imgCode;
     };
-    watch(() => state.imgCode, val => {
+    watch(() => config.imgCode, val => {
       ctx.emit('update:value', val);
     });
     onMounted(() => {
       nextTick(() => {
         draw();
-        state.imgCode = draw();
+        config.imgCode = draw();
       });
     });
 
     return {
-      ...toRefs(state),
       handleDraw,
-      verify,
+      config,
+      state
     };
   },
 });

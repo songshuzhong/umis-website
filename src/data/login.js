@@ -90,7 +90,8 @@ export default {
                 },
                 {
                   "renderer": "verify",
-                  "name": "verify"
+                  "name": "verify",
+                  "useRef": true
                 },
                 {
                   "renderer": "wrapper",

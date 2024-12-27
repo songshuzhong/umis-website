@@ -12,7 +12,7 @@ import '../../../i-renderer/packages/assets/styles/index.scss';
 import '../style/login.scss';
 
 const app = createApp(Application);
-const onLogin = (proxy, config, context, onActionFeedback, formdata) => {
+const onLogin = (proxy, config, context, onActionFeedback, formdata, options) => {
   api().staticApi()
     .post(`${process.env.VUE_APP_API_BASE}/api/auth/login`, formdata)
     .then((res) => {
@@ -21,7 +21,7 @@ const onLogin = (proxy, config, context, onActionFeedback, formdata) => {
       proxy.$dispatchAction(proxy, {url, actionType: 'url'}, {}, () => {});
     })
     .catch((e) => {
-      // form && form.$parent.$refs.field[4].$refs.component.handleDraw();
+      options.refs.verify.handleDraw();
       ElNotification({
         title: `错误${e?.data?.code || e?.response?.data?.code || e.code}`,
         message: e?.data?.message || e?.response?.data?.message || e.message,
@@ -53,16 +53,16 @@ const options = {
         verify: '1234'
       });
     },
-    login: function (proxy, config, context, onActionFeedback) {
+    login: function (proxy, config, context, onActionFeedback, options) {
       config.actionType = 'extends';
       config.triggered = 'valid';
       this.extends(proxy, config, context, onActionFeedback, {}).then((isValid) => {
         if (isValid) {
           const data = this.extends(proxy, {actionType: 'extends', triggered: 'getData'}, context, onActionFeedback, {});
-          onLogin(proxy, config, context, onActionFeedback, data);
+          onLogin(proxy, config, context, onActionFeedback, data, options);
         }
-      }).catch(e => {
-        console.log(e);
+      }).catch(() => {
+        options.refs.verify.handleDraw();
       }).finally(() => {
         onActionFeedback&&onActionFeedback('CANCEL_LOADING');
       });
