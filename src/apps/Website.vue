@@ -8,7 +8,7 @@
 
 <script>
 import {defineComponent, onBeforeMount, onMounted, getCurrentInstance} from 'vue';
-import {Schema} from '../../../i-renderer/packages/index';
+import {Schema} from 'i-renderer/dist/js/renderer';
 import frameSchema from '../data/websiteFrame.json';
 
 export default defineComponent({
@@ -71,7 +71,7 @@ export default defineComponent({
     });
     onMounted(() => {
       const timer = setTimeout(() => {
-        import('../../../i-renderer/packages/canvas/index')
+        import('i-renderer/dist/js/editor')
           .then(res => {
             const {Editor} = res;
             proxy.$.appContext.components[Editor.name] = Editor;

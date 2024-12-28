@@ -1,12 +1,12 @@
 import {createApp} from 'vue';
 import ElementPlus from 'element-plus';
-import IRenderer from  '../../../i-renderer/packages/index';
+import IRenderer from  'i-renderer/dist/js/renderer';
 import Application from '../apps/Editing.vue';
 import registrySw from '../registerServiceWorker';
 
 import 'element-plus/dist/index.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';
-import '../../../i-renderer/packages/assets/styles/index.scss';
+import 'i-renderer/dist/css/index.css';
 
 const app = createApp(Application);
 

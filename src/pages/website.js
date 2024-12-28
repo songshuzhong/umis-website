@@ -1,6 +1,6 @@
 import {createApp} from 'vue';
 import ElementPlus, {ElNotification} from 'element-plus';
-import IRenderer, {api} from '../../../i-renderer/packages/index';
+import IRenderer, {api} from 'i-renderer/dist/js/renderer';
 import createRoutes from '../router/website';
 import ToMobile from '../component/ToMobile.vue';
 import Ai from '../component/Ai.vue';
@@ -9,7 +9,7 @@ import registrySw from '../registerServiceWorker';
 import Verify from '../component/Verify';
 import 'element-plus/dist/index.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';
-import '../../../i-renderer/packages/assets/styles/index.scss';
+import 'i-renderer/dist/css/index.css';
 import '../style/index.scss';
 
 const app = createApp(Application);
@@ -29,7 +29,6 @@ const config = {
       proxy.$dispatchAction(proxy, {url: process.env.NODE_ENV === 'dev'? 'localhost/login.html': 'localhost/login', actionType: 'url'}, {}, () => {});
     },
   },
-  req: "if (url.includes('/api')) {\n  url += '.json';\n}",
   request: function(req) {
     if (localStorage.getItem('token')) {
       if (!req.headers) {
@@ -46,12 +45,19 @@ const config = {
     return res;
   }
 };
+let user = '/api/user';
 
+if (process.env.VUE_APP_API_NODE_ENV === 'gp') {
+  config.adaptor = {
+    req: 'if (url.includes("/api")) {\n  req.url += ".json";\n}',
+  };
+  user = 'https://songshuzhong.github.io/i-website/public/api/user.json';
+}
 registrySw(process.env.VUE_APP_SERVICE_WORKER);
-console.log(process.env.VUE_API_NODE_ENV, 6);
+
 api()
   .dynamicApi('', {headers: {Authorization: localStorage.getItem('token')}})
-  .get(process.env.VUE_API_NODE_ENV === 'gp'? 'https://songshuzhong.github.io/i-website/public/api/user.json': `${process.env.VUE_APP_API_BASE}/api/user`)
+  .get(user)
   .then(res => {
     const routers = createRoutes();
     config.permissions = res.data['permissions'];
