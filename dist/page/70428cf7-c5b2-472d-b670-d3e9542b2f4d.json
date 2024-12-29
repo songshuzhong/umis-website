@@ -1,0 +1,21 @@
+{
+  "pageId": "70428cf7-c5b2-472d-b670-d3e9542b2f4d",
+  "id": 7,
+  "projectId": "4",
+  "pageTitle": "组合性能",
+  "pageName": "comboPerformance",
+  "namespace": "联通",
+  "pageIcon": "",
+  "groupBy": "form",
+  "updatedBy": "admin",
+  "updatedCause": null,
+  "hidden": null,
+  "assets": [],
+  "visible": null,
+  "pageDesc": null,
+  "pageSchema": "{\n  \"renderer\": \"page\",\n  \"body\": [\n    {\n      \"renderer\": \"wrapper\",\n      \"body\": {\n        \"renderer\": \"form\",\n        \"initApi\": {\n          \"url\": \"/api/mock/form/combo/all\",\n          \"method\": \"get\"\n        },\n        \"size\": \"mini\",\n        \"controls\": [\n          {\n            \"renderer\": \"combo\",\n            \"name\": \"columns\",\n            \"label\": \"动态列\",\n            \"type\": \"multiple\",\n            \"inline\": false,\n            \"controls\": [\n              {\n                \"renderer\": \"input\",\n                \"name\": \"id\",\n                \"label\": \"id\"\n              },\n              {\n                \"renderer\": \"combo\",\n                \"name\": \"columns\",\n                \"label\": \"集合\",\n                \"type\": \"multiple\",\n                \"inline\": false,\n                \"controls\": [\n                  {\n                    \"renderer\": \"input\",\n                    \"name\": \"id\",\n                    \"label\": \"id\",\n                    \"rules\": [\n                      {\n                        \"required\": true,\n                        \"message\": \"姓名不能为空\"\n                      }\n                    ]\n                  }\n                ]\n              }\n            ]\n          },\n          {\n            \"renderer\": \"combo\",\n            \"name\": \"default\",\n            \"label\": \"默认\",\n            \"type\": \"array\",\n            \"defaultValue\": [],\n            \"controls\": [\n              {\n                \"renderer\": \"input\",\n                \"name\": \"id\",\n                \"label\": \"项\",\n                \"rules\": [\n                  {\n                    \"required\": true,\n                    \"message\": \"姓名不能为空\"\n                  }\n                ]\n              }\n            ]\n          },\n          {\n            \"renderer\": \"combo\",\n            \"name\": \"dict\",\n            \"label\": \"字典\",\n            \"type\": \"custom\",\n            \"inline\": false,\n            \"defaultValue\": {\n              \"objective\": [],\n              \"guaranteed_delivery\": []\n            },\n            \"controls\": [\n              {\n                \"renderer\": \"combo\",\n                \"name\": \"objective\",\n                \"label\": \"投放目标\",\n                \"type\": \"array\",\n                \"defaultValue\": [],\n                \"inline\": false,\n                \"controls\": [\n                  {\n                    \"renderer\": \"input\",\n                    \"name\": \"id\",\n                    \"label\": \"项\"\n                  }\n                ]\n              },\n              {\n                \"renderer\": \"combo\",\n                \"name\": \"guaranteed_delivery\",\n                \"label\": \"定价保量\",\n                \"type\": \"array\",\n                \"defaultValue\": [],\n                \"inline\": false,\n                \"controls\": [\n                  {\n                    \"renderer\": \"input\",\n                    \"name\": \"id\",\n                    \"label\": \"项\"\n                  }\n                ]\n              }\n            ]\n          },\n          {\n            \"renderer\": \"data\"\n          }\n        ]\n      }\n    }\n  ]\n}",
+  "version": 0,
+  "status": 1,
+  "createdAt": "2023-11-25T15:16:57.000Z",
+  "updatedAt": "2023-11-25T15:16:57.000Z"
+}

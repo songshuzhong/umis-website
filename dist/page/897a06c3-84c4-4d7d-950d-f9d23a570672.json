@@ -1,0 +1,23 @@
+{
+  "pageId": "897a06c3-84c4-4d7d-950d-f9d23a570672",
+  "id": 30,
+  "projectId": "4",
+  "pageTitle": "版本冲突2",
+  "pageName": "testTwo",
+  "namespace": "联通",
+  "pageIcon": "",
+  "groupBy": "依赖库",
+  "updatedBy": "admin",
+  "updatedCause": null,
+  "hidden": null,
+  "assets": [
+    "https://songshuzhong.github.io/i-assets/public/js/Test.1894bf.min.js?version=v4"
+  ],
+  "visible": null,
+  "pageDesc": null,
+  "pageSchema": "{\n  \"renderer\": \"page\",\n  \"body\": [\n    {\n      \"renderer\": \"Test\"\n    }\n  ]\n}",
+  "version": 0,
+  "status": 1,
+  "createdAt": "2023-11-25T15:24:48.000Z",
+  "updatedAt": "2023-11-27T06:20:37.000Z"
+}

@@ -1,0 +1,21 @@
+{
+  "pageId": "c85640d1-fe0b-46da-ad95-71b9a4e05f6b",
+  "id": 14,
+  "projectId": "4",
+  "pageTitle": "数据列",
+  "pageName": "dataColumn",
+  "namespace": "联通",
+  "pageIcon": "",
+  "groupBy": "crud",
+  "updatedBy": "admin",
+  "updatedCause": null,
+  "hidden": null,
+  "assets": [],
+  "visible": null,
+  "pageDesc": null,
+  "pageSchema": "{\n  \"renderer\": \"page\",\n  \"body\": [\n    {\n      \"renderer\": \"table\",\n      \"initApi\": {\n        \"url\": \"/api/mock/columnData\",\n        \"method\": \"get\",\n        \"cached\": false,\n        \"params\": {}\n      },\n      \"showColumnSaver\": true,\n      \"showDynamicColumn\": true,\n      \"title\": \"列、数据均来自接口，且列配置支持接口保存\"\n    }\n  ]\n}",
+  "version": 0,
+  "status": 1,
+  "createdAt": "2023-11-25T15:19:20.000Z",
+  "updatedAt": "2023-11-25T15:19:20.000Z"
+}

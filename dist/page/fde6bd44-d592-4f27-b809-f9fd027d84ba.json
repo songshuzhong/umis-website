@@ -1,0 +1,21 @@
+{
+  "pageId": "fde6bd44-d592-4f27-b809-f9fd027d84ba",
+  "id": 11,
+  "projectId": "4",
+  "pageTitle": "虚拟列表",
+  "pageName": "virtuleList",
+  "namespace": "联通",
+  "pageIcon": "",
+  "groupBy": "crud",
+  "updatedBy": "admin",
+  "updatedCause": null,
+  "hidden": null,
+  "assets": [],
+  "visible": null,
+  "pageDesc": null,
+  "pageSchema": "{\n  \"renderer\": \"page\",\n  \"body\": [\n    {\n      \"renderer\": \"cards\",\n      \"virtual\": true,\n      \"initApi\": {\n        \"url\": \"/api/mock/columnData\",\n        \"method\": \"get\",\n        \"params\": {}\n      },\n      \"body\": [\n        {\n          \"renderer\": \"avatar\",\n          \"title\": \"<%=data.id%>\",\n          \"subTitle\": \"<%=data.province%>\",\n          \"description\": \"<%=data.createdAt%>\",\n          \"src\": \"https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg\",\n          \"size\": 70,\n          \"shape\": \"circle\",\n          \"borderRadius\": 0,\n          \"color\": \"#606266\",\n          \"bgColor\": \"#ffffff\",\n          \"body\": [],\n          \"classname\": \"bounce_move_2\"\n        },\n        {\n          \"renderer\": \"action\",\n          \"text\": \"更新\",\n          \"isText\": true,\n          \"popupType\": \"tip\",\n          \"tipContent\": \"asdfasdf\",\n          \"size\": \"small\",\n          \"actionType\": \"ajax\",\n          \"actionApi\": {\n            \"url\": \"/api/users?uid=${uid}\",\n            \"method\": \"delete\",\n            \"params\": {}\n          },\n          \"body\": {}\n        }\n      ],\n      \"shadow\": \"hover\",\n      \"span\": 24,\n      \"bodyClass\": \"demo-list__each\",\n      \"syncLocation\": true\n    }\n  ],\n  \"innerStyle\": \".demo-list__each {\\n  position:relative;\\n  padding:10px;\\n  border-bottom:1px solid #EBEEF5;\\n}\\n.demo-list__each .i-action {\\n  position:absolute;\\n  right: 20px;\\n  top:50%;\\n  transform:translateY(-50%)\\n}\"\n}",
+  "version": 0,
+  "status": 1,
+  "createdAt": "2023-11-25T15:18:31.000Z",
+  "updatedAt": "2023-11-25T15:18:31.000Z"
+}

@@ -1,0 +1,21 @@
+{
+  "pageId": "c6be5603-a17d-406d-a192-8dd0112a29e0",
+  "id": 110,
+  "projectId": "4",
+  "pageTitle": "辅线程",
+  "pageName": "serviceWorker",
+  "namespace": "联通",
+  "pageIcon": null,
+  "groupBy": "",
+  "updatedBy": "admin",
+  "updatedCause": null,
+  "hidden": false,
+  "assets": [],
+  "visible": [],
+  "pageDesc": null,
+  "pageSchema": "{\n  \"renderer\": \"page\",\n  \"body\": [\n    {\n      \"renderer\": \"service\",\n      \"body\": [\n        {\n          \"renderer\": \"html\",\n          \"inline\": true,\n          \"html\": \"<span><%=$.date%></span>\\r\\n<h1 class=\\\"time__container\\\">\\r\\n  <span class=\\\"time\\\"><%=$.hours%></span>\\r\\n  <span>:</span>\\r\\n  <span class=\\\"time\\\"><%=$.min%></span>\\r\\n  <span class=\\\"time\\\">:</span>\\r\\n  <span class=\\\"time\\\"><%=$.sec%></span>\\r\\n</h1>\"\n        }\n      ],\n      \"promiseType\": \"sw\",\n      \"silentLoading\": true,\n      \"interval\": 1000\n    },\n    {\n      \"renderer\": \"form\",\n      \"controls\": [\n        {\n          \"renderer\": \"input\",\n          \"name\": \"as\",\n          \"label\": \"来自SW的校验\",\n          \"placeholder\": \"请输入\",\n          \"type\": \"text\",\n          \"flexible\": false,\n          \"rules\": [\n            {\n              \"type\": \"sw\",\n              \"trigger\": \"blur\"\n            }\n          ],\n          \"requiredOn\": \"1\"\n        },\n        {\n          \"renderer\": \"action\",\n          \"actionType\": \"submit\",\n          \"text\": \"提交\"\n        }\n      ],\n      \"inline\": true\n    }\n  ],\n  \"worker\": \"e => {   \\r\\n  if (e.jobOrigin == '/page/body/1') {\\r\\n    return Promise.reject({message: 'sw校验不通过'});\\r\\n  }   \\r\\n  var monthNames = [ \\\"January\\\", \\\"February\\\", \\\"March\\\", \\\"April\\\", \\\"May\\\", \\\"June\\\",\\\"July\\\", \\\"August\\\", \\\"September\\\", \\\"October\\\", \\\"November\\\", \\\"December\\\" ]; \\r\\n  var dayNames= [\\\"Sunday\\\",\\\"Monday\\\",\\\"Tuesday\\\",\\\"Wednesday\\\",\\\"Thursday\\\",\\\"Friday\\\",\\\"Saturday\\\"]\\r\\n\\r\\n  var today = new Date();\\r\\n\\r\\n  var date = (dayNames[today.getDay()] + \\\" \\\" + \\r\\n  today.getDate() + ' ' + monthNames[today.getMonth()] + ' ' +today.getFullYear());\\r\\n\\r\\n  var h = today.getHours();\\r\\n  var m = today.getMinutes();\\r\\n  var s = today.getSeconds();\\r\\n  var day = h<11 ? 'AM': 'PM';\\r\\n\\r\\n  h = h<10? '0'+h: h;\\r\\n  m = m<10? '0'+m: m;\\r\\n  s = s<10? '0'+s: s;               \\r\\n  return {\\r\\n    hours: h,\\r\\n    min: m,\\r\\n    sec: s,\\r\\n    day,\\r\\n    date\\r\\n  };\\r\\n}\"\n}",
+  "version": 0,
+  "status": 1,
+  "createdAt": "2024-08-27T13:50:52.000Z",
+  "updatedAt": "2024-08-27T13:51:35.000Z"
+}
