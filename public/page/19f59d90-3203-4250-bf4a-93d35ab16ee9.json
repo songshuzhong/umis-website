@@ -1,0 +1,21 @@
+{
+  "pageId": "19f59d90-3203-4250-bf4a-93d35ab16ee9",
+  "id": 26,
+  "projectId": "4",
+  "pageTitle": "污水净化",
+  "pageName": "clarificationSystem",
+  "namespace": "联通",
+  "pageIcon": "",
+  "groupBy": "图表",
+  "updatedBy": "admin",
+  "updatedCause": null,
+  "hidden": null,
+  "assets": [],
+  "visible": null,
+  "pageDesc": null,
+  "pageSchema": "{\n  \"renderer\": \"page\",\n  \"body\": [\n    {\n      \"renderer\": \"https://raw.githubusercontent.com/songshuzhong/i-components/master/src/components/Pipeline/Pipeline.vue\"\n    },\n    {\n      \"renderer\": \"image\",\n      \"src\": \"https://songshuzhong.github.io/i-assets/public/img/pipeline2.png\",\n      \"previews\": [],\n      \"classname\": \"page-pipeline-img-2\",\n      \"fit\": \"scale-down\"\n    },\n    {\n      \"renderer\": \"image\",\n      \"src\": \"https://songshuzhong.github.io/i-assets/public/img/pipeline3.png\",\n      \"previews\": [],\n      \"classname\": \"page-pipeline-img-3\",\n      \"fit\": \"scale-down\"\n    },\n    {\n      \"renderer\": \"image\",\n      \"src\": \"https://songshuzhong.github.io/i-assets/public/img/pipeline4.png\",\n      \"previews\": [],\n      \"classname\": \"page-pipeline-img-4\",\n      \"fit\": \"scale-down\"\n    },\n    {\n      \"renderer\": \"image\",\n      \"src\": \"https://songshuzhong.github.io/i-assets/public/img/pipeline5.png\",\n      \"previews\": [],\n      \"classname\": \"page-pipeline-img-5\",\n      \"fit\": \"scale-down\"\n    },\n    {\n      \"renderer\": \"image\",\n      \"src\": \"https://songshuzhong.github.io/i-assets/public/img/pipeline1.png\",\n      \"previews\": [],\n      \"classname\": \"page-pipeline-bucket-1\",\n      \"fit\": \"scale-down\"\n    },\n    {\n      \"renderer\": \"image\",\n      \"src\": \"https://songshuzhong.github.io/i-assets/public/img/pipeline1.png\",\n      \"previews\": [],\n      \"classname\": \"page-pipeline-bucket-2\",\n      \"fit\": \"scale-down\"\n    },\n    {\n      \"renderer\": \"image\",\n      \"src\": \"https://songshuzhong.github.io/i-assets/public/img/pipeline1.png\",\n      \"previews\": [],\n      \"classname\": \"page-pipeline-bucket-3\",\n      \"fit\": \"scale-down\"\n    }\n  ],\n  \"innerStyle\": \".page-pipeline-bucket-1 {\\n  &.el-image {\\n    position: absolute;\\n    top: 490px;\\n    left: 252px;\\n    width: 50px;\\n    height: 69px;\\n  }\\n}\\n.page-pipeline-bucket-2 {\\n  &.el-image {\\n    position: absolute;\\n    top: 380px;\\n    left: 520px;\\n    width: 50px;\\n    height: 69px;\\n  }\\n}\\n.page-pipeline-bucket-3 {\\n  &.el-image {\\n    position: absolute;\\n    top: 380px;\\n    left: 850px;\\n    width: 50px;\\n    height: 69px;\\n  }\\n}\\n.page-pipeline-img-3 {\\n  &.el-image {\\n    position: absolute;\\n    top: 285px;\\n    left: 90px;\\n    width: 127px;\\n    height: 80px;\\n  }\\n}\\n.page-pipeline-img-4 {\\n  &.el-image {\\n    position: absolute;\\n    top: 140px;\\n    left: 600px;\\n    width: 237px;\\n    height: 296px;\\n  }\\n}\\n.page-pipeline-img-5 {\\n  &.el-image {\\n    position: absolute;\\n    top: 152px;\\n    left: 298px;\\n    width: 120px;\\n    height: 270px;\\n  }\\n}\\n.page-pipeline-img-2 {\\n  &.el-image {\\n    position: absolute;\\n    top: 140px;\\n    right: 40px;\\n    width: 237px;\\n    height: 296px;\\n  }\\n}\"\n}",
+  "version": 0,
+  "status": 1,
+  "createdAt": "2023-11-25T15:23:29.000Z",
+  "updatedAt": "2023-11-25T15:23:29.000Z"
+}

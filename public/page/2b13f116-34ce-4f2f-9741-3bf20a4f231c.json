@@ -1,0 +1,23 @@
+{
+  "pageId": "2b13f116-34ce-4f2f-9741-3bf20a4f231c",
+  "id": 32,
+  "projectId": "4",
+  "pageTitle": "词云",
+  "pageName": "linkage",
+  "namespace": "联通",
+  "pageIcon": "",
+  "groupBy": "依赖库",
+  "updatedBy": "admin",
+  "updatedCause": null,
+  "hidden": null,
+  "assets": [
+    "https://songshuzhong.github.io/i-assets/public/lib/wordcloud.js"
+  ],
+  "visible": null,
+  "pageDesc": null,
+  "pageSchema": "{\n  \"renderer\": \"page\",\n  \"initData\": {},\n  \"body\": [\n    {\n      \"renderer\": \"service\",\n      \"name\": \"ChartService\",\n      \"initApi\": {\n        \"url\": \"https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/wordcloud\",\n        \"method\": \"get\",\n        \"params\": {\n          \"start_time\": \"${start_time}\"\n        }\n      },\n      \"body\": [\n        {\n          \"renderer\": \"chart\",\n          \"useWordCloud\": true,\n          \"height\": 345,\n          \"config\": {\n            \"grid\": {\n              \"top\": 15,\n              \"right\": 15,\n              \"bottom\": 20,\n              \"left\": 30\n            },\n            \"series\": [\n              {\n                \"type\": \"wordCloud\",\n                \"sizeRange\": [\n                  12,\n                  40\n                ],\n                \"rotationRange\": [\n                  0,\n                  0\n                ],\n                \"rotationStep\": 45,\n                \"gridSize\": 20,\n                \"shape\": \"circle\",\n                \"width\": \"100%\",\n                \"height\": \"100%\",\n                \"data\": \"${wordcloud}\"\n              }\n            ]\n          }\n        }\n      ]\n    }\n  ],\n  \"name\": \"DemoPage\"\n}",
+  "version": 0,
+  "status": 1,
+  "createdAt": "2023-11-25T15:25:38.000Z",
+  "updatedAt": "2023-11-27T06:18:56.000Z"
+}

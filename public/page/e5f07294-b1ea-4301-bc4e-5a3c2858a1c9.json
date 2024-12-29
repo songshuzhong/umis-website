@@ -1,0 +1,25 @@
+{
+  "pageId": "e5f07294-b1ea-4301-bc4e-5a3c2858a1c9",
+  "id": 89,
+  "projectId": "4",
+  "pageTitle": "上传",
+  "pageName": "uploader",
+  "namespace": "联通",
+  "pageIcon": null,
+  "groupBy": "form",
+  "updatedBy": "admin",
+  "updatedCause": "v1",
+  "hidden": false,
+  "assets": [
+    "https://songshuzhong.github.io/i-assets/public/js/spark-md5.min.js"
+  ],
+  "visible": [
+    8
+  ],
+  "pageDesc": null,
+  "pageSchema": "{\"renderer\":\"page\",\"initData\":{\"image\":\"https://songshuzhong.github.io/i-assets/public/img/shuttle.png\",\"files\":{\"src\":\"https://codeload.github.com/songshuzhong/i-renderer-sample/zip/refs/heads/master\",\"name\":\"i-renderer-sample.zip\"},\"video\":{\"cover\":\"https://songshuzhong.github.io/i-assets/public/ironMan.jpeg\",\"src\":\"https://songshuzhong.github.io/i-assets/public/IronMan.mp4\"},\"manual\":{\"name\":\"ironMan.mp4\",\"cover\":\"https://songshuzhong.github.io/i-assets/public/ironMan.jpeg\",\"src\":\"https://songshuzhong.github.io/i-assets/public/IronMan.mp4\"}},\"body\":[{\"renderer\":\"form\",\"actionApi\":{\"url\":\"https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/form/submit\",\"params\":{\"*\":\"*\"},\"method\":\"post\"},\"controls\":[{\"renderer\":\"divider\",\"text\":\"上传类型\"},{\"renderer\":\"upload\",\"name\":\"image\",\"preview\":true,\"validType\":\"normal\",\"listType\":\"picture-card\",\"rules\":[{\"required\":false}],\"autoUpload\":true,\"actionUrl\":\"/api/upload\",\"limit\":1,\"feedbackConfig\":[],\"accept\":\".webp,.jpg,.png\",\"spliced\":false,\"astrict\":{\"maxByte\":\"10000\",\"minWidth\":\"120\"},\"label\":\"图片\",\"data\":{},\"requiredOn\":\"true\"},{\"renderer\":\"upload\",\"name\":\"video\",\"preview\":true,\"validType\":\"normal\",\"type\":\"video\",\"listType\":\"picture-card\",\"rules\":[{\"required\":false}],\"autoUpload\":true,\"actionUrl\":\"/api/upload?type=video\",\"limit\":1,\"feedbackConfig\":[],\"accept\":\".mp4\",\"spliced\":false,\"astrict\":{\"maxByte\":\"10000\"},\"label\":\"视频\",\"data\":{},\"requiredOn\":\"true\"},{\"renderer\":\"upload\",\"listType\":\"picture-card\",\"name\":\"files\",\"label\":\"文件\",\"autoUpload\":true,\"actionUrl\":\"/api/upload?type=file\",\"accept\":\".zip,.txt\",\"type\":\"file\",\"spliced\":false,\"preview\":true,\"astrict\":{\"maxByte\":\"50000\"},\"data\":{},\"feedbackConfig\":[]},{\"renderer\":\"upload\",\"listType\":\"picture-card\",\"name\":\"manual\",\"lazy\":true,\"label\":\"切片\",\"actionUrl\":\"/api/file\",\"accept\":\".mp4,.zip\",\"type\":\"file\",\"spliced\":true,\"preview\":true,\"astrict\":{\"minByte\":\"100\"},\"data\":{},\"feedbackConfig\":[]},{\"renderer\":\"viewer\",\"body\":[{\"renderer\":\"data\"}]},{\"renderer\":\"action\",\"actionType\":\"submit\",\"text\":\"提交\",\"initApi\":{\"url\":\"/api/calendar\",\"method\":\"get\",\"params\":{}},\"silentMessage\":true,\"silentLoading\":false,\"cached\":false,\"syncLocation\":false,\"plain\":true,\"body\":{},\"type\":\"primary\",\"data\":{}},{\"renderer\":\"action\",\"text\":\"重置\",\"type\":\"warning\",\"plain\":true,\"actionType\":\"reset\",\"actionApi\":{\"url\":\"\",\"method\":\"post\",\"params\":{}},\"params\":{},\"body\":{},\"popupType\":\"confirm\",\"confirmTitle\":\"确定要重置吗？\"}],\"labelWidth\":\"120px\",\"idem\":true,\"classname\":\"actions-fixed\"}],\"steps\":[]}",
+  "version": 1,
+  "status": 1,
+  "createdAt": "2023-12-08T10:16:57.000Z",
+  "updatedAt": "2023-12-08T10:23:45.000Z"
+}

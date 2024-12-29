@@ -1,0 +1,21 @@
+{
+  "pageId": "f2f9da99-dd99-4ee1-b227-e821e61d1939",
+  "id": 12,
+  "projectId": "4",
+  "pageTitle": "卡片列表",
+  "pageName": "cards",
+  "namespace": "联通",
+  "pageIcon": "",
+  "groupBy": "crud",
+  "updatedBy": "admin",
+  "updatedCause": null,
+  "hidden": null,
+  "assets": [],
+  "visible": null,
+  "pageDesc": null,
+  "pageSchema": "{\n  \"renderer\": \"page\",\n  \"body\": {\n    \"renderer\": \"cards\",\n    \"name\": \"cards1\",\n    \"initApi\": {\n      \"url\": \"/api/mock/products\",\n      \"method\": \"get\",\n      \"params\": {}\n    },\n    \"gutter\": 30,\n    \"bodyStyle\": {\n      \"padding\": \"0\"\n    },\n    \"classname\": \"card-margin\",\n    \"header\": [],\n    \"body\": [\n      {\n        \"renderer\": \"image\",\n        \"computedSrc\": true,\n        \"src\": \"${cover}\",\n        \"classname\": \"zoom_1\",\n        \"previews\": []\n      },\n      {\n        \"renderer\": \"mapping\",\n        \"name\": \"status\",\n        \"status\": \"status\",\n        \"optionConfig\": {\n          \"text\": \"text\",\n          \"value\": \"value\"\n        },\n        \"map\": {\n          \"2\": \"推荐\",\n          \"4\": \"缺货\"\n        }\n      }\n    ],\n    \"footer\": [\n      {\n        \"renderer\": \"html\",\n        \"html\": \"<%=data.name%>\",\n        \"classname\": \"font-weight-600 text-center zoom_3\"\n      },\n      {\n        \"renderer\": \"html\",\n        \"html\": \"<%=data.desc%>\",\n        \"classname\": \"font-size-12 text-center margin-10 back_move_3\"\n      },\n      {\n        \"renderer\": \"html\",\n        \"html\": \"￥<%=data.price%>\",\n        \"classname\": \"text-center price shake_3\"\n      }\n    ],\n    \"span\": 6,\n    \"pageConfig\": {\n      \"pageIndex\": \"pageIndex\",\n      \"pageSize\": \"pageSize\",\n      \"total\": \"total\",\n      \"rows\": \"rows\"\n    },\n    \"actions\": [\n      {\n        \"renderer\": \"action\"\n      }\n    ],\n    \"hasPageInfo\": false,\n    \"shadow\": \"hover\",\n    \"skeletons\": 6\n  },\n  \"classname\": \"demo-page__products\",\n  \"innerStyle\": \".demo-page__products {\\n    img {\\n        width: 173px;\\n        height: 173px;\\n    }\\n    .price {\\n        color: rgb(255, 103, 0);\\n    }\\n    .i-card__body {\\n        position: relative;\\n    }\\n    .i-mapping__container {\\n      &.primary {\\n        background: var(--el-color-primary);\\n      }\\n      &.success {\\n        background: var(--el-color-success);\\n      }\\n      &.danger {\\n        background: var(--el-color-danger);\\n      }\\n      &.warning {\\n        background: var(--el-color-warning);\\n      }\\n      position: absolute;\\n      top: 5px;\\n      right: -27px;\\n      width: 100px;\\n      padding: 6px;\\n      text-align: center;\\n      color: white;\\n      transform: rotateZ(45deg);\\n      box-shadow: var(--el-box-shadow-dark);\\n      .el-badge {\\n          display: none;\\n      }\\n    }\\n}\",\n  \"steps\": []\n}",
+  "version": 0,
+  "status": 1,
+  "createdAt": "2023-11-25T15:18:50.000Z",
+  "updatedAt": "2023-11-25T15:18:50.000Z"
+}
