@@ -1,5 +1,6 @@
 <template>
-  <i-editor
+  <component
+    v-bind:is="'editor'"
     :editable="true"
     :nimble="true"
     :is-json="false"
@@ -8,13 +9,9 @@
 
 <script>
 import {defineComponent, onBeforeMount} from 'vue';
-import {Editor} from 'i-renderer/dist/js/editor';
 
 export default defineComponent({
   name: 'ToEditor',
-  components: {
-    IEditor: Editor
-  },
   setup() {
     onBeforeMount(() => {
       window.IRenderer = {
