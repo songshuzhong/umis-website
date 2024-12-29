@@ -9,7 +9,7 @@
 
 <script>
 import {defineComponent, onMounted, nextTick, watch, reactive, getCurrentInstance} from 'vue';
-import {useInitData} from '../../../i-renderer/packages/index';
+import {useInitData} from 'i-renderer/dist/js/renderer';
 export default defineComponent({
   name: 'Verify',
   props: {
