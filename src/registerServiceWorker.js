@@ -1,7 +1,7 @@
 import {ElNotification} from 'element-plus';
 import {register} from 'register-service-worker';
 
-const isGp = process.env.NODE_ENV === 'gp';
+const isGp = process.env.VUE_APP_API_NODE_ENV === 'gp';
 
 const registrySw = contextPath => {
   const sw = isGp? '/i-website/dist/service-worker.js': `${contextPath}/service-worker.js`;
