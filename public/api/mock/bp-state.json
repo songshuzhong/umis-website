@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "message": "success",
+  "data": {
+    "id": 44,
+    "title": "state",
+    "method": "get",
+    "path": "/bp/state",
+    "namespace": "联通",
+    "description": "多行任务state",
+    "delay": null,
+    "schema": "function({_req}) {\n  const taskId = _req.query.taskId;\n  const id = _req.query.taskId;\n  const taskName = \"新手券\" + _req.query.taskId;\n  const couponNum = \"40000\" + _req.query.taskId;\n  let sendNum;\n  var max = \"40000\" + _req.query.taskId;\n  var send = Number(_req.query.sendNum) + 30000;\n  if (Number(_req.query.sendNum) < Number(max)) {\n    sendNum = send;\n  } else {\n    sendNum = max;\n  }\n  let taskStatus;\n  var round = Math.floor(Math.random() * (100 - 1)) + 1;\n  if (_req.query.taskStatus == 2) {\n      if (Number(_req.query.sendNum) < Number(max)) {\n        taskStatus = 2;\n      } else {\n        taskStatus = 3;\n      }\n  }\n  if (_req.query.taskStatus == 4) {\n    taskStatus = round % 2 + 4;\n  }\n  return {\n    id,\n    taskId,\n    taskName,\n    taskStatus,\n    couponNum,\n    sendNum\n  }\n}",
+    "createdBy": "admin",
+    "createdAt": "2024-03-30T03:37:58.000Z",
+    "updatedAt": "2024-03-30T03:48:48.000Z"
+  }
+}

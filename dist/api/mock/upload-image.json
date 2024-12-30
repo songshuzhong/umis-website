@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "message": "success",
+  "data": {
+    "id": 69,
+    "title": "上传图片",
+    "method": "get",
+    "path": "/upload/image",
+    "namespace": "联通",
+    "description": "0",
+    "delay": 0,
+    "schema": "function({_req}) {\n  return {\n    \"src\":\"https://codeload.github.com/songshuzhong/i-renderer-sample/zip/refs/heads/master\",\n    \"name\":\"i-renderer-sample.zip\"\n  }\n}",
+    "createdBy": "admin",
+    "createdAt": "2024-06-15T03:33:55.000Z",
+    "updatedAt": "2024-06-15T03:33:55.000Z"
+  }
+}

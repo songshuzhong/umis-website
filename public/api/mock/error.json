@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "message": "success",
+  "data": {
+    "id": 66,
+    "title": "error",
+    "method": "get",
+    "path": "/error",
+    "namespace": "联通",
+    "description": "error",
+    "delay": 0,
+    "schema": "{\n  \"message\":\"json: cannot unmarshal string into Go struct field Vender.code of type int\",\n  \"status\":400\n}",
+    "createdBy": "admin",
+    "createdAt": "2024-05-25T03:08:04.000Z",
+    "updatedAt": "2024-05-25T03:08:04.000Z"
+  }
+}

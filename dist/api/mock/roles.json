@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "message": "success",
+  "data": {
+    "id": 68,
+    "title": "权限集合",
+    "method": "get",
+    "path": "/roles",
+    "namespace": "联通",
+    "description": "",
+    "delay": 0,
+    "schema": "function({_req}) {\n  return [\n        {\n            \"id\": 1,\n            \"name\": \"admin\",\n            \"description\": \"\",\n            \"namespace\": \"charge\",\n            \"createdBy\": \"admin\",\n            \"createdAt\": \"2023-11-30T02:47:47.044Z\",\n            \"updatedAt\": \"2024-05-09T05:15:59.857Z\"\n        },\n        {\n            \"id\": 13,\n            \"name\": \"input\",\n            \"description\": \"录入员\",\n            \"namespace\": \"charge\",\n            \"createdBy\": \"guangbin\",\n            \"createdAt\": \"2024-06-09T00:38:27.480Z\",\n            \"updatedAt\": \"2024-06-09T00:38:27.480Z\"\n        },\n        {\n            \"id\": 14,\n            \"name\": \"样品收发员\",\n            \"description\": \"负责接收样品，并发布检定任务\",\n            \"namespace\": \"charge\",\n            \"createdBy\": \"shuzhong\",\n            \"createdAt\": \"2024-06-11T17:40:45.331Z\",\n            \"updatedAt\": \"2024-06-11T17:40:45.331Z\"\n        }\n    ];\n}",
+    "createdBy": "admin",
+    "createdAt": "2024-06-12T19:14:17.000Z",
+    "updatedAt": "2024-06-12T19:14:17.000Z"
+  }
+}

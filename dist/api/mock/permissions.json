@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "message": "success",
+  "data": {
+    "id": 45,
+    "title": "权限集合",
+    "method": "get",
+    "path": "/permissions",
+    "namespace": "联通",
+    "description": "权限集合",
+    "delay": null,
+    "schema": "function({_req}) {\n  return {\n    \"user_list\": {\n        \"id\": 28,\n        \"name\": \"用户/用户管理/用户列表\",\n        \"key\": \"user_list\",\n        \"path\": \"/ajax/user/list\"\n    },\n    \"user_add\": {\n        \"id\": 29,\n        \"name\": \"用户/用户管理/添加用户\",\n        \"key\": \"user_add\",\n        \"path\": \"/ajax/user/add\"\n    },\n    \"user_edit\": {\n        \"id\": 30,\n        \"name\": \"用户/用户管理/编辑用户\",\n        \"key\": \"user_edit\",\n        \"path\": \"/ajax/user/edit\"\n    },\n    \"user_status\": {\n        \"id\": 31,\n        \"name\": \"用户/用户管理/设置用户状态\",\n        \"key\": \"user_status\",\n        \"path\": \"/ajax/user/status\"\n    },\n    \"log_list\": {\n        \"id\": 49,\n        \"name\": \"日志/日志/日志列表\",\n        \"key\": \"log_list\",\n        \"path\": \"/ajax/log/list\"\n    }\n};\n}",
+    "createdBy": "admin",
+    "createdAt": "2024-03-30T03:52:19.000Z",
+    "updatedAt": "2024-03-30T03:52:19.000Z"
+  }
+}

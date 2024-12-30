@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "message": "success",
+  "data": {
+    "id": 49,
+    "title": "todos",
+    "method": "get",
+    "path": "/todos",
+    "namespace": "联通",
+    "description": "todos",
+    "delay": null,
+    "schema": "function({_req}) {\n  return [\n    {\n      title: '起床',\n      done: true\n    }  ,\n    {\n      title: '洗漱',\n      done: true\n    }  ,\n    \n    {\n      title: '吃饭',\n      done: false\n    }  ,\n    {\n      title: '上班',\n      done: false\n    }  ,\n    \n    {\n      title: '睡觉',\n      done: false\n    }  \n  ];\n}",
+    "createdBy": "admin",
+    "createdAt": "2024-03-30T08:22:34.000Z",
+    "updatedAt": "2024-03-30T08:22:34.000Z"
+  }
+}

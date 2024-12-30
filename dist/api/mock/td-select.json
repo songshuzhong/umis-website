@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "message": "success",
+  "data": {
+    "id": 17,
+    "title": "td select",
+    "method": "get",
+    "path": "/td/select",
+    "namespace": "联通",
+    "description": "单元格勾选",
+    "delay": null,
+    "schema": "function({_req}) {\n  return {\n  \"rows\": [\n    {\n      \"start_time\": \"2023-06-09 00:00:00\",\n      \"end_time\": \"2023-06-13 23:59:59\",\n      \"customer_name\": \"月亮惹的祸\",\n      \"deliver_id\": \"150013302\",\n      \"imp_cnt\": \"267\",\n      \"imp_num\": \"1\",\n      \"click_cnt\": \"80\",\n      \"click_num\": \"0\",\n      \"traned_cnt\": \"3\",\n      \"cmt_cnt\": \"1\",\n      \"likes_cnt\": \"1056\",\n      \"clcted_cnt\": \"3\",\n      \"bhv_cnt\": \"19\",\n      \"bhv_num\": \"79\"\n    },\n    {\n      \"start_time\": \"2023-06-09 00:00:00\",\n      \"end_time\": \"2023-06-13 23:59:59\",\n      \"customer_name\": \"心太软\",\n      \"deliver_id\": \"150013303\",\n      \"imp_cnt\": \"267\",\n      \"imp_num\": \"1\",\n      \"click_cnt\": \"80\",\n      \"click_num\": \"0\",\n      \"traned_cnt\": \"3\",\n      \"cmt_cnt\": \"1\",\n      \"likes_cnt\": \"1056\",\n      \"clcted_cnt\": \"3\",\n      \"bhv_cnt\": \"19\",\n      \"bhv_num\": \"79\",\n      \"likes_cnt_checked\": true\n    },\n    {\n      \"start_time\": \"2023-06-09 00:00:00\",\n      \"end_time\": \"2023-06-13 23:59:59\",\n      \"customer_name\": \"以父之名\",\n      \"deliver_id\": \"150013304\",\n      \"imp_cnt\": \"267\",\n      \"imp_num\": \"1\",\n      \"click_cnt\": \"80\",\n      \"click_num\": \"0\",\n      \"traned_cnt\": \"3\",\n      \"cmt_cnt\": \"1\",\n      \"likes_cnt\": \"1056\",\n      \"clcted_cnt\": \"3\",\n      \"bhv_cnt\": \"19\",\n      \"bhv_num\": \"79\"\n    },\n    {\n      \"start_time\": \"2023-06-09 00:00:00\",\n      \"end_time\": \"2023-06-13 23:59:59\",\n      \"customer_name\": \"问\",\n      \"deliver_id\": \"150013305\",\n      \"imp_cnt\": \"267\",\n      \"imp_num\": \"1\",\n      \"click_cnt\": \"80\",\n      \"click_num\": \"0\",\n      \"traned_cnt\": \"3\",\n      \"cmt_cnt\": \"1\",\n      \"likes_cnt\": \"1056\",\n      \"clcted_cnt\": \"3\",\n      \"bhv_cnt\": \"19\",\n      \"bhv_num\": \"79\"\n    }\n  ],\n  \"count\": 10\n}\n}",
+    "createdBy": "admin",
+    "createdAt": "2024-03-29T01:35:43.000Z",
+    "updatedAt": "2024-10-05T02:56:00.000Z"
+  }
+}

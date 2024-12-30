@@ -4,6 +4,238 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/api/menu/0767bea4-c7e7-4aa7-a1b5-2fd5e1ec4a7f.json"
   },
   {
+    "revision": "ad465a07b9a94154c5b65439e64ef6a7",
+    "url": "/i-website/dist/api/mock/alternative-payeruid.json"
+  },
+  {
+    "revision": "1238965cf825e8a39d945995416185dd",
+    "url": "/i-website/dist/api/mock/availableDates.json"
+  },
+  {
+    "revision": "b8a2bec3378d7c648f8b42ecd4139056",
+    "url": "/i-website/dist/api/mock/bigForm.json"
+  },
+  {
+    "revision": "f26a16e1d9d6ade56fa77aee1f0af8f7",
+    "url": "/i-website/dist/api/mock/bigTable.json"
+  },
+  {
+    "revision": "715b0515981c3e4dd4b38e81f43c1e18",
+    "url": "/i-website/dist/api/mock/bp-state.json"
+  },
+  {
+    "revision": "40a04472ec86527529b69a067cfc4921",
+    "url": "/i-website/dist/api/mock/calendar.json"
+  },
+  {
+    "revision": "e21972ba891f406325cf706507b2d620",
+    "url": "/i-website/dist/api/mock/chart-love.json"
+  },
+  {
+    "revision": "f55a6d24e5488b31a1c76823775df667",
+    "url": "/i-website/dist/api/mock/chart-map.json"
+  },
+  {
+    "revision": "209a796c96810ed21ec8dfb665c46cb8",
+    "url": "/i-website/dist/api/mock/cities.json"
+  },
+  {
+    "revision": "9dd9c1392fb9cc73ced2cb77121e4dde",
+    "url": "/i-website/dist/api/mock/columnData.json"
+  },
+  {
+    "revision": "4e68e884d873767122dc2714b144a556",
+    "url": "/i-website/dist/api/mock/coupon-task-list.json"
+  },
+  {
+    "revision": "5ed0f802d0ba3f37c452337e422c6af2",
+    "url": "/i-website/dist/api/mock/coupon-task-stop.json"
+  },
+  {
+    "revision": "9b31c11eb669b68bbb20d49bf933370e",
+    "url": "/i-website/dist/api/mock/demo-users.json"
+  },
+  {
+    "revision": "5ae6291729bf0ea3ea37b4239daaa6a9",
+    "url": "/i-website/dist/api/mock/dependencies.json"
+  },
+  {
+    "revision": "d0973ce6db19f949d87378c0679ff6a9",
+    "url": "/i-website/dist/api/mock/dynamicSelect.json"
+  },
+  {
+    "revision": "6b42ed6fda28a5dcb793933369fa1aa5",
+    "url": "/i-website/dist/api/mock/effectScatter.json"
+  },
+  {
+    "revision": "237e150aa63ceb118e8b3a8a508f07c5",
+    "url": "/i-website/dist/api/mock/error.json"
+  },
+  {
+    "revision": "d2db9e421c328acc7d87716f8ba2ec17",
+    "url": "/i-website/dist/api/mock/fieldinfo.json"
+  },
+  {
+    "revision": "c60759f8bd612fbe5b446a128a70e50a",
+    "url": "/i-website/dist/api/mock/form-combo-all.json"
+  },
+  {
+    "revision": "ac0db3d5e3f202734116fb11f50edec7",
+    "url": "/i-website/dist/api/mock/form-verify.json"
+  },
+  {
+    "revision": "db22927cabbeaeeb8dc0e83b53e9445f",
+    "url": "/i-website/dist/api/mock/getSceneItem.json"
+  },
+  {
+    "revision": "03f6005b69934694fe252ffef4b16873",
+    "url": "/i-website/dist/api/mock/holiday.json"
+  },
+  {
+    "revision": "361e44360122a334cc71b6a5eb45e2cb",
+    "url": "/i-website/dist/api/mock/holidayDetails.json"
+  },
+  {
+    "revision": "5ab4114f8dd779d26524728aba36d2ec",
+    "url": "/i-website/dist/api/mock/iconHome.json"
+  },
+  {
+    "revision": "7b46364d9b056521408ce17c478bb3fe",
+    "url": "/i-website/dist/api/mock/libs.json"
+  },
+  {
+    "revision": "a18646fcaeaa79833a3799973f06d8d1",
+    "url": "/i-website/dist/api/mock/mapCity.json"
+  },
+  {
+    "revision": "3e8533760a503b34d31bcac208466f50",
+    "url": "/i-website/dist/api/mock/mapSelect.json"
+  },
+  {
+    "revision": "501157015ba5ef170c4d4ae3137e638a",
+    "url": "/i-website/dist/api/mock/news.json"
+  },
+  {
+    "revision": "f6ce90df9da6083f1db80bd36ecb17ac",
+    "url": "/i-website/dist/api/mock/number.json"
+  },
+  {
+    "revision": "158becf6c452c6cd4f23573bea8f63ef",
+    "url": "/i-website/dist/api/mock/order-delivery.json"
+  },
+  {
+    "revision": "fde1e300eca0d5fc99ac8d68993f0132",
+    "url": "/i-website/dist/api/mock/order-list.json"
+  },
+  {
+    "revision": "6fb0043f32b631ad41794522b7505dd0",
+    "url": "/i-website/dist/api/mock/params.json"
+  },
+  {
+    "revision": "f3438cda769e45727e65645eaa62967c",
+    "url": "/i-website/dist/api/mock/permissions.json"
+  },
+  {
+    "revision": "b3b6316e359d4bea55bd97203dc19100",
+    "url": "/i-website/dist/api/mock/plugins.json"
+  },
+  {
+    "revision": "73696bd476b7fae18565350bccf0f571",
+    "url": "/i-website/dist/api/mock/products.json"
+  },
+  {
+    "revision": "505f698024c870462a47beb4523290d4",
+    "url": "/i-website/dist/api/mock/pv.json"
+  },
+  {
+    "revision": "0a0e43192e6c221eed4649736d0d4bc7",
+    "url": "/i-website/dist/api/mock/rb-campaign.json"
+  },
+  {
+    "revision": "cf69efe8cb4ec32c39bf8421df5a1385",
+    "url": "/i-website/dist/api/mock/roles.json"
+  },
+  {
+    "revision": "c0b415ddf1f272dc8ad6e72b02866356",
+    "url": "/i-website/dist/api/mock/scheduleTable.json"
+  },
+  {
+    "revision": "649a2a894b0d1f83d6f1ef859c4c3410",
+    "url": "/i-website/dist/api/mock/shopping-price.json"
+  },
+  {
+    "revision": "f023db2d0f62167080759e6540f4c0f6",
+    "url": "/i-website/dist/api/mock/showTabs.json"
+  },
+  {
+    "revision": "1be3a16763aea026f0cb47658e4c1382",
+    "url": "/i-website/dist/api/mock/stressTesting.json"
+  },
+  {
+    "revision": "a770c205c08d10a1b451ec9a57f853d8",
+    "url": "/i-website/dist/api/mock/table-stressTesting.json"
+  },
+  {
+    "revision": "2ede0f89b4d73b09989872bc2290aa39",
+    "url": "/i-website/dist/api/mock/tableSchedule.json"
+  },
+  {
+    "revision": "3c6e336d2884aae6b045d5fe4c4dce73",
+    "url": "/i-website/dist/api/mock/tasks.json"
+  },
+  {
+    "revision": "4cdd13ef807d6ee8fa97eb99a435c7f2",
+    "url": "/i-website/dist/api/mock/tasks2.json"
+  },
+  {
+    "revision": "d2d33a71bbeb69d5bf512bc0570a08d0",
+    "url": "/i-website/dist/api/mock/tast-start.json"
+  },
+  {
+    "revision": "7813341b2ebe24a19871ec78a23dd9c4",
+    "url": "/i-website/dist/api/mock/td-select.json"
+  },
+  {
+    "revision": "4551956b757704841c3ddc321c65426e",
+    "url": "/i-website/dist/api/mock/tob-operation-advance-price.json"
+  },
+  {
+    "revision": "595595aaeab07a51d14e996fa3576ed1",
+    "url": "/i-website/dist/api/mock/tob-operation-advance-query.json"
+  },
+  {
+    "revision": "7bcc78a26f987d9f1ff858512b162910",
+    "url": "/i-website/dist/api/mock/todos.json"
+  },
+  {
+    "revision": "6f23e2caa2cdd34f29c25b2b3019373b",
+    "url": "/i-website/dist/api/mock/upload-image.json"
+  },
+  {
+    "revision": "6788bd64d049991f97a8b21ee97df6a9",
+    "url": "/i-website/dist/api/mock/upload.json"
+  },
+  {
+    "revision": "29847aff223eda4b9071d4779961d794",
+    "url": "/i-website/dist/api/mock/valid-comment.json"
+  },
+  {
+    "revision": "7016e638b5cd043d34a45464deb367bf",
+    "url": "/i-website/dist/api/mock/viewSchema.json"
+  },
+  {
+    "revision": "0079b9feed2a8a42e12824eab52ff634",
+    "url": "/i-website/dist/api/mock/virus-country.json"
+  },
+  {
+    "revision": "fd06e2f55dc553aa1cac65ecf7bd5d62",
+    "url": "/i-website/dist/api/mock/virus-province.json"
+  },
+  {
+    "revision": "05cf41dbd0cab0ae6f4672a80f24085f",
+    "url": "/i-website/dist/api/mock/weeksInMonth.json"
+  },
+  {
     "revision": "f828b18e36906532fadb324c6734bfda",
     "url": "/i-website/dist/api/page/030acc1b-5401-4189-86e9-e989fa8b3404.json"
   },
@@ -284,7 +516,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/css/playground.a7dc6fcc.css"
   },
   {
-    "revision": "4fc5733c949735e360db",
+    "revision": "7ef09efd34b14d9badf9",
     "url": "/i-website/dist/css/website.caed2f5b.css"
   },
   {
@@ -356,8 +588,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/js/playground.314a4a.js"
   },
   {
-    "revision": "4fc5733c949735e360db",
-    "url": "/i-website/dist/js/website.0bb462.js"
+    "revision": "7ef09efd34b14d9badf9",
+    "url": "/i-website/dist/js/website.e35105.js"
   },
   {
     "revision": "250fb0645f76f8ed43ec9138e3d05c99",
@@ -384,7 +616,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/vue3-sfc-loader.js"
   },
   {
-    "revision": "5c08dd399184b3690a7b95c432d4c4fa",
+    "revision": "6105c3b248d12a8020f6f012c9047e02",
     "url": "/i-website/dist/website.html"
   },
   {

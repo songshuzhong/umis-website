@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "message": "success",
+  "data": {
+    "id": 72,
+    "title": "获取当前月份周",
+    "method": "get",
+    "path": "/weeksInMonth",
+    "namespace": "联通",
+    "description": "获取当前月份周",
+    "delay": 0,
+    "schema": "function({_req}) {\n  const now = new Date();  \n  const year = now.getFullYear();  \n  const month = now.getMonth();  \n  const monthlyDatesWeekdays = {};  \n  for (let day = 1; day <= new Date(year, month + 1, 0).getDate(); day++) {  \n    const date = new Date(year, month, day);  \n    let dateStr = date.toISOString().split('T')[0].split('-')[2];  \n    let weekdayStr = '';\n    if (date.getDay() < 1) {\n      weekdayStr = '周六'\n    } else {\n      weekdayStr = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'][date.getDay() - 1]; \n    }\n    dateStr = (parseInt(dateStr, 10) - 1).toString(); \n    monthlyDatesWeekdays[dateStr] = weekdayStr;  \n  }  \n  \n  return monthlyDatesWeekdays;  \n}",
+    "createdBy": "admin",
+    "createdAt": "2024-07-27T01:16:44.000Z",
+    "updatedAt": "2024-07-27T02:43:39.000Z"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "message": "success",
+  "data": {
+    "id": 59,
+    "title": "可用日期",
+    "method": "get",
+    "path": "/availableDates",
+    "namespace": "联通",
+    "description": "可用日期",
+    "delay": 0,
+    "schema": "function({_req}) {\n  return {\n    \"available\": [\n      \"2024-04-09 00:00:00\",\n      \"2024-04-10 00:00:00\",\n      \"2024-04-11 00:00:00\",\n      \"2024-04-12 00:00:00\",\n      \"2024-04-13 00:00:00\",\n      \"2024-04-14 00:00:00\"\n    ]\n  }\n}",
+    "createdBy": "admin",
+    "createdAt": "2024-04-08T01:07:34.000Z",
+    "updatedAt": "2024-04-08T01:07:34.000Z"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "message": "success",
+  "data": {
+    "id": 43,
+    "title": "start",
+    "method": "post",
+    "path": "/tast/start",
+    "namespace": "联通",
+    "description": "多行任务start",
+    "delay": null,
+    "schema": "function({_req}) {\n  const taskId = _req.body.taskId;\n  const id = _req.body.taskId;\n  const taskName = \"新手券\" + _req.body.taskId;\n  const couponNum = \"40000\" + _req.body.taskId;\n  const sendNum = \"10000\" + _req.body.taskId;\n  const taskStatus = 2;\n\n  return {\n    id,\n    taskId,\n    taskName,\n    couponNum,\n    sendNum,\n    taskStatus\n  };\n}",
+    "createdBy": "admin",
+    "createdAt": "2024-03-30T03:30:04.000Z",
+    "updatedAt": "2024-03-30T03:30:04.000Z"
+  }
+}

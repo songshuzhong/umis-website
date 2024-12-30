@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "message": "success",
+  "data": {
+    "id": 33,
+    "title": "代投询价",
+    "method": "post",
+    "path": "/tob/operation/advance/price",
+    "namespace": "联通",
+    "description": "代投询价",
+    "delay": null,
+    "schema": "function({_req}) {\n  const count = Math.round(Math.random()*10000);\n  return {\n    \"mid\": \"4440705227211066\",\n    \"payerUid\": 38848,\n    \"commodities\": [\n        {\n            \"amount\": \"1000\",\n            \"count\": count\n        }\n    ]\n  };\n}",
+    "createdBy": "admin",
+    "createdAt": "2024-03-29T23:55:01.000Z",
+    "updatedAt": "2024-03-30T01:33:41.000Z"
+  }
+}

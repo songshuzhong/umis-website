@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "message": "success",
+  "data": {
+    "id": 31,
+    "title": "随机数",
+    "method": "post",
+    "path": "/number",
+    "namespace": "联通",
+    "description": "随机数",
+    "delay": null,
+    "schema": "function({_req}) {\n  let values = Object.values(_req.body);\n  while (values.some(Array.isArray)) {\n    values = [].concat(...values); \n  }\n  const number = values.length * 100;\n  return {number: \"约\" + number + \"用户\"};\n}",
+    "createdBy": "admin",
+    "createdAt": "2024-03-29T22:22:43.000Z",
+    "updatedAt": "2024-03-30T01:30:26.000Z"
+  }
+}

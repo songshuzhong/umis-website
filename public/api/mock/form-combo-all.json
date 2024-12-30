@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "message": "success",
+  "data": {
+    "id": 20,
+    "title": "combo全面测试",
+    "method": "get",
+    "path": "/form/combo/all",
+    "namespace": "联通",
+    "description": "combo全面测试",
+    "delay": null,
+    "schema": "function({_req}) {\n  return {\"columns\":[{\"id\":\"basic\",\"columns\":[{\"id\":\"date\",\"disabled\":true},{\"id\":\"tsid_unique_id\"},{\"id\":\"creative_name\"},{\"id\":\"ad_name\"},{\"id\":\"campaign_name\"},{\"id\":\"objective_name\"},{\"id\":\"tsid_unique_id\"},{\"id\":\"creative_name\"},{\"id\":\"ad_name\"},{\"id\":\"campaign_name\"},{\"id\":\"objective_name\"},{\"id\":\"tsid_unique_id\"},{\"id\":\"creative_name\"},{\"id\":\"ad_name\"},{\"id\":\"campaign_name\"},{\"id\":\"objective_name\"}]},{\"id\":\"show_data\"},{\"id\":\"activation_data\",\"columns\":[{\"id\":\"transform\"},{\"id\":\"transform_cost\"},{\"id\":\"bhv_70000001\"},{\"id\":\"bhv_70000001_cost\"},{\"id\":\"bhv_70000004\"},{\"id\":\"bhv_70000004_cost\"},{\"id\":\"first_time_pay\"},{\"id\":\"first_time_pay_cost\"},{\"id\":\"bhv_70000005\"},{\"id\":\"bhv_70000005_cost\"},{\"id\":\"deep_transfer_cost\"},{\"id\":\"bhv_70000003\"},{\"id\":\"bhv_70000003_cost\"},{\"id\":\"bhv_70000006\"},{\"id\":\"bhv_70000006_cost\"},{\"id\":\"bhv_70000010\"},{\"id\":\"bhv_70000011\"},{\"id\":\"bhv_70000006_rcv\"},{\"id\":\"bhv_70000010_rcv\"},{\"id\":\"bhv_70000011_rcv\"},{\"id\":\"bhv_70000007\"},{\"id\":\"bhv_70000008\"},{\"id\":\"first_game_average_play_time\"},{\"id\":\"bhv_70000012\"},{\"id\":\"bhv_70000012_cost\"},{\"id\":\"booking_transform\"},{\"id\":\"booking_transform_cost\"},{\"id\":\"bhv_70000010_rcv\"},{\"id\":\"bhv_70000011_rcv\"},{\"id\":\"bhv_70000007\"},{\"id\":\"bhv_70000008\"},{\"id\":\"first_game_average_play_time\"},{\"id\":\"bhv_70000012\"},{\"id\":\"bhv_70000012_cost\"},{\"id\":\"booking_transform\"},{\"id\":\"booking_transform_cost\"},{\"id\":\"bhv_70000010_rcv\"},{\"id\":\"bhv_70000011_rcv\"},{\"id\":\"bhv_70000007\"},{\"id\":\"bhv_70000008\"},{\"id\":\"first_game_average_play_time\"},{\"id\":\"bhv_70000012\"},{\"id\":\"bhv_70000012_cost\"},{\"id\":\"booking_transform\"},{\"id\":\"booking_transform_cost\"},{\"id\":\"bhv_70000010_rcv\"},{\"id\":\"bhv_70000011_rcv\"},{\"id\":\"bhv_70000007\"},{\"id\":\"bhv_70000008\"},{\"id\":\"first_game_average_play_time\"},{\"id\":\"bhv_70000012\"},{\"id\":\"bhv_70000012_cost\"},{\"id\":\"booking_transform\"},{\"id\":\"booking_transform_cost\"}]},{\"id\":\"page_data\"},{\"id\":\"online_data\"},{\"id\":\"msg_data\"},{\"id\":\"wechat_data\"},{\"id\":\"social_data\"},{\"id\":\"play_data\"},{\"id\":\"style_data\"},{\"id\":\"quality_data\"}],\"default\":[\"date\",\"creative_name\"],\"dict\":{\"objective\":[\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\"],\"guaranteed_delivery\":[\"9\",\"8\",\"7\",\"6\",\"5\",\"4\",\"3\",\"2\",\"1\"]}};\n}",
+    "createdBy": "admin",
+    "createdAt": "2024-03-29T02:33:27.000Z",
+    "updatedAt": "2024-03-30T01:12:27.000Z"
+  }
+}
