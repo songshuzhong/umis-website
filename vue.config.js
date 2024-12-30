@@ -8,7 +8,7 @@ const rewrites = [];
 const pages = {};
 
 glob.sync('./src/pages/*.js').forEach(entry => {
-  const filename = entry.replace(/(.*\/)*([^.]+).*/ig,'$2');
+  const filename = path.basename(entry, path.extname(entry));
   let pageConfig;
   try {
     let fileContent = fs.readFileSync(
