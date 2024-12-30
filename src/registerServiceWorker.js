@@ -4,7 +4,7 @@ import {register} from 'register-service-worker';
 const isGp = process.env.NODE_ENV === 'gp';
 
 const registrySw = contextPath => {
-  const sw = isGp? '/i-website/src/service-worker.js': `${contextPath}/service-worker.js`;
+  const sw = isGp? '/i-website/dist/service-worker.js': `${contextPath}/service-worker.js`;
 
   register(sw, {
     updatefound() {
