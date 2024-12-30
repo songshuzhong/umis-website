@@ -50,7 +50,7 @@ let user = '/api/user';
 if (process.env.VUE_APP_API_NODE_ENV === 'gp') {
   config.adaptor = {
     req: 'if (url.includes("/api")) {\n  req.url += ".json";\n}',
-    res: 'if (url.includes("/api/page")) {\r\n  res.data = {\r\n    data: res.data,\r\n    status: 0,\r\n    message: "success"\r\n  };\r\n}'
+    // res: 'if (url.includes("/api/page")) {\r\n  res.data = {\r\n    data: res.data,\r\n    status: 0,\r\n    message: "success"\r\n  };\r\n}'
   };
   user = 'https://songshuzhong.github.io/i-website/dist/api/user.json';
 }
