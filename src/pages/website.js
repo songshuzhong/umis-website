@@ -57,7 +57,7 @@ if (process.env.VUE_APP_API_NODE_ENV === 'gp') {
 registrySw(process.env.VUE_APP_SERVICE_WORKER);
 
 api()
-  .dynamicApi('', {headers: {Authorization: localStorage.getItem('token')}})
+  .useApi({headers: {Authorization: localStorage.getItem('token')}})
   .get(user)
   .then(res => {
     const routers = createRoutes();

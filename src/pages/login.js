@@ -13,7 +13,7 @@ import '../style/login.scss';
 
 const app = createApp(Application);
 const onLogin = (proxy, config, context, onActionFeedback, formdata, options) => {
-  api().staticApi()
+  api().useApi()
     .post(`${process.env.VUE_APP_API_BASE}/api/auth/login`, formdata)
     .then((res) => {
       localStorage.setItem('token', `Bearer ${res.data}`);
