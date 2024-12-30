@@ -516,7 +516,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/css/playground.a7dc6fcc.css"
   },
   {
-    "revision": "7ef09efd34b14d9badf9",
+    "revision": "e988c6ce9cf01f31bb29",
     "url": "/i-website/dist/css/website.caed2f5b.css"
   },
   {
@@ -588,8 +588,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/js/playground.314a4a.js"
   },
   {
-    "revision": "7ef09efd34b14d9badf9",
-    "url": "/i-website/dist/js/website.e35105.js"
+    "revision": "e988c6ce9cf01f31bb29",
+    "url": "/i-website/dist/js/website.c52551.js"
   },
   {
     "revision": "250fb0645f76f8ed43ec9138e3d05c99",
@@ -616,7 +616,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/i-website/dist/vue3-sfc-loader.js"
   },
   {
-    "revision": "6105c3b248d12a8020f6f012c9047e02",
+    "revision": "7dca3330ab0818f336d6b6c0158d5366",
     "url": "/i-website/dist/website.html"
   },
   {
