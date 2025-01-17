@@ -1,0 +1,19 @@
+{
+  "data": {
+    "projectId": "2f487a94-34fd-467d-b5e9-1ef3c785840d",
+    "pageId": "681942f3-e504-4d33-b198-c0ebc44b56e9",
+    "pageName": "logs",
+    "pageTitle": "版本日志",
+    "pageIcon": "",
+    "groupBy": "",
+    "hidden": null,
+    "assets": [],
+    "visible": [],
+    "pageDesc": null,
+    "pageSchema": "{\"renderer\":\"service\",\"classname\":\"i-home__logs\",\"initApi\":{\"url\":\"https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/logs\"},\"body\":[{\"renderer\":\"divider\",\"text\":\"更新日志\"},{\"renderer\":\"timeline\",\"placement\":\"top\",\"body\":[{\"renderer\":\"wrapper\",\"header\":[{\"renderer\":\"html\",\"html\":\"版本：<%=data.version%>\"}],\"body\":[{\"renderer\":\"html\",\"html\":\"<h3><%=data?.features?.length? 'Features': ''%></h3>\",\"inline\":true},{\"renderer\":\"each\",\"name\":\"features\"},{\"renderer\":\"html\",\"html\":\"<h3><%=data?.bugs?.length? 'bugs': ''%></h3>\",\"inline\":true},{\"renderer\":\"each\",\"name\":\"bugs\"},{\"renderer\":\"html\",\"html\":\"<h3><%=data?.refactors?.length? 'refactors': ''%></h3>\",\"inline\":true},{\"renderer\":\"each\",\"name\":\"refactors\"}],\"footer\":[]}],\"size\":\"large\",\"hollow\":true}]}",
+    "createdAt": "2023-05-30T06:34:25.000Z",
+    "updatedAt": "2023-05-30T06:40:03.000Z"
+  },
+  "status": 0,
+  "msg": "请求成功"
+}

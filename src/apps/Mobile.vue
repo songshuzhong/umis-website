@@ -4,7 +4,7 @@
       <iframe
         class="i-device-inner__frame"
         :key="update"
-        :src="`${src}/mobile.html?pageId=${pageId}`"
+        :src="`/mobile?pageId=${pageId}`"
       />
       <div class="i-device-inner__home" @click="refresh"/>
     </div>
@@ -26,23 +26,18 @@ import qs from 'qs';
 export default defineComponent({
   name: 'Mobile',
   setup() {
-    const isPro = process.env.NODE_ENV === 'production';
     const query = qs.parse(window.location.href.split('?')[1]);
     const isFrame = ref(query.isFrame);
     const update = ref(0);
-    let src = '';
-    let url;
-    if (isPro) {
-      url = 'https://www.fastmock.site/mock/a93e0b29161761b8153cbc02db04c643/api/page/' + query.pageId;
-      src = 'https://songshuzhong.github.io/i-website/dist';
-    } else {
-      url = '/api/page/' + query.pageId;
+    let url = '/api/page/' + query.pageId;
+    if (query.shared) {
+      url += '/shared';
     }
     const refresh = () => {
       update.value++;
     };
     onMounted(() => {
-      if (!isFrame.value) {
+      if (!isFrame.value && !query.shared) {
         const timer = window.setTimeout(() => {
           const page = document.querySelector('.i-page__container');
           const doc = document.documentElement;
@@ -56,8 +51,6 @@ export default defineComponent({
     return {
       pageId: query.pageId,
       isFrame,
-      isPro,
-      src,
       url,
       update,
       refresh

@@ -1,0 +1,271 @@
+{
+  "renderer": "page",
+  "body": [
+    {
+      "renderer": "wrapper",
+      "name": "PerformancePage",
+      "header": [
+        {
+          "renderer": "html",
+          "html": "<h1><%=data.title%></h1>",
+          "inline": true
+        }
+      ],
+      "body": [
+        {
+          "renderer": "service",
+          "body": [
+            {
+              "renderer": "html",
+              "inline": true,
+              "html": "<span><%=$.date%></span>\r\n<h1 class=\"time__container\">\r\n  <span class=\"time\"><%=$.hours%></span>\r\n  <span>:</span>\r\n  <span class=\"time\"><%=$.min%></span>\r\n  <span class=\"time\">:</span>\r\n  <span class=\"time\"><%=$.sec%></span>\r\n</h1>"
+            }
+          ],
+          "promiseType": "sw",
+          "silentLoading": true,
+          "interval": 1000
+        },
+        {
+          "renderer": "action",
+          "text": "跳转到外链",
+          "actionType": "url",
+          "url": "https://baidu.com/s?search=123",
+          "body": {},
+          "params": {
+            "blank": "1"
+          }
+        },
+        {
+          "renderer": "action",
+          "text": "弹个窗",
+          "type": "success",
+          "icon": "ChatLineSquare",
+          "actionType": "dialog",
+          "body": {
+            "body": [
+              {
+                "renderer": "form",
+                "controls": [
+                  {
+                    "renderer": "input",
+                    "name": "title",
+                    "label": "标题",
+                    "requiredOn": "1==1",
+                    "placeholder": "请输入",
+                    "type": "text",
+                    "rules": [
+                      {
+                        "type": "string",
+                        "message": "不允许出现数字"
+                      }
+                    ]
+                  }
+                ],
+                "name": "DemoForm",
+                "actionApi": {
+                  "url": "/api/submit",
+                  "method": "post",
+                  "params": {
+                    "title": "${title}"
+                  }
+                }
+              }
+            ],
+            "footer": [
+              {
+                "renderer": "action",
+                "text": "提交",
+                "actionType": "trigger",
+                "triggered": "DemoForm.submit",
+                "body": {}
+              }
+            ],
+            "fullscreen": false,
+            "center": false,
+            "closeOnClickModal": true,
+            "closeOnPressEscape": true
+          }
+        },
+        {
+          "renderer": "divider",
+          "text": "blabla"
+        },
+        {
+          "renderer": "switch",
+          "name": "showForm",
+          "defaultValue": false,
+          "label": "",
+          "width": 40,
+          "target": "PerformancePage",
+          "activeText": "启动",
+          "inactiveText": "停止"
+        },
+        {
+          "renderer": "divider",
+          "text": "blabla"
+        },
+        {
+          "renderer": "tabs",
+          "panels": [
+            {
+              "label": "直播方式",
+              "icon": "",
+              "body": [
+                {
+                  "renderer": "form",
+                  "controls": [
+                    {
+                      "renderer": "radio",
+                      "name": "type",
+                      "type": "button",
+                      "target": "LiveVideoTable",
+                      "options": [
+                        {
+                          "text": "普通直播",
+                          "value": "1"
+                        },
+                        {
+                          "text": "控流直播",
+                          "value": "2"
+                        },
+                        {
+                          "text": "视频直播",
+                          "value": "3",
+                          "disabledOn": ""
+                        },
+                        {
+                          "text": "网页开播",
+                          "value": "4",
+                          "disabledOn": ""
+                        }
+                      ],
+                      "defaultValue": "3"
+                    }
+                  ],
+                  "submitType": "target",
+                  "actionApi": {},
+                  "target": "LiveVideoTable"
+                },
+                {
+                  "renderer": "table",
+                  "name": "LiveVideoTable",
+                  "columns": [
+                    {
+                      "fixed": false,
+                      "sortable": false,
+                      "type": "index",
+                      "body": []
+                    },
+                    {
+                      "label": "封面",
+                      "name": "poster",
+                      "body": [
+                        {
+                          "renderer": "image",
+                          "src": "${cover}",
+                          "previews": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "名称",
+                      "name": "name",
+                      "body": []
+                    },
+                    {
+                      "label": "视频时长",
+                      "name": "length",
+                      "body": []
+                    },
+                    {
+                      "label": "视频ID",
+                      "name": "id",
+                      "body": []
+                    },
+                    {
+                      "label": "操作",
+                      "sortable": false,
+                      "fixed": false,
+                      "type": "-",
+                      "align": "none",
+                      "body": [
+                        {
+                          "renderer": "action",
+                          "category": "icon",
+                          "icon": "Delete",
+                          "body": {},
+                          "popupType": "confirm",
+                          "tipContent": "确认删除吗？",
+                          "actionType": "ajax",
+                          "actionApi": {
+                            "url": "/api/delete",
+                            "method": "delete",
+                            "params": {}
+                          },
+                          "confirmTitle": "确定删除吗？"
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "initApi": {
+                    "url": "http://rap2api.taobao.org/app/mock/241577/videos",
+                    "method": "get",
+                    "params": {
+                      "type": "${type}",
+                      "timestamp": "${timestamp}"
+                    }
+                  },
+                  "initData": {
+                    "type": 3
+                  },
+                  "height": 81,
+                  "showHeader": false
+                }
+              ]
+            },
+            {
+              "label": "在线人数",
+              "icon": "",
+              "body": []
+            }
+          ],
+          "activeIndex": 1,
+          "stretch": true,
+          "tabPosition": "top",
+          "activeTab": 0
+        },
+        {
+          "renderer": "divider",
+          "text": "blabla"
+        },
+        {
+          "renderer": "service",
+          "syncLocation": false,
+          "sendOn": "data.showForm",
+          "initApi": {
+            "url": "http://rap2api.taobao.org/app/mock/241577/videos",
+            "method": "get",
+            "params": {
+              "role_id": "${role_id}"
+            },
+            "cached": false
+          },
+          "initData": {},
+          "body": [
+            {
+              "renderer": "data"
+            }
+          ],
+          "silentLoading": false
+        }
+      ]
+    }
+  ],
+  "initData": {
+    "title": "欢迎体验，纵享丝滑",
+    "showForm": false
+  },
+  "mergeUrlQuery": true,
+  "worker": "e => {   \r\n  if (e.jobOrigin == '/page/body/1') {\r\n    return Promise.reject({message: 'sw校验不通过'});\r\n  }   \r\n  var monthNames = [ \"January\", \"February\", \"March\", \"April\", \"May\", \"June\",\"July\", \"August\", \"September\", \"October\", \"November\", \"December\" ]; \r\n  var dayNames= [\"Sunday\",\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\",\"Saturday\"]\r\n\r\n  var today = new Date();\r\n\r\n  var date = (dayNames[today.getDay()] + \" \" + \r\n  today.getDate() + ' ' + monthNames[today.getMonth()] + ' ' +today.getFullYear());\r\n\r\n  var h = today.getHours();\r\n  var m = today.getMinutes();\r\n  var s = today.getSeconds();\r\n  var day = h<11 ? 'AM': 'PM';\r\n\r\n  h = h<10? '0'+h: h;\r\n  m = m<10? '0'+m: m;\r\n  s = s<10? '0'+s: s;               \r\n  return {\r\n    hours: h,\r\n    min: m,\r\n    sec: s,\r\n    day,\r\n    date\r\n  };\r\n}"
+}

@@ -27,6 +27,8 @@ glob.sync('./src/pages/*.js').forEach(entry => {
     title: pageConfig.title,
     skeleton: pageConfig.skeleton || '',
     skeletonStyle: pageConfig.skeletonStyle || '',
+    preload: false,
+    prefetch: false,
     minify: isDev ? {} : {
       minifyJS: true,
       minifyCSS: true,
@@ -39,7 +41,7 @@ glob.sync('./src/pages/*.js').forEach(entry => {
 
 module.exports = {
   pages,
-  publicPath: isDev ? '' : '/i-website/dist',
+  publicPath: isDev ? '' : '/i-website',
   transpileDependencies: ['element-plus'],
   productionSourceMap: false,
   configureWebpack: {
@@ -60,7 +62,7 @@ module.exports = {
     plugins: [
       new MonacoWebpackPlugin({
         filename: 'worker/[name].worker.js',
-        languages: ['json', 'less'],
+        languages: ['json', 'less', 'sql', 'javascript', 'html'],
       }),
       new GenerateSW ({
         clientsClaim: true,
@@ -68,12 +70,18 @@ module.exports = {
       })
     ]
   },
+  chainWebpack: config => {
+    ['home', 'login', 'website', 'playground', 'mobile', 'editing'].forEach(entryName => {
+      config.plugins.delete(`prefetch-${entryName}`);
+      config.plugins.delete(`preload-${entryName}`);
+    });
+  },
   devServer: {
     port: 80,
     disableHostCheck: true,
     proxy: {
       '/api': {
-        target: 'http://localhost:1026',
+        target: 'http://0.0.0.0:9000',
         changeOrigin: true
       }
     }

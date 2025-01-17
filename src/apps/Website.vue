@@ -1,0 +1,90 @@
+<template>
+  <schema
+    :init-schema="frameSchema"
+    :canSchemaUpdate="false"
+    classname="i-renderer-website-schema__container"
+  />
+</template>
+
+<script>
+import {defineComponent, onBeforeMount, onMounted, getCurrentInstance} from 'vue';
+import {Schema} from 'i-renderer/dist/js/renderer';
+import frameSchema from '../data/websiteFrame.json';
+
+export default defineComponent({
+  name: 'Application',
+  components: {
+    Schema
+  },
+  setup() {
+    const { proxy } = getCurrentInstance();
+    const appendAssets = () => {
+      return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'http://www.i-renderer.love/javascript/vue3-sfc-loader@0.8.4.min.js';
+        script.onload = script.onreadystatechange = function() {
+          if (
+            !script.readyState ||
+            script.readyState === 'loaded' ||
+            script.readyState === 'complete'
+          ) {
+            script.onload = script.onreadystatechange = null;
+            resolve();
+          } else {
+            reject({
+              message: '脚本『vue3-sfc-loader』加载失败'
+            });
+          }
+        };
+        script.onerror = function() {
+          reject({
+            message: '脚本『vue3-sfc-loader』加载失败'
+          });
+        };
+        const timer = setTimeout(() => {
+          document.head.appendChild(script);
+          clearTimeout(timer);
+        }, 230);
+      });
+    };
+    onBeforeMount(() => {
+      const isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
+      if (isMobile) {
+        proxy.$dispatchAction(
+          proxy,
+          {
+            renderer: 'action',
+            actionType: 'trigger',
+            triggered: 'IWebsiteNav'
+          },
+          {},
+          () => {},
+        );
+      }
+      isMobile && proxy.$message.success('切换到PC端体验更加哦！');
+    });
+    onMounted(() => {
+      const timer = setTimeout(() => {
+        import(/* webpackChunkName:"editor",webpackPrefetch:false,webpackMode:"lazy" */ 'i-renderer/dist/js/editor')
+          .then(res => {
+            const {Editor} = res;
+            proxy.$.appContext.components[Editor.name] = Editor;
+          }).catch(e => {
+            console.error(e);
+          }).finally(() => {
+            clearTimeout(timer);
+          });
+        appendAssets();
+      }, 2000);
+    });
+
+    return {
+      frameSchema: {
+        renderer: 'admin',
+        ...frameSchema
+      }
+    };
+  }
+});
+</script>

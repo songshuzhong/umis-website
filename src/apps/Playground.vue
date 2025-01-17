@@ -6,10 +6,10 @@
       <component v-else v-bind:is="'i-editor'" :is-json="false"/>
       <el-divider direction="vertical" />
       <i-schema
-          :init-schema="initSchema"
-          :can-schema-update="false"
-          path="/editor"
-          classname="i-home__playground__preview"
+        :init-schema="initSchema"
+        :can-schema-update="false"
+        track="/editor"
+        classname="i-home__playground__preview"
       />
     </div>
   </div>
@@ -28,7 +28,7 @@ export default defineComponent({
     const isEditorReady = ref(false);
     let notice;
     onBeforeMount(() => {
-      window.IRenderer = {
+      proxy.$.appContext.$IRenderer = {
         pageSchema: DEFAULT_SCHEMA
       };
       uaManager.setWidth(window.innerHeight);

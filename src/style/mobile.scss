@@ -2,9 +2,10 @@ html,
 body,
 .i-website-app__container {
   height: 100%;
+  overflow: hidden;
 }
 .i-mobile__container {
-  overflow: hidden;
+  overflow-y: scroll;
   &>.el-skeleton {
     padding: 10px;
   }
