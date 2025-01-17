@@ -23,21 +23,21 @@ const router = createRouter({
           path: '/index',
           component: Schema,
           props: {
-            url: `${process.env.VUE_APP_PUBLIC_PATH_HOME}/page/home.json`,
+            initSchema: `${process.env.VUE_APP_PUBLIC_PATH_HOME}/page/home.json`,
           },
         },
         {
           path: '/logs',
           component: Schema,
           props: {
-            url: `${process.env.VUE_APP_PUBLIC_PATH_HOME}/page/logs.json`,
+            initSchema: `${process.env.VUE_APP_PUBLIC_PATH_HOME}/page/logs.json`,
           },
         },
         {
           path: '/me',
           component: Schema,
           props: {
-            url: `${process.env.VUE_APP_PUBLIC_PATH_HOME}/page/me.json`,
+            initSchema: `${process.env.VUE_APP_PUBLIC_PATH_HOME}/page/me.json`,
           },
           meta: {
             permission: 'quality'
@@ -47,7 +47,7 @@ const router = createRouter({
           path: '/quality',
           component: Schema,
           props: {
-            url: `${process.env.VUE_APP_PUBLIC_PATH_HOME}/page/me.json`,
+            initSchema: `${process.env.VUE_APP_PUBLIC_PATH_HOME}/page/me.json`,
           },
           meta: {
             permission: 'quality'
@@ -58,7 +58,7 @@ const router = createRouter({
           component: Schema,
           classname: 'i-renderer-website-schema__playground',
           props: {
-            url: `${process.env.VUE_APP_PUBLIC_PATH_HOME}/page/playground.json`,
+            initSchema: `${process.env.VUE_APP_PUBLIC_PATH_HOME}/page/playground.json`,
           },
           beforeEnter: () => {
             document.documentElement.classList.add('playground');
