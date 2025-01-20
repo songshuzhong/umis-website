@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "message": "success",
+  "data": {
+    "id": 71,
+    "title": "子schema",
+    "method": "get",
+    "path": "/viewSchema",
+    "namespace": "联通",
+    "description": "0",
+    "delay": 0,
+    "schema": "function({_req}) {\n  return    {\n      \"renderer\": \"layout\",\n      \"initData\": {\n        \"layout\": \"layout\"\n      },\n      \"direction\": \"horizontal\",\n      \"body\": [\n        {\n          \"renderer\": \"wrapper\",\n          \"initData\": {\n            \"left\": \"left\"\n          },\n          \"body\": [\n            {\n              \"renderer\": \"data\"\n            }\n          ]\n        },\n        {\n          \"renderer\": \"divider\",\n          \"direction\": \"vertical\"\n        },\n        {\n          \"renderer\": \"wrapper\",\n          \"initData\": {\n            \"right\": \"right\"\n          },\n          \"body\": [\n            {\n              \"renderer\": \"data\"\n            }\n          ]\n        }\n      ]\n    } \n}",
+    "createdBy": "admin",
+    "createdAt": "2024-07-21T07:43:54.000Z",
+    "updatedAt": "2024-07-21T10:38:22.000Z"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "message": "success",
+  "data": {
+    "id": 32,
+    "title": "异步校验",
+    "method": "get",
+    "path": "/form/verify",
+    "namespace": "联通",
+    "description": "异步校验",
+    "delay": null,
+    "schema": "function({_req}) {\n  const isValid = Number(_req.query.asyncValid) % 2 == 0;\n  const message = Number(_req.query.asyncValid) % 2 == 0 ? '异步校验通过' : '1234不可用、456非法、5676543涉密';\n  return {\n    isValid,\n    message\n  };\n}",
+    "createdBy": "admin",
+    "createdAt": "2024-03-29T23:04:44.000Z",
+    "updatedAt": "2024-03-30T01:31:59.000Z"
+  }
+}

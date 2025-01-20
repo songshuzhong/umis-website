@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "message": "success",
+  "data": {
+    "id": 57,
+    "title": "聚合页",
+    "method": "get",
+    "path": "/iconHome",
+    "namespace": "联通",
+    "description": "聚合页",
+    "delay": null,
+    "schema": "function({_req}) {\n    const type = _req.query.type;\n    if (type === 'icon') {\n      return {\n        icon_status: true,\n        icon_title: '红楼梦',\n        icon_desc: '一个是阆苑仙葩，一个是美玉无瑕。',\n        icon_src: 'https://songshuzhong.github.io/i-assets/public/img/h5/hongloumeng.jpeg'\n\n      }\n    }\n    if (type === 'home') {\n      return {\n        home_status: false,\n        home_title: '三国演义',\n        home_desc: '暗淡了刀光剑影，远去了鼓角争鸣。',\n        home_src: 'https://songshuzhong.github.io/i-assets/public/img/h5/sanguoyanyi.jpeg'\n      }\n    }\n    if (type === 'bubble') {\n      return {\n        bubble_status: true,\n        bubble_title: '水浒传',\n        bubble_desc: '天南地北。问乾坤何处，可容狂客。',\n        bubble_src: 'https://songshuzhong.github.io/i-assets/public/img/h5/shuihuzhuan.png'\n      }\n    }\n    if (type === 'thumb') {\n      return {\n        thumb_status: true,\n        thumb_title: '西游记',\n        thumb_desc: '鸿蒙初辟本无性，打破冥顽须悟空。',\n        thumb_src: 'https://songshuzhong.github.io/i-assets/public/img/h5/xiyouji.jpeg'\n      }\n    }\n  }",
+    "createdBy": "admin",
+    "createdAt": "2024-03-30T11:58:45.000Z",
+    "updatedAt": "2024-03-30T11:58:45.000Z"
+  }
+}

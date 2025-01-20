@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "message": "success",
+  "data": {
+    "id": 47,
+    "title": "工作日详情",
+    "method": "get",
+    "path": "/holidayDetails",
+    "namespace": "联通",
+    "description": "工作日详情",
+    "delay": null,
+    "schema": "function({_req}) {\n    const date = new Date(_req.query.calendar).getDate();\n    const type = date%2===0? '白班（集团统一班次）': '夜班（集团统一班次）';\n    const hour1 = Math.floor(Math.random() * 12);\n    const hour2 = Math.floor(Math.random() * 12 + 12);\n    \n    return {\n      type,\n      mon: `上班：${hour1}:08`,\n      eve: `下班：${hour2}:08`\n    }\n  }",
+    "createdBy": "admin",
+    "createdAt": "2024-03-30T08:20:45.000Z",
+    "updatedAt": "2024-03-30T08:20:45.000Z"
+  }
+}

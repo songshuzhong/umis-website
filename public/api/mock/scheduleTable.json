@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "message": "success",
+  "data": {
+    "id": 19,
+    "title": "排期表格",
+    "method": "get",
+    "path": "/scheduleTable",
+    "namespace": "联通",
+    "description": "排期表格",
+    "delay": null,
+    "schema": "function({_req}) {\n  return {\"global_delivery_dates\":[\"06-27\",\"06-28\",\"06-29\",\"06-30\",\"07-01\",\"07-02\",\"07-03\",\"07-04\",\"07-05\",\"07-06\"],\"rows\":[{\"resource_delivery_dates\":[\"2022-06-18\",\"2022-06-19\",\"2022-06-20\",\"2022-06-21\",\"2022-06-23\",\"2022-06-24\",\"2022-06-25\"],\"delivery_indent\":2,\"delivery_length\":1,\"creative_id\":10446,\"creative_name\":\"创意618\",\"campaign_delivery_dates\":\"2022.06.29-2022.06.29\",\"delivery_dates\":\"2022.06.28-2022.06.29\",\"creative_status\":1,\"campaign_id\":436,\"campaign_name\":\"11112we12\",\"campaign_status\":3,\"contract_no\":\"NO_PDPS000000058408_1655538989\",\"contract_item_id\":8,\"resource_id\":\"NO_PDPS000000058408_1655538989-PDPS0000000584081501_15041655538989\",\"batch_uid\":\"PDPS0000000584081501_15041655538989\",\"resource_name\":\"发现页广告\",\"resource_product_line\":\"普通开机\",\"biz_type\":null},{\"resource_delivery_dates\":[\"2022-06-18\",\"2022-06-19\",\"2022-06-20\",\"2022-06-21\",\"2022-06-22\",\"2022-06-23\",\"2022-06-24\",\"2022-06-25\"],\"delivery_indent\":4,\"delivery_length\":3,\"creative_id\":10447,\"creative_name\":\"动态小手半屏视频H5\",\"campaign_delivery_dates\":\"2022.06.20-2022.06.29\",\"delivery_dates\":\"2022.07.01-2022.07.04\",\"creative_status\":2,\"campaign_id\":436,\"campaign_name\":\"11112we12\",\"campaign_status\":2,\"contract_no\":\"NO_PDPS000000058408_1655538989\",\"contract_item_id\":8,\"resource_id\":\"NO_PDPS000000058408_1655538989-PDPS0000000584081501_15041655538989\",\"batch_uid\":\"PDPS0000000584081501_15041655538989\",\"resource_name\":\"发现页广告\",\"resource_product_line\":\"普通开机\",\"biz_type\":null},{\"resource_delivery_dates\":[\"2022-06-18\",\"2022-06-19\",\"2022-06-20\",\"2022-06-21\",\"2022-06-22\",\"2022-06-23\",\"2022-06-24\",\"2022-06-25\"],\"delivery_indent\":4,\"delivery_length\":2,\"creative_id\":10448,\"creative_name\":\"动态小手半屏视频H6\",\"campaign_delivery_dates\":\"2022.06.20-2022.06.29\",\"delivery_dates\":\"2022.07.01-2022.07.02\",\"creative_status\":3,\"campaign_id\":437,\"campaign_name\":\"11112we13\",\"campaign_status\":1,\"contract_no\":\"NO_PDPS000000058408_1655538989\",\"contract_item_id\":8,\"resource_id\":\"NO_PDPS000000058408_1655538989-PDPS0000000584081501_15041655538989\",\"batch_uid\":\"PDPS0000000584081501_15041655538989\",\"resource_name\":\"发现页广告\",\"resource_product_line\":\"普通开机\",\"biz_type\":null},{\"resource_delivery_dates\":[\"2022-06-18\",\"2022-06-19\",\"2022-06-20\",\"2022-06-21\",\"2022-06-22\",\"2022-06-23\",\"2022-06-24\",\"2022-06-25\"],\"delivery_indent\":1,\"delivery_length\":7,\"creative_id\":10448,\"creative_name\":\"动态小手半屏视频H1\",\"campaign_delivery_dates\":\"2022.06.20-2022.06.29\",\"delivery_dates\":\"2022.07.03-2022.07.05\",\"creative_status\":4,\"campaign_id\":417,\"campaign_name\":\"11112we13\",\"campaign_status\":5,\"contract_no\":\"NO_PDPS000000058408_1655538989\",\"contract_item_id\":8,\"resource_id\":\"NO_PDPS000000058408_1655538989-PDPS0000000584081501_1504165553899\",\"batch_uid\":\"PDPS0000000584081501_15041655538989\",\"resource_name\":\"开机页广告\",\"resource_product_line\":\"普通开机\",\"biz_type\":null}],\"total\":3};\n}",
+    "createdBy": "admin",
+    "createdAt": "2024-03-29T02:29:14.000Z",
+    "updatedAt": "2024-03-30T01:12:10.000Z"
+  }
+}

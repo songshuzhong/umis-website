@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "message": "success",
+  "data": {
+    "id": 58,
+    "title": "询价",
+    "method": "get",
+    "path": "/shopping/price",
+    "namespace": "联通",
+    "description": "询价",
+    "delay": null,
+    "schema": "function({_req}) {\n    const products = _req.body.ShoppingCartData || [];\n    const totalPrice = products.reduce((total, item) => {\n      total += Number(item.price) * Number(item.count || 1);\n      return total;\n    }, 0);\n    return {\n      totalPrice\n    };\n  }",
+    "createdBy": "admin",
+    "createdAt": "2024-03-30T12:05:30.000Z",
+    "updatedAt": "2024-03-30T12:05:30.000Z"
+  }
+}

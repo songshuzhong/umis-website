@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "message": "success",
+  "data": {
+    "id": 73,
+    "title": "表格项目甘特图",
+    "method": "get",
+    "path": "/tableSchedule",
+    "namespace": "联通",
+    "description": "表格项目甘特图",
+    "delay": 0,
+    "schema": "function({_req}) {\n  const rows = new Array(7).fill(0).map((_, j) => {\n    const o = {\n      name: `第${j + 1}项目`\n    };\n    for (let i = 0; i < 33; i++) {\n      o[`month_${i}`] = `第${j + 1}项目：${i}日`;\n    }\n    return o;\n  });\n  return {\n    count: 7,\n    rows\n  };\n}",
+    "createdBy": "admin",
+    "createdAt": "2024-07-27T01:56:47.000Z",
+    "updatedAt": "2024-07-27T02:02:51.000Z"
+  }
+}

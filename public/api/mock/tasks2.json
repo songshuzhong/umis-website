@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "message": "success",
+  "data": {
+    "id": 39,
+    "title": "异步任务2",
+    "method": "get",
+    "path": "/tasks2",
+    "namespace": "联通",
+    "description": "异步任务2",
+    "delay": null,
+    "schema": "function({_req}) {\n      const count = _req.query.count || 0;\n      return {\n        \"count\": 3,\n        \"rows\": [{\n        \"label\": \"单台\",\n        \"name\": \"hive\",\n        \"status\": 0,\n        \"count\": count\n      }, {\n        \"label\": \"单边\",\n        \"name\": \"partial\",\n        \"status\": 0,\n        \"count\": count\n      }, {\n        \"label\": \"全量\",\n        \"name\": \"full\",\n        \"status\": 0,\n        \"count\": count\n      }]\n      };\n}",
+    "createdBy": "admin",
+    "createdAt": "2024-03-30T03:13:11.000Z",
+    "updatedAt": "2024-03-30T03:13:11.000Z"
+  }
+}

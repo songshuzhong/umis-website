@@ -1,23 +1,27 @@
 {
-  "pageId": "baaa7a7c-6280-4961-8b3b-aada78e970f7",
-  "id": 28,
-  "projectId": "4",
-  "pageTitle": "加载失败",
-  "pageName": "scriptError",
-  "namespace": "联通",
-  "pageIcon": "",
-  "groupBy": "依赖库",
-  "updatedBy": "admin",
-  "updatedCause": null,
-  "hidden": null,
-  "assets": [
-    "https://songshuzhong.github.io/i-assets/public/js/test2.js"
-  ],
-  "visible": null,
-  "pageDesc": null,
-  "pageSchema": "{\n  \"renderer\": \"page\",\n  \"body\": [\n    {\n      \"renderer\": \"Test\"\n    },\n    {\n      \"renderer\": \"Test2\"\n    },\n    {\n      \"renderer\": \"Test3\"\n    }\n  ]\n}",
-  "version": 0,
-  "status": 1,
-  "createdAt": "2023-11-25T15:24:06.000Z",
-  "updatedAt": "2023-11-27T06:20:51.000Z"
+  "status": 0,
+  "message": "success",
+  "data": {
+    "pageId": "baaa7a7c-6280-4961-8b3b-aada78e970f7",
+    "id": 28,
+    "projectId": "4",
+    "pageTitle": "加载失败",
+    "pageName": "scriptError",
+    "namespace": "联通",
+    "pageIcon": "",
+    "groupBy": "依赖库",
+    "updatedBy": "admin",
+    "updatedCause": null,
+    "hidden": null,
+    "assets": [
+      "https://songshuzhong.github.io/i-assets/public/js/test2.js"
+    ],
+    "visible": null,
+    "pageDesc": null,
+    "pageSchema": "{\n  \"renderer\": \"page\",\n  \"body\": [\n    {\n      \"renderer\": \"Test\"\n    },\n    {\n      \"renderer\": \"Test2\"\n    },\n    {\n      \"renderer\": \"Test3\"\n    }\n  ]\n}",
+    "version": 0,
+    "status": 1,
+    "createdAt": "2023-11-25T15:24:06.000Z",
+    "updatedAt": "2023-11-27T06:20:51.000Z"
+  }
 }

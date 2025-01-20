@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "message": "success",
+  "data": {
+    "id": 40,
+    "title": "异步任务2",
+    "method": "post",
+    "path": "/tasks",
+    "namespace": "联通",
+    "description": "异步任务2",
+    "delay": null,
+    "schema": "function({_req}) {\n      const count = Number(_req.query.count) || 0;\n      let index = count;\n      if (!index) {\n        index = 1;\n      } else {\n        index += 1;\n      }\n      const status1 = function() {\n        if (index < 4) {\n          return index % 4;\n        } else {\n          return 4;\n        }\n      };\n      const status2 = function() {\n        if (index >= 3 && index < 6) {\n          return index % 3;\n        }\n        if (index == 6) {\n          return 3;\n        }\n        if (index > 6) {\n          return 4;\n        } else {\n          return 0;\n        }\n      };\n      const status3 = function() {\n        if (index >= 7) {\n          return index % 6;\n        }else if (index > 9) {\n          return 4;\n        } else {\n          return 0;\n        }\n      };\n      return { selectedRows: [{\n        \"label\": \"单台\",\n        \"name\": \"hive\",\n        \"status\": status1(),\n        \"count\": index\n      }, {\n        \"label\": \"单边\",\n        \"name\": \"partial\",\n        \"status\": status2(),\n        \"count\": index\n      }, {\n        \"label\": \"全量\",\n        \"name\": \"full\",\n        \"status\": status3(),\n        \"count\": index\n      }]};\n  }",
+    "createdBy": "admin",
+    "createdAt": "2024-03-30T03:19:00.000Z",
+    "updatedAt": "2024-03-30T03:19:00.000Z"
+  }
+}

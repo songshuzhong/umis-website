@@ -1,23 +1,27 @@
 {
-  "pageId": "180de081-02e3-409e-9f80-29548f8d4c02",
-  "id": 31,
-  "projectId": "4",
-  "pageTitle": "引导1",
-  "pageName": "driverjs",
-  "namespace": "联通",
-  "pageIcon": "",
-  "groupBy": "依赖库",
-  "updatedBy": "admin",
-  "updatedCause": null,
-  "hidden": null,
-  "assets": [
-    "https://songshuzhong.github.io/i-assets/public/js/Driver.444172.min.js"
-  ],
-  "visible": null,
-  "pageDesc": null,
-  "pageSchema": "{\n  \"renderer\": \"page\",\n  \"body\": [\n    {\n      \"renderer\": \"Driver\",\n      \"steps\": [\n        {\n          \"path\": \"/layout/body/1/layout/body/0/header/body/4/service/body/0/action\",\n          \"title\": \"第一步：首页\"\n        },\n        {\n          \"path\": \"/layout/body/1/layout/body/0/header/body/4/service/body/1/tomobile\",\n          \"title\": \"移动端预览\"\n        }\n      ]\n    }\n  ]\n}",
-  "version": 0,
-  "status": 1,
-  "createdAt": "2023-11-25T15:25:14.000Z",
-  "updatedAt": "2023-11-27T06:19:35.000Z"
+  "status": 0,
+  "message": "success",
+  "data": {
+    "pageId": "180de081-02e3-409e-9f80-29548f8d4c02",
+    "id": 31,
+    "projectId": "4",
+    "pageTitle": "引导1",
+    "pageName": "driverjs",
+    "namespace": "联通",
+    "pageIcon": "",
+    "groupBy": "依赖库",
+    "updatedBy": "admin",
+    "updatedCause": null,
+    "hidden": null,
+    "assets": [
+      "https://songshuzhong.github.io/i-assets/public/js/Driver.444172.min.js"
+    ],
+    "visible": null,
+    "pageDesc": null,
+    "pageSchema": "{\n  \"renderer\": \"page\",\n  \"body\": [\n    {\n      \"renderer\": \"Driver\",\n      \"steps\": [\n        {\n          \"path\": \"/layout/body/1/layout/body/0/header/body/4/service/body/0/action\",\n          \"title\": \"第一步：首页\"\n        },\n        {\n          \"path\": \"/layout/body/1/layout/body/0/header/body/4/service/body/1/tomobile\",\n          \"title\": \"移动端预览\"\n        }\n      ]\n    }\n  ]\n}",
+    "version": 0,
+    "status": 1,
+    "createdAt": "2023-11-25T15:25:14.000Z",
+    "updatedAt": "2023-11-27T06:19:35.000Z"
+  }
 }

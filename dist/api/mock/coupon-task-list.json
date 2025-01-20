@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "message": "success",
+  "data": {
+    "id": 41,
+    "title": "tasklist",
+    "method": "get",
+    "path": "/coupon/task/list",
+    "namespace": "联通",
+    "description": "tasklist",
+    "delay": null,
+    "schema": "function({_req}) {\n  let round = Math.floor(Math.random() * (100 - 1)) + 1;\n  const taskStatus1 = round % 5 + 1;\n  round = Math.floor(Math.random() * (100 - 1)) + 1;\n  const taskStatus2 = round % 5 + 1;\n  round = Math.floor(Math.random() * (100 - 1)) + 1;\n  const taskStatus3 = round % 5 + 1;  \n  round = Math.floor(Math.random() * (100 - 1)) + 1;\n  const taskStatus4 = round % 5 + 1;  \n  return {\n     \"items\": [{\n         \"id\": 1,\n         \"taskId\": 1,\n         \"taskName\": \" 新手券1\",\n         \"couponNum\": 400001,\n         \"sendNum\": 0,\n         \"taskStatus\": taskStatus1,\n       },\n       {\n         \"id\": 2,\n         \"taskId\": 2,\n         \"taskName\": \" 新手券2\",\n         \"couponNum\": 400002,\n         \"sendNum\": 0,\n         \"taskStatus\": taskStatus2,\n       },\n       {\n         \"id\": 3,\n         \"taskId\": 3,\n         \"taskName\": \" 新手券3\",\n         \"couponNum\": 400003,\n         \"sendNum\": 0,\n         \"taskStatus\": taskStatus3,\n       },\n       {\n         \"id\": 4,\n         \"taskId\": 4,\n         \"taskName\": \" 新手券4\",\n         \"couponNum\": 400004,\n         \"sendNum\": 0,\n         \"taskStatus\": taskStatus4,\n       }\n     ]\n   }  \n}",
+    "createdBy": "admin",
+    "createdAt": "2024-03-30T03:24:02.000Z",
+    "updatedAt": "2024-03-30T03:24:02.000Z"
+  }
+}

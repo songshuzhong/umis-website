@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "message": "success",
+  "data": {
+    "id": 61,
+    "title": "tabs显隐",
+    "method": "get",
+    "path": "/showTabs",
+    "namespace": "联通",
+    "description": "tabs显隐",
+    "delay": 0,
+    "schema": "function({_req}) {\n  return {\n    \"sponsorUnifyAccount\": true,\n    \"sponsorNameBlack\": true,\n    \"sponsorNameStarWhite\": true,\n    \"sponsorBlack\": true,\n    \"toSponsorNameBlack\": true,\n     \"midWhite\":true,\n    \"toSponsorBlack\": true\n  };\n}",
+    "createdBy": "admin",
+    "createdAt": "2024-04-12T23:41:50.000Z",
+    "updatedAt": "2024-04-12T23:41:50.000Z"
+  }
+}

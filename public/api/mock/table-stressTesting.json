@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "message": "success",
+  "data": {
+    "id": 60,
+    "title": "表格压测",
+    "method": "get",
+    "path": "/table/stressTesting",
+    "namespace": "联通",
+    "description": "表格压测",
+    "delay": 0,
+    "schema": "function({_req}) {\n  const pageIndex = Number(_req.query.pageIndex);\n  const pageSize = Number(_req.query.pageSize);\n  const start = (pageIndex - 1) * pageSize;\n  const offset = pageIndex * pageSize;\n  const rows = [];\n  for (let i = start; i < offset; i++) {\n    const row = {};\n    for (let j = 0; j < 30; j++) {\n      row[`column_${j}`] = i * (j + 1);\n    }\n    rows.push(row);\n  }\n  return {\n    currentPage: pageIndex,\n    rows,\n    count: 4000\n  };\n}",
+    "createdBy": "admin",
+    "createdAt": "2024-04-11T23:23:16.000Z",
+    "updatedAt": "2024-04-11T23:50:29.000Z"
+  }
+}

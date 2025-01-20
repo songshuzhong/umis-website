@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "message": "success",
+  "data": {
+    "id": 53,
+    "title": "pv",
+    "method": "get",
+    "path": "/pv",
+    "namespace": "联通",
+    "description": "pv",
+    "delay": null,
+    "schema": "function({_req}) {\n    const pv = (Math.ceil(Math.random() * 10000)).toLocaleString();\n    const feedback = (Math.ceil(Math.random() * 10000)).toLocaleString();\n    const support = (Math.ceil(Math.random() * 100000)).toLocaleString();\n    const fork = (Math.ceil(Math.random() * 10000)).toLocaleString();\n    return {\n      pv,\n      feedback,\n      support,\n      fork\n    };  \n}",
+    "createdBy": "admin",
+    "createdAt": "2024-03-30T11:46:48.000Z",
+    "updatedAt": "2024-03-30T11:46:48.000Z"
+  }
+}
