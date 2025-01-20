@@ -124,7 +124,7 @@
                 }
               ],
               "initApi": {
-                "url": "/antd-user.json",
+                "url": "/antd-user",
                 "method": "get",
                 "cached": false,
                 "debounce": 0,
@@ -162,7 +162,7 @@
                     {
                       "renderer": "service",
                       "initApi": {
-                        "url": "/antd-users.json",
+                        "url": "/antd-users",
                         "method": "get",
                         "cached": false,
                         "debounce": 0,

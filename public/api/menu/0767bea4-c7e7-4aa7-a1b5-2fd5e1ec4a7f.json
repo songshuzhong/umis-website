@@ -150,7 +150,7 @@
             ],
             "assets": [],
             "pageDesc": null,
-            "schemaUrl": "/api/page/antd-users.json"
+            "schemaUrl": "/api/page/antd-users"
           },
           {
             "renderer": "menuitem",
