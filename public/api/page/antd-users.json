@@ -96,6 +96,22 @@
                         "margin-bottom": "20px"
                       },
                       "html": "团队"
+                    },
+                    {
+                      "renderer": "each",
+                      "body": [
+                        {
+                          "renderer": "avatar",
+                          "src": "${logo}",
+                          "size": 36,
+                          "shape": "circle",
+                          "isComputedSrc": true,
+                          "borderRadius": 0,
+                          "subTitle": "<%=$.member%>"
+                        }
+                      ],
+                      "name": "notice",
+                      "classname": "notice"
                     }
                   ],
                   "loadingOn": "!$.name",
@@ -352,7 +368,12 @@
           ]
         }
       ],
-      "innerStyle": ".inline {\r\n  display: flex;\r\n  align-items: center;\r\n  margin-top: 6px;\r\n}\r\n.me {\r\n  width: 30%;\r\n}\r\n.tags {\r\n  .i-each__container__item {\r\n    margin-bottom: 4px;\r\n    display: inline-block;\r\n    color: var(--el-color-success);\r\n  }\r\n  .i-each__container__item + .i-each__container__item {\r\n    margin-left: 4px;\r\n  }\r\n}"
+      "innerStyle": ".inline {\r\n  display: flex;\r\n  align-items: center;\r\n  margin-top: 6px;\r\n}\r\n.me {\r\n  width: 30%;\r\n}\r\n.tags {\r\n  .i-each__container__item {\r\n    margin-bottom: 4px;\r\n    display: inline-block;\r\n    color: var(--el-color-success);\r\n  }\r\n  .i-each__container__item + .i-each__container__item {\r\n    margin-left: 4px;\r\n  }\r\n}\r\n.notice {\r\n  .i-each__container__item + .i-each__container__item {\r\n    margin-top: 10px;\r\n  }\r\n}",
+      "classname": "",
+      "mergeUrlQuery": false,
+      "showBacktop": false,
+      "isH5": false,
+      "qa": ""
     }
   },
   "status": 0,
